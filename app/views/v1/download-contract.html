@@ -1,0 +1,97 @@
+{% extends "layout.html" %}
+
+{% block page_title %}
+  Check your answers
+{% endblock %}
+
+{% block content %}
+
+<main id="content" role="main">
+  <div class="grid-row">
+    <div class="column-two-thirds">
+      <a href="#" class="link-back">Back</a>
+
+      <h1 class="heading-large">
+        Contract name
+      </h1>
+
+
+      <!-- use additional modifier class to change column widths for multiple groups of questions and answers: -->
+      <!--   * `cya-questions-short` for short questions -->
+      <!--   * `cya-questions-long` for long questions -->
+      <!--   * none for single group of q&a -->
+      <dl class="govuk-check-your-answers cya-questions-short">
+        <div>
+          <dt class="cya-question">
+            Created by
+          </dt>
+          <dd class="cya-answer">
+            Firstname Lastname
+          </dd>
+        </div>
+
+        <div>
+          <dt class="cya-question">
+            Last updated
+          </dt>
+          <dd class="cya-answer">
+            20 Februrary 2018
+          </dd>
+        </div>
+
+        <div>
+          <dt class="cya-question">
+            Status
+          </dt>
+          <dd class="cya-answer">
+            Draft
+          </dd>
+        </div>
+
+        <div>
+          <dt class="cya-question">
+            Version
+          </dt>
+          <dd class="cya-answer">
+            1.0
+          </dd>
+        </div>
+      </dl>
+
+
+
+      <h2 class="heading-medium">Documents</h2>
+
+      <p class="text">
+        This contract includes/is made up of/The contract is the:
+      </p>
+
+      <ul class="list list-bullet">
+        <li><a href="">The core terms agreement</a></li>
+        <li><a href="">The framework award form</a></li>
+        <li><a href="">The call-off order form</a></li>
+      </uL>
+
+      <h3 class="heading-small">Mandatory</h3>
+      <ul class="list list-bullet">
+        <li><a href="">Schedule 1</a></li>
+        <li><a href="">Schedule 2</a></li>
+        <li><a href="">Schedule 3</a></li>
+      </uL>
+
+      <h3 class="heading-small">Optional schedules</h3>
+      <ul class="list list-bullet">
+        <li><a href="">Schedule 4</a></li>
+        <li><a href="">Schedule 5</a></li>
+        <li><a href="">Schedule 6</a></li>
+      </uL>
+
+      <div class="form-group">
+        <a href="confirmation-page" class="button">Download contract</a>
+      </div>
+
+    </div>
+  </div>
+</main>
+
+{% endblock %}
