@@ -1,0 +1,5 @@
+---
+applications:
+- name: public-sector-contract-prototype
+  memory: 256M
+  buildpack: nodejs_buildpack
