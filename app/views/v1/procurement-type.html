@@ -10,7 +10,7 @@
   <div class="grid-row">
     <div class="column-two-thirds">
 
-      <a class="link-back" href="v1/">Back</a>
+      <a class="link-back" href="/v1">Back</a>
 
       <h1 class="heading-large">What category is your contract in?
       </h1>
@@ -18,11 +18,12 @@
       <form class="form" action="contract-name" method="post">
 
         <div class="form-group">
-          <select class="form-control" id="procurement-type" name="procurement-type">
-            {% for type in ['Professional Services', 'Technology', 'Property', 'Communications', 'Energy', 'Office', 'eCommerce', 'Fleet', 'Travel', 'Construction', 'Research'] %}
-              <option>{{ type }}</option>
+          {% for type in ['Professional Services', 'Technology', 'Property', 'Communications', 'Energy', 'Office', 'eCommerce', 'Fleet', 'Travel', 'Construction', 'Research'] %}
+            <div class="multiple-choice">
+              <input id="procurement-type" type="radio" name="procurement-type" value="{{ type }}" {% if type == data['procurement-type'] %}checked="checked"{% endif %}">
+              <label for="radio-{{ loop.index }}">{{ type }}</label>
+            </div>
             {% endfor %}
-          </select>
         </div>
 
         <div class="form-group">
