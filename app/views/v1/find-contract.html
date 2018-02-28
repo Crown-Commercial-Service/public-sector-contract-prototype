@@ -1,0 +1,63 @@
+{% extends "layout.html" %} {% block page_title %} Question page {% endblock %} {% block content %}
+
+<main id="content" role="main">
+  <div class="grid-row">
+    <div class="column-two-thirds">
+
+      <a class="link-back" href="/url/of/previous/page">Back</a>
+
+      <h1 class="heading-large">Find contract
+      </h1>
+      <h2 class="breadcrumb-description form-hint">Find published framework contracts</h2>
+
+      <form class="form" action="/url/of/next/page" method="post">
+        <div class="form-group">
+        </div>
+        <div class="form-group">
+          <label id="5a96915638366" for="keywords" class="">
+            Keywords
+            <span class="clear"></span>
+            <div class="form-hint">Can include contract title, description</div>
+            <span class="clear"></span>
+          </label>
+          <input class="form-control" id="contract-name" type="text" name="contract-name">
+        </div>
+
+        <div class="form-group">
+
+          <fieldset>
+
+            <legend>
+              <h3 class="heading-medium">What category does the contract belong to?</h3>
+              <span class="body-text">Select all that apply</span>
+            </legend>
+
+            <div class="multiple-choice">
+              <input id="category-1" name="categories" type="checkbox" value="professional-services">
+              <label for="category-1">Professional Services</label>
+            </div>
+            <div class="multiple-choice">
+              <input id="category-2" name="categories" type="checkbox" value="technology">
+              <label for="category-2">Technology</label>
+            </div>
+            <div class="multiple-choice">
+              <input id="category-3" name="categories" type="checkbox" value="property">
+              <label for="category-3">Property</label>
+            </div>
+
+          </fieldset>
+        </div>
+
+        <div class="standard-form-option standard-form-controls">
+          <input class="button" type="submit" value="Search">
+          <a href="">Reset</a>
+        </div>
+      </form>
+
+
+
+    </div>
+  </div>
+</main>
+
+{% endblock %}
