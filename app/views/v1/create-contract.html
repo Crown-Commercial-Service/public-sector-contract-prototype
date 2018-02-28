@@ -9,7 +9,7 @@
 <main id="content" role="main">
   <div class="grid-row">
     <div class="column-two-thirds">
-      <a href="create-contract" class="link-back">Back</a>
+      <a href="award-type" class="link-back">Back</a>
 
       <h1 class="heading-large">
         {{ data['contract-name'] }}
@@ -38,57 +38,35 @@
             20 Februrary 2018
           </dd>
         </div>
+      </dl>
 
+
+
+      <h2 class="heading-medium">Contract details</h2>
+
+      <dl class="govuk-check-your-answers cya-questions-short">
         <div>
           <dt class="cya-question">
-            Status
+            Procurement type
           </dt>
           <dd class="cya-answer">
-            Draft
+            Option summary
           </dd>
         </div>
 
         <div>
           <dt class="cya-question">
-            Version
+            Contract type
           </dt>
           <dd class="cya-answer">
-            1.0
+            {{ data['award-type'] }}
           </dd>
         </div>
       </dl>
 
 
+      <a href="download-contract" class="button">Create contract</a>
 
-      <h2 class="heading-medium">Documents</h2>
-
-      <p class="text">
-        This contract includes/is made up of/The contract is the:
-      </p>
-
-      <ul class="list list-bullet">
-        <li><a href="">The core terms agreement</a></li>
-        <li><a href="">The framework award form</a></li>
-        <li><a href="">The call-off order form</a></li>
-      </uL>
-
-      <h3 class="heading-small">Mandatory</h3>
-      <ul class="list list-bullet">
-        <li><a href="">Schedule 1</a></li>
-        <li><a href="">Schedule 2</a></li>
-        <li><a href="">Schedule 3</a></li>
-      </uL>
-
-      <h3 class="heading-small">Optional schedules</h3>
-      <ul class="list list-bullet">
-        <li><a href="">Schedule 4</a></li>
-        <li><a href="">Schedule 5</a></li>
-        <li><a href="">Schedule 6</a></li>
-      </uL>
-
-      <div class="form-group">
-        <a href="confirmation-page" class="button">Download contract</a>
-      </div>
 
     </div>
   </div>

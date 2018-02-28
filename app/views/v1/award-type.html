@@ -1,0 +1,42 @@
+{% extends "layout.html" %}
+
+{% block page_title %}
+  Question page
+{% endblock %}
+
+{% block content %}
+
+<main id="content" role="main">
+  <div class="grid-row">
+    <div class="column-two-thirds">
+
+      <a class="link-back" href="contract-summary.html">Back</a>
+
+      <form class="form" action="create-contract" method="post">
+        <div class="form-group">
+          <fieldset>
+
+            <legend>
+              <h1 class="heading-medium">How will the contract be awarded</h1>
+            </legend>
+
+            {% for type in ['Direct award', 'Further competition'] %}
+            <div class="multiple-choice">
+              <input id="award-type" type="radio" name="award-type" value="{{ type }}" {% if type == data['award-type'] %}checked="checked"{% endif %}">
+              <label for="radio-{{ loop.index }}">{{ type}}</label>
+            </div>
+            {% endfor %}
+
+          </fieldset>
+        </div>
+
+        <div class="form-group">
+          <input class="button" type="submit" value="Continue">
+        </div>
+      </form>
+
+    </div>
+  </div>
+</main>
+
+{% endblock %}

@@ -15,14 +15,14 @@
       <h1 class="heading-large">Contract name
       </h1>
 
-      <form class="form" action="/url/of/next/page" method="post">
+      <form class="form" action="contract-summary" method="post">
         <div class="form-group">
           <label class="form-label" for="ni-number">
             <span class="form-hint">
               Enter a name for your contract
             </span>
           </label>
-          <input class="form-control" id="contract-name" type="text" name="contract-name">
+          <input class="form-control" id="contract-name" type="text" name="contract-name" value="{{ data['contract-name'] }}">
         </div>
 
         <div class="form-group">
