@@ -23,7 +23,7 @@
               <input id="procurement-type" type="radio" name="procurement-type" value="{{ type }}" {% if type == data['procurement-type'] %}checked="checked"{% endif %}">
               <label for="radio-{{ loop.index }}">{{ type }}</label>
             </div>
-            {% endfor %}
+          {% endfor %}
         </div>
 
         <div class="form-group">
