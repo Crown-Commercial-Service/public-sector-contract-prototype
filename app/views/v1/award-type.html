@@ -22,8 +22,8 @@
 
             {% for type in ['Direct award', 'Further competition'] %}
             <div class="multiple-choice">
-              <input id="award-type" type="radio" name="award-type" value="{{ type }}" {% if type == data['award-type'] %}checked="checked"{% endif %}">
-              <label for="radio-{{ loop.index }}">{{ type}}</label>
+              <input id="award-type" type="checkbox" name="award-type" value="{{ type }}" {% if type == data['award-type'] %}checked="checked"{% endif %}">
+              <label for="checkbox-{{ loop.index }}">{{ type}}</label>
             </div>
             {% endfor %}
 
