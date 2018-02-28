@@ -26,7 +26,7 @@
             Created by
           </dt>
           <dd class="cya-answer">
-            Firstname Lastname
+            {{ data['first-name'] }} {{ data['last-name'] }}
           </dd>
         </div>
 
@@ -74,18 +74,31 @@
         <li><a href="documents/call-off-order-form">Call-off order form</a></li>
       </uL>
 
+{% set mandatory_schedules = [
+    'Framework schedule 1: Specification',
+    'Framework schedule 2: Framework tender',
+    'Framework schedule 3: Framework prices'
+  ]
+%}
+
       <h3 class="heading-small">Mandatory schedules</h3>
       <ul class="list list-bullet">
-        <li><a href="documents/schedule">Framework schedule 1: Specification</a></li>
-        <li><a href="documents/schedule">Framework schedule 2: Framework tender</a></li>
-        <li><a href="documents/schedule">Framework schedule 3: Framework prices</a></li>
+        {% for schedule in mandatory_schedules %}
+          <li><a href="documents/schedule">{{ schedule }}</a></li>
+        {% endfor %}
       </uL>
 
+{% set optional_schedules = [
+    'Joint schedule 8: Guarantee',
+    'Framework schedule 9: Cyber Essentials scheme',
+    'Call-off schedule 17: MoD terms'
+  ]
+%}
       <h3 class="heading-small">Optional schedules</h3>
       <ul class="list list-bullet">
-        <li><a href="documents/schedule">Joint schedule 8: Guarantee</a></li>
-        <li><a href="documents/schedule">Framework schedule 9: Cyber Essentials scheme</a></li>
-        <li><a href="documents/schedule">Call-off schedule 17: MoD terms</a></li>
+        {% for schedule in optional_schedules %}
+          <li><a href="documents/schedule">{{ schedule }}</a></li>
+        {% endfor %}
       </uL>
 
       <div class="form-group">
