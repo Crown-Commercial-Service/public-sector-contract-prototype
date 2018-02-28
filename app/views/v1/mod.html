@@ -1,0 +1,48 @@
+{% extends "layout.html" %}
+
+{% block page_title %}
+  Question page
+{% endblock %}
+
+{% block content %}
+
+<main id="content" role="main">
+  <div class="grid-row">
+    <div class="column-two-thirds">
+
+      <a class="link-back" href="contract-summary.html">Back</a>
+
+      <form class="form" action="technology" method="post">
+        <div class="form-group">
+          <fieldset>
+
+            <legend>
+              <h1 class="heading-large">Will the Ministry of Defence be using the contract?</h1>
+            </legend>
+
+            <div class="multiple-choice" data-target="mod-yes">
+              <input id="mod" type="radio" name="mod" value="Yes" {% if data['mod'] == 'Yes' %}checked="checked"{% endif %}>
+              <label for="mod">Yes</label>
+            </div>
+            <div class="panel panel-border-narrow js-hidden" id="mod-yes">
+              <p>We recommend you use Call-Off Schedule 17 - MOD Terms v3.0</p>
+            </div>
+
+            <div class="multiple-choice">
+              <input id="mod" type="radio" name="mod" value="No" {% if data['mod'] == 'No' %}checked="checked"{% endif %}">
+              <label for="mod">No</label>
+            </div>
+
+          </fieldset>
+        </div>
+
+        <div class="form-group">
+          <input class="button" type="submit" value="Continue">
+        </div>
+      </form>
+
+    </div>
+  </div>
+</main>
+
+{% endblock %}

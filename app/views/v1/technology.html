@@ -1,0 +1,48 @@
+{% extends "layout.html" %}
+
+{% block page_title %}
+  Question page
+{% endblock %}
+
+{% block content %}
+
+<main id="content" role="main">
+  <div class="grid-row">
+    <div class="column-two-thirds">
+
+      <a class="link-back" href="mod">Back</a>
+
+      <form class="form" action="award-type" method="post">
+        <div class="form-group">
+          <fieldset>
+
+            <legend>
+              <h1 class="heading-large">Will the contract be used to buy technology?</h1>
+            </legend>
+
+            <div class="multiple-choice" data-target="technology-yes">
+              <input id="technology" type="radio" name="technology" value="Yes" {% if data['technology'] == 'Yes' %}checked="checked"{% endif %}>
+              <label for="technology">Yes</label>
+            </div>
+            <div class="panel panel-border-narrow js-hidden" id="technology-yes">
+              <p>We recommend you use Framework Schedule 9 - Cyber Essentials Scheme v3.0</p>
+            </div>
+
+            <div class="multiple-choice">
+              <input id="technology" type="radio" name="technology" value="No" {% if data['technology'] == 'No' %}checked="checked"{% endif %}">
+              <label for="technology">No</label>
+            </div>
+
+          </fieldset>
+        </div>
+
+        <div class="form-group">
+          <input class="button" type="submit" value="Continue">
+        </div>
+      </form>
+
+    </div>
+  </div>
+</main>
+
+{% endblock %}
