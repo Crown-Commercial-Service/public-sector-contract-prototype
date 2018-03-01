@@ -84,11 +84,47 @@
         This contract will contain:
       </p>
 
-      <ul class="list list-bullet">
-        <li><a href="documents/core-terms">Core terms</a></li>
-        <li><a href="documents/framework-award-form">Framework award form</a></li>
-        <li><a href="documents/call-off-order-form">Call-off order form</a></li>
-      </uL>
+        <details>
+            <summary><span class="summary">Core terms</span></summary>
+
+            <div class="panel panel-border-narrow">
+              <p>
+                Tracy to put content here
+              </p>
+
+              <p>
+                <a href="documents/core-terms">Read more</a>
+              </p>
+            </div>
+        </details>
+
+        <details>
+            <summary><span class="summary">Framework award form</span></summary>
+
+            <div class="panel panel-border-narrow">
+              <p>
+                Tracy to put content here
+              </p>
+
+              <p>
+                <a href="documents/framework-award-form">Read more</a>
+              </p>
+            </div>
+        </details>
+
+        <details>
+            <summary><span class="summary">Call-off order form</span></summary>
+
+            <div class="panel panel-border-narrow">
+              <p>
+                Tracy to put content here
+              </p>
+
+              <p>
+                <a href="documents/call-off-order-form">Read more</a>
+              </p>
+            </div>
+        </details>
 
 {% set mandatory_schedules = [
     'Framework schedule 1: Specification',
@@ -98,28 +134,99 @@
 %}
 
       <h3 class="heading-small">Mandatory schedules</h3>
-      <ul class="list list-bullet">
+
         {% for schedule in mandatory_schedules %}
-          <li><a href="documents/schedule">{{ schedule }}</a></li>
+          <details>
+
+            <summary><span class="summary">{{ schedule }}</span></summary>
+
+            <div class="panel panel-border-narrow">
+
+              <p>
+                Tracy to put content here
+              </p>
+
+              <p>
+                <a href="documents/schedule">Read more</a>
+              </p>
+
+          </div>
+
+        </details>
         {% endfor %}
-      </uL>
 
 {% set optional_schedules = [
-    'Joint schedule 8: Guarantee',
     'Framework schedule 9: Cyber Essentials Scheme',
     'Call-off schedule 17: MoD terms'
   ]
 %}
       <h3 class="heading-small">Optional schedules</h3>
-      <ul class="list list-bullet">
+
         {% for schedule in optional_schedules %}
-          <li><a href="documents/schedule">{{ schedule }}</a> <a href="documents/schedule">[remove]</a></li>
+          <details>
+
+            <summary><span class="summary">{{ schedule }}</span>  <a href="">Remove</a></summary>
+
+            <div class="panel panel-border-narrow">
+
+              <p>
+                Tracy to put content here
+              </p>
+
+              <p>
+                <a href="documents/schedule">Read more</a>
+              </p>
+
+          </div>
+
+        </details>
         {% endfor %}
-      </uL>
+
+      {% set optional_schedules = [
+    'Framework schedule 9: Cyber Essentials Scheme',
+    'Call-off schedule 17: MoD terms'
+  ]
+%}
+      <h3 class="heading-small">Schedules we haven't included....</h3>
+
+        {% for schedule in optional_schedules %}
+          <details>
+
+            <summary><span class="summary">{{ schedule }}</span>  <a href="">Add</a></summary>
+
+            <div class="panel panel-border-narrow">
+
+              <p>
+                Tracy to put content here
+              </p>
+
+              <p>
+                <a href="documents/schedule">Read more</a>
+              </p>
+
+          </div>
+
+        </details>
+        {% endfor %}
+
 
       <div class="form-group" style="margin-top: 20px">
         <a href="download-contract" class="button">Create contract</a>
       </div>
+
+    </div>
+
+    <div class="column-third">
+
+      <aside class="govuk-related-items" role="complementary">
+        <h2 class="heading-medium" id="subsection-title">Related content</h2>
+        <nav role="navigation" aria-labelledby="subsection-title">
+          <ul class="font-xsmall">
+            <li><a href="https://ccs-agreements.cabinetoffice.gov.uk/">Find a framework agreement</a></li>
+            <li><a href="#">Guidance</a></li>
+          </ul>
+        </nav>
+      </aside>
 
     </div>
   </div>

@@ -60,7 +60,7 @@
         <div class="form-group">
           {% for type in types %}
             <div class="multiple-choice" data-target="{{ type['name'] }}-context">
-              <input id="{{ type['name'] }}" type="radio" name="procurement-type" value="{{ type['name'] }}" {% if type == data['procurement-type'] %}checked="checked"{% endif %}>
+              <input id="{{ type['name'] }}" type="radio" name="procurement-type" value="{{ type['name'] }}" {% if type['name'] == data['procurement-type'] %}checked="checked"{% endif %}>
               <label for="{{ type['name'] }}">{{ type['name'] }}</label>
             </div>
             <div class="panel panel-border-narrow js-hidden" id="{{ type['name'] }}-context">
