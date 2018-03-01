@@ -51,7 +51,7 @@
             {{ data['contract-summary'] }}
           </dd>
           <dd class="cya-answer">
-            <a href="procurement-type">Edit</a>
+            <a href="contract-summary">Edit</a>
           </dd>
         </div>
 
@@ -132,83 +132,51 @@
     'Framework schedule 3: Framework prices'
   ]
 %}
-
       <h3 class="heading-small">Mandatory schedules</h3>
+      {% for schedule in mandatory_schedules %}
+        <details>
+          <summary><span class="summary">{{ schedule }}</span></summary>
+          <div class="panel panel-border-narrow">
+            <p>
+              Tracy to put content here
+            </p>
+            <p>
+              <a href="documents/schedule">Read more</a>
+            </p>
+        </div>
+      </details>
+      {% endfor %}
 
-        {% for schedule in mandatory_schedules %}
-          <details>
 
-            <summary><span class="summary">{{ schedule }}</span></summary>
+      {% macro schedule_(schedule_name, schedule_content, add_remove_link_name) %}
+      <details>
+          <summary><span class="summary">{{ schedule_name }}</span>  <a href="">{{ add_remove_link_name }}</a></summary>
+          <div class="panel panel-border-narrow">
+            <p>
+              {{ schedule_content }}
+            </p>
+            <p>
+              <a href="documents/schedule">Read more</a>
+            </p>
+        </div>
+      </details>
+      {% endmacro %}
 
-            <div class="panel panel-border-narrow">
-
-              <p>
-                Tracy to put content here
-              </p>
-
-              <p>
-                <a href="documents/schedule">Read more</a>
-              </p>
-
-          </div>
-
-        </details>
-        {% endfor %}
-
-{% set optional_schedules = [
-    'Framework schedule 9: Cyber Essentials Scheme',
-    'Call-off schedule 17: MoD terms'
-  ]
-%}
       <h3 class="heading-small">Optional schedules</h3>
+      {% if data['technology'] == "Yes" %}
+        {{ schedule_("Framework schedule 9: Cyber Essentials Scheme", 'here is my extra content', 'Remove') }}
+      {% endif %}
+      {% if data['mod'] == "Yes" %}
+        {{ schedule_("Call-off schedule 17: MoD terms", 'here is my extra content', 'Remove') }}
+      {% endif %}
 
-        {% for schedule in optional_schedules %}
-          <details>
-
-            <summary><span class="summary">{{ schedule }}</span>  <a href="">Remove</a></summary>
-
-            <div class="panel panel-border-narrow">
-
-              <p>
-                Tracy to put content here
-              </p>
-
-              <p>
-                <a href="documents/schedule">Read more</a>
-              </p>
-
-          </div>
-
-        </details>
-        {% endfor %}
-
-      {% set optional_schedules = [
-    'Framework schedule 9: Cyber Essentials Scheme',
-    'Call-off schedule 17: MoD terms'
-  ]
-%}
       <h3 class="heading-small">Schedules we haven't included....</h3>
-
-        {% for schedule in optional_schedules %}
-          <details>
-
-            <summary><span class="summary">{{ schedule }}</span>  <a href="">Add</a></summary>
-
-            <div class="panel panel-border-narrow">
-
-              <p>
-                Tracy to put content here
-              </p>
-
-              <p>
-                <a href="documents/schedule">Read more</a>
-              </p>
-
-          </div>
-
-        </details>
-        {% endfor %}
-
+      {% if data['technology'] == "No" %}
+        {{ schedule_("Framework schedule 9: Cyber Essentials Scheme", 'here is my extra content', 'Add') }}
+      {% endif %}
+      {% if data['mod'] == "No" %}
+        {{ schedule_("Call-off schedule 17: MoD terms", 'here is my extra content', 'Add') }}
+      {% endif %}
 
       <div class="form-group" style="margin-top: 20px">
         <a href="download-contract" class="button">Create contract</a>

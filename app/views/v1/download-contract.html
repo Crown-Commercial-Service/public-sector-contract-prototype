@@ -35,7 +35,7 @@
             Last updated
           </dt>
           <dd class="cya-answer">
-            20 Februrary 2018
+            6 March 2018
           </dd>
         </div>
 
@@ -56,6 +56,15 @@
             1.0
           </dd>
         </div>
+
+        <div>
+          <dt class="cya-question">
+            Category
+          </dt>
+          <dd class="cya-answer">
+            {{ data['procurement-type'] }}
+          </dd>
+        </div>
       </dl>
 
       <p style="margin-top: 30px">{{ data['contract-summary'] }}</p>
@@ -69,9 +78,9 @@
       </p>
 
       <ul class="list list-bullet">
-        <li><a href="documents/core-terms">Core terms</a></li>
-        <li><a href="documents/framework-award-form">Framework award form</a></li>
-        <li><a href="documents/call-off-order-form">Call-off order form</a></li>
+        <li>Core terms</a></li>
+        <li>Framework award form</li>
+        <li>Call-off order form</li>
       </uL>
 
 {% set mandatory_schedules = [
@@ -84,22 +93,17 @@
       <h3 class="heading-small">Mandatory schedules</h3>
       <ul class="list list-bullet">
         {% for schedule in mandatory_schedules %}
-          <li><a href="documents/schedule">{{ schedule }}</a></li>
+          <li>{{ schedule }}</li>
         {% endfor %}
       </uL>
 
-{% set optional_schedules = [
-    'Joint schedule 8: Guarantee',
-    'Framework schedule 9: Cyber Essentials scheme',
-    'Call-off schedule 17: MoD terms'
-  ]
-%}
+      {% if data['technology'] == 'Yes' or  data['mod'] == 'Yes' %}
       <h3 class="heading-small">Optional schedules</h3>
       <ul class="list list-bullet">
-        {% for schedule in optional_schedules %}
-          <li><a href="documents/schedule">{{ schedule }}</a></li>
-        {% endfor %}
+          {% if data['technology'] == 'Yes' %}<li>Framework schedule 9: Cyber Essentials scheme</li>{% endif %}
+          {% if data['mod'] == 'Yes' %}<li>Call-off schedule 17: MoD terms</li>{% endif %}
       </uL>
+      {% endif %}
 
       <div class="form-group">
         <a href="confirmation-page" class="button">Download contract</a>
