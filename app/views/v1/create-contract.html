@@ -35,7 +35,7 @@
             Last updated
           </dt>
           <dd class="cya-answer">
-            20 Februrary 2018
+            6 March 2018
           </dd>
         </div>
       </dl>
@@ -45,10 +45,25 @@
       <dl class="govuk-check-your-answers cya-questions-short">
         <div>
           <dt class="cya-question">
+            Contract summary
+          </dt>
+          <dd class="cya-answer">
+            {{ data['contract-summary'] }}
+          </dd>
+          <dd class="cya-answer">
+            <a href="procurement-type">Edit</a>
+          </dd>
+        </div>
+
+        <div>
+          <dt class="cya-question">
             Procurement category
           </dt>
           <dd class="cya-answer">
             {{ data['procurement-type'] }}
+          </dd>
+          <dd class="cya-answer">
+            <a href="procurement-type">Edit</a>
           </dd>
         </div>
 
@@ -59,8 +74,48 @@
           <dd class="cya-answer">
             {{ data['award-type'] }}
           </dd>
+          <dd class="cya-answer">
+            <a href="award-type">Edit</a>
+          </dd>
         </div>
       </dl>
+
+      <p class="text" style="margin-top: 40px">
+        This contract will contain:
+      </p>
+
+      <ul class="list list-bullet">
+        <li><a href="documents/core-terms">Core terms</a></li>
+        <li><a href="documents/framework-award-form">Framework award form</a></li>
+        <li><a href="documents/call-off-order-form">Call-off order form</a></li>
+      </uL>
+
+{% set mandatory_schedules = [
+    'Framework schedule 1: Specification',
+    'Framework schedule 2: Framework tender',
+    'Framework schedule 3: Framework prices'
+  ]
+%}
+
+      <h3 class="heading-small">Mandatory schedules</h3>
+      <ul class="list list-bullet">
+        {% for schedule in mandatory_schedules %}
+          <li><a href="documents/schedule">{{ schedule }}</a></li>
+        {% endfor %}
+      </uL>
+
+{% set optional_schedules = [
+    'Joint schedule 8: Guarantee',
+    'Framework schedule 9: Cyber Essentials Scheme',
+    'Call-off schedule 17: MoD terms'
+  ]
+%}
+      <h3 class="heading-small">Optional schedules</h3>
+      <ul class="list list-bullet">
+        {% for schedule in optional_schedules %}
+          <li><a href="documents/schedule">{{ schedule }}</a> <a href="documents/schedule">[remove]</a></li>
+        {% endfor %}
+      </uL>
 
       <div class="form-group" style="margin-top: 20px">
         <a href="download-contract" class="button">Create contract</a>

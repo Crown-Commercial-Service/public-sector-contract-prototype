@@ -4,13 +4,53 @@
   Question page
 {% endblock %}
 
+{% set types = [
+  {
+    'name': 'Communications',
+    'context': 'Advertising, media buying, market research, digital media, direct marketing, events'
+  },
+  {
+    'name': 'Construction',
+    'context': 'Building materials, modular buildings, project management and full design team services'
+  },
+  {
+    'name': 'Energy',
+    'context': 'Electricity, gas, liquid fuels and associated services'
+  },
+  {
+    'name': 'Fleet',
+    'context': 'Vehicle purchase, lease and fleet management services, tyres, conversions and telematics'
+  },
+  {
+    'name': 'Office',
+    'context': 'Office supplies, managed print services, records management, post, courier and print solutions'
+  },
+  {
+    'name': 'Property',
+    'context': 'Facilities management, furniture, laundry, catering'
+  },
+  {
+    'name': 'Research',
+    'context': 'Market, economic and social, also science and technical research'
+  },
+  {
+    'name': 'Technology',
+    'context': 'Technology commodities, hardware, software, telecoms and network services, cloud and services and software licensing'
+  },
+  {
+    'name': 'Travel',
+    'context': 'Air, rail, hotel and meeting & event bookings, via Travel Management Companies'
+  }
+]
+%}
+
 {% block content %}
 
 <main id="content" role="main">
   <div class="grid-row">
     <div class="column-two-thirds">
 
-      <a class="link-back" href="/v1">Back</a>
+      <a class="link-back" href="name">Back</a>
 
       <h1 class="heading-large">What category is your contract in?
       </h1>
@@ -18,10 +58,13 @@
       <form class="form" action="contract-name" method="post">
 
         <div class="form-group">
-          {% for type in ['Professional Services', 'Technology', 'Property', 'Communications', 'Energy', 'Office', 'eCommerce', 'Fleet', 'Travel', 'Construction', 'Research'] %}
-            <div class="multiple-choice">
-              <input id="procurement-type" type="radio" name="procurement-type" value="{{ type }}" {% if type == data['procurement-type'] %}checked="checked"{% endif %}">
-              <label for="radio-{{ loop.index }}">{{ type }}</label>
+          {% for type in types %}
+            <div class="multiple-choice" data-target="{{ type['name'] }}-context">
+              <input id="{{ type['name'] }}" type="radio" name="procurement-type" value="{{ type['name'] }}" {% if type == data['procurement-type'] %}checked="checked"{% endif %}>
+              <label for="{{ type['name'] }}">{{ type['name'] }}</label>
+            </div>
+            <div class="panel panel-border-narrow js-hidden" id="{{ type['name'] }}-context">
+              <p>{{ type['context'] }}</p>
             </div>
           {% endfor %}
         </div>
@@ -38,8 +81,8 @@
         <h2 class="heading-medium" id="subsection-title">Related content</h2>
         <nav role="navigation" aria-labelledby="subsection-title">
           <ul class="font-xsmall">
-            <li><a href="#">More about procurement categories</a></li>
             <li><a href="https://ccs-agreements.cabinetoffice.gov.uk/">Find a framework agreement</a></li>
+            <li><a href="https://ccs-agreements.cabinetoffice.gov.uk/category-information-and-updates">More about procurement categories</a></li>
           </ul>
         </nav>
       </aside>

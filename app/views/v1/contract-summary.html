@@ -17,8 +17,10 @@
 
       <form class="form" action="mod" method="post">
         <div class="form-group">
-          <label class="form-label" for="textarea">
-            Briefly describe the contract and what can be bought using it.
+          <label class="form-label" for="contract-summary">
+            <span class="form-hint">
+              Briefly describe the contract and what can be bought using it.
+            </span>
           </label>
           <textarea class="form-control form-control-3-4" name="contract-summary" id="contract-summary" rows="5">{{ data['contract-summary'] }}</textarea>
         </div>
