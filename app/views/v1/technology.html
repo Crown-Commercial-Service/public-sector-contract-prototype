@@ -29,15 +29,14 @@
                  This schedule will be included when you create your framework.</p>
             </div>
 
-            <div class="multiple-choice">
+            <div class="multiple-choice" data-target="technology-no">
               <input id="technology" type="radio" name="technology" value="No" {% if data['technology'] == 'No' %}checked="checked"{% endif %}">
               <label for="technology">No</label>
-                
-             <div class="panel panel-border-narrow js-hidden" id="mod-no">
+            </div> 
+            <div class="panel panel-border-narrow js-hidden" id="technology-no">
               <p>As you answered no, you don't need to use Joint schedule 9: Minimum standards of reliability. 
               If anything changes, you can include it when you create your framework.</p>
             </div> 
-            </div>
 
           </fieldset>
         </div>
