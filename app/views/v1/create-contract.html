@@ -182,20 +182,24 @@
       </details>
       {% endmacro %}
 
+      {% if data['mod'] == "Yes" or data['technology'] == "Yes" %}
       <h3 class="heading-small">Optional schedules</h3>
+      {% endif %}
       {% if data['mod'] == "Yes" %}
-        {{ schedule_("Joint schedule 8: Guarantee", 'here is my extra content', 'Remove') }}
+        {{ schedule_("Joint schedule 8: Guarantee", 'This schedule allows CCS and buyers to request a deed of guarantee from suppliers.', 'Remove') }}
       {% endif %}
       {% if data['technology'] == "Yes" %}
-        {{ schedule_("Joint schedule 9: Minimum standards of reliability", 'here is my extra content', 'Remove') }}
+        {{ schedule_("Joint schedule 9: Minimum standards of reliability", 'This schedule puts in extra safeguards for contracts worth over £20 million.', 'Remove') }}
       {% endif %}
 
+      {% if data['mod'] == "No" or data['technology'] == "No" %}
       <h3 class="heading-small">Optional schedules not included</h3>
+      {% endif %}
       {% if data['mod'] == "No" %}
-        {{ schedule_("Joint schedule 8: Guarantee", 'here is my extra content', 'Add') }}
+        {{ schedule_("Joint schedule 8: Guarantee", 'This schedule allows CCS and buyers to request a deed of guarantee from suppliers.', 'Add') }}
       {% endif %}
       {% if data['technology'] == "No" %}
-        {{ schedule_("Joint schedule 9: Minimum standards of reliability", 'here is my extra content', 'Add') }}
+        {{ schedule_("Joint schedule 9: Minimum standards of reliability", 'This schedule puts in extra safeguards for contracts worth over £20 million.', 'Add') }}
       {% endif %}
 
       <div class="form-group" style="margin-top: 20px">
