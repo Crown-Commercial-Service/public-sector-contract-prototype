@@ -20,10 +20,10 @@
               <h1 class="heading-large">How will the buyer award a contract at call-off?</h1>
             </legend>
 
-            {% for type in ['Direct award', 'Further competition'] %}
+            {% for type in [['Direct award', 'Buyers can award a contract to a supplier without going through a bidding process.'], ['Further competition', 'Suppliers on a framework have to bid for business.']] %}
             <div class="multiple-choice">
-              <input id="award-type" type="checkbox" name="award-type" value="{{ type }}" {% if type == data['award-type'] %}checked="checked"{% endif %}">
-              <label for="checkbox-{{ loop.index }}">{{ type}}<br><span class="form-hint">extra content</span></label>
+              <input id="award-type" type="checkbox" name="award-type" value="{{ type[0] }}" {% if type[0] == data['award-type'] %}checked="checked"{% endif %}">
+              <label for="checkbox-{{ loop.index }}">{{ type[0] }}<br><span class="form-hint">{{ type[1] }}</span></label>
             </div>
             {% endfor %}
           </fieldset>
