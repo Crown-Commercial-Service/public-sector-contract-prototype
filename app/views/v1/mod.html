@@ -25,12 +25,17 @@
               <label for="mod">Yes</label>
             </div>
             <div class="panel panel-border-narrow js-hidden" id="mod-yes">
-              <p>We recommend you use Call-off schedule 17: MoD terms</p>
+              <p>You'll need to use Call-off schedule 17: MoD terms. This schedule has been added to your framework contract.</p>
             </div>
 
             <div class="multiple-choice">
               <input id="mod" type="radio" name="mod" value="No" {% if data['mod'] == 'No' %}checked="checked"{% endif %}">
               <label for="mod">No</label>
+            </div>
+                      
+            <div class="panel panel-border-narrow js-hidden" id="mod-no">
+              <p>As you answered no, you don't need to use Call-off schedule 17: MoD terms. 
+              If anything changes, you can include it when you create your framework.</p>
             </div>
 
           </fieldset>
