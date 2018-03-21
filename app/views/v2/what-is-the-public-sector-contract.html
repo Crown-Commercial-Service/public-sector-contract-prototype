@@ -141,6 +141,24 @@
         <p>{{ schedule[1] }}</p>
       {% endfor %}
 
+{% set optional_schedules = [
+  [
+    "Optional schedule 1",
+    "Optional schedule 1 context"
+  ],
+  [
+    "Optional schedule 2",
+    "Optional schedule 2 context"
+  ]
+]
+%}
+
+      <h3 class="heading-small">Optional schedules</h3>
+      {% for schedule in optional_schedules %}
+        <a href="">{{ schedule[0] }}</a>
+        <p>{{ schedule[1] }}</p>
+      {% endfor %}
+
       <div class="form-group" style="margin-top: 20px">
         <a href="reference-number" class="button">Create a contract</a>
       </div>
