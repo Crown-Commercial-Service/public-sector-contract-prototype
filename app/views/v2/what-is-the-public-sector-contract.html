@@ -9,26 +9,26 @@
 <main id="content" role="main">
   <div class="grid-row">
     <div class="column-two-thirds">
-      <a href="award-type" class="link-back">Back</a>
+      <a href="/v2/index" class="link-back">Back</a>
 
       <h1 class="heading-large">
         The contract documents
       </h1>
 
       <p class="text" style="margin-top: 40px">
-        
+
       You can view and download each of the individual sections of the contract.</p>
 
       <p>Click on the document names to find out more.</p>
 
       <p>You can also decide whether you need to add any of the optional schedules to your contract.
-        
+
       </p>
-      
+
       <h3 class="heading-small">Contract documents</h3>
-      
+
       <p>These documents must be used in every procurement.</p>
-      
+
       <a href="">Core terms</a>
       <p>
         Standards CCS terms for common goods and services bought using a framework agreement.
@@ -44,96 +44,101 @@
         Details the goods or service being bought, what they’ll cost and how they’ll be delivered.
       </p>
 
+
 {% set mandatory_schedules = [
-    <a href="">'Framework schedule 1: Specification',</a>
-       <p>
-        What the supplier is selling.
-      </p> 
-    <a href="">'Framework schedule 2: Framework tender',</a>
-       <p>
-        How the supplier will deliver their goods or services.
-      </p>  
-    <a href="">'Framework schedule 3: Framework prices',</a>
-       <p>
-        What the supplier can charge.
-      </p>  
-    <a href="">'Framework schedule 4: Framework management',</a>
-       <p>
-        How the framework will be managed.
-      </p>  
-    <a href="">'Framework schedule 5: Management charges and information',</a>
-       <p>
-        What suppliers have to tell CCS and the charges they must pay.
-      </p>  
-    <a href="">'Framework schedule 6: Call-off award procedure',</a>
-        <p>
-        How a call-off contract should be awarded.
-      </p>  
-     <a href="">'Framework schedule 7: Self audit certificate',</a>
-        <p>
-        A template letter that confirms suppliers have followed all necessary procedures.
-      </p> 
-    <a href="">'Joint schedule 1: Definitions',</a>
-       <p>
-        What all the capitalised terms in the contract mean.
-      </p> 
-    <a href="">'Joint schedule 2: Variation form',</a>
-       <p>
-        How an existing contract can be changed.
-      </p> 
-    <a href="">'Joint schedule 3: Insurance requirements',</a>
-      <p>
-        The insurance a supplier needs in case of neglicence or breach of obligations.
-      </p> 
-    <a href="">'Joint schedule 4: Commercially sensitive information',</a>
-       <p>
-        The only information about the supplier that can't be publicly disclosed.
-      </p> 
-    <a href="">'Joint schedule 5: Corporate social responsibility',</a>
-       <p>
-        The supplier's social responsibilities.
-      </p> 
-    <a href="">'Joint schedule 6: Key subcontractors',</a>
-       <p>
-        Restrictions on when suppliers can change the subcontractors working on the contract.
-      </p> 
-    <a href="">'Joint schedule 7: Financial difficulties',</a>
-       <p>
-        What happens if the supplier gets into financial trouble.
-      </p> 
-    <a href="">'Joint schedule 8: Guarantee',</a>
-      <p>
-        A third-party must provide an assurance that the supplier can fulfill their obligations. 
-      </p> 
-        <a href="">'Joint schedule 9: Minimum standards of reliability',</a>
-      <p>
-        A requirement that call-off contracts must meet the standards outlined in the OJEU notice. 
-      </p> 
-        <a href="">'Joint schedule 10: Rectification plan',</a>
-      <p>
-        What to do if the supplier breaches the terms of the contract.
-      </p> 
-        <a href="">'Joint schedule 11: Processing data',</a>
-      <p>
-        How suppliers should handle data.
-      </p> 
-    <a href="">'Call-off schedule 1: Transparency reports',</a>
-      <p>
-        Information the buyer needs from the supplier to meet its transparency requirements.
-      </p> 
-    <a href="">'Call-off schedule 2: Staff transfer',</a>
-      <p>
-        Protection if employees transfer to a new organisation.
-      </p> 
-    <a href="">'Call-off schedule 3: Continuous improvement',</a>
-      <p>
-        Supplies must always improve their performance.
-      </p>
+  [
+    "Framework schedule 1: Specification",
+    "What the supplier is selling."
+  ],
+  [
+    "Framework schedule 2: Framework tender",
+    "How the supplier will deliver their goods or services."
+  ],
+  [
+    "Framework schedule 3: Framework prices",
+    "What the supplier can charge."
+  ],
+  [
+    "Framework schedule 4: Framework management",
+    "How the framework will be managed."
+  ],
+  [
+    "Framework schedule 5: Management charges and information",
+    "What suppliers have to tell CCS and the charges they must pay."
+  ],
+  [
+    "Framework schedule 6: Call-off award procedure",
+    "How a call-off contract should be awarded."
+  ],
+  [
+    "Framework schedule 7: Self audit certificate",
+    "A template letter that confirms suppliers have followed all necessary procedures."
+  ],
+  [
+    "Joint schedule 1: Definitions",
+    "What all the capitalised terms in the contract mean."
+  ],
+  [
+    "Joint schedule 2: Variation form",
+    "How an existing contract can be changed."
+  ],
+  [
+    "Joint schedule 3: Insurance requirements",
+    "The insurance a supplier needs in case of neglicence or breach of obligations."
+  ],
+  [
+    "Joint schedule 4: Commercially sensitive information",
+    "The only information about the supplier that can't be publicly disclosed."
+  ],
+  [
+    "Joint schedule 5: Corporate social responsibility",
+    "The supplier's social responsibilities."
+  ],
+  [
+    "Joint schedule 6: Key subcontractors",
+    "Restrictions on when suppliers can change the subcontractors working on the contract."
+  ],
+  [
+    "Joint schedule 7: Financial difficulties",
+    "What happens if the supplier gets into financial trouble."
+
+  ],
+  [
+    "Joint schedule 8: Guarantee",
+    "A third-party must provide an assurance that the supplier can fulfill their obligations."
+  ],
+  [
+    "Joint schedule 9: Minimum standards of reliability",
+    "A requirement that call-off contracts must meet the standards outlined in the OJEU notice."
+  ],
+  [
+    "Joint schedule 10: Rectification plan",
+    "What to do if the supplier breaches the terms of the contract."
+  ],
+  [
+    "Joint schedule 11: Processing data",
+    "How suppliers should handle data."
+  ],
+  [
+    "Call-off schedule 1: Transparency reports",
+    "Information the buyer needs from the supplier to meet its transparency requirements."
+
+  ],
+  [
+    "Call-off schedule 2: Staff transfer",
+    "Protection if employees transfer to a new organisation."
+  ],
+  [
+    "Call-off schedule 3: Continuous improvement",
+    "Supplies must always improve their performance."
   ]
+]
 %}
+
       <h3 class="heading-small">Mandatory schedules</h3>
       {% for schedule in mandatory_schedules %}
-        <a href="">{{ schedule }}</a><br>
+        <a href="">{{ schedule[0] }}</a>
+        <p>{{ schedule[1] }}</p>
       {% endfor %}
 
       <div class="form-group" style="margin-top: 20px">
