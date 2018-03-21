@@ -1,0 +1,162 @@
+{% extends "layout.html" %}
+
+{% block page_title %}
+  What is the public sector contract
+{% endblock %}
+
+{% block content %}
+
+<main id="content" role="main">
+  <div class="grid-row">
+    <div class="column-two-thirds">
+      <a href="award-type" class="link-back">Back</a>
+
+      <h1 class="heading-large">
+        What is the public sector contract...
+      </h1>
+
+      <p class="text" style="margin-top: 40px">
+        This framework contract will contain the:
+      </p>
+
+        <details>
+            <summary><span class="summary">Core terms</span></summary>
+
+            <div class="panel panel-border-narrow">
+              <p>
+
+                Standards CCS terms for common goods and services bought using a framework agreement.
+              </p>
+
+              <p>
+                <a href="documents/core-terms">Read more</a>
+              </p>
+            </div>
+        </details>
+
+        <details>
+            <summary><span class="summary">Framework award form</span></summary>
+
+            <div class="panel panel-border-narrow">
+              <p>
+
+               Where CCS and suppliers sign the contract and the place that tells you what you need to know
+               to form the contract.
+              </p>
+
+              <p>
+                <a href="documents/framework-award-form">Read more</a>
+              </p>
+            </div>
+        </details>
+
+        <details>
+            <summary><span class="summary">Call-off order form</span></summary>
+
+            <div class="panel panel-border-narrow">
+              <p>
+
+                Details the goods or service being bought, what they’ll cost and how they’ll be delivered.
+              </p>
+
+              <p>
+                <a href="documents/call-off-order-form">Read more</a>
+              </p>
+            </div>
+        </details>
+
+{% set mandatory_schedules = [
+    'Framework schedule 1: Specification',
+    'Framework schedule 2: Framework tender',
+    'Framework schedule 3: Framework prices',
+    'Framework schedule 4: Framework management',
+    'Framework schedule 5: Management charges and information',
+    'Framework schedule 6: Call-off award procedure',
+    'Framework schedule 7: Self audit certificate',
+    'Joint schedule 1: Definitions',
+    'Joint schedule 2: Variation form',
+    'Joint schedule 3: Insurance requirements',
+    'Joint schedule 4: Commercially sensitive information',
+    'Joint schedule 5: Corporate social responsibility',
+    'Joint schedule 6: Rectification plan',
+    'Joint schedule 7: Processing data',
+    'Joint schedule 8: Definitions',
+    'Call-off schedule 1: Transparency reports',
+    'Call-off schedule 2: Staff transfer',
+    'Call-off schedule 3: Continuous improvement',
+    'Call-off schedule 4: Exit management'
+  ]
+%}
+      <h3 class="heading-small">Mandatory schedules</h3>
+      {% for schedule in mandatory_schedules %}
+        <details>
+          <summary><span class="summary">{{ schedule }}</span></summary>
+          <div class="panel panel-border-narrow">
+            <p>
+              These schedules have to be used for every procurement and explain how the terms work in practice.
+            </p>
+            <p>
+              <a href="documents/schedule">Read more</a>
+            </p>
+        </div>
+      </details>
+      {% endfor %}
+
+
+      {% macro schedule_(schedule_name, schedule_content, add_remove_link_name) %}
+      <details>
+          <summary><span class="summary">{{ schedule_name }}</span>  <a href="">{{ add_remove_link_name }}</a></summary>
+          <div class="panel panel-border-narrow">
+            <p>
+              {{ schedule_content }}
+            </p>
+            <p>
+              <a href="documents/schedule">Read more</a>
+            </p>
+        </div>
+      </details>
+      {% endmacro %}
+
+      {% if data['mod'] == "Yes" or data['technology'] == "Yes" %}
+      <h3 class="heading-small">Optional schedules</h3>
+      {% endif %}
+      {% if data['mod'] == "Yes" %}
+        {{ schedule_("Joint schedule 8: Guarantee", 'This schedule allows CCS and buyers to request a deed of guarantee from suppliers.', 'Remove') }}
+      {% endif %}
+      {% if data['technology'] == "Yes" %}
+        {{ schedule_("Joint schedule 9: Minimum standards of reliability", 'This schedule puts in extra safeguards for contracts worth over £20 million.', 'Remove') }}
+      {% endif %}
+
+      {% if data['mod'] == "No" or data['technology'] == "No" %}
+      <h3 class="heading-small">Optional schedules not included</h3>
+      {% endif %}
+      {% if data['mod'] == "No" %}
+        {{ schedule_("Joint schedule 8: Guarantee", 'This schedule allows CCS and buyers to request a deed of guarantee from suppliers.', 'Add') }}
+      {% endif %}
+      {% if data['technology'] == "No" %}
+        {{ schedule_("Joint schedule 9: Minimum standards of reliability", 'This schedule puts in extra safeguards for contracts worth over £20 million.', 'Add') }}
+      {% endif %}
+
+      <div class="form-group" style="margin-top: 20px">
+        <a href="download-contract" class="button">Create framework contract</a>
+      </div>
+
+    </div>
+
+    <div class="column-third">
+
+      <aside class="govuk-related-items" role="complementary">
+        <h2 class="heading-medium" id="subsection-title">Related content</h2>
+        <nav role="navigation" aria-labelledby="subsection-title">
+          <ul class="font-xsmall">
+            <li><a href="https://ccs-agreements.cabinetoffice.gov.uk/">Find a framework agreement</a></li>
+            <li><a href="#">Guidance</a></li>
+          </ul>
+        </nav>
+      </aside>
+
+    </div>
+  </div>
+</main>
+
+{% endblock %}
