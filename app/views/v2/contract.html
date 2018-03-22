@@ -107,9 +107,25 @@
       {% endfor %}
 
 
-      <div class="form-group">
+      <div class="form-group" style="margin-top: 20px">
         <a href="../public/files/example-contract.zip" class="button">Download</a>
       </div>
+
+{% set optional_schedules = [
+    "Framework schedule 9: Cyber essentials scheme",
+    "Call-off schedule 4: Call-off tender",
+    "Call-off schedule 6: ICT services",
+    "Call-off schedule 10: Exit management",
+    "Call-off schedule 11: Installation works",
+    "Call-off schedule 12: Background checks"
+]
+%}
+
+      <h3 class="heading-small">Optional schedules</h3>
+      {% for schedule in optional_schedules %}
+        <a href="schedule">{{ schedule }}</a><br>
+      {% endfor %}
+
 
     </div>
   </div>
