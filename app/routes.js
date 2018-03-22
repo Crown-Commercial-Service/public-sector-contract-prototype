@@ -130,33 +130,38 @@ schedules = [
 	{
 		"name": "Framework schedule 9: Cyber essentials scheme",
 		"optional": true,
-	    "context": "Cyber security standards the supplier must meet."
+	    "context": "Cyber security standards the supplier must meet.",
+	    "decision_text": "This text will help them to decide if they should use this or not"
 	},
 	{
 		"name": "Call-off schedule 4: Call-off tender",
 		"optional": true,
-	    "context": "How the supplier will meet the buyer's demands."
+	    "context": "How the supplier will meet the buyer's demands.",
+	    "decision_text": "This text will help them to decide if they should use this or not"
 	},
 	{
 		"name": "Call-off schedule 6: ICT services",
 		"optional": true,
-	    "context": "Additional responsibilities for ICT contracts."
+	    "context": "Additional responsibilities for ICT contracts.",
+	    "decision_text": "This text will help them to decide if they should use this or not"
 	},
 	{
 		"name": "Call-off schedule 10: Exit management",
 		"optional": true,
-	    "context": "What happens when the contract ends."
+	    "context": "What happens when the contract ends.",
+	    "decision_text": "This text will help them to decide if they should use this or not"
 	},
 	{
 		"name": "Call-off schedule 11: Installation works",
 		"optional": true,
-	    "context": "What the supplier has to do when installing goods."
+	    "context": "What the supplier has to do when installing goods.",
+	    "decision_text": "This text will help them to decide if they should use this or not"
 	},
 	{
 		"name": "Call-off schedule 12: Background checks",
 		"optional": true,
 		"context": "Security checks on supplier staff.",
-		"decision-text": "This text will help them to decide if they should use this or not"
+		"decision_text": "This text will help them to decide if they should use this or not"
 	}
 ]
 

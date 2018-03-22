@@ -20,18 +20,17 @@
               <h1 class="heading-large">Add/Remove {{ schedule.name }}</h1>
             </legend>
 
-            <p>Context sentence here</p>
+            <p>{{ schedule.decision_text }}</p>
 
-            <div class="multiple-choice" data-target="technology-yes">
-              <input id="technology" type="radio" name="technology" value="Yes" {% if data['technology'] == 'Yes' %}checked="checked"{% endif %}>
-              <label for="technology">Yes</label>
+            <div class="multiple-choice">
+              <input id="schedule-yes" type="radio" name="schedule" value="Yes">
+              <label for="schedule-yes">Yes</label>
             </div>
 
-            <div class="multiple-choice" data-target="technology-no">
-              <input id="technology" type="radio" name="technology" value="No" {% if data['technology'] == 'No' %}checked="checked"{% endif %}">
-              <label for="technology">No</label>
+            <div class="multiple-choice">
+              <input id="schedule-no" type="radio" name="schedule" value="No">
+              <label for="schedule-no">No</label>
             </div>
-
           </fieldset>
         </div>
 
