@@ -71,30 +71,61 @@
       <h2 class="heading-medium">Documents</h2>
 
       <p class="text">
-        This framework contract is made up of the:
+        This contract includes:
       </p>
 
       <a href="schedule">Core terms</a><br>
       <a href="schedule">Framework award form</a><br>
       <a href="schedule">Call-off order form</a><br>
 
+{% set mandatory_schedules = [
+    'Framework schedule 1: Specification',
+    'Framework schedule 2: Framework tender',
+    'Framework schedule 3: Framework prices',
+    'Framework schedule 4: Framework management',
+    'Framework schedule 5: Management charges and information',
+    'Framework schedule 6: Call-off award procedure',
+    'Framework schedule 7: Self audit certificate',
+    'Joint schedule 1: Definitions',
+    'Joint schedule 2: Variation form',
+    'Joint schedule 3: Insurance requirements',
+    'Joint schedule 4: Commercially sensitive information',
+    'Joint schedule 5: Corporate social responsibility',
+    'Joint schedule 6: Rectification plan',
+    'Joint schedule 7: Processing data',
+    'Joint schedule 8: Definitions',
+    'Call-off schedule 1: Transparency reports',
+    'Call-off schedule 2: Staff transfer',
+    'Call-off schedule 3: Continuous improvement',
+    'Call-off schedule 4: Exit management'
+  ]
+%}
+
       <h3 class="heading-small">Mandatory schedules</h3>
-      {% for schedule in schedules %}
-        {% if schedule.optional == false %}
-        <a href="schedule/{{ loop.index }}">{{ schedule.name }}</a><br>
-        {% endif %}
+      {% for schedule in mandatory_schedules %}
+        <a href="schedule">{{ schedule }}</a><br>
       {% endfor %}
+
 
       <div class="form-group" style="margin-top: 20px">
         <a href="../public/files/example-contract.zip" class="button">Download</a>
       </div>
 
+{% set optional_schedules = [
+    "Framework schedule 9: Cyber essentials scheme",
+    "Call-off schedule 4: Call-off tender",
+    "Call-off schedule 6: ICT services",
+    "Call-off schedule 10: Exit management",
+    "Call-off schedule 11: Installation works",
+    "Call-off schedule 12: Background checks"
+]
+%}
+
       <h3 class="heading-small">Optional schedules</h3>
-      {% for schedule in schedules %}
-        {% if schedule.optional == true %}
-        <a href="schedule/{{ loop.index }}">{{ schedule.name }}</a> - <a href="add-remove-schedule">Add</a><br>
-        {% endif %}
+      {% for schedule in optional_schedules %}
+        <a href="schedule">{{ schedule }}</a> - <a href="add-remove-schedule">Add</a><br>
       {% endfor %}
+
 
     </div>
   </div>
