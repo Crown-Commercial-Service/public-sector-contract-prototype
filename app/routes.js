@@ -111,7 +111,11 @@ router.get('/', function (req, res) {
 
 // add your routes here
 
-router.get('/v2/schedule/:scheduleId', function (req, res) {q
+router.get('/v2/contract', function (req, res) {
+  res.render('v2/contract', {schedules: schedules})
+})
+
+router.get('/v2/schedule/:scheduleId', function (req, res) {
 scheduleId = req.params["scheduleId"] - 1
   res.render('v2/schedule', {schedule: schedules[scheduleId]})
 })
