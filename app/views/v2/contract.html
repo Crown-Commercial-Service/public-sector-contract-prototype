@@ -1,0 +1,121 @@
+{% extends "layout.html" %}
+
+{% block page_title %}
+  Check your answers
+{% endblock %}
+
+{% block content %}
+
+<main id="content" role="main">
+  <div class="grid-row">
+    <div class="column-two-thirds">
+      <a href="team-members" class="link-back">Back</a>
+
+      <h1 class="heading-large">
+        {{ data['reference-number'] }}
+      </h1>
+
+
+      <!-- use additional modifier class to change column widths for multiple groups of questions and answers: -->
+      <!--   * `cya-questions-short` for short questions -->
+      <!--   * `cya-questions-long` for long questions -->
+      <!--   * none for single group of q&a -->
+      <dl class="govuk-check-your-answers cya-questions-short">
+        <div>
+          <dt class="cya-question">
+            Created by
+          </dt>
+          <dd class="cya-answer">
+            Firstname Lastname
+          </dd>
+        </div>
+
+        <div>
+          <dt class="cya-question">
+            Last updated
+          </dt>
+          <dd class="cya-answer">
+            27 March 2018
+          </dd>
+        </div>
+
+        <div>
+          <dt class="cya-question">
+            Status
+          </dt>
+          <dd class="cya-answer">
+            Draft
+          </dd>
+        </div>
+
+        <div>
+          <dt class="cya-question">
+            Version
+          </dt>
+          <dd class="cya-answer">
+            1.0
+          </dd>
+        </div>
+
+        <div>
+          <dt class="cya-question">
+            Sourcing manager
+          </dt>
+          <dd class="cya-answer">
+            your-email@crowncommercial.gov.uk
+          </dd>
+        </div>
+      </dl>
+
+
+      <h2 class="heading-medium">Documents</h2>
+
+      <p class="text">
+        This framework contract is made up of the:
+      </p>
+
+      <ul class="list list-bullet">
+        <li>Core terms</a></li>
+        <li>Framework award form</li>
+        <li>Call-off order form</li>
+      </uL>
+
+{% set mandatory_schedules = [
+    'Framework schedule 1: Specification',
+    'Framework schedule 2: Framework tender',
+    'Framework schedule 3: Framework prices',
+    'Framework schedule 4: Framework management',
+    'Framework schedule 5: Management charges and information',
+    'Framework schedule 6: Call-off award procedure',
+    'Framework schedule 7: Self audit certificate',
+    'Joint schedule 1: Definitions',
+    'Joint schedule 2: Variation form',
+    'Joint schedule 3: Insurance requirements',
+    'Joint schedule 4: Commercially sensitive information',
+    'Joint schedule 5: Corporate social responsibility',
+    'Joint schedule 6: Rectification plan',
+    'Joint schedule 7: Processing data',
+    'Joint schedule 8: Definitions',
+    'Call-off schedule 1: Transparency reports',
+    'Call-off schedule 2: Staff transfer',
+    'Call-off schedule 3: Continuous improvement',
+    'Call-off schedule 4: Exit management'
+  ]
+%}
+
+      <h3 class="heading-small">Mandatory schedules</h3>
+      <ul class="list list-bullet">
+        {% for schedule in mandatory_schedules %}
+          <li>{{ schedule }}</li>
+        {% endfor %}
+      </uL>
+
+      <div class="form-group">
+        <a href="../public/files/example-contract.zip" class="button">Download</a>
+      </div>
+
+    </div>
+  </div>
+</main>
+
+{% endblock %}
