@@ -120,4 +120,9 @@ scheduleId = req.params["scheduleId"] - 1
   res.render('v2/schedule', {schedule: schedules[scheduleId]})
 })
 
+router.get('/v2/add-remove-schedule/:scheduleId', function (req, res) {
+scheduleId = req.params["scheduleId"] - 1
+  res.render('v2/add-remove-schedule', {schedule: schedules[scheduleId]})
+})
+
 module.exports = router
