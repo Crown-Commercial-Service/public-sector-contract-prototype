@@ -1,0 +1,60 @@
+{% extends "layout.html" %}
+
+{% block page_title %}
+  Question page
+{% endblock %}
+
+{% block content %}
+
+<main id="content" role="main">
+  <div class="grid-row">
+    <div class="column-two-thirds">
+
+      <a class="link-back" href="reference-number">Back</a>
+
+      <h1 class="heading-large">Team member details</h1>
+
+      <p>Who else is working on this contract?</p>
+
+      <form class="form" action="contract-summary" method="post">
+        <div class="form-group">
+          <label class="form-label" for="reference-number">
+            <span class="form-hint">
+              Email address
+            </span>
+          </label>
+          <input class="form-control" id="reference-number" type="text" name="contract-name" value="{{ data['team-member-email-address'] }}">
+        </div>
+
+        <div class="form-group">
+          <fieldset>
+
+            <legend>
+              <h1 class="heading-large">Role</h1>
+            </legend>
+
+            <div class="multiple-choice" data-target="mod-yes">
+              <input id="mod" type="radio" name="mod" value="Yes" {% if data['mod'] == 'Yes' %}checked="checked"{% endif %}>
+              <label for="mod">Sourcing manager</label>
+            </div>
+
+            <div class="multiple-choice" data-target="mod-no">
+              <input id="mod" type="radio" name="mod" value="No" {% if data['mod'] == 'No' %}checked="checked"{% endif %}">
+              <label for="mod">Some other role</label>
+            </div>
+
+          </fieldset>
+        </div>
+
+        <p>Team members will receive notifications when optional schedules are added to the contract.</p>
+
+        <div class="form-group">
+          <input class="button" type="submit" value="Continue">
+        </div>
+      </form>
+
+    </div>
+  </div>
+</main>
+
+{% endblock %}
