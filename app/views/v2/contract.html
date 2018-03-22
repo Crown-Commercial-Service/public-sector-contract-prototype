@@ -74,11 +74,9 @@
         This framework contract is made up of the:
       </p>
 
-      <ul class="list list-bullet">
-        <li>Core terms</a></li>
-        <li>Framework award form</li>
-        <li>Call-off order form</li>
-      </uL>
+      <a href="schedule">Core terms</a><br>
+      <a href="schedule">Framework award form</a><br>
+      <a href="schedule">Call-off order form</a><br>
 
 {% set mandatory_schedules = [
     'Framework schedule 1: Specification',
@@ -104,11 +102,10 @@
 %}
 
       <h3 class="heading-small">Mandatory schedules</h3>
-      <ul class="list list-bullet">
-        {% for schedule in mandatory_schedules %}
-          <li>{{ schedule }}</li>
-        {% endfor %}
-      </uL>
+      {% for schedule in mandatory_schedules %}
+        <a href="schedule">{{ schedule }}</a><br>
+      {% endfor %}
+
 
       <div class="form-group">
         <a href="../public/files/example-contract.zip" class="button">Download</a>
