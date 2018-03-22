@@ -12,7 +12,7 @@
 
       <a class="link-back" href="what-is-the-public-sector-contract">Back</a>
 
-      <h1 class="heading-large">Framework reference number</h1>
+      <h1 class="heading-large">Contract name</h1>
 
       <form class="form" action="contract" method="post">
 
@@ -20,20 +20,20 @@
           <h2 class="heading-medium">Framework reference number</h2>
           <label class="form-label" for="reference-number">
             <span class="form-hint">
-              Also known as the RM number.
+             This is also known as the RM number. If you don't know it yet, just add something and change it later.
             </span>
           </label>
           <input class="form-control" id="reference-number" type="text" name="reference-number" value="{{ data['reference-number'] }}">
         </div>
 
         <div class="form-group">
-          <h2 class="heading-medium">Contract name</h2>
-          <label class="form-label" for="contract-name">
+          <h2 class="heading-medium">Name</h2>
+          <label class="form-label" for="reference-number">
             <span class="form-hint">
-              Name your contract so you can find it easily. You can change this.
+              Name your contract so you can find it easily when you log back in to the system. You can always change this.
             </span>
           </label>
-          <input class="form-control" id="reference-number" type="text" name="contract-name" value="{{ data['contract-name'] }}">
+          <input class="form-control" id="reference-number" type="text" name="reference-number" value="{{ data['reference-number'] }}">
         </div>
 
         <div class="form-group">
