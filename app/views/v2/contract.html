@@ -9,7 +9,6 @@
 <main id="content" role="main">
   <div class="grid-row">
     <div class="column-two-thirds">
-      <a href="team-members" class="link-back">Back</a>
 
       <h1 class="heading-large">
         {{ data['reference-number'] }}
@@ -23,11 +22,26 @@
       <dl class="govuk-check-your-answers cya-questions-short">
         <div>
           <dt class="cya-question">
+            Contract name
+          </dt>
+          <dd class="cya-answer">
+            {{ data.contract_name }}
+          </dd>
+          <dd class="cya-change">
+            <a href="#">
+              Change<span class="visually-hidden"> contract name</span>
+            </a>
+          </dd>
+        </div>
+
+        <div>
+          <dt class="cya-question">
             Created by
           </dt>
           <dd class="cya-answer">
             Firstname Lastname
           </dd>
+          <dd class="cya-change"></dd>
         </div>
 
         <div>
@@ -37,6 +51,7 @@
           <dd class="cya-answer">
             27 March 2018
           </dd>
+          <dd class="cya-change"></dd>
         </div>
 
         <div>
@@ -46,6 +61,7 @@
           <dd class="cya-answer">
             Draft
           </dd>
+          <dd class="cya-change"></dd>
         </div>
 
         <div>
@@ -55,6 +71,7 @@
           <dd class="cya-answer">
             1.0
           </dd>
+          <dd class="cya-change"></dd>
         </div>
 
         <div>
@@ -64,6 +81,7 @@
           <dd class="cya-answer">
             your-email@crowncommercial.gov.uk
           </dd>
+          <dd class="cya-change"></dd>
         </div>
       </dl>
 
