@@ -67,6 +67,9 @@
         </div>
       </dl>
 
+      <p style="margin-top: 30px;">
+        <a href="team-members">Add team members</a>
+      </p>
 
       <h2 class="heading-medium">Documents</h2>
 
@@ -74,12 +77,6 @@
         This contract contains:
       </p>
 
-      <a href="schedule">Core terms</a><br>
-      <a href="schedule">Framework award form</a><br>
-      <a href="schedule">Call-off order form</a><br>
-
-
-      <h3 class="heading-small">Schedules</h3>
       {% for schedule in schedules %}
         {% if schedule.optional == false %}
         <a href="schedule/{{ loop.index }}">{{ schedule.name }}</a><br>
@@ -91,6 +88,7 @@
       </div>
 
       <h3 class="heading-small">Optional schedules</h3>
+      <p>You now need to add these if you wish to include them in your contract</p>
       {% for schedule in schedules %}
         {% if schedule.optional == true %}
         <a href="schedule/{{ loop.index }}">{{ schedule.name }}</a> - <a href="add-remove-schedule/{{ loop.index }}">Add</a><br>

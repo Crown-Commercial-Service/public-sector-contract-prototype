@@ -35,12 +35,17 @@
 
             <div class="multiple-choice" data-target="mod-yes">
               <input id="mod" type="radio" name="mod" value="Yes" {% if data['mod'] == 'Yes' %}checked="checked"{% endif %}>
-              <label for="mod">Sourcing manager</label>
+              <label for="mod">Legal</label>
             </div>
 
-            <div class="multiple-choice" data-target="mod-no">
-              <input id="mod" type="radio" name="mod" value="No" {% if data['mod'] == 'No' %}checked="checked"{% endif %}">
-              <label for="mod">Add role</label>
+            <div class="multiple-choice" data-target="mod-yes">
+              <input id="mod" type="radio" name="mod" value="Yes" {% if data['mod'] == 'Yes' %}checked="checked"{% endif %}>
+              <label for="mod">Policy</label>
+            </div>
+
+            <div class="multiple-choice" data-target="mod-yes">
+              <input id="mod" type="radio" name="mod" value="Yes" {% if data['mod'] == 'Yes' %}checked="checked"{% endif %}>
+              <label for="mod">Sourcing</label>
             </div>
 
           </fieldset>
@@ -49,7 +54,7 @@
         <p>Team members will be emailed when optional schedules are added.</p>
 
         <div class="form-group">
-          <input class="button" type="submit" value="Send email">
+          <input class="button" type="submit" value="Invite">
           <input class="button" type="submit" value="Skip">
         </div>
       </form>

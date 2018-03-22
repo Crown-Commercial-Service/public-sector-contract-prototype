@@ -3,6 +3,18 @@ var router = express.Router()
 
 schedules = [
 	{
+		"name": 'Core terms',
+		"optional": false
+	},
+	{
+		"name": 'Framework award form',
+		"optional": false
+	},
+	{
+		"name": 'Call-off order form',
+		"optional": false
+	},
+	{
 		"name": 'Framework schedule 1: Specification',
 		"optional": false
 	},
@@ -100,7 +112,9 @@ schedules = [
 	},
 	{
 		"name": "Call-off schedule 12: Background checks",
-		"optional": true
+		"optional": true,
+		"context": "this is context about this schedule",
+		"decision-text": "This text will help them to decide if they should use this or not"
 	}
 ]
 
