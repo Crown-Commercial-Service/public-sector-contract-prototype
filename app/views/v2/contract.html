@@ -91,7 +91,7 @@
       <p>You now need to add these if you wish to include them in your contract</p>
       {% for schedule in schedules %}
         {% if schedule.optional == true %}
-        <a href="schedule/{{ loop.index }}">{{ schedule.name }}</a> - <a href="add-remove-schedule/{{ loop.index }}">Add</a><br>
+        <a href="schedule/{{ loop.index }}">{{ schedule.name }}</a> - <a href="schedule/{{ loop.index }}/add">Add</a><br>
         {% endif %}
       {% endfor %}
 

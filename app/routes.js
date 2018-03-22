@@ -181,13 +181,14 @@ router.get('/v2/contract', function (req, res) {
 })
 
 router.get('/v2/schedule/:scheduleId', function (req, res) {
-scheduleId = req.params["scheduleId"] - 1
+  scheduleId = req.params["scheduleId"] - 1
   res.render('v2/schedule', {schedule: schedules[scheduleId]})
 })
 
-router.get('/v2/add-remove-schedule/:scheduleId', function (req, res) {
-scheduleId = req.params["scheduleId"] - 1
-  res.render('v2/add-remove-schedule', {schedule: schedules[scheduleId]})
+router.get('/v2/schedule/:scheduleId/:addOrRemove', function (req, res) {
+  scheduleId = req.params["scheduleId"] - 1
+  addOrRemove = req.params["addOrRemove"]
+  res.render('v2/add-remove-schedule', {schedule: schedules[scheduleId], addOrRemove: addOrRemove})
 })
 
 module.exports = router
