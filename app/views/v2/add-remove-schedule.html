@@ -17,24 +17,12 @@
           <fieldset>
 
             <legend>
-              <h1 class="heading-large">{{ schedule.name }}</h1>
+              <h1 class="heading-large">{{ addOrRemove | capitalize }} {{ schedule.name }}</h1>
             </legend>
 
             <p>
                 {{ schedule.decision_text | safe }}
             </p>
-
-            <h2 class="heading-medium">Would you like to {{ addOrRemove }} this schedule?</h2>
-
-            <div class="multiple-choice">
-              <input id="yesno-yes" type="radio" name="yesno" value="Yes">
-              <label for="yesno-yes">Yes</label>
-            </div>
-
-            <div class="multiple-choice">
-              <input id="yesno-no" type="radio" name="yesno" value="No">
-              <label for="yesno-no">No</label>
-            </div>
           </fieldset>
         </div>
 
@@ -46,6 +34,7 @@
 
         <div class="form-group">
           <input class="button" type="submit" value="Confirm">
+          <a href="../../contract" class="button">Cancel</a>
         </div>
       </form>
 
