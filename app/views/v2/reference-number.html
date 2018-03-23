@@ -14,7 +14,8 @@
 
       <h1 class="heading-large">Contract name</h1>
       
-      <p>Give the contract a name and add the RM number. This will make it easier to find later.</p>
+      <p>Add the framework reference number (also known as the RM number) and contract name. 
+      This will make it easier to find.</p>
 
       <form class="form" action="contract" method="post">
 
@@ -22,7 +23,7 @@
           <h2 class="heading-medium">Framework reference number</h2>
           <label class="form-label" for="reference-number">
             <span class="form-hint">
-             This is also known as the RM number. You can change this later if you don't know it.
+             Add the RM number. You'll use this to find your contract.
             </span>
           </label>
           <input class="form-control" id="reference-number" type="text" name="reference-number" value="{{ data['reference-number'] }}">
@@ -32,7 +33,8 @@
           <h2 class="heading-medium">Name</h2>
           <label class="form-label" for="reference-number">
             <span class="form-hint">
-              Pick a name that is easy to remember. You can always change this later.
+              You can also use a name to find your contract. 
+              If you don't know the name, choose something memorable. You can always change it later. 
             </span>
           </label>
           <input class="form-control" id="contract_name" type="text" name="contract_name" value="{{ data['contract_name'] }}">
