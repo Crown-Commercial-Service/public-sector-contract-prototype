@@ -128,36 +128,42 @@ schedules = [
 	    "context": "What the supplier can charge."
 	},
 	{
+		"id": 26,
 		"name": "Framework schedule 9: Cyber essentials scheme",
 		"optional": true,
 	    "context": "Cyber security standards the supplier must meet.",
 	    "decision_text": "This text will help them to decide if they should use this or not"
 	},
 	{
+		"id": 27,
 		"name": "Call-off schedule 4: Call-off tender",
 		"optional": true,
 	    "context": "How the supplier will meet the buyer's demands.",
 	    "decision_text": "This text will help them to decide if they should use this or not"
 	},
 	{
+		"id": 28,
 		"name": "Call-off schedule 6: ICT services",
 		"optional": true,
 	    "context": "Additional responsibilities for ICT contracts.",
 	    "decision_text": "This text will help them to decide if they should use this or not"
 	},
 	{
+		"id": 29,
 		"name": "Call-off schedule 10: Exit management",
 		"optional": true,
 	    "context": "What happens when the contract ends.",
 	    "decision_text": "This text will help them to decide if they should use this or not"
 	},
 	{
+		"id": 26,
 		"name": "Call-off schedule 11: Installation works",
 		"optional": true,
 	    "context": "What the supplier has to do when installing goods.",
 	    "decision_text": "This text will help them to decide if they should use this or not"
 	},
 	{
+		"id": 30,
 		"name": "Call-off schedule 12: Background checks",
 		"optional": true,
 		"context": "Security checks on supplier staff.",
