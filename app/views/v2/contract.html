@@ -89,8 +89,8 @@
 
       <p style="margin-top: 30px;">
         <a href="team-members">Add team members</a>
-        <p>Add the names and email addresses of the team.</p>
-      <p>They will be sent a notification that the contract is being created.</p>
+          <p>Add the team's names and email addresses.</p>
+      <p>They'll be sent a notification that the contract is being created.</p>
       </p>
 
       <h2 class="heading-medium">Documents</h2>
@@ -101,7 +101,7 @@
       {% for schedule in schedules %}
         {% if schedule.optional == true %}
           {% if schedule.id not in optionalIncluded %}
-            <a href="schedule/{{ loop.index }}">{{ schedule.name }}</a><a href="schedule/{{ loop.index }}/add" style="float: right;">Add</a><br>
+            <a href="schedule/{{ loop.index }}">{{ schedule.name }}</a> - <a href="schedule/{{ loop.index }}/add">Add</a><br>
           {% endif %}
         {% endif %}
       {% endfor %}
@@ -115,7 +115,7 @@
         <a href="schedule/{{ loop.index }}">{{ schedule.name }}</a><br>
         {% else %}
           {% if schedule.id in optionalIncluded %}
-            <a href="schedule/{{ loop.index }}">{{ schedule.name }}</a><a href="schedule/{{ loop.index }}/remove" style="float: right;">Remove</a><br>
+            <a href="schedule/{{ loop.index }}">{{ schedule.name }}</a> - <a href="schedule/{{ loop.index }}/remove">Remove</a><br>
           {% endif %}
         {% endif %}
       {% endfor %}
