@@ -20,7 +20,7 @@
               <h1 class="heading-large">{{ addOrRemove | capitalize }} {{ schedule.name }}</h1>
             </legend>
 
-            <p>{{ schedule.decision_text }}</p>
+            <p>{{ schedule.decision_text | safe }}</p>
 
             <div class="multiple-choice">
               <input id="schedule-yes" type="radio" name="schedule" value="Yes">
