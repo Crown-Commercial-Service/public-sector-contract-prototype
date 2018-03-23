@@ -101,7 +101,7 @@
       {% for schedule in schedules %}
         {% if schedule.optional == true %}
           {% if schedule.id not in optionalIncluded %}
-            <a href="schedule/{{ loop.index }}">{{ schedule.name }}</a> - <a href="schedule/{{ loop.index }}/add">Add</a><br>
+            <a href="schedule/{{ loop.index }}">{{ schedule.name }}</a><a href="schedule/{{ loop.index }}/add" style="float: right">Add</a><br>
           {% endif %}
         {% endif %}
       {% endfor %}
@@ -115,7 +115,7 @@
         <a href="schedule/{{ loop.index }}">{{ schedule.name }}</a><br>
         {% else %}
           {% if schedule.id in optionalIncluded %}
-            <a href="schedule/{{ loop.index }}">{{ schedule.name }}</a> - <a href="schedule/{{ loop.index }}/remove">Remove</a><br>
+            <a href="schedule/{{ loop.index }}">{{ schedule.name }}</a><a href="schedule/{{ loop.index }}/remove" style="float: right">Remove</a><br>
           {% endif %}
         {% endif %}
       {% endfor %}
