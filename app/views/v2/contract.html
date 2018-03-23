@@ -87,12 +87,15 @@
 
       <p style="margin-top: 30px;">
         <a href="team-members">Add team members</a>
+        <p>Add the names and contact details of the team.</p>
+      <p>This will send them a notification that the contract is being worked on.</p>
       </p>
 
       <h2 class="heading-medium">Documents</h2>
 
-      <h3 class="heading-small">Optional schedules</h3>
-      <p>You now need to add these if you wish to include them in your contract</p>
+      <h3 class="heading-small">Optional documents</h3>
+      <p>Take a look at the documents and decide if you need to use them.</p>
+      <p>You can add or remove them at any time from this page.</p>
       {% for schedule in schedules %}
         {% if schedule.optional == true %}
           {% if schedule.id not in optionalIncluded %}
