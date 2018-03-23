@@ -16,14 +16,14 @@
 
       <p>Who else is working on this contract?</p>
 
-      <form class="form" action="contract" method="post">
+      <form class="form" action="" method="post">
         <div class="form-group">
           <label class="form-label" for="reference-number">
             <span class="form-hint">
               Email address
             </span>
           </label>
-          <input class="form-control" id="reference-number" type="text" name="contract-name" value="{{ data['team-member-email-address'] }}">
+          <input class="form-control" id="reference-number" type="text" name="email">
         </div>
 
         <div class="form-group">
@@ -34,18 +34,18 @@
             </legend>
 
             <div class="multiple-choice" data-target="mod-yes">
-              <input id="mod" type="radio" name="mod" value="Yes" {% if data['mod'] == 'Yes' %}checked="checked"{% endif %}>
-              <label for="mod">Legal</label>
+              <input id="legal" type="radio" name="role" value="Legal">
+              <label for="legal">Legal</label>
             </div>
 
             <div class="multiple-choice" data-target="mod-yes">
-              <input id="mod" type="radio" name="mod" value="Yes" {% if data['mod'] == 'Yes' %}checked="checked"{% endif %}>
-              <label for="mod">Policy</label>
+              <input id="policy" type="radio" name="role" value="Policy">
+              <label for="policy">Policy</label>
             </div>
 
             <div class="multiple-choice" data-target="mod-yes">
-              <input id="mod" type="radio" name="mod" value="Yes" {% if data['mod'] == 'Yes' %}checked="checked"{% endif %}>
-              <label for="mod">Sourcing</label>
+              <input id="sourcing" type="radio" name="role" value="Sourcing">
+              <label for="sourcing">Sourcing</label>
             </div>
 
           </fieldset>

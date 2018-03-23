@@ -185,13 +185,10 @@ router.get('/v2/what-is-the-public-sector-contract', function (req, res) {
 })
 
 router.get('/v2/contract', function (req, res) {
-
-
   if (req.session.data['optionalIncluded'] == undefined) {
   	req.session.data['optionalIncluded'] = []
   }
 
-  console.log(req.session.data['optionalIncluded'])
   res.render(
   	'v2/contract',
   	{
@@ -199,6 +196,22 @@ router.get('/v2/contract', function (req, res) {
   	  optionalIncluded: req.session.data['optionalIncluded']
   	}
   )
+})
+
+router.post('/v2/team-members', function (req, res) {
+  email = req.session.data['email']
+  role = req.session.data['role']
+
+  if (req.session.data['teammembers'] == undefined) {
+  	req.session.data['teammembers'] = []
+  }
+
+  req.session.data['teammembers'].push({
+  	email: email,
+  	role: role
+  })
+
+  res.redirect('/v2/contract')
 })
 
 router.get('/v2/schedule/:scheduleId', function (req, res) {
