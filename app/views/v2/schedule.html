@@ -10,8 +10,11 @@
 
   <div class="grid-row">
     <div class="column-two-thirds">
-
-      <a class="link-back" href="../contract">Back</a>
+      {% if preview %}
+        <a class="link-back" href="../what-is-the-public-sector-contract">Back</a>
+      {% else %}
+        <a class="link-back" href="../contract">Back</a>
+      {% endif %}
 
       <h1 class="heading-xlarge">
        {{ schedule.name }}

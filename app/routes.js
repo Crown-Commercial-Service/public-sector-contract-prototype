@@ -216,7 +216,10 @@ router.post('/v2/team-members', function (req, res) {
 
 router.get('/v2/schedule/:scheduleId', function (req, res) {
   scheduleId = req.params["scheduleId"] - 1
-  res.render('v2/schedule', {schedule: schedules[scheduleId]})
+  res.render('v2/schedule', {
+  	schedule: schedules[scheduleId],
+  	preview: req.query.preview
+  })
 })
 
 router.get('/v2/schedule/:scheduleId/:addOrRemove', function (req, res) {

@@ -16,7 +16,7 @@
       </h1>
 
       <p class="text" style="margin-top: 40px">
-        
+
       <p>You can look at any of the contract documents before you start.</p>
 
      <p>Otherwise, continue to enter the details of your procurement and who's going to be working on it.</p>
@@ -31,7 +31,7 @@
 
       {% for schedule in schedules %}
         {% if schedule.optional == false %}
-        <a href="schedule/{{ loop.index }}">{{ schedule.name }}</a>
+        <a href="schedule/{{ loop.index }}?preview=true">{{ schedule.name }}</a>
         <p>{{ schedule.context }}</p>
         {% endif %}
       {% endfor %}
@@ -39,7 +39,7 @@
       <h3 class="heading-small">Optional documents</h3>
       {% for schedule in schedules %}
         {% if schedule.optional == true %}
-        <a href="schedule/{{ loop.index }}">{{ schedule.name }}</a>
+        <a href="schedule/{{ loop.index }}?preview=true">{{ schedule.name }}</a>
         <p>{{ schedule.context }}</p>
         {% endif %}
       {% endfor %}
