@@ -185,7 +185,20 @@ router.get('/v2/what-is-the-public-sector-contract', function (req, res) {
 })
 
 router.get('/v2/contract', function (req, res) {
-  res.render('v2/contract', {schedules: schedules})
+
+
+  if (req.session.data['optionalIncluded'] == undefined) {
+  	req.session.data['optionalIncluded'] = []
+  }
+
+  console.log(req.session.data['optionalIncluded'])
+  res.render(
+  	'v2/contract',
+  	{
+  	  schedules: schedules,
+  	  optionalIncluded: req.session.data['optionalIncluded']
+  	}
+  )
 })
 
 router.get('/v2/schedule/:scheduleId', function (req, res) {
@@ -197,6 +210,22 @@ router.get('/v2/schedule/:scheduleId/:addOrRemove', function (req, res) {
   scheduleId = req.params["scheduleId"] - 1
   addOrRemove = req.params["addOrRemove"]
   res.render('v2/add-remove-schedule', {schedule: schedules[scheduleId], addOrRemove: addOrRemove})
+})
+
+router.post('/v2/schedule/:scheduleId/:addOrRemove', function (req, res) {
+  scheduleId = Number(req.params["scheduleId"]
+  addOrRemove = req.params["addOrRemove"]
+
+  if (req.session.data['optionalIncluded'] == undefined) {
+  	req.session.data['optionalIncluded'] = []
+  }
+
+  if (addOrRemove == "add") {
+  	req.session.data['optionalIncluded'].push(scheduleId)
+  }
+
+  console.log(req.session.data['optionalIncluded'])
+  res.redirect('/v2/contract')
 })
 
 module.exports = router
