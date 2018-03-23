@@ -193,7 +193,9 @@ router.get('/v2/contract', function (req, res) {
   	'v2/contract',
   	{
   	  schedules: schedules,
-  	  optionalIncluded: req.session.data['optionalIncluded']
+  	  optionalIncluded: req.session.data['optionalIncluded'],
+  	  updated: req.query.updated,
+  	  invited: req.query.invited
   	}
   )
 })
@@ -211,7 +213,7 @@ router.post('/v2/team-members', function (req, res) {
   	role: role
   })
 
-  res.redirect('/v2/contract')
+  res.redirect('/v2/contract?invited=true')
 })
 
 router.get('/v2/schedule/:scheduleId', function (req, res) {
@@ -249,7 +251,7 @@ router.post('/v2/schedule/:scheduleId/:addOrRemove', function (req, res) {
   }
 
   console.log(req.session.data['optionalIncluded'])
-  res.redirect('/v2/contract')
+  res.redirect('/v2/contract?updated=true')
 })
 
 module.exports = router

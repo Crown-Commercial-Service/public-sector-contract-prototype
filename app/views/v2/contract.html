@@ -10,6 +10,22 @@
   <div class="grid-row">
     <div class="column-two-thirds">
 
+      {% if updated %}
+      <div class="govuk-box-highlight">
+        <p class="font-medium" style="margin-bottom: 0px">
+          Your contract documents have been updated.
+        </p>
+      </div>
+      {% endif %}
+
+      {% if invited %}
+      <div class="govuk-box-highlight">
+        <p class="font-medium" style="margin-bottom: 0px">
+           Team member added. You can see your team listed on the download contract page.
+        </p>
+      </div>
+      {% endif %}
+
       <h1 class="heading-large">
         {{ data['reference-number'] }}
       </h1>
