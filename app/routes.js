@@ -213,7 +213,7 @@ router.get('/v2/schedule/:scheduleId/:addOrRemove', function (req, res) {
 })
 
 router.post('/v2/schedule/:scheduleId/:addOrRemove', function (req, res) {
-  scheduleId = Number(req.params["scheduleId"]
+  scheduleId = Number(req.params["scheduleId"])
   addOrRemove = req.params["addOrRemove"]
 
   if (req.session.data['optionalIncluded'] == undefined) {
@@ -222,6 +222,14 @@ router.post('/v2/schedule/:scheduleId/:addOrRemove', function (req, res) {
 
   if (addOrRemove == "add") {
   	req.session.data['optionalIncluded'].push(scheduleId)
+  }
+
+  if (addOrRemove == "remove") {
+  	for(var i = req.session.data['optionalIncluded'].length - 1; i >= 0; i--) {
+	    if(req.session.data['optionalIncluded'][i] === scheduleId) {
+	       req.session.data['optionalIncluded'].splice(i, 1);
+	    }
+	}
   }
 
   console.log(req.session.data['optionalIncluded'])
