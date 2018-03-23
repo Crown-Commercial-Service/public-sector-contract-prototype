@@ -17,9 +17,9 @@
 
       <p class="text" style="margin-top: 40px">
         
-      Enter the details of your procurement and who's going to be working on it.
+     You can look at any of the contract documents before you start. 
 
-      You can look at any of the documents before you start. </p>
+     Otherwise, continue to enter the details of your procurement and who's going to be working on it.</p>
 
       <div class="form-group" style="margin-top: 20px">
         <a href="reference-number" class="button">Continue</a>
@@ -36,7 +36,7 @@
         {% endif %}
       {% endfor %}
 
-      <h3 class="heading-small">Optional schedules</h3>
+      <h3 class="heading-small">Optional documents</h3>
       {% for schedule in schedules %}
         {% if schedule.optional == true %}
         <a href="schedule/{{ loop.index }}">{{ schedule.name }}</a>
