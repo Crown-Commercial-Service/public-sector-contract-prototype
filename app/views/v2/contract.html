@@ -74,15 +74,17 @@
           <dd class="cya-change"></dd>
         </div>
 
-        <div>
-          <dt class="cya-question">
-            Sourcing manager
-          </dt>
-          <dd class="cya-answer">
-            your-email@crowncommercial.gov.uk
-          </dd>
-          <dd class="cya-change"></dd>
-        </div>
+        {% for teammember in teammembers %}
+          <div>
+            <dt class="cya-question">
+              {{ teammember.role }}
+            </dt>
+            <dd class="cya-answer">
+              {{ teammember.email }}
+            </dd>
+            <dd class="cya-change"></dd>
+          </div>
+        {% endfor %}
       </dl>
 
       <p style="margin-top: 30px;">
