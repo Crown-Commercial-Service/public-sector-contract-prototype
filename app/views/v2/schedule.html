@@ -29,6 +29,16 @@
             20 February 2018
           </dd>
         </div>
+        {% if not preview %}
+        <div>
+          <dt class="cya-question">
+            Comments
+          </dt>
+          <dd class="cya-answer">
+            0
+          </dd>
+        </div>
+        {% endif %}
       </dl>
 
       <p style="margin-top: 30px">{{ schedule.context }}</p>
