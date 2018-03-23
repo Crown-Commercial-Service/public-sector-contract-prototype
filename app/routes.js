@@ -5,7 +5,7 @@ schedules = [
 	{
 		"name": 'Core terms',
 		"optional": false,
-		"context": "Standards CCS terms for common goods and services bought using a framework agreement."
+		"context": "Standard CCS terms for common goods and services bought using a framework agreement."
 	},
 	{
 		"name": 'Framework award form',
@@ -25,7 +25,7 @@ schedules = [
 	{
 	    "name": "Framework schedule 2: Framework tender",
 	    "optional": false,
-	    "context": "How the supplier will deliver their goods or services."
+	    "context": "How the supplier will deliver the goods or services."
 	},
 	{
 	    "name": "Framework schedule 3: Framework prices",
@@ -50,7 +50,7 @@ schedules = [
 	{
 	    "name": "Framework schedule 7: Self audit certificate",
 	    "optional": false,
-	    "context": "A template letter that confirms how suppliers should act."
+	    "context": "A certificate that confirms how suppliers should behave."
 	},
 	{
 	    "name": "Joint schedule 1: Definitions",
@@ -90,7 +90,7 @@ schedules = [
 	{
 	    "name": "Joint schedule 8: Guarantee",
 	    "optional": false,
-	    "context": "A third-party must provide an assurance that a supplier can fulfill their obligations."
+	    "context": "A third-party must provide an assurance that a supplier can fulfill the contract."
 	},
 	{
 	    "name": "Joint schedule 9: Minimum standards of reliability",
@@ -120,7 +120,7 @@ schedules = [
 	{
 	    "name": "Call-off schedule 3: Continuous improvement",
 	    "optional": false,
-	    "context": "Suppliers must always improve performance."
+	    "context": "Details how suppliers must always improve performance."
 	},
 	{
 	    "name": "Call-off schedule 5: Pricing details",
@@ -131,8 +131,8 @@ schedules = [
 		"id": 26,
 		"name": "Framework schedule 9: Cyber essentials scheme",
 		"optional": true,
-	    "context": "The cyber security standards the supplier must meet are outlined in this schedule.",
-	    "decision_text": "We recommend you include this schedule if suppliers will be handling sensitive or personal information, for instance addresses or bank details",
+	    "context": "The cyber security standards the supplier must meet are in this schedule.",
+	    "decision_text": "We suggest you include this schedule if suppliers will be handling sensitive or personal information, for example addresses or bank details",
 
 	},
 	{
@@ -140,14 +140,14 @@ schedules = [
 		"name": "Call-off schedule 4: Call-off tender",
 		"optional": true,
 	    "context": "How suppliers will meet the buyers' demands.",
-	    "decision_text": "We recommend you include this schedule if suppliers will tender for work."
+	    "decision_text": "We suggest you include this schedule if suppliers will tender for the work."
 	},
 	{
 		"id": 28,
 		"name": "Call-off schedule 6: ICT services",
 		"optional": true,
 	    "context": "Additional responsibilities for ICT contracts.",
-	    "decision_text": "We recommend you include this schedule if software, hardware or ICT support will be bought.",
+	    "decision_text": "We suggest you include this schedule if software, hardware or ICT support will be bought.",
 
 	},
 	{
@@ -155,21 +155,21 @@ schedules = [
 		"name": "Call-off schedule 10: Exit management",
 		"optional": true,
 	    "context": "What happens when the contract ends.",
-	    "decision_text": "We recommend you include this schedule if buyers will want to specify how contract handover works.",
+	    "decision_text": "We suggest you include this schedule if buyers will want to specify how contract handover works.",
 	},
 	{
 		"id": 30,
 		"name": "Call-off schedule 11: Installation works",
 		"optional": true,
 	    "context": "What the supplier has to do when installing goods.",
-	    "decision_text": "We recommend you include this schedule if suppliers will be installing any goods.",
+	    "decision_text": "We suggest you include this schedule if suppliers will be installing any goods.",
 	},
 	{
 		"id": 31,
 		"name": "Call-off schedule 12: Background checks",
 		"optional": true,
 		"context": "Security checks on supplier staff.",
-		"decision_text": "We recommend you include this schedule if buyers will need to vet staff before work starts.",
+		"decision_text": "We suggest you include this schedule if buyers will need to vet staff before work starts.",
 	}
 ]
 
