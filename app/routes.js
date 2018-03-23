@@ -35,7 +35,7 @@ schedules = [
 	{
 	    "name": "Framework schedule 4: Framework management",
 	    "optional": false,
-	    "context": "How the framework will be managed."
+	    "context": "How the framework contract will be managed."
 	},
 	{
 	    "name": "Framework schedule 5: Management charges and information",
@@ -50,7 +50,7 @@ schedules = [
 	{
 	    "name": "Framework schedule 7: Self audit certificate",
 	    "optional": false,
-	    "context": "A template letter that confirms suppliers have followed all necessary procedures."
+	    "context": "A template letter that confirms how suppliers should act."
 	},
 	{
 	    "name": "Joint schedule 1: Definitions",
@@ -80,7 +80,7 @@ schedules = [
 	{
 	    "name": "Joint schedule 6: Key subcontractors",
 	    "optional": false,
-	    "context": "Restrictions on when suppliers can change the subcontractors working on the contract."
+	    "context": "Restrictions about when subcontractors can be changed."
 	},
 	{
 	    "name": "Joint schedule 7: Financial difficulties",
@@ -131,43 +131,44 @@ schedules = [
 		"id": 26,
 		"name": "Framework schedule 9: Cyber essentials scheme",
 		"optional": true,
-	    "context": "Cyber security standards the supplier must meet.",
-	    "decision_text": "This text will help them to decide if they should use this or not"
+	    "context": "The cyber security standards the supplier must meet are outlined in this schedule.<br><br> 
+		If you answer yes to this question you'll need this schedule.",
+	    "decision_text": "Will suppliers handle sensitive or personal information, for instance addresses or bank details?"
 	},
 	{
 		"id": 27,
 		"name": "Call-off schedule 4: Call-off tender",
 		"optional": true,
-	    "context": "How the supplier will meet the buyer's demands.",
-	    "decision_text": "This text will help them to decide if they should use this or not"
+	    "context": "How suppliers will meet the buyers' demands. If you answer yes to this question you'll need this schedule.",
+	    "decision_text": "Will suppliers tender for work?"
 	},
 	{
 		"id": 28,
 		"name": "Call-off schedule 6: ICT services",
 		"optional": true,
-	    "context": "Additional responsibilities for ICT contracts.",
-	    "decision_text": "This text will help them to decide if they should use this or not"
+	    "context": "Additional responsibilities for ICT contracts. If you answer yes to this question you'll need this schedule.",
+	    "decision_text": "Will software, hardware or ICT support be sold?"
 	},
 	{
 		"id": 29,
 		"name": "Call-off schedule 10: Exit management",
 		"optional": true,
-	    "context": "What happens when the contract ends.",
-	    "decision_text": "This text will help them to decide if they should use this or not"
+	    "context": "What happens when the contract ends. If you answer yes to this question you'll need this schedule.",
+	    "decision_text": "Will buyers want to specify how contract handover works?"
 	},
 	{
 		"id": 30,
 		"name": "Call-off schedule 11: Installation works",
 		"optional": true,
-	    "context": "What the supplier has to do when installing goods.",
-	    "decision_text": "This text will help them to decide if they should use this or not"
+	    "context": "What the supplier has to do when installing goods. If you answer yes to this question you'll need this schedule.",
+	    "decision_text": "Will suppliers need to install any goods?"
 	},
 	{
 		"id": 31,
 		"name": "Call-off schedule 12: Background checks",
 		"optional": true,
-		"context": "Security checks on supplier staff.",
-		"decision_text": "This text will help them to decide if they should use this or not"
+		"context": "Security checks on supplier staff. If you answer yes to this question you'll need this schedule.",
+		"decision_text": "Will buyers need to vet staff before work starts?"
 	}
 ]
 
