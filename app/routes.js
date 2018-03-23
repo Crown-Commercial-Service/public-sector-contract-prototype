@@ -156,14 +156,14 @@ schedules = [
 	    "decision_text": "This text will help them to decide if they should use this or not"
 	},
 	{
-		"id": 26,
+		"id": 30,
 		"name": "Call-off schedule 11: Installation works",
 		"optional": true,
 	    "context": "What the supplier has to do when installing goods.",
 	    "decision_text": "This text will help them to decide if they should use this or not"
 	},
 	{
-		"id": 30,
+		"id": 31,
 		"name": "Call-off schedule 12: Background checks",
 		"optional": true,
 		"context": "Security checks on supplier staff.",
