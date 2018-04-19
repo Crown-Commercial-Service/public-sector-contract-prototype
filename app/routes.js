@@ -180,17 +180,17 @@ router.get('/', function (req, res) {
 
 // add your routes here
 
-router.get('/v2/what-is-the-public-sector-contract', function (req, res) {
-  res.render('v2/what-is-the-public-sector-contract', {schedules: schedules})
+router.get('/:version(v2|v3)/what-is-the-public-sector-contract', function (req, res) {
+  res.render(`${req.params.version}/what-is-the-public-sector-contract`, {schedules: schedules})
 })
 
-router.get('/v2/contract', function (req, res) {
+router.get('/:version(v2|v3)/contract', function (req, res) {
   if (req.session.data['optionalIncluded'] == undefined) {
   	req.session.data['optionalIncluded'] = []
   }
 
   res.render(
-  	'v2/contract',
+	`${req.params.version}/contract`,
   	{
   	  schedules: schedules,
   	  optionalIncluded: req.session.data['optionalIncluded'],
@@ -200,7 +200,7 @@ router.get('/v2/contract', function (req, res) {
   )
 })
 
-router.post('/v2/team-members', function (req, res) {
+router.post('/:version(v2|v3)/team-members', function (req, res) {
   email = req.session.data['email']
   role = req.session.data['role']
 
@@ -213,24 +213,24 @@ router.post('/v2/team-members', function (req, res) {
   	role: role
   })
 
-  res.redirect('/v2/contract?invited=true')
+  res.redirect(`${req.params.version}/contract?invited=true`)
 })
 
-router.get('/v2/schedule/:scheduleId', function (req, res) {
+router.get('/:version(v2|v3)/schedule/:scheduleId', function (req, res) {
   scheduleId = req.params["scheduleId"] - 1
-  res.render('v2/schedule', {
+  res.render(`${req.params.version}/schedule`, {
   	schedule: schedules[scheduleId],
   	preview: req.query.preview
   })
 })
 
-router.get('/v2/schedule/:scheduleId/:addOrRemove', function (req, res) {
+router.get('/:version(v2|v3)/schedule/:scheduleId/:addOrRemove', function (req, res) {
   scheduleId = req.params["scheduleId"] - 1
   addOrRemove = req.params["addOrRemove"]
-  res.render('v2/add-remove-schedule', {schedule: schedules[scheduleId], addOrRemove: addOrRemove})
+  res.render(`${req.params.version}/add-remove-schedule`, {schedule: schedules[scheduleId], addOrRemove: addOrRemove})
 })
 
-router.post('/v2/schedule/:scheduleId/:addOrRemove', function (req, res) {
+router.post('/:version(v2|v3)/schedule/:scheduleId/:addOrRemove', function (req, res) {
   scheduleId = Number(req.params["scheduleId"])
   addOrRemove = req.params["addOrRemove"]
 
@@ -251,7 +251,7 @@ router.post('/v2/schedule/:scheduleId/:addOrRemove', function (req, res) {
   }
 
   console.log(req.session.data['optionalIncluded'])
-  res.redirect('/v2/contract?updated=true')
+  res.redirect(`${req.params.version}/contract?updated=true`)
 })
 
 module.exports = router

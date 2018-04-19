@@ -1,0 +1,45 @@
+{% extends "layout.html" %}
+
+{% block page_title %}
+  Question page
+{% endblock %}
+
+{% block content %}
+
+<main id="content" role="main">
+  <div class="grid-row">
+    <div class="column-two-thirds">
+
+      <a class="link-back" href="../../contract">Back</a>
+
+      <form class="form" method="post">
+        <div class="form-group">
+          <fieldset>
+
+            <legend>
+              <h1 class="heading-large">{{ addOrRemove | capitalize }} {{ schedule.name }}</h1>
+            </legend>
+
+            <p>
+                {{ schedule.decision_text | safe }}
+            </p>
+          </fieldset>
+        </div>
+
+        <div class="form-group">
+          <p>Add comment (optional)</p>
+          <label>Add a comment to explain your decision. This may be useful later and for other team members.</label>
+          <textarea rows="4" cols="50"></textarea>
+        </div>
+
+        <div class="form-group">
+          <input class="button" type="submit" value="Confirm">
+          <a href="../../contract" class="button">Cancel</a>
+        </div>
+      </form>
+
+    </div>
+  </div>
+</main>
+
+{% endblock %}
