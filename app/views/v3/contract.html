@@ -1,0 +1,149 @@
+{% extends "layout.html" %}
+
+{% block page_title %}
+  Check your answers
+{% endblock %}
+
+{% block content %}
+
+<main id="content" role="main">
+  <div class="grid-row">
+    <div class="column-two-thirds">
+
+      {% if updated %}
+      <div class="govuk-box-highlight">
+        <p class="font-medium" style="margin-bottom: 0px">
+          Your contract documents have been updated.
+        </p>
+      </div>
+      {% endif %}
+
+      {% if invited %}
+      <div class="govuk-box-highlight">
+        <p class="font-medium" style="margin-bottom: 0px">
+           Your team member has been added. 
+        </p>
+      </div>
+      {% endif %}
+
+      <h1 class="heading-large">
+        {{ data['reference-number'] }}
+      </h1>
+
+
+      <!-- use additional modifier class to change column widths for multiple groups of questions and answers: -->
+      <!--   * `cya-questions-short` for short questions -->
+      <!--   * `cya-questions-long` for long questions -->
+      <!--   * none for single group of q&a -->
+      <dl class="govuk-check-your-answers cya-questions-short">
+        <div>
+          <dt class="cya-question">
+            Contract name
+          </dt>
+          <dd class="cya-answer">
+            {{ data.contract_name }}
+          </dd>
+          <dd class="cya-change">
+            <a href="#">
+              Change<span class="visually-hidden"> contract name</span>
+            </a>
+          </dd>
+        </div>
+
+        <div>
+          <dt class="cya-question">
+            Created by
+          </dt>
+          <dd class="cya-answer">
+            Your name
+          </dd>
+          <dd class="cya-change"></dd>
+        </div>
+
+        <div>
+          <dt class="cya-question">
+            Last updated
+          </dt>
+          <dd class="cya-answer">
+            27 March 2018
+          </dd>
+          <dd class="cya-change"></dd>
+        </div>
+
+        <div>
+          <dt class="cya-question">
+            Status
+          </dt>
+          <dd class="cya-answer">
+            Draft
+          </dd>
+          <dd class="cya-change"></dd>
+        </div>
+
+        <div>
+          <dt class="cya-question">
+            Version
+          </dt>
+          <dd class="cya-answer">
+            1.0
+          </dd>
+          <dd class="cya-change"></dd>
+        </div>
+
+        {% for teammember in data['teammembers'] %}
+          <div>
+            <dt class="cya-question">
+              {{ teammember.role }}
+            </dt>
+            <dd class="cya-answer">
+              {{ teammember.email }}
+            </dd>
+            <dd class="cya-change"></dd>
+          </div>
+        {% endfor %}
+      </dl>
+
+      <p style="margin-top: 30px;">
+        <a href="team-members">Add team members</a>
+      <p>Add the names and email addresses of anyone who'll work on the contract.</p>
+      <p>They'll be emailed and invited to work with you.</p>
+      </p>
+
+      <h2 class="heading-medium">Documents</h2>
+
+      <h3 class="heading-small">Optional documents</h3>
+      <p>Look at the optional documents and decide which are the right ones to use.</p>
+      <p>You can add or remove them at any time from this page.</p>
+      {% for schedule in schedules %}
+        {% if schedule.optional == true %}
+          {% if schedule.id not in optionalIncluded %}
+            <a href="schedule/{{ loop.index }}">{{ schedule.name }}</a><a href="schedule/{{ loop.index }}/add" style="float: right">Add</a><br>
+          {% endif %}
+        {% endif %}
+      {% endfor %}
+
+      <h3 class="heading-small">Documents in your contract</h3>
+      <p class="text" style="margin-top: 30px;">
+        Your contract includes:
+      </p>
+
+      {% for schedule in schedules %}
+        {% if schedule.optional == false %}
+        <a href="schedule/{{ loop.index }}">{{ schedule.name }}</a><br>
+        {% else %}
+          {% if schedule.id in optionalIncluded %}
+            <a href="schedule/{{ loop.index }}">{{ schedule.name }}</a><a href="schedule/{{ loop.index }}/remove" style="float: right">Remove</a><br>
+          {% endif %}
+        {% endif %}
+      {% endfor %}
+
+
+      <div class="form-group" style="margin-top: 20px">
+        <a href="../public/files/example-contract.zip" class="button">Download contract</a>
+      </div>
+
+    </div>
+  </div>
+</main>
+
+{% endblock %}

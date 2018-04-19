@@ -1,0 +1,67 @@
+{% extends "layout.html" %}
+
+{% block page_title %}
+  Question page
+{% endblock %}
+
+{% block content %}
+
+<main id="content" role="main">
+  <div class="grid-row">
+    <div class="column-two-thirds">
+
+      <a class="link-back" href="contract">Back</a>
+
+      <h1 class="heading-large">The team</h1>
+
+      <p>Who else is working on this contract?</p>
+
+      <form class="form" action="" method="post">
+        <div class="form-group">
+          <label class="form-label" for="reference-number">
+            <span class="form-hint">
+              Email address
+            </span>
+          </label>
+          <input class="form-control" id="reference-number" type="text" name="email">
+        </div>
+
+        <div class="form-group">
+          <fieldset>
+
+            <legend>
+              <h1 class="heading-large">Role</h1>
+            </legend>
+
+            <div class="multiple-choice" data-target="mod-yes">
+              <input id="legal" type="radio" name="role" value="Legal">
+              <label for="legal">Legal</label>
+            </div>
+
+            <div class="multiple-choice" data-target="mod-yes">
+              <input id="policy" type="radio" name="role" value="Policy">
+              <label for="policy">Policy</label>
+            </div>
+
+            <div class="multiple-choice" data-target="mod-yes">
+              <input id="sourcing" type="radio" name="role" value="Sourcing">
+              <label for="sourcing">Sourcing</label>
+            </div>
+
+          </fieldset>
+        </div>
+
+        <p>Anyone you add will be emailed and invited to work on this contract.</p>
+        <p>You can add more people at any time.</p>
+
+        <div class="form-group">
+          <input class="button" type="submit" value="Invite">
+          <a href="contract" class="button">Cancel</a>
+        </div>
+      </form>
+
+    </div>
+  </div>
+</main>
+
+{% endblock %}

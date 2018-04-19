@@ -1,0 +1,55 @@
+{% extends "layout.html" %}
+
+{% block page_title %}
+  The contract documents
+{% endblock %}
+
+{% block content %}
+
+<main id="content" role="main">
+  <div class="grid-row">
+    <div class="column-two-thirds">
+      <a href="/v3/index" class="link-back">Back</a>
+
+      <h1 class="heading-large">
+        The contract documents
+      </h1>
+
+      <p class="text" style="margin-top: 40px">
+
+      <p>You can look at any of the contract documents before you start.</p>
+
+     <p>Otherwise, continue and enter the name of the contract and who's going to be working on it.</p>
+
+      <div class="form-group" style="margin-top: 20px">
+        <a href="reference-number" class="button">Continue</a>
+      </div>
+
+      <h3 class="heading-small">Contract documents</h3>
+
+      <p>These documents have to be used in every procurement.</p>
+
+      {% for schedule in schedules %}
+        {% if schedule.optional == false %}
+        <a href="schedule/{{ loop.index }}?preview=true">{{ schedule.name }}</a>
+        <p>{{ schedule.context }}</p>
+        {% endif %}
+      {% endfor %}
+
+      <h3 class="heading-small">Optional documents</h3>
+      {% for schedule in schedules %}
+        {% if schedule.optional == true %}
+        <a href="schedule/{{ loop.index }}?preview=true">{{ schedule.name }}</a>
+        <p>{{ schedule.context }}</p>
+        {% endif %}
+      {% endfor %}
+
+      <div class="form-group" style="margin-top: 20px">
+        <a href="reference-number" class="button">Continue</a>
+      </div>
+
+    </div>
+  </div>
+</main>
+
+{% endblock %}
