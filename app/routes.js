@@ -231,7 +231,7 @@ router.post('/:version(v2|v3)/team-members', function (req, res) {
   	role: role
   })
 
-  res.redirect(`${req.params.version}/contract?invited=true`)
+  res.redirect(`/${req.params.version}/contract?invited=true`)
 })
 
 router.get('/:version(v2|v3)/schedule/:scheduleId', function (req, res) {
