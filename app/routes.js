@@ -96,6 +96,22 @@ schedules = [
 
 	},
 	{
+		"id": 28,
+		"name": "Call-off schedule 7: Key supplier staff",
+		"optional": true,
+	    "context": "Restrictions on a supplier changing staff that are crucial to deliver the contract.",
+	    "decision_text": "We suggest you include this schedule if you may want to restrict the supplier from changing specific, essential staff members without approval.",
+
+	},
+	{
+		"id": 28,
+		"name": "Call-off schedule 8: Business continuity and disaster recovery",
+		"optional": true,
+	    "context": "What the supplier must do to make sure the contract can still be delivered even if there’s an unexpected event.",
+	    "decision_text": "We suggest you include this schedule if the supplier can't be easily replaced and failure of the contract would have serious consequences for your organisation.",
+
+	},
+	{
 		"id": 29,
 		"name": "Call-off schedule 10: Exit management",
 		"optional": true,
@@ -110,8 +126,29 @@ schedules = [
 	    "decision_text": "We suggest you include this schedule if suppliers will be installing any goods.",
 	},
 	{
+		"id": 30,
+		"name": "Call-off schedule 12: Clustering",
+		"optional": true,
+	    "context": "Enables multiple Buyers to join together to buy more efficiently.",
+	    "decision_text": "We suggest you include this schedule if you are also buying for others under a single call-off contract.",
+	},
+	{
+		"id": 30,
+		"name": "Call-off schedule 15: Call-off contract management",
+		"optional": true,
+	    "context": "How the supplier and the buyer should work together on the call-off contract.",
+	    "decision_text": "We suggest you include this schedule if you need a process to collaborate with the supplier and monitor and manage the call-off contract.",
+	},
+	{
+		"id": 30,
+		"name": "Call-off schedule 16: Benchmarking",
+		"optional": true,
+	    "context": "A process for comparing the value offered by the supplier against other providers in the market.",
+	    "decision_text": "We suggest you include this schedule if you need to be able to monitor pricing to ensure it always provides good value.",
+	},
+	{
 		"id": 31,
-		"name": "Call-off schedule 12: Background checks",
+		"name": "Call-off schedule 18: Background checks",
 		"optional": true,
 		"context": "Security checks on supplier staff.",
 		"decision_text": "We suggest you include this schedule if buyers will need to vet staff before work starts.",
