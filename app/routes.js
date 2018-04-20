@@ -95,27 +95,6 @@ schedules = [
 	    "decision_text": "We suggest you include this schedule if software, hardware or ICT support will be bought.",
 
 	},
-	{	
-	    "id": 32,
-	    "name": "Joint schedule 7: Financial difficulties",
-	    "optional": false,
-	    "context": "What happens if a supplier gets into financial trouble."
-	    "decision_text": "We suggest you include this schedule if you want to regularly monitor the supplier's financial stability.",
-	},
-	{	
-	    "id": 33,
-	    "name": "Joint schedule 8: Guarantee",
-	    "optional": false,
-	    "context": "A third-party must provide an assurance that a supplier can fulfill the contract."
-	    "decision_text": "We suggest you include this schedule if there's no framework guarantee and you want a third party guarantee in case the supplier doesn't deliver the contract.",
-	},
-	{
-	    "id": 34,
-	    "name": "Joint schedule 9: Minimum standards of reliability",
-	    "optional": false,
-	    "context": "A requirement that call-off contracts must meet the standards in the OJEU notice."
-	    "decision_text": "We suggest you include this schedule if this call-off contract is worth more than £10 million",
-	},
 	{
 		"id": 29,
 		"name": "Call-off schedule 10: Exit management",
@@ -136,6 +115,27 @@ schedules = [
 		"optional": true,
 		"context": "Security checks on supplier staff.",
 		"decision_text": "We suggest you include this schedule if buyers will need to vet staff before work starts.",
+	},
+	{	
+	    "id": 32,
+	    "name": "Joint schedule 7: Financial difficulties",
+	    "optional": false,
+	    "context": "What happens if a supplier gets into financial trouble.",
+	    "decision_text": "We suggest you include this schedule if you want to regularly monitor the supplier's financial stability.",
+	},
+	{	
+	    "id": 33,
+	    "name": "Joint schedule 8: Guarantee",
+	    "optional": false,
+	    "context": "A third-party must provide an assurance that a supplier can fulfill the contract.",
+	    "decision_text": "We suggest you include this schedule if there's no framework guarantee and you want a third party guarantee in case the supplier doesn't deliver the contract.",
+	},
+	{
+	    "id": 34,
+	    "name": "Joint schedule 9: Minimum standards of reliability",
+	    "optional": false,
+	    "context": "A requirement that call-off contracts must meet the standards in the OJEU notice.",
+	    "decision_text": "We suggest you include this schedule if this call-off contract is worth more than £10 million",
 	},
 ]
 
