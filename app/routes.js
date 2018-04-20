@@ -5,12 +5,7 @@ schedules = [
 	{
 		"name": 'Core terms',
 		"optional": false,
-		"context": "Standard CCS terms for common goods and services bought using a framework agreement."
-	},
-	{
-		"name": 'Framework award form',
-		"optional": false,
-		"context": "Where CCS and suppliers sign the contract and the place that tells you what you need to know to form the contract."
+		"context": "Standard CCS terms for common goods and services. These cannot be changed."
 	},
 	{
 		"name": 'Call-off order form',
@@ -18,39 +13,24 @@ schedules = [
 		"context": "Details the goods or service being bought, what they’ll cost and how they’ll be delivered."
 	},
 	{
-	    "name": "Framework schedule 1: Specification",
+	    "name": "Call-off schedule 1: Transparency reports",
 	    "optional": false,
-	    "context": "What the supplier is selling."
+	    "context": "Information the buyer needs from the supplier to meet transparency requirements."
 	},
 	{
-	    "name": "Framework schedule 2: Framework tender",
+	    "name": "Call-off schedule 2: Staff transfer",
 	    "optional": false,
-	    "context": "How the supplier will deliver the goods or services."
+	    "context": "Employee protection rights if staff are transferred to a new company."
 	},
 	{
-	    "name": "Framework schedule 3: Framework prices",
+	    "name": "Call-off schedule 3: Continuous improvement",
+	    "optional": false,
+	    "context": "Details how suppliers must improve their performance throughout the contract."
+	},
+	{
+	    "name": "Call-off schedule 5: Pricing details",
 	    "optional": false,
 	    "context": "What the supplier can charge."
-	},
-	{
-	    "name": "Framework schedule 4: Framework management",
-	    "optional": false,
-	    "context": "How the framework contract will be managed."
-	},
-	{
-	    "name": "Framework schedule 5: Management charges and information",
-	    "optional": false,
-	    "context": "What suppliers have to tell CCS and the charges they must pay."
-	},
-	{
-	    "name": "Framework schedule 6: Call-off award procedure",
-	    "optional": false,
-	    "context": "How a call-off contract should be awarded."
-	},
-	{
-	    "name": "Framework schedule 7: Self audit certificate",
-	    "optional": false,
-	    "context": "A certificate that confirms how suppliers should behave."
 	},
 	{
 	    "name": "Joint schedule 1: Definitions",
@@ -83,21 +63,6 @@ schedules = [
 	    "context": "Restrictions about when subcontractors can be changed."
 	},
 	{
-	    "name": "Joint schedule 7: Financial difficulties",
-	    "optional": false,
-	    "context": "What happens if a supplier gets into financial trouble."
-	},
-	{
-	    "name": "Joint schedule 8: Guarantee",
-	    "optional": false,
-	    "context": "A third-party must provide an assurance that a supplier can fulfill the contract."
-	},
-	{
-	    "name": "Joint schedule 9: Minimum standards of reliability",
-	    "optional": false,
-	    "context": "A requirement that call-off contracts must meet the standards outlined in the OJEU not}ce."
-	},
-	{
 	    "name": "Joint schedule 10: Rectification plan",
 	    "optional": false,
 	    "context": "What to do if the supplier breaches the terms of the contract."
@@ -106,26 +71,6 @@ schedules = [
 	    "name": "Joint schedule 11: Processing data",
 	    "optional": false,
 	    "context": "How suppliers should handle data."
-	},
-	{
-	    "name": "Call-off schedule 1: Transparency reports",
-	    "optional": false,
-	    "context": "Information the buyer needs from the supplier to meet its transparency requirements."
-	},
-	{
-	    "name": "Call-off schedule 2: Staff transfer",
-	    "optional": false,
-	    "context": "Employee protection if transferred to a new company."
-	},
-	{
-	    "name": "Call-off schedule 3: Continuous improvement",
-	    "optional": false,
-	    "context": "Details how suppliers must always improve performance."
-	},
-	{
-	    "name": "Call-off schedule 5: Pricing details",
-	    "optional": false,
-	    "context": "What the supplier can charge."
 	},
 	{
 		"id": 26,
@@ -150,6 +95,27 @@ schedules = [
 	    "decision_text": "We suggest you include this schedule if software, hardware or ICT support will be bought.",
 
 	},
+	{	
+	    "id": 32,
+	    "name": "Joint schedule 7: Financial difficulties",
+	    "optional": false,
+	    "context": "What happens if a supplier gets into financial trouble."
+	    "decision_text": "We suggest you include this schedule if you want to regularly monitor the supplier's financial stability.",
+	},
+	{	
+	    "id": 33,
+	    "name": "Joint schedule 8: Guarantee",
+	    "optional": false,
+	    "context": "A third-party must provide an assurance that a supplier can fulfill the contract."
+	    "decision_text": "We suggest you include this schedule if there's no framework guarantee and you want a third party guarantee in case the supplier doesn't deliver the contract.",
+	},
+	{
+	    "id": 34,
+	    "name": "Joint schedule 9: Minimum standards of reliability",
+	    "optional": false,
+	    "context": "A requirement that call-off contracts must meet the standards in the OJEU notice."
+	    "decision_text": "We suggest you include this schedule if this call-off contract is worth more than £10 million",
+	},
 	{
 		"id": 29,
 		"name": "Call-off schedule 10: Exit management",
@@ -170,7 +136,7 @@ schedules = [
 		"optional": true,
 		"context": "Security checks on supplier staff.",
 		"decision_text": "We suggest you include this schedule if buyers will need to vet staff before work starts.",
-	}
+	},
 ]
 
 // Route index page
