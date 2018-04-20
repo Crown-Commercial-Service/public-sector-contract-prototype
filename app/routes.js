@@ -251,7 +251,7 @@ router.post('/:version(v2|v3)/schedule/:scheduleId/:addOrRemove', function (req,
   }
 
   console.log(req.session.data['optionalIncluded'])
-  res.redirect(`${req.params.version}/contract?updated=true`)
+  res.redirect(`/${req.params.version}/contract?updated=true`)
 })
 
 module.exports = router
