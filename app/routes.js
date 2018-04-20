@@ -193,7 +193,7 @@ schedules = [
 function findScheduleById(scheduleId) {
   schedules.find(function(schedule) {
 	if (schedule.id === scheduleId) {
-	  return element
+	  return schedule
 	}
   })
 }
