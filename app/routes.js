@@ -190,13 +190,6 @@ schedules = [
 	},
 ]
 
-function findScheduleById(scheduleId) {
-  schedules.find(function(schedule) {
-	if (schedule.id === scheduleId) {
-	  return schedule
-	}
-  })
-}
 
 // Route index page
 router.get('/', function (req, res) {
@@ -242,15 +235,23 @@ router.post('/:version(v2|v3)/team-members', function (req, res) {
 })
 
 router.get('/:version(v2|v3)/schedule/:scheduleId', function (req, res) {
+  scheduleId = Number(req.params['scheduleId'])
+  schedule = schedules.find(function(sch) {
+	return sch.id === scheduleId
+  })
   res.render(`${req.params.version}/schedule`, {
-  	schedule: findScheduleById(req.params["scheduleId"]),
-  	preview: req.query.preview
+	schedule: schedule,
+	preview: req.query.preview
   })
 })
 
 router.get('/:version(v2|v3)/schedule/:scheduleId/:addOrRemove', function (req, res) {
+  scheduleId = Number(req.params['scheduleId'])
+  schedule = schedules.find(function(sch) {
+	return sch.id === scheduleId
+  })
   res.render(`${req.params.version}/add-remove-schedule`, {
-	schedule: findScheduleById(req.params['scheduleId']),
+	schedule: schedule,
 	addOrRemove: req.params['addOrRemove']
   })
 })
