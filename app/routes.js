@@ -8,6 +8,10 @@ schedules = {
   'v3': yaml.safeLoad(fs.readFileSync('./app/views/v3/schedules.yml', 'utf8')),
 }
 
+function findScheduleById(scheduleId, version) {
+  return schedules[version].find(function(sch) { return sch.id == scheduleId })
+}
+
 // Route index page
 router.get('/', function (req, res) {
   res.render('index')
@@ -55,24 +59,16 @@ router.post('/:version(v2|v3)/team-members', function (req, res) {
 })
 
 router.get('/:version(v2|v3)/schedule/:scheduleId', function (req, res) {
-  scheduleId = Number(req.params['scheduleId'])
-  schedule = schedules[req.params.version].find(function(sch) {
-	return sch.id === scheduleId
-  })
   res.render(`${req.params.version}/schedule`, {
-	schedule: schedule,
-	preview: req.query.preview
+    schedule: findScheduleById(req.params['scheduleId'], req.params.version),
+    preview: req.query.preview
   })
 })
 
 router.get('/:version(v2|v3)/schedule/:scheduleId/:addOrRemove', function (req, res) {
-  scheduleId = Number(req.params['scheduleId'])
-  schedule = schedules[req.params.version].find(function(sch) {
-	return sch.id === scheduleId
-  })
   res.render(`${req.params.version}/add-remove-schedule`, {
-	schedule: schedule,
-	addOrRemove: req.params['addOrRemove']
+    schedule: findScheduleById(req.params['scheduleId'], req.params.version),
+    addOrRemove: req.params['addOrRemove']
   })
 })
 
