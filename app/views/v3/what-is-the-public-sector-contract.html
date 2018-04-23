@@ -32,7 +32,7 @@
 
       {% for schedule in schedules %}
         {% if schedule.optional == false %}
-        <a href="schedule/{{ loop.index }}?preview=true">{{ schedule.name }}</a>
+        <a href="schedule/{{ schedule.id }}?preview=true">{{ schedule.name }}</a>
         <p>{{ schedule.context }}</p>
         {% endif %}
       {% endfor %}
@@ -40,7 +40,7 @@
       <h3 class="heading-small">Optional documents</h3>
       {% for schedule in schedules %}
         {% if schedule.optional == true %}
-        <a href="schedule/{{ loop.index }}?preview=true">{{ schedule.name }}</a>
+        <a href="schedule/{{ schedule.id }}?preview=true">{{ schedule.name }}</a>
         <p>{{ schedule.context }}</p>
         {% endif %}
       {% endfor %}
