@@ -1,0 +1,130 @@
+- id: 1
+  optional: false
+  name: 'Core terms'
+  context: "Standard CCS terms for common goods and services bought using a framework agreement."
+- id: 2
+  optional: false
+  name: "Framework award form"
+  context: "Where CCS and suppliers sign the contract and the place that tells you what you need to know to form the contract."
+- id: 3
+  optional: false
+  name: "Call-off order form"
+  context: "Details the goods or service being bought, what they’ll cost and how they’ll be delivered."
+- id: 4
+  optional: false
+  name: "Framework schedule 1: Specification"
+  context: "What the supplier is selling."
+- id: 5
+  optional: false
+  name: "Framework schedule 2: Framework tender"
+  context: "How the supplier will deliver the goods or services."
+- id: 6
+  optional: false
+  name: "Framework schedule 3: Framework prices"
+  context: "What the supplier can charge."
+- id: 7
+  optional: false
+  name: "Framework schedule 4: Framework management"
+  context: "How the framework contract will be managed."
+- id: 8
+  optional: false
+  name: "Framework schedule 5: Management charges and information"
+  context: "What suppliers have to tell CCS and the charges they must pay."
+- id: 9
+  optional: false
+  name: "Framework schedule 6: Call-off award procedure"
+  context: "How a call-off contract should be awarded."
+- id: 10
+  optional: false
+  name: "Framework schedule 7: Self audit certificate"
+  context: "A certificate that confirms how suppliers should behave."
+- id: 11
+  optional: false
+  name: "Joint schedule 1: Definitions"
+  context: "What the capitalised terms in the contract mean."
+- id: 12
+  optional: false
+  name: "Joint schedule 2: Variation form"
+  context: "How an existing contract can be changed."
+- id: 13
+  optional: false
+  name: "Joint schedule 3: Insurance requirements"
+  context: "The insurance a supplier needs for the contract."
+- id: 14
+  optional: false
+  name: "Joint schedule 4: Commercially sensitive information"
+  context": "The information about a supplier that can't be publicly disclosed."
+- id: 15
+  optional: false
+  name: "Joint schedule 5: Corporate social responsibility"
+  context: "The suppliers' social responsibilities."
+- id: 16
+  optional: false
+  name: "Joint schedule 6: Key subcontractors"
+  context: "Restrictions about when subcontractors can be changed."
+- id: 17
+  optional: false
+  name: "Joint schedule 7: Financial difficulties"
+  context: "What happens if a supplier gets into financial trouble."
+- id: 18
+  optional: false
+  name: "Joint schedule 8: Guarantee"
+  context: "A third-party must provide an assurance that a supplier can fulfill the contract."
+- id: 19
+  optional": false
+  name: "Joint schedule 9: Minimum standards of reliability"
+  context: "A requirement that call-off contracts must meet the standards outlined in the OJEU notice."
+- id: 20
+  optional: false
+  name: "Joint schedule 10: Rectification plan"
+  context: "What to do if the supplier breaches the terms of the contract."
+- id: 21
+  optional": false
+  name: "Joint schedule 11: Processing data"
+  context: "How suppliers should handle data."
+- id: 22
+  optional: false
+  name: "Call-off schedule 1: Transparency reports"
+  context: "Information the buyer needs from the supplier to meet its transparency requirements."
+- id: 23
+  optional: false
+  name: "Call-off schedule 2: Staff transfer"
+  context: "Employee protection if transferred to a new company."
+- id: 24
+  optional: false
+  name: "Call-off schedule 3: Continuous improvement"
+  context: "Details how suppliers must always improve performance."
+- id: 25
+  optional: false
+  name: "Call-off schedule 5: Pricing details"
+  context: "What the supplier can charge."
+- id: 26
+  optional: true
+  name: "Framework schedule 9: Cyber essentials scheme"
+  context: "The cyber security standards the supplier must meet are in this schedule."
+  decision_text: "We suggest you include this schedule if suppliers will be handling sensitive or personal information, for example addresses or bank details"
+- id: 27
+  optional: true
+  name: "Call-off schedule 4: Call-off tender"
+  context: "How suppliers will meet the buyers' demands."
+  decision_text: "We suggest you include this schedule if suppliers will tender for the work."
+- id: 28
+  optional: true
+  name: "Call-off schedule 6: ICT services"
+  context: "Additional responsibilities for ICT contracts."
+  decision_text: "We suggest you include this schedule if software, hardware or ICT support will be bought."
+- id: 29
+  optional: true
+  name: "Call-off schedule 10: Exit management"
+  context: "What happens when the contract ends."
+  decision_text: "We suggest you include this schedule if buyers will want to specify how contract handover works."
+- id: 30
+  optional: true
+  name: "Call-off schedule 11: Installation works"
+  context: "What the supplier has to do when installing goods."
+  decision_text: "We suggest you include this schedule if suppliers will be installing any goods."
+- id: 31
+  optional: true
+  name: "Call-off schedule 12: Background checks"
+  context: "Security checks on supplier staff."
+  decision_text: "We suggest you include this schedule if buyers will need to vet staff before work starts."
