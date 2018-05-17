@@ -1,38 +1,45 @@
 overview:
-  title: "Page title"
+  title: "Award a contract"
   introduction:
-    - "Some information about what the buyer can do with this view"
-    - 'If you would like to fill in this form offiline you can <a href="#" class="link">download the call off order form</a>'
+    - "Fill in the call-off order form to create a contract with a supplier."
+    - "You will:"
+    - (<ul>)  "fill in all the sections that will make up your order form"
+    -         "invite your supplier to fill in their sections"
+    -         "review the form"
+    -         "sign online"(/<ul>)
+    - 'If you would like to fill in the order form offline, <a href="#" class="link">download the call-off order form</a>.'
   contract:
-    text: "Contract details"
-    hint: "Some information on what this contract is about and some general top-level guidance"
+    text: "What you're buying"
+    hint: "Fill in the form with the details of what you're buying, for how much and how it'll be delivered."
   buyer:
     text: "Buyer details"
-    hint: ""
+    hint: "Includes information about the buyer, including name and address."
   supplier:
     text: "Supplier details"
-    hint: ""
+    hint: "Supplier information like name and address."
   sign:
-    text: "Sign contract"
-    hint: ""
+    text: "Signature page"
+    hint: "Digitally sign the call-off order form. Once the buyer and supplier have both signed your call-off contract is ready to use."
 contract_overview:
-  title: "Contract name"
+  title: "Call-off order form"
   introduction:
-    - "Guidance notes and links. E.g This order form, when completed and executed by both parties forms a call-off contract"
+    - "Once the form has been completed and signed you can start working with the supplier."
 contract_details:
-  title: "Contract Details"
+  title: "About the contract"
   introduction:
-    - ""
+    - "Answer the questions about what you're buying and how." 
+    - "If a question isn't relevant, just say n/a."
   form:
     reference:
-      label: "Call-off reference"
-      hint: "Guidance on what reference to enter"
+      label: "Call-off reference number"
+      hint: "Every contract has a reference number." 
+       - "This is usually starts with 'RM' and is found on the bottom right corner of the contract documents."
     start_date:
       label: "Start date"
-      hint: ""
+      hint: "This is the date you expect the supplier to start work."
     end_date:
       label: "End date"
-      hint: ""
+      hint: "This is when your contract is due to end."
     initial_period:
       label: "Initial period"
       hint: ""
