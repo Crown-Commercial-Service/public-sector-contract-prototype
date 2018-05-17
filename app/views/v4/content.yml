@@ -49,8 +49,8 @@ progress:
     - ""
   form:
     report:
-      label: "Progress report"
-      hint: "Once a month at the start of the month"
+      label: "Progress updates"
+      hint: "Specify how you want to be kept up to date, for example meetings or reports and say how often you want this."
     frequency:
       label: "Progress frequency"
       hint: "Once a month at the start of the month"
@@ -61,7 +61,7 @@ what:
   form:
     details:
       label: "What are you buying"
-      hint: "Enter information on what you are buying (deliverables and delivery dates). You can find this in your requirements"
+      hint: "Say what you're buying and your delivery dates. You should be able to find this information in your requirements"
 charges:
   title: ""
   introduction:
@@ -69,7 +69,7 @@ charges:
   form:
     call_off:
       label: "Call-off charges"
-      hint: "Add some hint text"
+      hint: "How much you'll have to pay and any pricing structure."
 liability:
   title: ""
   introduction:
@@ -77,7 +77,7 @@ liability:
   form:
     max_liability:
       label: "Maximum liability"
-      hint: "This amount is based on the overall value of your call-off contract. [Add figure]"
+      hint: "This should be 150% of the estimated yearly charges, but no more than £5 million."
 terms:
   title: ""
   introduction:
@@ -85,31 +85,31 @@ terms:
   form:
     special_terms:
       label: "Special terms"
-      hint: "Something about the special terms"
+      hint: "You can add any additional terms that you need for you call-off contract in this section."
 guarantee:
-  title: ""
+  title: "Guarantee"
   introduction:
-    - ""
+    - "Answer yes if you need reassurance from a third party that the supplier can meet their obligations."
 expenses:
-  title: ""
+  title: "Refundable charges"
   introdution:
     - ""
   form:
     reimbursable:
-      label: "Reimbursable expenses"
-      hint: "I'll pay for your lunch"
+      label: "Refundable charges"
+      hint: "Any supplier expenses that you're willing to refund them for."
 credits:
   title: ""
   introduction:
     - ""
   form:
     service_credits:
-      label: "Service credits"
-      hint: "If something fails"
+      label: "Payment if the service fails"
+      hint: "What the supplier should pay if the service fails, for an agreed period, because of their error. "
 payment:
-  title: ""
+  title: "How you want to be paid"
   introduction:
-    - ""
+    - "Choose how you'd like to pay the supplier for their work."
   methods:
     - "Bank transfer"
     - "Cash"
@@ -120,14 +120,14 @@ buyer:
     - ""
   form:
     name:
-      label: "Name"
-      hint: "Insert buyer name"
+      label: "Company name"
+      hint: ""
     address:
       label: "Address"
-      hint: "Buyer address"
+      hint: ""
     invoice_address:
       label: "Invoice address"
-      hint: "Invoice address if different"
+      hint: "Add you invoice address if different."
 environmental:
   title: ""
   introduction:
@@ -135,7 +135,7 @@ environmental:
   form:
     policy:
       label: "Environmental policy"
-      hint: "Upload or paste"
+      hint: "Upload or add a link to your organisation's environmental policy."
 security:
   title: ""
   introduction:
@@ -143,18 +143,18 @@ security:
   form:
     policy:
       label: "Security policy"
-      hint: "Upload or paste"
+      hint: "Upload or add a link to your organisation's security policy."
 supplier:
   title: "Supplier details"
   introduction:
     - ""
   form:
     name:
-      label: "Name"
-      hint: "Insert supplier name"
+      label: "Company name"
+      hint: ""
     address:
       label: "Address"
-      hint: "Supplier address"
+      hint: ""
 supplier_details:
   title: ""
   introduction:
