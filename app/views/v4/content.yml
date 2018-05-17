@@ -1,0 +1,199 @@
+overview:
+  title: "Page title"
+  introduction:
+    - "Some information about what the buyer can do with this view"
+    - 'If you would like to fill in this form offiline you can <a href="#" class="link">download the call off order form</a>'
+contract_overview:
+  title: "Contract name"
+  introduction:
+    - "Guidance notes and links. E.g This order form, when completed and executed by both parties forms a call-off contract"
+contract_details:
+  title: "Contract Details"
+  introduction:
+    - ""
+  form:
+    reference:
+      label: "Call-off reference"
+      hint: "Guidance on what reference to enter"
+    start_date:
+      label: "Start date"
+      hint: ""
+    end_date:
+      label: "End date"
+      hint: ""
+    initial_period:
+      label: "Initial period"
+      hint: ""
+progress:
+  title: ""
+  introduction:
+    - ""
+  form:
+    report:
+      label: "Progress report"
+      hint: "Once a month at the start of the month"
+    frequency:
+      label: "Progress frequency"
+      hint: "Once a month at the start of the month"
+what:
+  title: ""
+  introduction:
+    - ""
+  form:
+    details:
+      label: "What are you buying"
+      hint: "Enter information on what you are buying (deliverables and delivery dates). You can find this in your requirements"
+charges:
+  title: ""
+  introduction:
+    - ""
+  form:
+    call_off:
+      label: "Call-off charges"
+      hint: "Add some hint text"
+liability:
+  title: ""
+  introduction:
+    - ""
+  form:
+    max_liability:
+      label: "Maximum liability"
+      hint: "This amount is based on the overall value of your call-off contract. [Add figure]"
+terms:
+  title: ""
+  introduction:
+    - ""
+  form:
+    special_terms:
+      label: "Special terms"
+      hint: "Something about the special terms"
+guarantee:
+  title: ""
+  introduction:
+    - ""
+expenses:
+  title: ""
+  introdution:
+    - ""
+  form:
+    reimbursable:
+      label: "Reimbursable expenses"
+      hint: "I'll pay for your lunch"
+credits:
+  title: ""
+  introduction:
+    - ""
+  form:
+    service_credits:
+      label: "Service credits"
+      hint: "If something fails"
+payment:
+  title: ""
+  introduction:
+    - ""
+  methods:
+    - "Bank transfer"
+    - "Cash"
+    - "Other"
+buyer:
+  title: "Buyer details"
+  introduction:
+    - ""
+  form:
+    name:
+      label: "Name"
+      hint: "Insert buyer name"
+    address:
+      label: "Address"
+      hint: "Buyer address"
+    invoice_address:
+      label: "Invoice address"
+      hint: "Invoice address if different"
+environmental:
+  title: ""
+  introduction:
+    - ""
+  form:
+    policy:
+      label: "Environmental policy"
+      hint: "Upload or paste"
+security:
+  title: ""
+  introduction:
+    - ""
+  form:
+    policy:
+      label: "Security policy"
+      hint: "Upload or paste"
+supplier:
+  title: "Supplier details"
+  introduction:
+    - ""
+  form:
+    name:
+      label: "Name"
+      hint: "Insert supplier name"
+    address:
+      label: "Address"
+      hint: "Supplier address"
+supplier_details:
+  title: ""
+  introduction:
+    - ""
+  form:
+    contract_manager:
+      label: "Contract manager"
+      hint: "Insert name, role, email, address"
+    registration_number:
+      label: "Registration number"
+      hint: "Supplier company registration number"
+    duns:
+      label: "DUNS number"
+      hint: "DUNS number"
+sensitive:
+  title: ""
+  introduction:
+    - ""
+  form:
+    information:
+      label: "Commercially sensitive information"
+      hint: "Upload or paste"
+authorised_representatives:
+  title: "Add authorised representatives"
+  introduction:
+    - ""
+  form:
+    name:
+      label: "Name"
+    role:
+      label: "Role"
+    email:
+      label: "Email address"
+    address:
+      label: "Address"
+buyer_countersign:
+  title: "Countersign contract"
+  introduction:
+    - "For an on behalf of the buyer"
+    - "This is the authorised buyer representative"
+  name:
+    label: "Name"
+    hint: ""
+  date:
+    label: "Date"
+    hint: ""
+supplier_countersign:
+  title: "Countersign contract"
+  introduction:
+    - "For an on behalf of the supplier"
+    - "This is the authorised suppier representative"
+  name:
+    label: "Name"
+    hint: ""
+  date:
+    label: "Date"
+    hint: ""
+countersign_contract:
+  title: "Countersign contract"
+  introduction:
+    - "Confirmation details"
