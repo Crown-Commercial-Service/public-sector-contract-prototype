@@ -1,0 +1,33 @@
+<form class="form" action="" method="post">
+  <div class="form-group">
+    <h2 class="heading-medium">{{ content.form.contract_manager.label }}</h2>
+    <label class="form-label" for="contract-manager">
+      <span class="form-hint">
+        {{ content.form.contract_manager.hint }}
+      </span>
+    </label>
+    <input class="form-control" id="contract-manager" type="text" name="contract-manager">
+
+    <h2 class="heading-medium">{{ content.form.registration_number.label }}</h2>
+    <label class="form-label" for="registration-number">
+      <span class="form-hint">
+        {{ content.form.registration_number.hint }}
+      </span>
+    </label>
+    <input class="form-control" id="registration-number" type="text" name="registration-number">
+
+    <h2 class="heading-medium">{{ content.form.duns.label }}</h2>
+    <label class="form-label" for="duns">
+      <span class="form-hint">
+        {{ content.form.duns.hint }}
+      </span>
+    </label>
+    <input class="form-control" id="duns" type="text" name="duns">
+  </div>
+
+  <div class="form-group">
+    {# <input class="button" type="submit" value="Save and continue"> #}
+    <a href="key_staff" class="button button-start">Save and continue</a>
+    <a href="#" class="button button-start">Cancel</a>
+  </div>
+</form>

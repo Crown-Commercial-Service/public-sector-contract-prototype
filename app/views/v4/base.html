@@ -1,0 +1,25 @@
+{% extends "layout.html" %}
+
+{% block page_title %}
+  Create a contract
+{% endblock %}
+
+{% block content %}
+
+<main id="content" role="main">
+  <div class="grid-row">
+    <div class="column-two-thirds">
+
+      <h1 class="heading-xlarge">{{ content.title }}</h1>
+
+      {% for paragraph_text in content.introduction %}
+      <p>{{ paragraph_text }}</p>
+      {% endfor %}
+
+      {% include "v4/_" + page + ".html" %}
+
+    </div>
+  </div>
+</main>
+
+{% endblock %}

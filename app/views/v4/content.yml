@@ -18,8 +18,8 @@ overview:
     hint: "Supplier information like name and address."
   sign:
     text: "Signature page"
-    hint: 
-      - "Digitally sign the call-off order form." 
+    hint:
+      - "Digitally sign the call-off order form."
       - "Once the buyer and supplier have both signed your call-off contract is ready to use."
 contract_overview:
   title: "Call-off order form"
@@ -28,20 +28,20 @@ contract_overview:
 contract_details:
   title: "About the contract"
   introduction:
-    - "Answer the questions about what you're buying and how." 
+    - "Answer the questions about what you're buying and how."
     - "If a question isn't relevant, just say so."
   form:
     reference:
       label: "Call-off reference number"
-      hint: 
-        - "Every contract has a reference number." 
+      hint:
+        - "Every contract has a reference number."
         - "It usually starts with 'RM' and is found on the bottom right corner of the contract documents."
     start_date:
       label: "Start date"
       hint: "This is the date you expect the supplier to start work."
     end_date:
       label: "End date"
-      hint: 
+      hint:
         - "This is when your contract is due to end, assuming the contract isn't extended."
     initial_period:
       label: "Initial period"
@@ -53,7 +53,7 @@ progress:
   form:
     report:
       label: "Progress updates"
-      hint: 
+      hint:
         - "Specify how you want to be kept up to date, for example meetings or reports."
         - "Say how often you want to be updated."
     frequency:
@@ -66,8 +66,8 @@ what:
   form:
     details:
       label: "What you're buying"
-      hint: 
-        - "Say what you're buying and your delivery dates." 
+      hint:
+        - "Say what you're buying and your delivery dates."
         - "You should be able to find this information in your requirements."
 charges:
   title: ""
@@ -84,7 +84,7 @@ liability:
   form:
     max_liability:
       label: "Maximum liability"
-      hint: 
+      hint:
         - "This is the amount you want the supplier to pay you if something goes wrong and it's their fault."
         - "This figure should be 150% of your estimated yearly charges, but no more than £5 million."
 terms:
@@ -177,8 +177,8 @@ supplier_details:
       hint: "If a company is registered at Companies House, it will have a registration number."
     duns:
       label: "DUNS number"
-      hint: 
-        - "A DUNS number will help the buyers assess the financial stability and reliability of a company." 
+      hint:
+        - "A DUNS number will help the buyers assess the financial stability and reliability of a company."
         - "Include it if you have one."
 sensitive:
   title: ""
@@ -187,13 +187,13 @@ sensitive:
   form:
     information:
       label: "Commercially sensitive information"
-      hint: 
-          - "The contract will be publically availble or may be subject to a Freedom of Information request."
-          - "Include details of anything that cannot be made publically available and the reasons why."
+      hint:
+        - "The contract will be publically availble or may be subject to a Freedom of Information request."
+        - "Include details of anything that cannot be made publically available and the reasons why."
 authorised_representatives:
   title: "Authorised representative"
   introduction:
-    - "This person has the authority to sign this call-off contract order form on behalf of your organisation." 
+    - "This person has the authority to sign this call-off contract order form on behalf of your organisation."
     - "Usually this person is a senior member of the organisation."
   form:
     name:

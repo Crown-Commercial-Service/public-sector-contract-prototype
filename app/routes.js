@@ -8,6 +8,8 @@ schedules = {
   'v3': yaml.safeLoad(fs.readFileSync('./app/views/v3/schedules.yml', 'utf8')),
 }
 
+content = yaml.safeLoad(fs.readFileSync('./app/views/v4/content.yml', 'utf8'))
+
 function findScheduleById(scheduleId, version) {
   return schedules[version].find(function(sch) { return sch.id == scheduleId })
 }
@@ -18,6 +20,64 @@ router.get('/', function (req, res) {
 })
 
 // add your routes here
+
+// v4 routes
+
+router.get('/v4', function (req, res) {
+  if (req.session.data.order_form == undefined) {
+    req.session.data.order_form = {}
+  }
+  res.render('v4/overview', { content: content.overview })
+})
+
+router.get('/v4/contract_details', function (req, res) {
+  res.render('v4/contract_details', {
+    order_form: req.session.data.order_form,
+    content: content
+  })
+})
+
+router.post('/v4/contract_details', function (req, res) {
+  if (req.session.data.order_form == undefined) {
+    req.session.data.order_form = {}
+  }
+  data = req.session.data
+  req.session.data.order_form.contract_details =
+  {
+    reference_number: data.reference_number,
+    start_date: data.start_date,
+    end_date: data.end_date,
+    initial_period: data.initial_period,
+    progress_report: data.progress_report,
+    progress_frequency: data.progress_frequency,
+    what: data.what,
+    call_off_charges: data.call_off_charges,
+    liability: data.liability,
+    special_terms: data.special_terms,
+    guarantee: data.guarantee,
+    expenses: data.expenses,
+    services_credits: data.service_credits,
+    payment: data.payment
+  }
+  res.redirect('/v4')
+})
+
+router.get('/v4/buyer', function (req, res) {
+  res.render('v4/buyer', {
+    order_form: req.session.data.order_form,
+    content: content
+  })
+})
+
+router.get('/v4/:page', function (req, res) {
+  page = req.params.page
+  res.render('v4/base', {
+    page: page,
+    content: content[`${page}`]
+  })
+})
+
+// v2 and v3 routes
 
 router.get('/:version(v2|v3)/what-is-the-public-sector-contract', function (req, res) {
   res.render(

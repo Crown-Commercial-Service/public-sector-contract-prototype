@@ -1,0 +1,41 @@
+<p>If you would like to fill in the order form offline, <a href="#" class="link">download the call-off order form</a>.</p>
+
+<h2 class="heading-medium">{{ content.contract_details.form.reference.label }}</h2>
+<label class="form-label" for="reference_number">
+  <span class="form-hint">
+    {% for hint_text in content.contract_details.form.reference.hint %}
+    {{ hint_text }}<br>
+    {% endfor %}
+  </span>
+</label>
+{% if order_form.contract_details.reference_number %}
+<input class="form-control" id="reference_number" type="text" name="reference_number"
+value={{ order_form.contract_details.reference_number }}>
+{% else %}
+<input class="form-control" id="reference_number" type="text" name="reference_number"
+value="05625751">
+{% endif %}
+
+<h2 class="heading-medium">{{ content.contract_details.form.start_date.label }}</h2>
+<label class="form-label" for="start_date">
+  <span class="form-hint">
+    {{ content.contract_details.form.start_date.hint }}
+  </span>
+</label>
+{% if order_form.contract_details.start_date %}
+<input class="form-control" id="start_date" type="text" name="start_date" value={{ order_form.contract_details.start_date }}>
+{% else %}
+<input class="form-control" id="start_date" type="text" name="start_date" value="01/01/01">
+{% endif %}
+
+<h2 class="heading-medium">{{ content.contract_details.form.end_date.label }}</h2>
+<label class="form-label" for="end_date">
+  <span class="form-hint">
+    {{ content.contract_details.form.end_date.hint }}
+  </span>
+</label>
+{% if order_form.contract_details.end_date %}
+<input class="form-control" id="end_date" type="text" name="end_date" value={{ order_form.contract_details.end_date }}>
+{% else %}
+<input class="form-control" id="end_date" type="text" name="end_date" value="01/01/01">
+{% endif %}

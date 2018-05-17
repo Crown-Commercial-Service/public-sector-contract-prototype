@@ -1,0 +1,74 @@
+{% extends "layout.html" %}
+
+{% block page_title %}
+  Create a contract
+{% endblock %}
+
+{% block content %}
+
+<main id="content" role="main">
+  <div class="grid-row">
+    <div class="column-two-thirds">
+
+      <h1 class="heading-xlarge">{{ content.title }}</h1>
+
+      {% for paragraph_text in content.introduction %}
+      <p>{{ paragraph_text }}</p>
+      {% endfor %}
+
+    </div>
+
+    <div class="column-third">
+
+      <aside class="govuk-related-items" role="complementary">
+        <h2 class="heading-medium" id="subsection-title">Related content</h2>
+        <nav role="navigation" aria-labelledby="subsection-title">
+          <ul class="font-xsmall">
+            <li><a href="#">Call-off contract guidance</a></li>
+            <li><a href="#">Buyer guidance</a></li>
+          </ul>
+        </nav>
+      </aside>
+
+    </div>
+  </div>
+
+  <div class="grid-row">
+    <div class="column-two-thirds">
+      <ul class="list list-number">
+        <li>
+          <h2 class="heading-medium">{{ content.contract.text }}</h2>
+          <p>{{ content.contract.hint }}</p>
+          <p><a href="v4/contract_details">Check contract details</a></p>
+        </li>
+        <li>
+          <h2 class="heading-medium">{{ content.buyer.text }}</h2>
+          <p>{{ content.buyer.hint }}</p>
+          <p><a href="v4/buyer">Check buyer details</a></p>
+        </li>
+        <li>
+          <h2 class="heading-medium">{{ content.supplier.text }}</h2>
+          <p>{{ content.supplier.hint }}</p>
+          <p><a href="v4/supplier">Check supplier details</a></p>
+          <p><a href="#">Invite supplier to edit</a></p>
+        </li>
+        <li>
+          <h2 class="heading-medium">{{ content.sign.text }}</h2>
+          {% for hint_text in content.sign.hint %}
+          <p>{{ hint_text }}</p>
+          {% endfor %}
+          <p><a href="v4/buyer_countersign">Sign contract (only active when 1 - 3 complete)</a></p>
+        </li>
+      </ul>
+    </div>
+  </div>
+
+  <div class="grid-row">
+    <div class="column-two-thirds">
+      <a class="button button-start" href="#" role="link">View contract</a>
+      <a class="button button-start" href="#" role="link">Download contract</a>
+    </div>
+  </div>
+</main>
+
+{% endblock %}

@@ -1,0 +1,41 @@
+<form class="form" action="" method="post">
+  <div class="form-group">
+    <h2 class="heading-medium">{{ content.form.name.label }}</h2>
+    <label class="form-label" for="name">
+      <span class="form-hint">
+        {{ content.form.name.hint }}
+      </span>
+    </label>
+    <input class="form-control" id="name" type="text" name="name">
+
+    <h2 class="heading-medium">{{ content.form.role.label }}</h2>
+    <label class="form-label" for="role">
+      <span class="form-hint">
+        {{ content.form.role.hint }}
+      </span>
+    </label>
+    <input class="form-control" id="role" type="text" name="role">
+
+    <h2 class="heading-medium">{{ content.form.email.label }}</h2>
+    <label class="form-label" for="email">
+      <span class="form-hint">
+        {{ content.form.email.hint }}
+      </span>
+    </label>
+    <input class="form-control" id="email" type="text" name="email">
+
+    <h2 class="heading-medium">{{ content.form.address.label }}</h2>
+    <label class="form-label" for="address">
+      <span class="form-hint">
+        {{ content.form.address.hint }}
+      </span>
+    </label>
+    <input class="form-control" id="address" type="text" name="address">
+  </div>
+
+  <div class="form-group">
+    {# <input class="button" type="submit" value="Save and continue"> #}
+    <a href="key_staff" class="button button-start">Save and continue</a>
+    <a href="#" class="button button-start">Cancel</a>
+  </div>
+</form>

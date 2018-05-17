@@ -1,0 +1,71 @@
+{% extends "layout.html" %}
+
+{% block page_title %}
+  Create a contract
+{% endblock %}
+
+{% block content %}
+
+<main id="content" role="main">
+  <div class="grid-row">
+    <div class="column-two-thirds">
+
+      <h1 class="heading-xlarge">{{ content.buyer.title }}</h1>
+
+      {% for paragraph_text in content.buyer.introduction %}
+      <p>{{ paragraph_text }}</p>
+      {% endfor %}
+
+      <form class="form" action="" method="post">
+          <div class="form-group">
+            <h2 class="heading-medium">{{ content.buyer.form.name.label }}</h2>
+            <label class="form-label" for="name">
+              <span class="form-hint">
+                {{ content.buyer.form.name.hint }}
+              </span>
+            </label>
+            <input class="form-control" id="name" type="text" name="name">
+
+            <h2 class="heading-medium">{{ content.buyer.form.address.label }}</h2>
+            <label class="form-label" for="address">
+              <span class="form-hint">
+                {{ content.buyer.form.address.hint }}
+              </span>
+            </label>
+            <input class="form-control" id="address" type="text" name="address">
+
+            <h2 class="heading-medium">{{ content.buyer.form.invoice_address.label }}</h2>
+            <label class="form-label" for="name">
+              <span class="form-hint">
+                {{ content.buyer.form.invoice_address.hint }}
+              </span>
+            </label>
+            <input class="form-control" id="invoice_address" type="text" name="invoice_address">
+
+            <h2 class="heading-medium">{{ content.environmental.form.policy.label }}</h2>
+            <label class="form-label" for="environmental-policy">
+              <span class="form-hint">
+                {{ content.environmental.form.policy.hint }}
+              </span>
+            </label>
+            <input class="form-control" id="expenses" type="text" name="expenses">
+
+            <h2 class="heading-medium">{{ content.security.form.policy.label }}</h2>
+            <label class="form-label" for="environmental-policy">
+              <span class="form-hint">
+                {{ content.security.form.policy.hint }}
+              </span>
+            </label>
+            <input class="form-control" id="expenses" type="text" name="expenses">
+          </div>
+
+          <div class="form-group">
+            <input class="button button-start" type="submit" value="Save">
+            <a href="#" class="button button-start">Cancel</a>
+          </div>
+        </form>
+    </div>
+  </div>
+</main>
+
+{% endblock %}

@@ -1,0 +1,15 @@
+<fieldset>
+
+  <legend>
+    <h2 class="heading-medium">Payment method</h2>
+  </legend>
+
+  {% for method in content.payment.methods %}
+  {% set id = method.replace(" ", "-").toLowerCase() %}
+  <div class="multiple-choice" data-target="mod-yes">
+    <input id={{ id }} type="radio" name="role" value={{ method }}>
+    <label for={{ id }}>{{ method }}</label>
+  </div>
+  {% endfor %}
+
+</fieldset>

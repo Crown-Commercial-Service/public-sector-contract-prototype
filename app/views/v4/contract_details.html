@@ -1,0 +1,43 @@
+{% extends "layout.html" %}
+
+{% block page_title %}
+  Create a contract
+{% endblock %}
+
+{% block content %}
+
+<main id="content" role="main">
+  <div class="grid-row">
+    <div class="column-two-thirds">
+
+      <h1 class="heading-xlarge">{{ content.contract_details.title }}</h1>
+
+      {% for paragraph_text in content.contract_details.introduction %}
+      <p>{{ paragraph_text }}</p>
+      {% endfor %}
+
+      <form class="form" action="" method="post">
+        <div class="form-group">
+          {% include "v4/_contract_details.html" %}
+          {% include "v4/_progress.html" %}
+          {% include "v4/_what.html" %}
+          {% include "v4/_charges.html" %}
+          {% include "v4/_liability.html" %}
+          {% include "v4/_terms.html" %}
+          {% include "v4/_guarantee.html" %}
+          {% include "v4/_expenses.html" %}
+          {% include "v4/_credits.html" %}
+          {% include "v4/_payment.html" %}
+        </div>
+
+        <div class="form-group">
+          <input class="button button-start" type="submit" value="Save">
+          {# <a href="/v4" class="button button-start">Save and continue</a> #}
+          <a href="#" class="button button-start">Cancel</a>
+        </div>
+      </form>
+    </div>
+  </div>
+</main>
+
+{% endblock %}
