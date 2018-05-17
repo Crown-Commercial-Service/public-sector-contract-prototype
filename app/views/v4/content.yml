@@ -39,7 +39,7 @@ contract_details:
       hint: "This is the date you expect the supplier to start work."
     end_date:
       label: "End date"
-      hint: "This is when your contract is due to end."
+      hint: "This is when your contract is due to end, assuming the contract isn't extended."
     initial_period:
       label: "Initial period"
       hint: ""
@@ -60,7 +60,7 @@ what:
     - ""
   form:
     details:
-      label: "What are you buying"
+      label: "What you're buying"
       hint: "Say what you're buying and your delivery dates. You should be able to find this information in your requirements"
 charges:
   title: ""
@@ -69,7 +69,7 @@ charges:
   form:
     call_off:
       label: "Call-off charges"
-      hint: "How much you'll have to pay and any pricing structure."
+      hint: "How much you'll have to pay and details of any pricing structure you want."
 liability:
   title: ""
   introduction:
@@ -77,7 +77,8 @@ liability:
   form:
     max_liability:
       label: "Maximum liability"
-      hint: "This should be 150% of the estimated yearly charges, but no more than £5 million."
+      hint: "This is the amount you want the supplier to pay you if something goes wrong and it's their fault."
+      - "This figure should be 150% of the estimated yearly charges, but no more than £5 million."
 terms:
   title: ""
   introduction:
@@ -85,11 +86,11 @@ terms:
   form:
     special_terms:
       label: "Special terms"
-      hint: "You can add any additional terms that you need for you call-off contract in this section."
+      hint: "Add any additional terms you want to include in your call-off contract."
 guarantee:
   title: "Guarantee"
   introduction:
-    - "Answer yes if you need reassurance from a third party that the supplier can meet their obligations."
+    - "Answer yes if you need a third party to guarantee your supplier can meet their obligations."
 expenses:
   title: "Refundable charges"
   introdution:
@@ -97,7 +98,7 @@ expenses:
   form:
     reimbursable:
       label: "Refundable charges"
-      hint: "Any supplier expenses that you're willing to refund them for."
+      hint: "Any supplier expenses that you're willing to refund to them, for example travel."
 credits:
   title: ""
   introduction:
@@ -105,9 +106,9 @@ credits:
   form:
     service_credits:
       label: "Payment if the service fails"
-      hint: "What the supplier should pay if the service fails, for an agreed period, because of their error. "
+      hint: "What the supplier should pay if the service fails, for an agreed amount of time, because of supplier error. "
 payment:
-  title: "How you want to be paid"
+  title: "How you want to pay"
   introduction:
     - "Choose how you'd like to pay the supplier for their work."
   methods:
@@ -127,7 +128,7 @@ buyer:
       hint: ""
     invoice_address:
       label: "Invoice address"
-      hint: "Add you invoice address if different."
+      hint: "Add invoice address if different."
 environmental:
   title: ""
   introduction:
@@ -162,13 +163,13 @@ supplier_details:
   form:
     contract_manager:
       label: "Contract manager"
-      hint: "Insert name, role, email, address"
+      hint: "This person will be the buyer's daily contact. Include name, role and contact details."
     registration_number:
-      label: "Registration number"
-      hint: "Supplier company registration number"
+      label: "Company registration number"
+      hint: "If a company is registered at Companies House, it will have a registration number."
     duns:
       label: "DUNS number"
-      hint: "DUNS number"
+      hint: "A DUNS number will help the buyers assess the financial stability and reliability of a company."
 sensitive:
   title: ""
   introduction:
@@ -176,11 +177,13 @@ sensitive:
   form:
     information:
       label: "Commercially sensitive information"
-      hint: "Upload or paste"
+      hint: "The contract will be publically availble or may be subject to a Freedom of Information request."
+          - "Include details of anything that cannot be made publically available and the reasons why."
 authorised_representatives:
-  title: "Add authorised representatives"
+  title: "Authorised representative"
   introduction:
-    - ""
+    - "This person has the authority to sign this call-off contract order form on behalf of your organisation." 
+    - "Usually this person is at director level."
   form:
     name:
       label: "Name"
@@ -191,10 +194,10 @@ authorised_representatives:
     address:
       label: "Address"
 buyer_countersign:
-  title: "Countersign contract"
+  title: "Signature"
   introduction:
-    - "For an on behalf of the buyer"
-    - "This is the authorised buyer representative"
+    - "For and on behalf of the buyer"
+    - "This person must have the authority to sign the contract, usually this will be your authorised representative."
   name:
     label: "Name"
     hint: ""
@@ -202,10 +205,10 @@ buyer_countersign:
     label: "Date"
     hint: ""
 supplier_countersign:
-  title: "Countersign contract"
+  title: "Countersign the contract"
   introduction:
-    - "For an on behalf of the supplier"
-    - "This is the authorised suppier representative"
+    - "For and on behalf of the supplier"
+    - "This person must have the authority to sign the contract, usually this will be a senior person in the organisation."
   name:
     label: "Name"
     hint: ""
