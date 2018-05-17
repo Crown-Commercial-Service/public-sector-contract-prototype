@@ -1,7 +1,7 @@
-var express = require('express')
-var router  = express.Router()
-var yaml    = require('js-yaml')
-var fs      = require('fs-extra')
+var express = require('express');
+var router  = express.Router();
+var yaml    = require('js-yaml');
+var fs      = require('fs-extra');
 
 schedules = {
   'v2': yaml.safeLoad(fs.readFileSync('./app/views/v2/schedules.yml', 'utf8')),
@@ -28,17 +28,17 @@ router.get('/:version(v2|v3)/what-is-the-public-sector-contract', function (req,
 
 router.get('/:version(v2|v3)/contract', function (req, res) {
   if (req.session.data['optionalIncluded'] == undefined) {
-  	req.session.data['optionalIncluded'] = []
+    req.session.data['optionalIncluded'] = []
   }
 
   res.render(
-	`${req.params.version}/contract`,
-  	{
-  	  schedules: schedules[req.params.version],
-  	  optionalIncluded: req.session.data['optionalIncluded'],
-  	  updated: req.query.updated,
-  	  invited: req.query.invited
-  	}
+    `${req.params.version}/contract`,
+    {
+      schedules: schedules[req.params.version],
+      optionalIncluded: req.session.data['optionalIncluded'],
+      updated: req.query.updated,
+      invited: req.query.invited
+    }
   )
 })
 
@@ -47,12 +47,12 @@ router.post('/:version(v2|v3)/team-members', function (req, res) {
   role = req.session.data['role']
 
   if (req.session.data['teammembers'] == undefined) {
-  	req.session.data['teammembers'] = []
+    req.session.data['teammembers'] = []
   }
 
   req.session.data['teammembers'].push({
-  	email: email,
-  	role: role
+    email: email,
+    role: role
   })
 
   res.redirect(`/${req.params.version}/contract?invited=true`)
@@ -77,17 +77,17 @@ router.post('/:version(v2|v3)/schedule/:scheduleId/:addOrRemove', function (req,
   addOrRemove = req.params['addOrRemove']
 
   if (req.session.data['optionalIncluded'] == undefined) {
-  	req.session.data['optionalIncluded'] = []
+    req.session.data['optionalIncluded'] = []
   }
 
   if (addOrRemove == 'add') {
-  	req.session.data['optionalIncluded'].push(scheduleId)
+    req.session.data['optionalIncluded'].push(scheduleId)
   }
 
   if (addOrRemove == 'remove') {
     req.session.data['optionalIncluded'].splice(
       req.session.data['optionalIncluded'].indexOf(scheduleId, 1)
-	)
+    )
   }
 
   console.log(req.session.data['optionalIncluded'])
