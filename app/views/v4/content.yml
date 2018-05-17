@@ -3,6 +3,18 @@ overview:
   introduction:
     - "Some information about what the buyer can do with this view"
     - 'If you would like to fill in this form offiline you can <a href="#" class="link">download the call off order form</a>'
+  contract:
+    text: "Contract details"
+    hint: "Some information on what this contract is about and some general top-level guidance"
+  buyer:
+    text: "Buyer details"
+    hint: ""
+  supplier:
+    text: "Supplier details"
+    hint: ""
+  sign:
+    text: "Sign contract"
+    hint: ""
 contract_overview:
   title: "Contract name"
   introduction:
