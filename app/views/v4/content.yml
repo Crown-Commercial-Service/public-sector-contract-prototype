@@ -5,11 +5,6 @@ overview:
     - "This used to be called the call-off order form."
     - "You've already given us some of this information, so we've put it into the form for you."
     - "You can check and edit this information."
-    - "Then you need to:"
-  list_items:
-    - "invite your supplier to fill in their details"
-    - "review the complete form"
-    - "sign the contract online"
   contract:
     text: "1 . What you're buying"
     hint: "Fill in the form with the details of what you're buying, for how much and how it'll be delivered."
