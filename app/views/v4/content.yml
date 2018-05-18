@@ -1,14 +1,14 @@
 overview:
   title: "Award a contract"
   introduction:
-    - "Complete the call-off order form to create a contract with a supplier."
+    - "Complete the call-off order form to create your contract with a supplier."
     - "You've already given us some of this information, so we've put it into the form for you."
-    - "You can check and edit the information if you need to."
+    - "You can check and edit this information."
     - "Then you need to:"
     - "fill in any remaining information"
     - "invite your supplier to fill in their details"
     - "review the complete form"
-    - "sign it online"
+    - "sign the contract online"
   contract:
     text: "What you're buying"
     hint: "Fill in the form with the details of what you're buying, for how much and how it'll be delivered."
@@ -17,12 +17,12 @@ overview:
     hint: "Includes information about the buyer, including name and address."
   supplier:
     text: "Supplier details"
-    hint: "Supplier information like name and address."
+    hint: "Includes information about the supplier, including key staff and subcontractors."
   sign:
     text: "Signature page"
     hint:
       - "Sign the call-off order form online."
-      - "Once the buyer and supplier have both signed the call-off contract is ready to use."
+      - "Once you've both signed the call-off contract it's ready to use."
 contract_overview:
   title: "Call-off order form"
   introduction:
@@ -37,7 +37,7 @@ contract_details:
       label: "Call-off reference number"
       hint:
         - "Every contract has a reference number."
-        - "It usually starts with 'RM' and is found on the bottom right corner of the contract documents."
+        - "It usually starts with 'RM' and is found on the bottom right of the contract documents."
     start_date:
       label: "Start date"
       hint: "This is the date you expect the supplier to start work."
@@ -57,7 +57,7 @@ progress:
       label: "Progress updates"
       hint:
         - "Specify how you want to be kept up to date, for example meetings or reports."
-        - "Include how regularly you'd like to be updated."
+        - "Include how regularly you'd like to be updated by your supplier."
     frequency:
       label: "Progress frequency"
       hint: "Once a month at the start of the month"
@@ -116,7 +116,7 @@ credits:
   form:
     service_credits:
       label: "Payment if the service fails"
-      hint: "What the supplier should pay if the service fails for an agreed amount of time because of their error."
+      hint: "The penalty the supplier has to pay if the service fails because of their error."
 payment:
   title: "How you want to pay"
   introduction:
@@ -176,7 +176,7 @@ supplier_details:
       hint: "This person will be the buyer's daily contact. Include name, role and contact details."
     registration_number:
       label: "Company registration number"
-      hint: "If a company is registered at Companies House, it will have a registration number."
+      hint: "If a company is registered at Companies House, it'll have a registration number."
     duns:
       label: "DUNS number"
       hint:
