@@ -19,8 +19,8 @@ overview:
   sign:
     text: "Signature page"
     hint:
-      - "Digitally sign the call-off order form."
-      - "Once the buyer and supplier have both signed your call-off contract is ready to use."
+      - "Sign the call-off order form online."
+      - "Once the buyer and supplier have both signed the call-off contract is ready to use."
 contract_overview:
   title: "Call-off order form"
   introduction:
