@@ -26,6 +26,7 @@ overview:
       - "Once you've both signed you can start working with your supplier."
     buyer: "Sign contract"
     supplier_sign: "Invite supplier to sign"
+    supplier_invited: "Supplier invited to sign"
 contract_overview:
   title: "Call-off order form"
   introduction:
@@ -211,6 +212,10 @@ authorised_representatives:
       label: "Address"
 supplier_edit:
   title: "Invite the supplier to edit"
+  hint: ""
+  email: "Email"
+invite_supplier_signatory:
+  title: "Invite the supplier to sign"
   hint: ""
   email: "Email"
 buyer_signatory:

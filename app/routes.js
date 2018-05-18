@@ -31,7 +31,8 @@ router.get('/v4', function (req, res) {
   res.render('v4/overview', {
     order_form: req.session.data.order_form,
     content: content.overview,
-    supplier_edit: req.query.supplier_edit
+    supplier_edit: req.query.supplier_edit,
+    supplier_signatory_invited: req.query.supplier_signatory_invited
   })
 })
 
@@ -142,7 +143,8 @@ router.post('/v4/buyer_signatory', function (req, res) {
   req.session.data.order_form.buyer_signatory = {
     name: data.buyer_sign_name,
     role: data.buyer_sign_role,
-    date: data.buyer_sign_date
+    date: data.buyer_sign_date,
+    signed: true
   }
 
   console.log(req.session.data.order_form)
@@ -163,6 +165,21 @@ router.post('/v4/supplier_edit', function (req, res) {
   console.log(req.session.data.order_form)
 
   res.redirect('/v4?supplier_edit=true')
+})
+
+router.post('/v4/invite_supplier_signatory', function (req, res) {
+  if (req.session.data.order_form == undefined) {
+    req.session.data.order_form = {}
+  }
+
+  data = req.session.data
+  req.session.data.order_form.invited_supplier_signatory = {
+    email: data.invited_supplier_signatory_email
+  }
+
+  console.log(req.session.data.order_form)
+
+  res.redirect('/v4?supplier_signatory_invited=true')
 })
 
 router.get('/v4/:page', function (req, res) {
