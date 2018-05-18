@@ -41,9 +41,9 @@ router.post('/v4/contract_details', function (req, res) {
   if (req.session.data.order_form == undefined) {
     req.session.data.order_form = {}
   }
+
   data = req.session.data
-  req.session.data.order_form.contract_details =
-  {
+  req.session.data.order_form.contract_details = {
     reference_number: data.reference_number,
     start_date: data.start_date,
     end_date: data.end_date,
@@ -59,14 +59,65 @@ router.post('/v4/contract_details', function (req, res) {
     services_credits: data.service_credits,
     payment: data.payment
   }
+
   res.redirect('/v4')
 })
 
 router.get('/v4/buyer', function (req, res) {
+  if (req.session.data.order_form == undefined) {
+    req.session.data.order_form = {}
+  }
+
   res.render('v4/buyer', {
     order_form: req.session.data.order_form,
     content: content
   })
+})
+
+router.post('/v4/buyer', function (req, res) {
+  if (req.session.data.order_form == undefined) {
+    req.session.data.order_form = {}
+  }
+
+  data = req.session.data
+  req.session.data.order_form.buyer = {
+    name: data.buyer_name,
+    address: data.buyer_address,
+    invoice_address: data.invoice_address,
+    environmental_policy: data.environmental_policy,
+    security_policy: data.security_policy
+  }
+
+  res.redirect('/v4')
+})
+
+router.get('/v4/supplier', function (req, res) {
+  if (req.session.data.order_form == undefined) {
+    req.session.data.order_form = {}
+  }
+
+  res.render('v4/supplier', {
+    order_form: req.session.data.order_form,
+    content: content
+  })
+})
+
+router.post('/v4/supplier', function (req, res) {
+  if (req.session.data.order_form == undefined) {
+    req.session.data.order_form = {}
+  }
+
+  data = req.session.data
+  req.session.data.order_form.supplier = {
+    name: data.supplier_name,
+    address: data.supplier_address,
+    contract_manager: data.contract_manager,
+    registration_number: data.registration_number,
+    duns: data.duns,
+    sensitive_information: data.sensitive_information
+  }
+
+  res.redirect('/v4')
 })
 
 router.get('/v4/:page', function (req, res) {

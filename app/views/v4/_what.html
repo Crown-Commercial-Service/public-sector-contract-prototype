@@ -4,4 +4,4 @@
     {{ content.what.form.details.hint }}
   </span>
 </label>
-<textarea class="form-control form-control-3-4" name="what" id="what" rows="10"></textarea>
+<textarea class="form-control form-control-3-4" name="what" id="what" rows="10">{% if order_form.contract_details.what %}{{ order_form.contract_details.what }}{% else %}Example facilities order{% endif %}</textarea>

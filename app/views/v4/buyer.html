@@ -17,53 +17,59 @@
       {% endfor %}
 
       <form class="form" action="" method="post">
-          <div class="form-group">
-            <h2 class="heading-medium">{{ content.buyer.form.name.label }}</h2>
-            <label class="form-label" for="name">
-              <span class="form-hint">
-                {{ content.buyer.form.name.hint }}
-              </span>
-            </label>
-            <input class="form-control" id="name" type="text" name="name">
+        <div class="form-group">
+          <h2 class="heading-medium">{{ content.buyer.form.name.label }}</h2>
+          <label class="form-label" for="buyer_name">
+            <span class="form-hint">
+              {{ content.buyer.form.name.hint }}
+            </span>
+          </label>
+          <input class="form-control" id="buyer_name" type="text" name="buyer_name" value="{% if order_form.buyer.name %}{{ order_form.buyer.name }}{% else %}GDS{% endif %}">
 
-            <h2 class="heading-medium">{{ content.buyer.form.address.label }}</h2>
-            <label class="form-label" for="address">
-              <span class="form-hint">
-                {{ content.buyer.form.address.hint }}
-              </span>
-            </label>
-            <input class="form-control" id="address" type="text" name="address">
+          <h2 class="heading-medium">{{ content.buyer.form.address.label }}</h2>
+          <label class="form-label" for="buyer_address">
+            <span class="form-hint">
+              {{ content.buyer.form.address.hint }}
+            </span>
+          </label>
+          <input class="form-control" id="buyer_address" type="text" name="buyer_address" value="{% if order_form.buyer.address %}{{ order_form.buyer.address }}{% else %}White Chapel Building, London{% endif %}">
 
-            <h2 class="heading-medium">{{ content.buyer.form.invoice_address.label }}</h2>
-            <label class="form-label" for="name">
-              <span class="form-hint">
-                {{ content.buyer.form.invoice_address.hint }}
-              </span>
-            </label>
-            <input class="form-control" id="invoice_address" type="text" name="invoice_address">
+          <h2 class="heading-medium">{{ content.buyer.form.invoice_address.label }}</h2>
+          <label class="form-label" for="name">
+            <span class="form-hint">
+              {{ content.buyer.form.invoice_address.hint }}
+            </span>
+          </label>
+          <input class="form-control" id="invoice_address" type="text" name="invoice_address">
 
-            <h2 class="heading-medium">{{ content.environmental.form.policy.label }}</h2>
-            <label class="form-label" for="environmental-policy">
-              <span class="form-hint">
-                {{ content.environmental.form.policy.hint }}
-              </span>
-            </label>
-            <input class="form-control" id="expenses" type="text" name="expenses">
+          <h2 class="heading-medium">Authorised representatives</h2>
+          {% for representative in order_form.buyer.representatives %}
+          <p>{{ representative.name }}</p>
+          {% endfor %}
+          <p><a href="authorised_representatives" class="">Add</a></p>
 
-            <h2 class="heading-medium">{{ content.security.form.policy.label }}</h2>
-            <label class="form-label" for="environmental-policy">
-              <span class="form-hint">
-                {{ content.security.form.policy.hint }}
-              </span>
-            </label>
-            <input class="form-control" id="expenses" type="text" name="expenses">
-          </div>
+          <h2 class="heading-medium">{{ content.environmental.form.policy.label }}</h2>
+          <label class="form-label" for="environmental_policy">
+            <span class="form-hint">
+              {{ content.environmental.form.policy.hint }}
+            </span>
+          </label>
+          <input class="form-control" id="environmental_policy" type="text" name="environmental_policy" value="{{ order_form.buyer.environmental_policy }}">
 
-          <div class="form-group">
-            <input class="button button-start" type="submit" value="Save">
-            <a href="#" class="button button-start">Cancel</a>
-          </div>
-        </form>
+          <h2 class="heading-medium">{{ content.security.form.policy.label }}</h2>
+          <label class="form-label" for="security_policy">
+            <span class="form-hint">
+              {{ content.security.form.policy.hint }}
+            </span>
+          </label>
+          <input class="form-control" id="security_policy" type="text" name="security_policy" value="{{ order_form.buyer.security_policy }}">
+        </div>
+
+        <div class="form-group">
+          <input class="button button-start" type="submit" value="Save">
+          <a href="#" class="button button-start">Cancel</a>
+        </div>
+      </form>
     </div>
   </div>
 </main>
