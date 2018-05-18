@@ -114,7 +114,7 @@ credits:
   form:
     service_credits:
       label: "Payment if the service fails"
-      hint: "What the supplier should pay if the service fails for an agreed amount of time because of supplier error."
+      hint: "What the supplier should pay if the service fails for an agreed amount of time because of their error."
 payment:
   title: "How you want to pay"
   introduction:
