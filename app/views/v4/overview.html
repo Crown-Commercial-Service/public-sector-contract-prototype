@@ -68,17 +68,18 @@
           <p>{{ hint_text }}</p>
           {% endfor %}
 
-          <p><a href="v4/buyer_signatory">{{ content.sign.buyer }}</a></p>
 
           {% if order_form.buyer_signatory.signed %}
-            {% if supplier_signatory_invited %}
-            <div class="govuk-box-highlight">
-              <p class="font-medium" style="margin-bottom: 0px">
-                {{ content.sign.supplier_invited }}
-              </p>
-            </div>
-            {% endif %}
+          {% if supplier_signatory_invited %}
+          <div class="govuk-box-highlight">
+            <p class="font-medium" style="margin-bottom: 0px">
+              {{ content.sign.supplier_invited }}
+            </p>
+          </div>
+          {% endif %}
           <p><a href="v4/invite_supplier_signatory">{{ content.sign.supplier_sign }}</a></p>
+          {% else %}
+          <p><a href="v4/buyer_signatory">{{ content.sign.buyer }}</a></p>
           {% endif %}
 
         </div>
