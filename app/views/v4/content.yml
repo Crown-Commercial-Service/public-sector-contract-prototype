@@ -55,7 +55,7 @@ progress:
       label: "Progress updates"
       hint:
         - "Specify how you want to be kept up to date, for example meetings or reports."
-        - "Say how often you want to be updated."
+        - "Include how regularly you'd like to be updated."
     frequency:
       label: "Progress frequency"
       hint: "Once a month at the start of the month"
