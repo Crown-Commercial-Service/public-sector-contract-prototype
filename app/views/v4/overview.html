@@ -1,7 +1,7 @@
 {% extends "layout.html" %}
 
 {% block page_title %}
-  Create a contract
+  Award a contract
 {% endblock %}
 
 {% block content %}
@@ -24,8 +24,8 @@
         <h2 class="heading-medium" id="subsection-title">Related content</h2>
         <nav role="navigation" aria-labelledby="subsection-title">
           <ul class="font-xsmall">
-            <li><a href="#">Call-off contract guidance</a></li>
-            <li><a href="#">Buyer guidance</a></li>
+            <li><a href="https://www.gov.uk/guidance/how-to-award-a-contract-when-you-buy-services">How to award a contract</a></li>
+            <li><a href="https://www.gov.uk/guidance/digital-marketplace-buyers-guide">Buyer guidance</a></li>
           </ul>
         </nav>
       </aside>
@@ -39,17 +39,17 @@
         <li>
           <h2 class="heading-medium">{{ content.contract.text }}</h2>
           <p>{{ content.contract.hint }}</p>
-          <p><a href="v4/contract_details">Check contract details</a></p>
+          <p><a href="v4/contract_details">Check and complete contract details</a></p>
         </li>
         <li>
           <h2 class="heading-medium">{{ content.buyer.text }}</h2>
           <p>{{ content.buyer.hint }}</p>
-          <p><a href="v4/buyer">Check buyer details</a></p>
+          <p><a href="v4/buyer">Check and complete buyer details</a></p>
         </li>
         <li>
           <h2 class="heading-medium">{{ content.supplier.text }}</h2>
           <p>{{ content.supplier.hint }}</p>
-          <p><a href="v4/supplier">Check supplier details</a></p>
+          <p><a href="v4/supplier">Check and complete supplier details</a></p>
           <p><a href="#">Invite supplier to edit</a></p>
         </li>
         <li>
