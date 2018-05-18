@@ -4,4 +4,14 @@
     {{ content.what.form.details.hint }}
   </span>
 </label>
-<textarea class="form-control form-control-3-4" name="what" id="what" rows="10">{% if order_form.contract_details.what %}{{ order_form.contract_details.what }}{% else %}Example facilities order{% endif %}</textarea>
+<textarea class="form-control form-control-3-4" name="what" id="what" rows="10">{% if order_form.contract_details.what %}{{ order_form.contract_details.what }}{% else %}This information should include:
+
+what you want to call your requirements
+why this work is being done, for example an organisation or policy goal
+the problem you want to solve
+the citizen or ‘end user’ that this work is being carried out for, and what they want to do
+phase the work is currently in: discovery, alpha, beta, or live
+existing team the supplier will be working with
+working arrangements, for example the supplier should be onsite 3 days a week for face-to-face meetings
+details of work that’s already been done, for example a discovery phase or early market engagement
+any terms or conditions you want to add to the standard contract {% endif %}</textarea>
