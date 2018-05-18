@@ -1,12 +1,12 @@
 overview:
   title: "Award a contract"
   introduction:
-    - "Fill in the call-off order form to create a contract with a supplier."
+    - "Complete the call-off order form to create a contract with a supplier."
     - "You will:"
-    - (<ul>)  "fill in all the sections that will make up your order form"
+    - (<ul>)  "fill in all the sections that make up the order form"
     -         "invite your supplier to fill in their sections"
     -         "review the form"
-    -         "sign online"(/<ul>)
+    -         "both sign it online"(/<ul>)
     - 'If you would like to fill in the order form offline, <a href="#" class="link">download the call-off order form</a>.'
   contract:
     text: "What you're buying"
@@ -23,17 +23,17 @@ overview:
 contract_overview:
   title: "Call-off order form"
   introduction:
-    - "Once the form has been completed and signed you can start working with the supplier."
+    - "Once the form has been completed and signed you can start working with your supplier."
 contract_details:
   title: "About the contract"
   introduction:
     - "Answer the questions about what you're buying and how." 
-    - "If a question isn't relevant, just say n/a."
+    - "If a question isn't relevant, just say so."
   form:
     reference:
       label: "Call-off reference number"
       hint: "Every contract has a reference number." 
-       - "This is usually starts with 'RM' and is found on the bottom right corner of the contract documents."
+       - "It usually starts with 'RM' and is found on the bottom right corner of the contract documents."
     start_date:
       label: "Start date"
       hint: "This is the date you expect the supplier to start work."
@@ -50,7 +50,7 @@ progress:
   form:
     report:
       label: "Progress updates"
-      hint: "Specify how you want to be kept up to date, for example meetings or reports and say how often you want this."
+      hint: "Specify how you want to be kept up to date, for example meetings or reports, and say how often you want this to happen."
     frequency:
       label: "Progress frequency"
       hint: "Once a month at the start of the month"
@@ -61,7 +61,7 @@ what:
   form:
     details:
       label: "What you're buying"
-      hint: "Say what you're buying and your delivery dates. You should be able to find this information in your requirements"
+      hint: "Say what you're buying and your delivery dates. You should be able to find this information in your requirements."
 charges:
   title: ""
   introduction:
@@ -69,7 +69,7 @@ charges:
   form:
     call_off:
       label: "Call-off charges"
-      hint: "How much you'll have to pay and details of any pricing structure you want."
+      hint: "How much you'll have to pay and details of any pricing structure you want to use."
 liability:
   title: ""
   introduction:
@@ -78,7 +78,7 @@ liability:
     max_liability:
       label: "Maximum liability"
       hint: "This is the amount you want the supplier to pay you if something goes wrong and it's their fault."
-      - "This figure should be 150% of the estimated yearly charges, but no more than £5 million."
+      - "This figure should be 150% of your estimated yearly charges, but no more than £5 million."
 terms:
   title: ""
   introduction:
@@ -86,11 +86,11 @@ terms:
   form:
     special_terms:
       label: "Special terms"
-      hint: "Add any additional terms you want to include in your call-off contract."
+      hint: "Add any additional terms you need to include in your call-off contract to make your contract work."
 guarantee:
   title: "Guarantee"
   introduction:
-    - "Answer yes if you need a third party to guarantee your supplier can meet their obligations."
+    - "Answer yes if you need a third party to guarantee the supplier can meet their obligations."
 expenses:
   title: "Refundable charges"
   introdution:
@@ -98,7 +98,7 @@ expenses:
   form:
     reimbursable:
       label: "Refundable charges"
-      hint: "Any supplier expenses that you're willing to refund to them, for example travel."
+      hint: "Any supplier expenses that you're willing to refund, for example travel."
 credits:
   title: ""
   introduction:
@@ -106,11 +106,11 @@ credits:
   form:
     service_credits:
       label: "Payment if the service fails"
-      hint: "What the supplier should pay if the service fails, for an agreed amount of time, because of supplier error. "
+      hint: "What the supplier should pay if the service fails for an agreed amount of time because of supplier error."
 payment:
   title: "How you want to pay"
   introduction:
-    - "Choose how you'd like to pay the supplier for their work."
+    - "Choose how you'd like to pay the supplier."
   methods:
     - "Bank transfer"
     - "Cash"
@@ -136,7 +136,7 @@ environmental:
   form:
     policy:
       label: "Environmental policy"
-      hint: "Upload or add a link to your organisation's environmental policy."
+      hint: "Upload or link to your organisation's environmental policy."
 security:
   title: ""
   introduction:
@@ -144,7 +144,7 @@ security:
   form:
     policy:
       label: "Security policy"
-      hint: "Upload or add a link to your organisation's security policy."
+      hint: "Upload or link to your organisation's security policy."
 supplier:
   title: "Supplier details"
   introduction:
@@ -169,7 +169,7 @@ supplier_details:
       hint: "If a company is registered at Companies House, it will have a registration number."
     duns:
       label: "DUNS number"
-      hint: "A DUNS number will help the buyers assess the financial stability and reliability of a company."
+      hint: "A DUNS number will help the buyers assess the financial stability and reliability of a company. Include it if you have one."
 sensitive:
   title: ""
   introduction:
@@ -183,7 +183,7 @@ authorised_representatives:
   title: "Authorised representative"
   introduction:
     - "This person has the authority to sign this call-off contract order form on behalf of your organisation." 
-    - "Usually this person is at director level."
+    - "Usually this person is a senior member of the organisation."
   form:
     name:
       label: "Name"
@@ -208,7 +208,7 @@ supplier_countersign:
   title: "Countersign the contract"
   introduction:
     - "For and on behalf of the supplier"
-    - "This person must have the authority to sign the contract, usually this will be a senior person in the organisation."
+    - "This person must have the authority to sign the contract, usually this will be a senior person in the company."
   name:
     label: "Name"
     hint: ""
