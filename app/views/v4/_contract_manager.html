@@ -17,7 +17,9 @@
 <h2 class="heading-medium">{{ content.supplier_details.form.duns.label }}</h2>
 <label class="form-label" for="duns">
   <span class="form-hint">
-    {{ content.supplier_details.form.duns.hint }}
+    {% for hint_text in content.supplier_details.form.duns.hint %}
+    {{ hint_text }}<br>
+    {% endfor %}
   </span>
 </label>
 <input class="form-control" id="duns" type="text" name="duns" value="{% if order_form.supplier.duns %}{{ order_form.supplier.duns }}{% else %}0123456789{% endif %}">

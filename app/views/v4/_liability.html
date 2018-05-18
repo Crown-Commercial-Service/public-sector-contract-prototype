@@ -1,7 +1,9 @@
 <h2 class="heading-medium">{{ content.liability.form.max_liability.label }}</h2>
 <label class="form-label" for="liability">
   <span class="form-hint">
-    {{ content.liability.form.max_liability.hint }}
+    {% for hint_text in content.liability.form.max_liability.hint %}
+    {{ hint_text }}<br>
+    {% endfor %}
   </span>
 </label>
 <textarea class="form-control form-control-3-4" name="liability" id="liability" rows="10">{{ order_form.contract_details.liability }}</textarea>

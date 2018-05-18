@@ -1,7 +1,9 @@
 <h2 class="heading-medium">{{ content.progress.form.report.label }}</h2>
 <label class="form-label" for="progress_report">
   <span class="form-hint">
-    {{ content.progress.form.report.hint }}
+      {% for hint_text in content.progress.form.report.hint %}
+      {{ hint_text }}<br>
+      {% endfor %}
   </span>
 </label>
 <input class="form-control" id="progress_report" type="text" name="progress_report" value="{{ order_form.contract_details.progress_report }}">
