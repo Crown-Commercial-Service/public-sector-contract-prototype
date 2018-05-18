@@ -196,7 +196,7 @@ sensitive:
       hint:
         - "The contract will be publically availble or may be subject to a Freedom of Information request."
         - "Include details of anything that can't be made publically available and the reasons why not."
-authorised_representatives:
+authorised_representative:
   title: "Authorised representative"
   introduction:
     - "This person has the authority to sign this call-off contract order form on behalf of your organisation."

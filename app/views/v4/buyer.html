@@ -43,10 +43,10 @@
           <input class="form-control" id="invoice_address" type="text" name="invoice_address">
 
           <h2 class="heading-medium">Authorised representatives</h2>
-          {% for representative in order_form.buyer.representatives %}
+          {% for representative in order_form.buyer_representatives %}
           <p>{{ representative.name }}</p>
           {% endfor %}
-          <p><a href="authorised_representatives" class="">Add</a></p>
+          <p><a href="authorised_representative" class="">Add</a></p>
 
           <h2 class="heading-medium">{{ content.environmental.form.policy.label }}</h2>
           <label class="form-label" for="environmental_policy">

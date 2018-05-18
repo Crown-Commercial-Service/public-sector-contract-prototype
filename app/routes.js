@@ -102,6 +102,28 @@ router.post('/v4/buyer', function (req, res) {
   res.redirect('/v4')
 })
 
+router.post('/v4/authorised_representative', function (req, res) {
+  if (req.session.data.order_form == undefined) {
+    req.session.data.order_form = {}
+  }
+
+  if (req.session.data.order_form.buyer_representatives == undefined) {
+    req.session.data.order_form.buyer_representatives = []
+  }
+
+  data = req.session.data
+  req.session.data.order_form.buyer_representatives.push({
+    name: data.authorised_name,
+    role: data.authorised_role,
+    email: data.authorised_email,
+    address: data.authorised_address
+  })
+
+  console.log(req.session.data.order_form)
+
+  res.redirect('/v4/buyer')
+})
+
 router.get('/v4/supplier', function (req, res) {
   if (req.session.data.order_form == undefined) {
     req.session.data.order_form = {}
