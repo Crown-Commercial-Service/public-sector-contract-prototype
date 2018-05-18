@@ -2,11 +2,13 @@ overview:
   title: "Award a contract"
   introduction:
     - "Complete the call-off order form to create a contract with a supplier."
-    - "You will:"
-    - "fill in all the sections that make up the order form"
-    - "invite your supplier to fill in their sections"
-    - "review the form"
-    - "both sign it online"
+    - "You've already given us some of this information, so we've put it into the form for you."
+    - "You can check and edit the information if you need to."
+    - "Then you need to:"
+    - "fill in any remaining information"
+    - "invite your supplier to fill in their details"
+    - "review the complete form"
+    - "sign it online"
   contract:
     text: "What you're buying"
     hint: "Fill in the form with the details of what you're buying, for how much and how it'll be delivered."
