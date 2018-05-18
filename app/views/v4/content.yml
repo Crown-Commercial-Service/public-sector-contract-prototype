@@ -42,7 +42,7 @@ contract_details:
     end_date:
       label: "End date"
       hint:
-        - "This is when your contract is due to end, assuming the contract isn't extended."
+        - "This is when your contract is due to end, assuming it isn't extended."
     initial_period:
       label: "Initial period"
       hint: ""
