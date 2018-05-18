@@ -16,6 +16,12 @@
       <p>{{ paragraph_text }}</p>
       {% endfor %}
 
+      <ul class="list list-bullet">
+        {%for item in content.list_items %}
+        <li>{{ item }}</li>
+        {% endfor %}
+      </ul>
+
     </div>
 
     <div class="column-third">
@@ -35,31 +41,37 @@
 
   <div class="grid-row">
     <div class="column-two-thirds">
-      <ul class="list list-number">
-        <li>
-          <h2 class="heading-medium">{{ content.contract.text }}</h2>
-          <p>{{ content.contract.hint }}</p>
-          <p><a href="v4/contract_details">Check and complete contract details</a></p>
-        </li>
-        <li>
-          <h2 class="heading-medium">{{ content.buyer.text }}</h2>
-          <p>{{ content.buyer.hint }}</p>
-          <p><a href="v4/buyer">Check and complete buyer details</a></p>
-        </li>
-        <li>
-          <h2 class="heading-medium">{{ content.supplier.text }}</h2>
-          <p>{{ content.supplier.hint }}</p>
-          <p><a href="v4/supplier">Check and complete supplier details</a></p>
-          <p><a href="#">Invite supplier to edit</a></p>
-        </li>
-        <li>
-          <h2 class="heading-medium">{{ content.sign.text }}</h2>
+      <h2 class="heading-medium">{{ content.contract.text }}</h2>
+      <div class="list-number">
+        <p>{{ content.contract.hint }}</p>
+        <p><a href="v4/contract_details">{{ content.contract.link }}</a></p>
+      </div>
+
+      <h2 class="heading-medium">{{ content.buyer.text }}</h2>
+      <div class="list-number">
+        <p>{{ content.buyer.hint }}</p>
+        <p><a href="v4/buyer">{{ content.buyer.link }}</a></p>
+      </div>
+
+      <h2 class="heading-medium">{{ content.supplier.text }}</h2>
+      <div class="list-number">
+        <p>{{ content.supplier.hint }}</p>
+        <p><a href="v4/supplier">{{ content.supplier.link }}</a></p>
+        <p><a href="#">{{ content.supplier.edit }}</a></p>
+      </div>
+
+      {% if (order_form.contract_details.complete) and (order_form.buyer.complete) and (order_form.supplier.complete) %}
+        <h2 class="heading-medium">{{ content.sign.text }}</h2>
+        <div class="list-number">
           {% for hint_text in content.sign.hint %}
           <p>{{ hint_text }}</p>
           {% endfor %}
-          <p><a href="v4/buyer_countersign">Sign contract (only active when 1 - 3 complete)</a></p>
-        </li>
-      </ul>
+          <p><a href="v4/buyer_countersign">{{ content.sign.buyer }}</a></p>
+          {% if order_form.buyer.signed %}
+          <p><a href="v4/invite_supplier_countersign">{{ content.sign.supplier_sign }}</a></p>
+          {% endif %}
+        </div>
+      {% endif %}
     </div>
   </div>
 

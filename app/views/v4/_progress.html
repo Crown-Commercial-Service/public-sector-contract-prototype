@@ -6,12 +6,4 @@
       {% endfor %}
   </span>
 </label>
-<input class="form-control" id="progress_report" type="text" name="progress_report" value="{{ order_form.contract_details.progress_report }}">
-
-<h2 class="heading-medium">{{ content.progress.form.frequency.label }}</h2>
-<label class="form-label" for="progress_frequency">
-  <span class="form-hint">
-    {{ content.progress.form.frequency.hint }}
-  </span>
-</label>
-<input class="form-control" id="progress_frequency" type="text" name="progress_frequency" value="{{ order_form.contract_details.progress_frequency }}">
+<textarea class="form-control form-control-3-4" name="progress_report" id="progress_report" rows="10">{{ order_form.contract_details.progress_report }}</textarea>

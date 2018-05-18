@@ -27,7 +27,11 @@ router.get('/v4', function (req, res) {
   if (req.session.data.order_form == undefined) {
     req.session.data.order_form = {}
   }
-  res.render('v4/overview', { content: content.overview })
+
+  res.render('v4/overview', {
+    order_form: req.session.data.order_form,
+    content: content.overview
+  })
 })
 
 router.get('/v4/contract_details', function (req, res) {
@@ -47,7 +51,6 @@ router.post('/v4/contract_details', function (req, res) {
     reference_number: data.reference_number,
     start_date: data.start_date,
     end_date: data.end_date,
-    initial_period: data.initial_period,
     progress_report: data.progress_report,
     progress_frequency: data.progress_frequency,
     what: data.what,
@@ -57,8 +60,11 @@ router.post('/v4/contract_details', function (req, res) {
     guarantee: data.guarantee,
     expenses: data.expenses,
     services_credits: data.service_credits,
-    payment: data.payment
+    payment: data.payment,
+    complete: true
   }
+
+  console.log(req.session.data.order_form)
 
   res.redirect('/v4')
 })
@@ -85,8 +91,11 @@ router.post('/v4/buyer', function (req, res) {
     address: data.buyer_address,
     invoice_address: data.invoice_address,
     environmental_policy: data.environmental_policy,
-    security_policy: data.security_policy
+    security_policy: data.security_policy,
+    complete: true
   }
+
+  console.log(req.session.data.order_form)
 
   res.redirect('/v4')
 })
@@ -114,8 +123,11 @@ router.post('/v4/supplier', function (req, res) {
     contract_manager: data.contract_manager,
     registration_number: data.registration_number,
     duns: data.duns,
-    sensitive_information: data.sensitive_information
+    sensitive_information: data.sensitive_information,
+    complete: true
   }
+
+  console.log(req.session.data.order_form)
 
   res.redirect('/v4')
 })

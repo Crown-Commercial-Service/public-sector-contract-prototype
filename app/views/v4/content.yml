@@ -5,24 +5,31 @@ overview:
     - "You've already given us some of this information, so we've put it into the form for you."
     - "You can check and edit this information."
     - "Then you need to:"
+  list_items:
     - "fill in any remaining information"
     - "invite your supplier to fill in their details"
     - "review the complete form"
     - "sign the contract online"
   contract:
-    text: "What you're buying"
+    text: "1 . What you're buying"
     hint: "Fill in the form with the details of what you're buying, for how much and how it'll be delivered."
+    link: "Check and complete contract details"
   buyer:
-    text: "Buyer details"
+    text: "2. Buyer details"
     hint: "Includes information about the buyer, including name and address."
+    link: "Check and complete buyer details"
   supplier:
-    text: "Supplier details"
+    text: "3. Supplier details"
     hint: "Includes information about the supplier, including key staff and subcontractors."
+    link: "Check and complete supplier details"
+    edit: "Invite supplier to edit"
   sign:
-    text: "Signature page"
+    text: "4. Signature page"
     hint:
       - "Sign the call-off order form online."
       - "Once you've both signed the call-off contract it's ready to use."
+    buyer: "Sign contract"
+    supplier_sign: "Invite supplier to sign"
 contract_overview:
   title: "Call-off order form"
   introduction:
@@ -99,8 +106,7 @@ terms:
       hint: "Add any additional terms you need to include in your call-off contract to make your contract work."
 guarantee:
   title: "Guarantee"
-  introduction:
-    - "Answer yes if you need a third party to guarantee the supplier can meet their obligations."
+  introduction: "Answer yes if you need a third party to guarantee the supplier can meet their obligations."
 expenses:
   title: "Refundable charges"
   introdution:
