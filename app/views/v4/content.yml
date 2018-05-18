@@ -58,9 +58,9 @@ progress:
     report:
       label: "Progress updates"
       hint:
-        - "Once the supplier starts work, say how you want to be updated on progress."
+        - "Once the supplier starts work, say how you want to be updated on their progress."
         - "For example, in meetings or using reports."
-        - "Say how regularly you'd like to be updated."
+        - "Also say how regularly you'd like to be updated."
     frequency:
       label: "Progress frequency"
       hint: "Once a month at the start of the month"
@@ -90,7 +90,7 @@ liability:
     max_liability:
       label: "Maximum liability"
       hint:
-        - "This is the amount you want the supplier to pay you if something goes wrong and it's their fault."
+        - "This is the amount you want the supplier to pay you if something goes wrong because of their actions."
         - "This figure should be 150% of your estimated yearly charges, but no more than £5 million."
 terms:
   title: ""
@@ -118,15 +118,15 @@ credits:
   form:
     service_credits:
       label: "Payment if the service fails"
-      hint: "The penalty the supplier has to pay if the service fails because of a mistake they've made."
+      hint: "The penalty the supplier has to pay if the service falls down because of a mistake they've made."
 payment:
   title: "How you want to pay"
   introduction:
     - "Choose how you'd like to pay the supplier."
   methods:
-    - "Government Procurement Card"
     - "Bank transfer"
     - "Cash"
+    - "Government Procurement Card"
     - "Other"
 buyer:
   title: "Buyer details"
@@ -179,7 +179,7 @@ supplier_details:
       hint: "This person will be the buyer's daily contact. Include name, role and contact details."
     registration_number:
       label: "Company registration number"
-      hint: "If a company is registered at Companies House they'll have a registration number."
+      hint: "If a company is registered at Companies House they'll have an 8-digit registration number."
     duns:
       label: "DUNS number"
       hint:
