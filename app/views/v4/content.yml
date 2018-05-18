@@ -226,10 +226,13 @@ buyer_signatory:
   name:
     label: "Name"
     hint: ""
+  role:
+    label: "Role"
+    hint: ""
   date:
     label: "Date"
     hint: ""
-supplier_countersign:
+supplier_signatory:
   title: "Countersign the contract"
   introduction:
     - "For and on behalf of the supplier"

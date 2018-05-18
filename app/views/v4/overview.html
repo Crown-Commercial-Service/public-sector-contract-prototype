@@ -73,9 +73,9 @@
           {% for hint_text in content.sign.hint %}
           <p>{{ hint_text }}</p>
           {% endfor %}
-          <p><a href="v4/buyer_countersign">{{ content.sign.buyer }}</a></p>
+          <p><a href="v4/buyer_signatory">{{ content.sign.buyer }}</a></p>
           {% if order_form.buyer.signed %}
-          <p><a href="v4/invite_supplier_countersign">{{ content.sign.supplier_sign }}</a></p>
+          <p><a href="v4/invite_supplier_signatory">{{ content.sign.supplier_sign }}</a></p>
           {% endif %}
         </div>
       {% endif %}

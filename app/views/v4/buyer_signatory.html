@@ -1,0 +1,32 @@
+<form class="form" action="" method="post">
+  <div class="form-group">
+    <h2 class="heading-medium">{{ content.name.label }}</h2>
+    <label class="form-label" for="buyer_sign_name">
+      <span class="form-hint">
+        {{ content.name.hint }}
+      </span>
+    </label>
+    <input class="form-control" id="buyer_sign_name" type="text" name="buyer_sign_name">
+
+    <h2 class="heading-medium">{{ content.role.label }}</h2>
+    <label class="form-label" for="buyer_sign_role">
+      <span class="form-hint">
+        {{ content.role.hint }}
+      </span>
+    </label>
+    <input class="form-control" id="buyer_sign_role" type="text" name="buyer_sign_role">
+
+    <h2 class="heading-medium">{{ content.date.label }}</h2>
+    <label class="form-label" for="buyer_sign_date">
+      <span class="form-hint">
+        {{ content.date.hint }}
+      </span>
+    </label>
+    <input class="form-control" id="buyer_sign_date" type="text" name="buyer_sign_date">
+  </div>
+
+  <div class="form-group">
+    <input class="button button-start" type="submit" value="Sign">
+    <a href="#" class="button button-start">Cancel</a>
+  </div>
+</form>

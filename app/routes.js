@@ -133,6 +133,38 @@ router.post('/v4/supplier', function (req, res) {
   res.redirect('/v4')
 })
 
+router.post('/v4/buyer_signatory', function (req, res) {
+  if (req.session.data.order_form == undefined) {
+    req.session.data.order_form = {}
+  }
+
+  data = req.session.data
+  req.session.data.order_form.buyer_signatory = {
+    name: data.buyer_sign_name,
+    role: data.buyer_sign_role,
+    date: data.buyer_sign_date
+  }
+
+  console.log(req.session.data.order_form)
+
+  res.redirect('/v4')
+})
+
+router.post('/v4/supplier_edit', function (req, res) {
+  if (req.session.data.order_form == undefined) {
+    req.session.data.order_form = {}
+  }
+
+  data = req.session.data
+  req.session.data.order_form.supplier_edit = {
+    email: data.supplier_edit_email
+  }
+
+  console.log(req.session.data.order_form)
+
+  res.redirect('/v4?supplier_edit=true')
+})
+
 router.get('/v4/:page', function (req, res) {
   page = req.params.page
   res.render('v4/base', {
