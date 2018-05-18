@@ -1,12 +1,12 @@
 overview:
   title: "Award a contract"
   introduction:
-    - "Complete the call-off order form to create your contract with a supplier."
+    - "Enter your details to create a contract with your supplier."
+    - "This used to be called the call-off order form."
     - "You've already given us some of this information, so we've put it into the form for you."
     - "You can check and edit this information."
     - "Then you need to:"
   list_items:
-    - "fill in any remaining information"
     - "invite your supplier to fill in their details"
     - "review the complete form"
     - "sign the contract online"
@@ -26,8 +26,8 @@ overview:
   sign:
     text: "4. Signature page"
     hint:
-      - "Sign the call-off order form online."
-      - "Once you've both signed the call-off contract it's ready to use."
+      - "Sign online."
+      - "Once you've both signed you can start working with your supplier."
     buyer: "Sign contract"
     supplier_sign: "Invite supplier to sign"
 contract_overview:
@@ -38,7 +38,6 @@ contract_details:
   title: "About the contract"
   introduction:
     - "Answer the questions about what you're buying and how."
-    - "If a question isn't relevant, just say so."
   form:
     reference:
       label: "Call-off reference number"
@@ -63,8 +62,9 @@ progress:
     report:
       label: "Progress updates"
       hint:
-        - "Specify how you want to be kept up to date, for example meetings or reports."
-        - "Include how regularly you'd like to be updated by your supplier."
+        - "Once the supplier starts work, say how you want to be updated on progress. 
+        - "For example, in meetings or using reports."
+        - "Say how regularly you'd like to be updated."
     frequency:
       label: "Progress frequency"
       hint: "Once a month at the start of the month"
@@ -122,12 +122,13 @@ credits:
   form:
     service_credits:
       label: "Payment if the service fails"
-      hint: "The penalty the supplier has to pay if the service fails because of their error."
+      hint: "The penalty the supplier has to pay if the service fails because of a mistake they've made."
 payment:
   title: "How you want to pay"
   introduction:
     - "Choose how you'd like to pay the supplier."
   methods:
+    - "Government Procurement Card"
     - "Bank transfer"
     - "Cash"
     - "Other"
@@ -182,7 +183,7 @@ supplier_details:
       hint: "This person will be the buyer's daily contact. Include name, role and contact details."
     registration_number:
       label: "Company registration number"
-      hint: "If a company is registered at Companies House, it'll have a registration number."
+      hint: "If a company is registered at Companies House they'll have a registration number."
     duns:
       label: "DUNS number"
       hint:
