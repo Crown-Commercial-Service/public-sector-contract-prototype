@@ -4,18 +4,18 @@ overview:
     - "Enter your details to create a contract with your supplier."
     - "This used to be called the call-off order form."
     - "You've already given us some of this information, so we've put it into the form for you."
-    - "You can check and edit this information."
+    - "You can check and edit the information."
   contract:
     text: "1 . What you're buying"
     hint: "Fill in the form with the details of what you're buying, for how much and how it'll be delivered."
     link: "Check and complete contract details"
   buyer:
     text: "2. Buyer details"
-    hint: "Includes information about the buyer, including name and address."
+    hint: "Includes information about the buyer, for example name and address."
     link: "Check and complete buyer details"
   supplier:
     text: "3. Supplier details"
-    hint: "Includes information about the supplier, including key staff and subcontractors."
+    hint: "Includes information about the supplier, for example key staff."
     link: "Check and complete supplier details"
     edit: "Invite supplier to edit"
     invited: "Supplier has been invited to edit"
