@@ -57,7 +57,14 @@
       <div class="list-number">
         <p>{{ content.supplier.hint }}</p>
         <p><a href="v4/supplier">{{ content.supplier.link }}</a></p>
-        <p><a href="#">{{ content.supplier.edit }}</a></p>
+        {% if supplier_edit %}
+        <div class="govuk-box-highlight">
+          <p class="font-medium" style="margin-bottom: 0px">
+            {{ content.supplier.invited }}
+          </p>
+        </div>
+        {% endif %}
+        <p><a href="v4/supplier_edit">{{ content.supplier.edit }}</a></p>
       </div>
 
       {% if (order_form.contract_details.complete) and (order_form.buyer.complete) and (order_form.supplier.complete) %}

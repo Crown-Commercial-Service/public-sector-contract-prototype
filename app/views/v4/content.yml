@@ -23,6 +23,7 @@ overview:
     hint: "Includes information about the supplier, including key staff and subcontractors."
     link: "Check and complete supplier details"
     edit: "Invite supplier to edit"
+    invited: "Supplier has been invited to edit"
   sign:
     text: "4. Signature page"
     hint:
@@ -213,7 +214,11 @@ authorised_representatives:
       label: "Email address"
     address:
       label: "Address"
-buyer_countersign:
+supplier_edit:
+  title: "Invite the supplier to edit"
+  hint: ""
+  email: "Email"
+buyer_signatory:
   title: "Sign the contract"
   introduction:
     - "For and on behalf of the buyer"

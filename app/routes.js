@@ -30,7 +30,8 @@ router.get('/v4', function (req, res) {
 
   res.render('v4/overview', {
     order_form: req.session.data.order_form,
-    content: content.overview
+    content: content.overview,
+    supplier_edit: req.query.supplier_edit
   })
 })
 
