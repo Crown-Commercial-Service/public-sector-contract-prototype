@@ -3,11 +3,10 @@ overview:
   introduction:
     - "Complete the call-off order form to create a contract with a supplier."
     - "You will:"
-    - (<ul>)  "fill in all the sections that make up the order form"
-    -         "invite your supplier to fill in their sections"
-    -         "review the form"
-    -         "both sign it online"(/<ul>)
-    - 'If you would like to fill in the order form offline, <a href="#" class="link">download the call-off order form</a>.'
+    - "fill in all the sections that make up the order form"
+    - "invite your supplier to fill in their sections"
+    - "review the form"
+    - "both sign it online"
   contract:
     text: "What you're buying"
     hint: "Fill in the form with the details of what you're buying, for how much and how it'll be delivered."
@@ -32,14 +31,16 @@ contract_details:
   form:
     reference:
       label: "Call-off reference number"
-      hint: "Every contract has a reference number." 
-       - "It usually starts with 'RM' and is found on the bottom right corner of the contract documents."
+      hint: 
+        - "Every contract has a reference number." 
+        - "It usually starts with 'RM' and is found on the bottom right corner of the contract documents."
     start_date:
       label: "Start date"
       hint: "This is the date you expect the supplier to start work."
     end_date:
       label: "End date"
-      hint: "This is when your contract is due to end, assuming the contract isn't extended."
+      hint: 
+        - "This is when your contract is due to end, assuming the contract isn't extended."
     initial_period:
       label: "Initial period"
       hint: ""
@@ -50,7 +51,9 @@ progress:
   form:
     report:
       label: "Progress updates"
-      hint: "Specify how you want to be kept up to date, for example meetings or reports, and say how often you want this to happen."
+      hint: 
+        - "Specify how you want to be kept up to date, for example meetings or reports.
+        - Say how often you want to be updated."
     frequency:
       label: "Progress frequency"
       hint: "Once a month at the start of the month"
