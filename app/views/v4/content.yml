@@ -205,10 +205,10 @@ authorised_representatives:
     address:
       label: "Address"
 buyer_countersign:
-  title: "Signature"
+  title: "Sign the contract"
   introduction:
     - "For and on behalf of the buyer"
-    - "This person must have the authority to sign the contract, usually this will be your authorised representative."
+    - "This person must have the authority to sign, usually this will be your authorised representative."
   name:
     label: "Name"
     hint: ""
@@ -219,7 +219,7 @@ supplier_countersign:
   title: "Countersign the contract"
   introduction:
     - "For and on behalf of the supplier"
-    - "This person must have the authority to sign the contract, usually this will be a senior person in the company."
+    - "This person must have the authority to sign, usually this will be a senior person in the company."
   name:
     label: "Name"
     hint: ""
