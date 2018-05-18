@@ -221,8 +221,8 @@ invite_supplier_signatory:
 buyer_signatory:
   title: "Sign the contract"
   introduction:
-    - "For and on behalf of the buyer"
-    - "This person must have the authority to sign, usually this will be your authorised representative."
+    - "You must have the authority to sign this contract on the buyer's behalf."
+    - "Usually this will be your authorised representative."
   name:
     label: "Name"
     hint: ""
@@ -235,8 +235,8 @@ buyer_signatory:
 supplier_signatory:
   title: "Countersign the contract"
   introduction:
-    - "For and on behalf of the supplier"
-    - "This person must have the authority to sign, usually this will be a senior person in the company."
+    - "You must have the authority to sign this contract on the supplier's behalf." 
+    - "Usually this will be a senior person in your company."
   name:
     label: "Name"
     hint: ""
