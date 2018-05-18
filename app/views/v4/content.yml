@@ -63,7 +63,7 @@ progress:
     report:
       label: "Progress updates"
       hint:
-        - "Once the supplier starts work, say how you want to be updated on progress. 
+        - "Once the supplier starts work, say how you want to be updated on progress."
         - "For example, in meetings or using reports."
         - "Say how regularly you'd like to be updated."
     frequency:
