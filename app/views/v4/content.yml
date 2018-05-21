@@ -28,6 +28,7 @@ overview:
     buyer_signed: "You have signed the contract."
     supplier_sign: "Invite supplier to sign"
     supplier_invited: "Supplier invited to sign"
+    supplier_signed: "The supplier has signed the contract"
 contract_overview:
   title: "Call-off order form"
   introduction:
