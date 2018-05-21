@@ -9,6 +9,21 @@
 <main id="content" role="main">
   <div class="grid-row">
     <div class="column-two-thirds">
+      {% if supplier_edit %}
+      <div class="govuk-box-highlight">
+        <p class="font-medium" style="margin-bottom: 0px">
+          {{ content.supplier.invited }}
+        </p>
+      </div>
+      {% endif %}
+
+      {% if supplier_signatory_invited %}
+      <div class="govuk-box-highlight">
+        <p class="font-medium" style="margin-bottom: 0px">
+          {{ content.sign.supplier_invited }}
+        </p>
+      </div>
+      {% endif %}
 
       <h1 class="heading-xlarge">{{ content.title }}</h1>
 
@@ -51,13 +66,6 @@
       <div class="list-number">
         <p>{{ content.supplier.hint }}</p>
         <p><a href="v4/supplier">{{ content.supplier.link }}</a></p>
-        {% if supplier_edit %}
-        <div class="govuk-box-highlight">
-          <p class="font-medium" style="margin-bottom: 0px">
-            {{ content.supplier.invited }}
-          </p>
-        </div>
-        {% endif %}
         <p><a href="v4/supplier_edit">{{ content.supplier.edit }}</a></p>
       </div>
 
@@ -70,13 +78,6 @@
 
 
           {% if order_form.buyer_signatory_complete %}
-          {% if supplier_signatory_invited %}
-          <div class="govuk-box-highlight">
-            <p class="font-medium" style="margin-bottom: 0px">
-              {{ content.sign.supplier_invited }}
-            </p>
-          </div>
-          {% endif %}
           <p><a href="v4/invite_supplier_signatory">{{ content.sign.supplier_sign }}</a></p>
           {% else %}
           <p><a href="v4/buyer_signatory">{{ content.sign.buyer }}</a></p>
