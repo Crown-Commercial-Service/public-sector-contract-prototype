@@ -1,3 +1,4 @@
+var helpers = require('./helpers');
 var express = require('express');
 var router  = express.Router();
 var yaml    = require('js-yaml');
@@ -9,10 +10,6 @@ schedules = {
 }
 
 content = yaml.safeLoad(fs.readFileSync('./app/views/v4/content.yml', 'utf8'))
-
-function findScheduleById(scheduleId, version) {
-  return schedules[version].find(function(sch) { return sch.id == scheduleId })
-}
 
 // Route index page
 router.get('/', function (req, res) {
@@ -255,14 +252,14 @@ router.post('/:version(v2|v3)/team-members', function (req, res) {
 
 router.get('/:version(v2|v3)/schedule/:scheduleId', function (req, res) {
   res.render(`${req.params.version}/schedule`, {
-    schedule: findScheduleById(req.params['scheduleId'], req.params.version),
+    schedule: helpers.findScheduleById(req.params['scheduleId'], req.params.version),
     preview: req.query.preview
   })
 })
 
 router.get('/:version(v2|v3)/schedule/:scheduleId/:addOrRemove', function (req, res) {
   res.render(`${req.params.version}/add-remove-schedule`, {
-    schedule: findScheduleById(req.params['scheduleId'], req.params.version),
+    schedule: helpers.findScheduleById(req.params['scheduleId'], req.params.version),
     addOrRemove: req.params['addOrRemove']
   })
 })
