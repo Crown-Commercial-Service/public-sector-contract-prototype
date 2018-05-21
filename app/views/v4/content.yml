@@ -25,6 +25,7 @@ overview:
       - "Sign online."
       - "Once you've both signed you can start working with your supplier."
     buyer: "Sign contract"
+    buyer_signed: "You have signed the contract."
     supplier_sign: "Invite supplier to sign"
     supplier_invited: "Supplier invited to sign"
 contract_overview:
@@ -207,6 +208,10 @@ supplier_staff:
 supplier_subcontractors:
   title: "Key subcontractors"
   introduction: ""
+added:
+  buyer_representatives: "Added representative"
+  supplier_staff: "Added member of staff"
+  supplier_subcontractors: "Added subcontractor"
 supplier_edit:
   title: "Invite the supplier to edit"
   hint: ""

@@ -34,7 +34,8 @@ router.get('/v4/:page', function (req, res) {
     header: req.params.page,
     page: req.params.page,
     order_form: req.session.data,
-    content: content
+    content: content,
+    added: req.query.added
   })
 })
 
@@ -87,7 +88,7 @@ router.post('/v4/add/:type', function (req, res) {
     path = 'supplier'
   }
 
-  res.redirect(`/v4/${path}`)
+  res.redirect(`/v4/${path}?added=${type}`)
 })
 
 // v2 and v3 routes
