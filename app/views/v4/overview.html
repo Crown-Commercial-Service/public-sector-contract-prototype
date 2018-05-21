@@ -72,17 +72,18 @@
       {% if (order_form.contract_details_complete) and (order_form.buyer_complete) and (order_form.supplier_complete) %}
         <h2 class="heading-medium">{{ content.sign.text }}</h2>
         <div class="list-number">
+          {% if not order_form.buyer_signatory_complete %}
           {% for hint_text in content.sign.hint %}
           <p>{{ hint_text }}</p>
           {% endfor %}
-
+          {% endif %}
 
           {% if order_form.buyer_signatory_complete %}
+          <p>{{ content.sign.buyer_signed }}</p>
           <p><a href="v4/invite_supplier_signatory">{{ content.sign.supplier_sign }}</a></p>
           {% else %}
           <p><a href="v4/buyer_signatory">{{ content.sign.buyer }}</a></p>
           {% endif %}
-
         </div>
       {% endif %}
     </div>
