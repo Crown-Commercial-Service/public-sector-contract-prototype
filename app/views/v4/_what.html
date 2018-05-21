@@ -6,7 +6,7 @@
     {% endfor %}
   </span>
 </label>
-<textarea class="form-control form-control-3-4" name="what" id="what" rows="10">{% if order_form.contract_details.what %}{{ order_form.contract_details.what }}{% else %}This information should include:
+<textarea class="form-control form-control-3-4" name="what" id="what" rows="10">{% if order_form.what %}{{ order_form.what }}{% else %}This information should include:
 
 what you want to call your requirements
 why this work is being done, for example an organisation or policy goal

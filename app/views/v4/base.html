@@ -10,9 +10,9 @@
   <div class="grid-row">
     <div class="column-two-thirds">
 
-      <h1 class="heading-xlarge">{{ content.title }}</h1>
+      <h1 class="heading-xlarge">{{ content[header].title }}</h1>
 
-      {% for paragraph_text in content.introduction %}
+      {% for paragraph_text in content[header].introduction %}
       <p>{{ paragraph_text }}</p>
       {% endfor %}
 

@@ -21,192 +21,73 @@ router.get('/', function (req, res) {
 // v4 routes
 
 router.get('/v4', function (req, res) {
-  if (req.session.data.order_form == undefined) {
-    req.session.data.order_form = {}
-  }
-
   res.render('v4/overview', {
-    order_form: req.session.data.order_form,
+    order_form: req.session.data,
     content: content.overview,
     supplier_edit: req.query.supplier_edit,
     supplier_signatory_invited: req.query.supplier_signatory_invited
   })
 })
 
-router.get('/v4/contract_details', function (req, res) {
-  res.render('v4/contract_details', {
-    order_form: req.session.data.order_form,
+router.get('/v4/:page', function (req, res) {
+  res.render('v4/base', {
+    header: req.params.page,
+    page: req.params.page,
+    order_form: req.session.data,
     content: content
   })
 })
 
-router.post('/v4/contract_details', function (req, res) {
-  if (req.session.data.order_form == undefined) {
-    req.session.data.order_form = {}
+router.post('/v4/:page', function (req, res) {
+  page = req.params.page
+  req.session.data[`${page}_complete`] = true
+
+  console.log(`*********\n`)
+  console.log(req.session.data)
+  console.log(`*********\n`)
+
+  let query = ''
+  if (page === 'supplier_edit') {
+    query = '?supplier_edit=true'
+  } else if (page === 'invite_supplier_signatory') {
+    query = '?supplier_signatory_invited=true'
   }
 
-  data = req.session.data
-  req.session.data.order_form.contract_details = {
-    reference_number: data.reference_number,
-    start_date: data.start_date,
-    end_date: data.end_date,
-    progress_report: data.progress_report,
-    progress_frequency: data.progress_frequency,
-    what: data.what,
-    call_off_charges: data.call_off_charges,
-    liability: data.liability,
-    special_terms: data.special_terms,
-    guarantee: data.guarantee,
-    expenses: data.expenses,
-    services_credits: data.service_credits,
-    payment: data.payment,
-    complete: true
-  }
-
-  console.log(req.session.data.order_form)
-
-  res.redirect('/v4')
+  res.redirect(`/v4${query}`)
 })
 
-router.get('/v4/buyer', function (req, res) {
-  if (req.session.data.order_form == undefined) {
-    req.session.data.order_form = {}
-  }
-
-  res.render('v4/buyer', {
-    order_form: req.session.data.order_form,
+router.get('/v4/add/:type', function (req, res) {
+  res.render('v4/base', {
+    header: req.params.type,
+    page: 'representatives',
+    type: req.params.type,
     content: content
   })
 })
 
-router.post('/v4/buyer', function (req, res) {
-  if (req.session.data.order_form == undefined) {
-    req.session.data.order_form = {}
+router.post('/v4/add/:type', function (req, res) {
+  let type = req.params.type
+  if (req.session.data[type] == undefined) {
+    req.session.data[type] = []
   }
 
   data = req.session.data
-  req.session.data.order_form.buyer = {
-    name: data.buyer_name,
-    address: data.buyer_address,
-    invoice_address: data.invoice_address,
-    environmental_policy: data.environmental_policy,
-    security_policy: data.security_policy,
-    complete: true
-  }
-
-  console.log(req.session.data.order_form)
-
-  res.redirect('/v4')
-})
-
-router.post('/v4/authorised_representative', function (req, res) {
-  if (req.session.data.order_form == undefined) {
-    req.session.data.order_form = {}
-  }
-
-  if (req.session.data.order_form.buyer_representatives == undefined) {
-    req.session.data.order_form.buyer_representatives = []
-  }
-
-  data = req.session.data
-  req.session.data.order_form.buyer_representatives.push({
+  req.session.data[type].push({
     name: data.authorised_name,
     role: data.authorised_role,
     email: data.authorised_email,
     address: data.authorised_address
   })
 
-  console.log(req.session.data.order_form)
+  console.log(req.session.data)
 
-  res.redirect('/v4/buyer')
-})
-
-router.get('/v4/supplier', function (req, res) {
-  if (req.session.data.order_form == undefined) {
-    req.session.data.order_form = {}
+  if (type.includes('buyer')) {
+    path = 'buyer'
+  } else if (type.includes('supplier')) {
+    path = 'supplier'
   }
 
-  res.render('v4/supplier', {
-    order_form: req.session.data.order_form,
-    content: content
-  })
-})
-
-router.post('/v4/supplier', function (req, res) {
-  if (req.session.data.order_form == undefined) {
-    req.session.data.order_form = {}
-  }
-
-  data = req.session.data
-  req.session.data.order_form.supplier = {
-    name: data.supplier_name,
-    address: data.supplier_address,
-    contract_manager: data.contract_manager,
-    registration_number: data.registration_number,
-    duns: data.duns,
-    sensitive_information: data.sensitive_information,
-    complete: true
-  }
-
-  console.log(req.session.data.order_form)
-
-  res.redirect('/v4')
-})
-
-router.post('/v4/buyer_signatory', function (req, res) {
-  if (req.session.data.order_form == undefined) {
-    req.session.data.order_form = {}
-  }
-
-  data = req.session.data
-  req.session.data.order_form.buyer_signatory = {
-    name: data.buyer_sign_name,
-    role: data.buyer_sign_role,
-    date: data.buyer_sign_date,
-    signed: true
-  }
-
-  console.log(req.session.data.order_form)
-
-  res.redirect('/v4')
-})
-
-router.post('/v4/supplier_edit', function (req, res) {
-  if (req.session.data.order_form == undefined) {
-    req.session.data.order_form = {}
-  }
-
-  data = req.session.data
-  req.session.data.order_form.supplier_edit = {
-    email: data.supplier_edit_email
-  }
-
-  console.log(req.session.data.order_form)
-
-  res.redirect('/v4?supplier_edit=true')
-})
-
-router.post('/v4/invite_supplier_signatory', function (req, res) {
-  if (req.session.data.order_form == undefined) {
-    req.session.data.order_form = {}
-  }
-
-  data = req.session.data
-  req.session.data.order_form.invited_supplier_signatory = {
-    email: data.invited_supplier_signatory_email
-  }
-
-  console.log(req.session.data.order_form)
-
-  res.redirect('/v4?supplier_signatory_invited=true')
-})
-
-router.get('/v4/:page', function (req, res) {
-  page = req.params.page
-  res.render('v4/base', {
-    page: page,
-    content: content[`${page}`]
-  })
+  res.redirect(`/v4/${path}`)
 })
 
 // v2 and v3 routes

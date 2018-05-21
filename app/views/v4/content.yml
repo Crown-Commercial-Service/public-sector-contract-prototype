@@ -196,20 +196,17 @@ sensitive:
       hint:
         - "The contract will be publically availble or may be subject to a Freedom of Information request."
         - "Include details of anything that can't be made publically available and the reasons why not."
-authorised_representative:
+buyer_representatives:
   title: "Authorised representative"
   introduction:
     - "This person has the authority to sign this call-off contract order form on behalf of your organisation."
     - "Usually this person is a senior member of the organisation."
-  form:
-    name:
-      label: "Name"
-    role:
-      label: "Role"
-    email:
-      label: "Email address"
-    address:
-      label: "Address"
+supplier_staff:
+  title: "Key staff"
+  introduction: ""
+supplier_subcontractors:
+  title: "Key subcontractors"
+  introduction: ""
 supplier_edit:
   title: "Invite the supplier to edit"
   hint: ""
@@ -235,7 +232,7 @@ buyer_signatory:
 supplier_signatory:
   title: "Countersign the contract"
   introduction:
-    - "You must have the authority to sign this contract on the supplier's behalf." 
+    - "You must have the authority to sign this contract on the supplier's behalf."
     - "Usually this will be a senior person in your company."
   name:
     label: "Name"

@@ -1,11 +1,11 @@
 <h2 class="heading-medium">Key staff</h2>
-{% for staff in order_form.supplier.staff %}
+{% for staff in order_form.supplier_staff %}
 <p>{{ staff.name }}</p>
 {% endfor %}
-<p><a href="authorised_representatives" class="">Add staff</a></p>
+<p><a href="add/supplier_staff" class="">Add staff</a></p>
 
 <h2 class="heading-medium">Key subcontractors</h2>
-{% for subcontractor in order_form.supplier.subcontractors %}
+{% for subcontractor in order_form.supplier_subcontractors %}
 <p>{{ subcontractor.name }}</p>
 {% endfor %}
-<p><a href="authorised_representatives" class="">Add subcontractors</a></p>
+<p><a href="add/supplier_subcontractors" class="">Add subcontractors</a></p>

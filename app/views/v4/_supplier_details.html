@@ -4,7 +4,7 @@
     {{ content.supplier.form.name.hint }}
   </span>
 </label>
-<input class="form-control" id="supplier_name" type="text" name="supplier_name" value="{% if order_form.supplier.name %}{{ order_form.supplier.name }}{% else %}AWS{% endif %}">
+<input class="form-control" id="supplier_name" type="text" name="supplier_name" value="{% if order_form.supplier_name %}{{ order_form.supplier_name }}{% else %}AWS{% endif %}">
 
 <h2 class="heading-medium">{{ content.supplier.form.address.label }}</h2>
 <label class="form-label" for="supplier_address">
@@ -12,4 +12,4 @@
     {{ content.supplier.form.address.hint }}
   </span>
 </label>
-<input class="form-control" id="supplier_address" type="text" name="supplier_address" value="{% if order_form.supplier.address %}{{ order_form.supplier.address }}{% else %}The Principle Place, Shoreditch{% endif %}">
+<input class="form-control" id="supplier_address" type="text" name="supplier_address" value="{% if order_form.supplier_address %}{{ order_form.supplier_address }}{% else %}The Principle Place, Shoreditch{% endif %}">

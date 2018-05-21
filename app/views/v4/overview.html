@@ -61,7 +61,7 @@
         <p><a href="v4/supplier_edit">{{ content.supplier.edit }}</a></p>
       </div>
 
-      {% if (order_form.contract_details.complete) and (order_form.buyer.complete) and (order_form.supplier.complete) %}
+      {% if (order_form.contract_details_complete) and (order_form.buyer_complete) and (order_form.supplier_complete) %}
         <h2 class="heading-medium">{{ content.sign.text }}</h2>
         <div class="list-number">
           {% for hint_text in content.sign.hint %}
@@ -69,7 +69,7 @@
           {% endfor %}
 
 
-          {% if order_form.buyer_signatory.signed %}
+          {% if order_form.buyer_signatory_complete %}
           {% if supplier_signatory_invited %}
           <div class="govuk-box-highlight">
             <p class="font-medium" style="margin-bottom: 0px">

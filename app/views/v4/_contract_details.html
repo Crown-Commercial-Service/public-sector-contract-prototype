@@ -9,7 +9,7 @@
   </span>
 </label>
 <input class="form-control" id="reference_number" type="text" name="reference_number"
-value="{% if order_form.contract_details.reference_number %}{{ order_form.contract_details.reference_number }}{% else %}RM05625751{% endif %}">
+value="{% if order_form.reference_number %}{{ order_form.reference_number }}{% else %}RM05625751{% endif %}">
 
 <h2 class="heading-medium">{{ content.contract_details.form.start_date.label }}</h2>
 <label class="form-label" for="start_date">
@@ -17,7 +17,7 @@ value="{% if order_form.contract_details.reference_number %}{{ order_form.contra
     {{ content.contract_details.form.start_date.hint }}
   </span>
 </label>
-<input class="form-control" id="start_date" type="text" name="start_date" value="{% if order_form.contract_details.start_date %}{{ order_form.contract_details.start_date}}{% else %}01/06/18{% endif %}">
+<input class="form-control" id="start_date" type="text" name="start_date" value="{% if order_form.start_date %}{{ order_form.start_date}}{% else %}01/06/18{% endif %}">
 
 <h2 class="heading-medium">{{ content.contract_details.form.end_date.label }}</h2>
 <label class="form-label" for="end_date">
@@ -25,4 +25,4 @@ value="{% if order_form.contract_details.reference_number %}{{ order_form.contra
     {{ content.contract_details.form.end_date.hint }}
   </span>
 </label>
-<input class="form-control" id="end_date" type="text" name="end_date" value="{% if order_form.contract_details.end_date %}{{ order_form.contract_details.end_date}}{% else %}01/06/20{% endif %}">
+<input class="form-control" id="end_date" type="text" name="end_date" value="{% if order_form.end_date %}{{ order_form.end_date}}{% else %}01/06/20{% endif %}">
