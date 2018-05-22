@@ -1,7 +1,7 @@
 overview:
   title: "Award a contract"
   introduction:
-    - "Enter your details to create a contract with your supplier."
+    - "Fill in the form to create a contract with your supplier."
     - "This used to be called the call-off order form."
     - "You've already given us some of this information, so we've put it into the form for you."
     - "You can check and edit the information."
@@ -10,7 +10,7 @@ overview:
     hint: "Fill in the form with the details of what you're buying, for example how much and how it'll be delivered."
     link: "Check and complete contract details"
   buyer:
-    text: "2. Buyer details"
+    text: "2. Buying organisation details"
     hint: "Includes information about the buyer, for example name and address."
     link: "Check and complete buyer details"
   supplier:
