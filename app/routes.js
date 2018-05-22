@@ -22,11 +22,16 @@ router.get('/', function (req, res) {
 
 router.get('/v4', function (req, res) {
   data = req.session.data
+
+  console.log(`*********\n`)
+  console.log(data)
+  console.log(`*********\n`)
+
   res.render('v4/overview', {
     order_form: data,
     content: content.overview,
     contract_details_complete: helpers.sectionComplete('payment', data),
-    buyer_complete: helpers.sectionComplete('security', data),
+    buyer_complete: helpers.sectionComplete('environmental', data),
     supplier_complete: helpers.sectionComplete('sensitive', data),
     supplier_edit: req.query.supplier_edit,
     supplier_signatory_invited: req.query.supplier_signatory_invited
@@ -56,10 +61,6 @@ router.get('/v4/:page', function (req, res) {
 router.post('/v4/:page', function (req, res) {
   page = req.params.page
   req.session.data[`${page}_complete`] = true
-
-  console.log(`*********\n`)
-  console.log(req.session.data)
-  console.log(`*********\n`)
 
   let query = ''
   if (page === 'supplier_edit') {
@@ -95,10 +96,6 @@ router.post('/v4/add/:type', function (req, res) {
     email: data.authorised_email,
     address: data.authorised_address
   })
-
-  console.log(`*********\n`)
-  console.log(req.session.data)
-  console.log(`*********\n`)
 
   path = helpers.additionReturnPath(type)
   res.redirect(`/v4/${path}?added=${type}`)
