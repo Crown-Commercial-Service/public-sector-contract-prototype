@@ -1,34 +1,31 @@
-<p>If you would like to fill in the order form offline, <a href="../public/files/Call_Off_Order_Form.docx"  class="link">download the call-off order form</a>.</p>
-
 <form class="form" action="" method="post">
   <div class="form-group">
+    <h2 class="heading-medium">{{ content.contract_details.form.reference.label }}</h2>
+    <label class="form-label" for="reference_number">
+      <span class="form-hint">
+        {% for hint_text in content.contract_details.form.reference.hint %}
+        {{ hint_text }}<br>
+        {% endfor %}
+      </span>
+    </label>
+    <input class="form-control" id="reference_number" type="text" name="reference_number"
+    value="{% if order_form.reference_number %}{{ order_form.reference_number }}{% else %}RM05625751{% endif %}">
 
-      <h2 class="heading-medium">{{ content.contract_details.form.reference.label }}</h2>
-      <label class="form-label" for="reference_number">
-        <span class="form-hint">
-          {% for hint_text in content.contract_details.form.reference.hint %}
-          {{ hint_text }}<br>
-          {% endfor %}
-        </span>
-      </label>
-      <input class="form-control" id="reference_number" type="text" name="reference_number"
-      value="{% if order_form.reference_number %}{{ order_form.reference_number }}{% else %}RM05625751{% endif %}">
+    <h2 class="heading-medium">{{ content.contract_details.form.start_date.label }}</h2>
+    <label class="form-label" for="start_date">
+      <span class="form-hint">
+        {{ content.contract_details.form.start_date.hint }}
+      </span>
+    </label>
+    <input class="form-control" id="start_date" type="text" name="start_date" value="{% if order_form.start_date %}{{ order_form.start_date}}{% else %}01/06/18{% endif %}">
 
-      <h2 class="heading-medium">{{ content.contract_details.form.start_date.label }}</h2>
-      <label class="form-label" for="start_date">
-        <span class="form-hint">
-          {{ content.contract_details.form.start_date.hint }}
-        </span>
-      </label>
-      <input class="form-control" id="start_date" type="text" name="start_date" value="{% if order_form.start_date %}{{ order_form.start_date}}{% else %}01/06/18{% endif %}">
-
-      <h2 class="heading-medium">{{ content.contract_details.form.end_date.label }}</h2>
-      <label class="form-label" for="end_date">
-        <span class="form-hint">
-          {{ content.contract_details.form.end_date.hint }}
-        </span>
-      </label>
-      <input class="form-control" id="end_date" type="text" name="end_date" value="{% if order_form.end_date %}{{ order_form.end_date}}{% else %}01/06/20{% endif %}">
+    <h2 class="heading-medium">{{ content.contract_details.form.end_date.label }}</h2>
+    <label class="form-label" for="end_date">
+      <span class="form-hint">
+        {{ content.contract_details.form.end_date.hint }}
+      </span>
+    </label>
+    <input class="form-control" id="end_date" type="text" name="end_date" value="{% if order_form.end_date %}{{ order_form.end_date}}{% else %}01/06/20{% endif %}">
   </div>
 
   {% include "v4/_save_and_continue.html" %}
