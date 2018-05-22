@@ -21,7 +21,8 @@ flow = {
   environmental: '/security',
   security: '',
   supplier: '/contract_manager',
-  contract_manager: '/key_staff',
+  contract_manager: '/supplier_numbers',
+  supplier_numbers: '/key_staff',
   key_staff: '/sensitive',
   sensitive: ''
 }

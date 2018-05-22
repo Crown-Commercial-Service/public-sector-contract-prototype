@@ -184,7 +184,7 @@ supplier_details:
     - ""
   form:
     contract_manager:
-      label: "Contract manager"
+      label: "Contract manager name"
       hint: "This person will be the buyer's daily contact. Include name, role and contact details."
     registration_number:
       label: "Company registration number"
@@ -201,7 +201,7 @@ sensitive:
     information:
       label: "Commercially sensitive information"
       hint:
-        - "The contract will be publically availble. Include here details of anything that can't be publically available and explain why."
+        - "The contract will be publically available. Include here details of anything that can't be publically available and explain why."
 buyer_representatives:
   title: "Authorised representative"
   introduction:
@@ -217,8 +217,8 @@ supplier_staff:
 supplier_subcontractors:
   title: "Key subcontractors"
   introduction: "Add the subcontractor roles or people that you can't deliver the contract without."
+  hint: "Add the subcontractor roles or people that you can't deliver the contract without."
 added:
-hint: "Add the subcontractor roles or people that you can't deliver the contract without."
   buyer_representatives: "Added authorised representative"
   supplier_staff: "Added staff member"
   supplier_subcontractors: "Added subcontractor"

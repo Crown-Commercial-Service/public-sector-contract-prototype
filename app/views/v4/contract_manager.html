@@ -1,30 +1,33 @@
 <form class="form" action="" method="post">
   <div class="form-group">
     <h2 class="heading-medium">{{ content.supplier_details.form.contract_manager.label }}</h2>
-    <label class="form-label" for="contract_manager">
+    <label class="form-label" for="contract_manager_name">
       <span class="form-hint">
         {{ content.supplier_details.form.contract_manager.hint }}
       </span>
     </label>
-    <input class="form-control" id="contract_manager" type="text" name="contract_manager" value="{{ order_form.contract_manager }}">
+    <input class="form-control" id="contract_manager_name" type="text" name="contract_manager_name" value="{{ order_form.contract_manager_name }}">
 
-    <h2 class="heading-medium">{{ content.supplier_details.form.registration_number.label }}</h2>
-    <label class="form-label" for="registration_number">
+    <h2 class="heading-medium">Role</h2>
+    <label class="form-label" for="contract_manager_role">
       <span class="form-hint">
-        {{ content.supplier_details.form.registration_number.hint }}
       </span>
     </label>
-    <input class="form-control" id="registration_number" type="text" name="registration_number" value="{% if order_form.registration_number %}{{ order_form.registration_number }}{% else %}05218772{% endif %}">
+    <input class="form-control" id="contract_manager_role" type="text" name="contract_manager_role" value="{{ order_form.contract_manager_role }}">
 
-    <h2 class="heading-medium">{{ content.supplier_details.form.duns.label }}</h2>
-    <label class="form-label" for="duns">
+    <h2 class="heading-medium">Email</h2>
+    <label class="form-label" for="contract_manager_email">
       <span class="form-hint">
-        {% for hint_text in content.supplier_details.form.duns.hint %}
-        {{ hint_text }}<br>
-        {% endfor %}
       </span>
     </label>
-    <input class="form-control" id="duns" type="text" name="duns" value="{% if order_form.duns %}{{ order_form.duns }}{% else %}678952172{% endif %}">
+    <input class="form-control" id="contract_manager_email" type="text" name="contract_manager_email" value="{{ order_form.contract_manager_email }}">
+
+    <h2 class="heading-medium">Address</h2>
+    <label class="form-label" for="contract_manager_address">
+      <span class="form-hint">
+      </span>
+    </label>
+    <input class="form-control" id="contract_manager_address" type="text" name="contract_manager_address" value="{{ order_form.contract_manager_address }}">
   </div>
 
   {% include "v4/_save_and_continue.html" %}
