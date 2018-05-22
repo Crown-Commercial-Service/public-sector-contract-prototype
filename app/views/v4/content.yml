@@ -41,7 +41,7 @@ contract_details:
     reference:
       label: "Call-off reference number"
       hint:
-        - "Every contract has a reference number that can help you identify it."
+        - "Every contract has a reference number that can help identify it."
     start_date:
       label: "Start date"
       hint: "This is the date you expect the supplier to start work."
