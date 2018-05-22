@@ -185,8 +185,7 @@ supplier_details:
     duns:
       label: "DUNS number"
       hint:
-        - "A DUNS number will help the buyers assess the financial stability and reliability of a company."
-        - "Include it if you have one."
+        - "A DUNS number will help the buyers assess the financial stability and reliability of a company. Include it if you have one."
 sensitive:
   title: ""
   introduction:
