@@ -1,0 +1,31 @@
+<form class="form" action="" method="post">
+  <div class="form-group">
+    <h2 class="heading-medium">{{ content.supplier_details.form.contract_manager.label }}</h2>
+    <label class="form-label" for="contract_manager">
+      <span class="form-hint">
+        {{ content.supplier_details.form.contract_manager.hint }}
+      </span>
+    </label>
+    <input class="form-control" id="contract_manager" type="text" name="contract_manager" value="{{ order_form.contract_manager }}">
+
+    <h2 class="heading-medium">{{ content.supplier_details.form.registration_number.label }}</h2>
+    <label class="form-label" for="registration_number">
+      <span class="form-hint">
+        {{ content.supplier_details.form.registration_number.hint }}
+      </span>
+    </label>
+    <input class="form-control" id="registration_number" type="text" name="registration_number" value="{% if order_form.registration_number %}{{ order_form.registration_number }}{% else %}05218772{% endif %}">
+
+    <h2 class="heading-medium">{{ content.supplier_details.form.duns.label }}</h2>
+    <label class="form-label" for="duns">
+      <span class="form-hint">
+        {% for hint_text in content.supplier_details.form.duns.hint %}
+        {{ hint_text }}<br>
+        {% endfor %}
+      </span>
+    </label>
+    <input class="form-control" id="duns" type="text" name="duns" value="{% if order_form.duns %}{{ order_form.duns }}{% else %}678952172{% endif %}">
+  </div>
+
+  {% include "v4/_save_and_continue.html" %}
+</form>

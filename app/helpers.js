@@ -19,7 +19,11 @@ flow = {
   payment: '',
   buyer: '/environmental',
   environmental: '/security',
-  security: ''
+  security: '',
+  supplier: '/contract_manager',
+  contract_manager: '/key_staff',
+  key_staff: '/sensitive',
+  sensitive: ''
 }
 
 exports.nextPage = function(current_page) {

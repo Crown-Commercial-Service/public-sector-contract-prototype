@@ -1,14 +1,21 @@
 <form class="form" action="" method="post">
   <div class="form-group">
-    {% include "v4/_supplier_details.html" %}
-    {% include "v4/_contract_manager.html" %}
-    {% include "v4/_key_staff.html" %}
-    {% include "v4/_sensitive.html" %}
+    <h2 class="heading-medium">{{ content.supplier.form.name.label }}</h2>
+    <label class="form-label" for="supplier_name">
+      <span class="form-hint">
+        {{ content.supplier.form.name.hint }}
+      </span>
+    </label>
+    <input class="form-control" id="supplier_name" type="text" name="supplier_name" value="{% if order_form.supplier_name %}{{ order_form.supplier_name }}{% else %}AWS{% endif %}">
+
+    <h2 class="heading-medium">{{ content.supplier.form.address.label }}</h2>
+    <label class="form-label" for="supplier_address">
+      <span class="form-hint">
+        {{ content.supplier.form.address.hint }}
+      </span>
+    </label>
+    <input class="form-control" id="supplier_address" type="text" name="supplier_address" value="{% if order_form.supplier_address %}{{ order_form.supplier_address }}{% else %}The Principle Place, Shoreditch{% endif %}">
   </div>
 
-  <div class="form-group">
-    <input class="button button-start" type="submit" value="Save">
-    {# <a href="/v4" class="button button-start">Save and continue</a> #}
-    <a href="#" class="button button-start">Cancel</a>
-  </div>
+  {% include "v4/_save_and_continue.html" %}
 </form>

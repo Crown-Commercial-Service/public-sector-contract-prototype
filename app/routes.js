@@ -27,6 +27,7 @@ router.get('/v4', function (req, res) {
     content: content.overview,
     contract_details_complete: helpers.sectionComplete('payment', data),
     buyer_complete: helpers.sectionComplete('security', data),
+    supplier_complete: helpers.sectionComplete('sensitive', data),
     supplier_edit: req.query.supplier_edit,
     supplier_signatory_invited: req.query.supplier_signatory_invited
   })
