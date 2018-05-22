@@ -7,6 +7,7 @@
     </label>
     <input class="form-control" id="authorised_name" type="text" name="authorised_name">
 
+    {% if type != 'supplier_subcontractors' %}
     <h2 class="heading-medium">Role</h2>
     <label class="form-label" for="authorised_role">
       <span class="form-hint">
@@ -27,6 +28,8 @@
       </span>
     </label>
     <input class="form-control" id="authorised_address" type="text" name="authorised_address">
+    {% endif %}
+
   </div>
 
   <div class="form-group">
