@@ -69,9 +69,7 @@ what:
   form:
     details:
       label: "What's being bought"
-      hint:
-        - "Say what's being bought and the delivery dates."
-        - "You should be able to find this information in the requirements."
+      hint: "Say what's being bought and the delivery dates. You should be able to find this information in the requirements."
 charges:
   title: "Contract details"
   introduction:
@@ -87,9 +85,7 @@ liability:
   form:
     max_liability:
       label: "Maximum liability"
-      hint:
-        - "This is the amount the supplier must pay if something goes wrong because of their actions."
-        - "This figure should be 150% of the estimated yearly charges, but no more than £5 million."
+      hint: "This is the amount the supplier must pay if something goes wrong because of their actions. This figure should be 150% of the estimated yearly charges, but no more than £5 million."
 terms:
   title: "Contract details"
   introduction:
