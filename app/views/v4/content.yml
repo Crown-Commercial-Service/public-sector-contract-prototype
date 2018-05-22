@@ -201,14 +201,14 @@ sensitive:
 buyer_representatives:
   title: "Authorised representative"
   introduction:
-    - "This person has the authority to sign this call-off contract order form on behalf of your organisation."
+    - "This person has the authority to sign this call-off contract order form for your organisation."
     - "Usually this person is a senior member of the organisation."
 supplier_staff:
   title: "Key staff"
-  introduction: ""
+  introduction: "Add the staff roles or people that you can't deliver the contract without."
 supplier_subcontractors:
   title: "Key subcontractors"
-  introduction: ""
+  introduction: "Add the subcontractor roles or people that you can't deliver the contract without."
 added:
   buyer_representatives: "Added representative"
   supplier_staff: "Added member of staff"
@@ -222,7 +222,7 @@ invite_supplier_signatory:
   hint: ""
   email: "Email"
 buyer_signatory:
-  title: "Sign the contract"
+  title: "Sign the order form"
   introduction:
     - "You must have the authority to sign on the buyer's behalf."
     - "Usually this will be your authorised representative."
