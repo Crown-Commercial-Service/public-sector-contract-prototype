@@ -58,10 +58,8 @@ progress:
     - ""
   form:
     report:
-      label: "How you want the supplier to update you about the work"
-      hint:
-        - "Once the supplier starts work, say how you want to be updated on their progress. For example, in meetings or using reports."
-        - "Also say how regularly you'd like to be updated."
+      label: "Working arrangements"
+      hint: "How the supplier needs to provide updates about their work. For example, should the supplier be onsite 3 days a week for face-to-face meetings or provide weekly written reports."
     frequency:
       label: "Progress frequency"
       hint: "Once a month at the start of the month"
@@ -71,18 +69,18 @@ what:
     - ""
   form:
     details:
-      label: "What you're buying"
+      label: "What's being bought"
       hint:
-        - "Say what you're buying and your delivery dates."
-        - "You should be able to find this information in your requirements."
+        - "Say what's being bought and the delivery dates."
+        - "You should be able to find this information in the requirements."
 charges:
   title: ""
   introduction:
     - ""
   form:
     call_off:
-      label: "What and how you pay"
-      hint: "How much you'll have to pay and details of any pricing structure you want to use."
+      label: "Cost and how to pay"
+      hint: "How much it'll cost and details of any pricing structures needed."
 liability:
   title: ""
   introduction:
@@ -91,8 +89,8 @@ liability:
     max_liability:
       label: "Maximum liability"
       hint:
-        - "This is the amount you want the supplier to pay you if something goes wrong because of their actions."
-        - "This figure should be 150% of your estimated yearly charges, but no more than £5 million."
+        - "This is the amount the supplier must pay if something goes wrong because of their actions."
+        - "This figure should be 150% of the estimated yearly charges, but no more than £5 million."
 terms:
   title: ""
   introduction:
@@ -100,14 +98,14 @@ terms:
   form:
     special_terms:
       label: "Special terms"
-      hint: "Add any additional terms you need to include in your call-off contract to make your contract work."
+      hint: "Add any additional terms needed in the call-off contract to make the contract work."
 guarantee:
   title: ""
   introduction:
     - ""
   form:
     label: "Guarantee"
-    hint: "Answer yes if you need a third party to guarantee the supplier can meet their obligations."
+    hint: "Answer yes if a third party is needed to guarantee the supplier can meet their obligations."
 expenses:
   title: "Refundable charges"
   introdution:
@@ -115,7 +113,7 @@ expenses:
   form:
     reimbursable:
       label: "Charges that can be refunded"
-      hint: "Any supplier expenses that you're willing to refund, for example travel."
+      hint: "Any supplier expenses that will be refunded, for example travel."
 credits:
   title: ""
   introduction:
@@ -123,14 +121,14 @@ credits:
   form:
     service_credits:
       label: "Compensation"
-      hint: "The financial penalty the supplier must pay if the service fails because of a mistake they've made."
+      hint: "The financial penalty the supplier must pay if the service fails because of their mistake."
 payment:
   title:
   introduction:
     - ""
   form:
     label: "Paying the supplier"
-    hint: "Decide how to pay the supplier."
+    hint: "How the supplier will be paid."
   methods:
     - "Bank transfer"
     - "Credit card"
@@ -157,7 +155,7 @@ environmental:
   form:
     policy:
       label: "Environmental policy"
-      hint: "Link to or upload your environmental policy."
+      hint: "Link to or upload the environmental policy."
 security:
   title: ""
   introduction:
@@ -165,7 +163,7 @@ security:
   form:
     policy:
       label: "Security policy"
-      hint: "Link to or upload your security policy."
+      hint: "Link to or upload the security policy."
 supplier:
   title: "Supplier details"
   introduction:
@@ -191,7 +189,7 @@ supplier_details:
     duns:
       label: "DUNS number"
       hint:
-        - "A DUNS number will help the buyers assess the financial stability and reliability of a company. Include it if you have one."
+        - "A DUNS number will help the buyers assess the financial stability and reliability of a company. Include if available."
 sensitive:
   title: ""
   introduction:
@@ -199,16 +197,8 @@ sensitive:
   form:
     information:
       label: "Commercially sensitive information"
-      hint: "The contract will be publically available. Include here details of anything that can't be publically available and explain why."
-buyer_representative:
-  title: "Authorised representative"
-  introduction:
-    - "This person must have the authority to sign the form for the organisation."
-    - "Usually this is a senior member of the organisation."
-  hint:
-    - "This person must have the authority to sign the form for the organisation."
-    - "Usually this is a senior member of the organisation."
-supplier_representative:
+      hint: "The contract will be publically available. Include details of anything that can't be made publically available and explain why."
+buyer_representatives:
   title: "Authorised representative"
   introduction:
     - "This person must have the authority to sign the form for the organisation."
@@ -219,16 +209,15 @@ supplier_representative:
 supplier_staff:
   title: "Key staff"
   introduction:
-    - "Add the staff roles or people that you can't deliver the contract without."
-  hint: "Add the staff roles or people that you can't deliver the contract without."
+    - "Add the staff roles or people that are essential to the delivery of the contract."
+  hint: "Add the staff roles or people that are essential to the delivery of the contract."
 supplier_subcontractors:
   title: "Key subcontractors"
   introduction:
-    - "Add the subcontractor roles or people that you can't deliver the contract without."
+    - "Add the subcontractor roles or people that are essential to the delivery of the contract."
 added:
-  hint: "Add the subcontractor roles or people that you can't deliver the contract without."
-  buyer_representative: "Added authorised representative"
-  supplier_representative: "Added authorised representative"
+  hint: "Add the subcontractor roles or people that are essential to the delivery of the contract."
+  buyer_representatives: "Added authorised representative"
   supplier_staff: "Added staff member"
   supplier_subcontractors: "Added subcontractor"
 supplier_edit:
@@ -241,9 +230,7 @@ invite_supplier_signatory:
   email: "Email"
 buyer_signatory:
   title: "Sign the form"
-  introduction:
-    - "You must have the authority to sign for the buyer."
-    - "Usually this will be your authorised representative."
+  introduction: "You must have the authority to sign. Usually this will be a senior person in the organisation."
   name:
     label: "Name"
     hint: ""
@@ -256,8 +243,7 @@ buyer_signatory:
 supplier_signatory:
   title: "Countersign the contract"
   introduction:
-    - "You must have the authority to sign for the supplier."
-    - "Usually this will be a senior person in your company."
+    - "You must have the authority to sign. Usually this will be a senior person in the company."
   name:
     label: "Name"
     hint: ""
