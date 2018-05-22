@@ -9,8 +9,5 @@
     <textarea class="form-control form-control-3-4" name="call_off_charges" id="call_off_charges" rows="10">{{ order_form.call_off_charges }}</textarea>
   </div>
 
-  <div class="form-group">
-    <input class="button button-start" type="submit" value="Save and continue">
-    <a href="#" class="button button-start">Cancel</a>
-  </div>
+  {% include "v4/_save_and_continue.html" %}
 </form>

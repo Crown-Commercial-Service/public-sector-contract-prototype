@@ -31,10 +31,7 @@
       <input class="form-control" id="end_date" type="text" name="end_date" value="{% if order_form.end_date %}{{ order_form.end_date}}{% else %}01/06/20{% endif %}">
   </div>
 
-  <div class="form-group">
-    <input class="button button-start" type="submit" value="Save and continue">
-    <a href="#" class="button button-start">Cancel</a>
-  </div>
+  {% include "v4/_save_and_continue.html" %}
 </form>
 
 
