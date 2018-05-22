@@ -24,7 +24,7 @@
     </label>
     <input class="form-control" id="invoice_address" type="text" name="invoice_address" value={{ order_form.invoice_address }}>
 
-    <h2 class="heading-medium">Authorised representatives</h2>
+    <h2 class="heading-medium">Authorised representative</h2>
     {% for representative in order_form.buyer_representatives %}
     <p>{{ representative.name }}</p>
     {% endfor %}
