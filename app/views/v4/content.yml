@@ -6,7 +6,7 @@ overview:
     - "You've already given us some of this information, so we've put it into the form for you."
     - "You can check and edit the information."
   contract:
-    text: "1 . Contract details"
+    text: "1. Contract details"
     hint: "Fill in the form with the details of what you're buying, for example how much and how it'll be delivered."
     link: "Check and complete contract details"
   buyer:
@@ -103,8 +103,12 @@ terms:
       label: "Special terms"
       hint: "Add any additional terms you need to include in your call-off contract to make your contract work."
 guarantee:
-  title: "Guarantee"
-  introduction: "Answer yes if you need a third party to guarantee the supplier can meet their obligations."
+  title: ""
+  introduction:
+    - ""
+  form:
+    label: "Guarantee"
+    hint: "Answer yes if you need a third party to guarantee the supplier can meet their obligations."
 expenses:
   title: "Refundable charges"
   introdution:
@@ -122,9 +126,12 @@ credits:
       label: "Compensation"
       hint: "The financial penalty the supplier must pay if the service fails because of a mistake they've made."
 payment:
-  title: "Paying the supplier"
+  title:
   introduction:
-    - "Decide how you will pay the supplier."
+    - ""
+  form:
+    label: "Paying the supplier"
+    hint: "Decide how you will pay the supplier."
   methods:
     - "Bank transfer"
     - "Cash"
@@ -193,25 +200,26 @@ sensitive:
   form:
     information:
       label: "Commercially sensitive information"
-      hint:
-        - "The contract will be publically availble. Include here details of anything that can't be publically available and explain why."
+      hint: "The contract will be publically available. Include here details of anything that can't be publically available and explain why."
 buyer_representatives:
   title: "Authorised representative"
   introduction:
     - "You must have the authority to sign the form for your organisation."
     - "Usually this is a senior member of the organisation."
-    hint:
+  hint:
     - "You must have the authority to sign the form for your organisation."
     - "Usually this is a senior member of the organisation."
 supplier_staff:
   title: "Key staff"
-  introduction: "Add the staff roles or people that you can't deliver the contract without."
+  introduction:
+    - "Add the staff roles or people that you can't deliver the contract without."
   hint: "Add the staff roles or people that you can't deliver the contract without."
 supplier_subcontractors:
   title: "Key subcontractors"
-  introduction: "Add the subcontractor roles or people that you can't deliver the contract without."
+  introduction:
+    - "Add the subcontractor roles or people that you can't deliver the contract without."
 added:
-hint: "Add the subcontractor roles or people that you can't deliver the contract without." 
+  hint: "Add the subcontractor roles or people that you can't deliver the contract without."
   buyer_representatives: "Added authorised representative"
   supplier_staff: "Added staff member"
   supplier_subcontractors: "Added subcontractor"
@@ -248,10 +256,6 @@ supplier_signatory:
   date:
     label: "Date"
     hint: ""
-countersign_contract:
-  title: "Countersign contract"
-  introduction:
-    - "Confirmation details"
 contract:
   title: "Contract name"
   introduction:
