@@ -230,7 +230,8 @@ invite_supplier_signatory:
   email: "Email"
 buyer_signatory:
   title: "Sign the form"
-  introduction: "You must have the authority to sign. Usually this will be a senior person in the organisation."
+  introduction:
+    - "You must have the authority to sign. Usually this will be a senior person in the organisation."
   name:
     label: "Name"
     hint: ""
@@ -240,6 +241,7 @@ buyer_signatory:
   date:
     label: "Date"
     hint: ""
+  authorised: "I confirm I have the authority to sign"
 supplier_signatory:
   title: "Countersign the contract"
   introduction:
