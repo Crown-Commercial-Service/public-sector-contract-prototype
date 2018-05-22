@@ -16,19 +16,16 @@ flow = {
   guarantee: '/expenses',
   expenses: '/credits',
   credits: '/payment',
-  payment: '',
   buyer: '/environmental',
   environmental: '/security',
-  security: '',
   supplier: '/contract_manager',
   contract_manager: '/supplier_numbers',
   supplier_numbers: '/key_staff',
   key_staff: '/sensitive',
-  sensitive: ''
 }
 
 exports.nextPage = function(current_page) {
-  return flow[current_page]
+  return flow[current_page] || ''
 }
 
 exports.sectionComplete = function(last_page_in_section, session_data) {
