@@ -1,5 +1,3 @@
-
-
 <form class="form" action="" method="post">
   <div class="form-group">
     <h2 class="heading-medium">{{ content.buyer.form.name.label }}</h2>
@@ -31,36 +29,8 @@
     <p>{{ representative.name }}</p>
     {% endfor %}
     <p><a href="add/buyer_representatives" class="">Add</a></p>
-
-    <h2 class="heading-medium">{{ content.environmental.form.policy.label }}</h2>
-    <label class="form-label" for="environmental_policy">
-      <span class="form-hint">
-        {{ content.environmental.form.policy.hint }}
-      </span>
-    </label>
-    <input class="form-control" id="environmental_policy" type="text" name="environmental_policy" value="{{ order_form.environmental_policy }}">
-    <label class="form-label" for="environmental_policy_file" style="margin-top: 20px">
-      Upload a file
-    </label>
-    <input type="file" id="environmental_policy_file">
-
-    <h2 class="heading-medium">{{ content.security.form.policy.label }}</h2>
-    <label class="form-label" for="security_policy">
-      <span class="form-hint">
-        {{ content.security.form.policy.hint }}
-      </span>
-    </label>
-    <input class="form-control" id="security_policy" type="text" name="security_policy" value="{{ order_form.security_policy }}">
-
-    <label class="form-label" for="security_policy_file" style="margin-top: 20px">
-      Upload a file
-    </label>
-    <input type="file" id="security_policy_file">
   </div>
 
-  <div class="form-group">
-    <input class="button button-start" type="submit" value="Save">
-    <a href="#" class="button button-start">Cancel</a>
-  </div>
+  {% include "v4/_save_and_continue.html" %}
 </form>
 

@@ -205,11 +205,11 @@ sensitive:
 buyer_representatives:
   title: "Authorised representative"
   introduction:
-    - "This person must have the authority to sign the order form for your organisation."
-    - "Usually this is a senior member of the organisation."
-    hint:
-    - "This person must have the authority to sign the order form for your organisation."
-    - "Usually this is a senior member of the organisation."
+    - "This person has the authority to sign this call-off contract order form for your organisation."
+    - "Usually this person is a senior member of the organisation."
+  hint:
+    - "This person has the authority to sign this call-off contract order form for your organisation."
+    - "Usually this person is a senior member of the organisation."
 supplier_staff:
   title: "Key staff"
   introduction: "Add the staff roles or people that you can't deliver the contract without."

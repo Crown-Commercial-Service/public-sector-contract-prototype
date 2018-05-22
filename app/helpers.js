@@ -16,7 +16,10 @@ flow = {
   guarantee: '/expenses',
   expenses: '/credits',
   credits: '/payment',
-  payment: ''
+  payment: '',
+  buyer: '/environmental',
+  environmental: '/security',
+  security: ''
 }
 
 exports.nextPage = function(current_page) {
