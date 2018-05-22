@@ -6,7 +6,7 @@
         {{ content.expenses.form.reimbursable.hint }}
       </span>
     </label>
-    <input class="form-control" id="expenses" type="text" name="expenses" value="{{ order_form.contract_details.expenses }}">
+    <textarea class="form-control form-control-3-4" name="expenses" id="expenses" rows="10">{{ order_form.contract_details.expenses }}</textarea>
   </div>
 
   {% include "v4/_save_and_continue.html" %}
