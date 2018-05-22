@@ -11,7 +11,7 @@ overview:
     link: "Check and complete contract details"
   buyer:
     text: "2. Buying organisation details"
-    hint: "Includes information about the buyer, for example name and address."
+    hint: "Includes information about the buyer, for example your security policy."
     link: "Check and complete buyer details"
   supplier:
     text: "3. Supplier details"
