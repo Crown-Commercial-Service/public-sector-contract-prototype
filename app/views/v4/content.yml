@@ -7,7 +7,7 @@ overview:
     - "You can check and edit the information."
   contract:
     text: "1 . About the contract"
-    hint: "Fill in the form with the details of what you're buying, for how much and how it'll be delivered."
+    hint: "Fill in the form with the details of what you're buying, for example how much and how it'll be delivered."
     link: "Check and complete contract details"
   buyer:
     text: "2. Buyer details"
