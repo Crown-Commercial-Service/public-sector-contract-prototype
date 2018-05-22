@@ -17,7 +17,7 @@ overview:
     text: "3. Supplier details"
     hint: "Includes information about the supplier, for example key staff."
     link: "Check and complete supplier details"
-    edit: "Invite the supplier to edit"
+    edit: "Invite the supplier to add their details"
     invited: "The supplier has been invited to edit"
   sign:
     text: "4. Check your answers"
@@ -78,7 +78,7 @@ charges:
     - ""
   form:
     call_off:
-      label: "Cost and how to pay"
+      label: "Price and how to pay"
       hint: "How much it'll cost and details of any pricing structures needed."
 liability:
   title: "Contract details"
@@ -111,8 +111,8 @@ expenses:
     - ""
   form:
     reimbursable:
-      label: "Charges that can be refunded"
-      hint: "Any supplier expenses that will be refunded, for example travel."
+      label: "Supplier expenses"
+      hint: "Any supplier expenses that'll be refunded, for example travel."
 credits:
   title: "Contract details"
   introduction:
@@ -228,7 +228,7 @@ invite_supplier_signatory:
   hint: ""
   email: "Email"
 buyer_signatory:
-  title: "Sign the form"
+  title: "Sign the contract"
   introduction:
     - "You must have the authority to sign. Usually this will be a senior person in the organisation."
   name:
