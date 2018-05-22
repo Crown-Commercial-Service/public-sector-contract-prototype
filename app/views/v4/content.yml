@@ -241,7 +241,7 @@ buyer_signatory:
   date:
     label: "Date"
     hint: ""
-  authorised: "I confirm I have the authority to sign"
+  authorised: "I confirm I have the authority to sign this contract on my organisation's behalf."
 supplier_signatory:
   title: "Countersign the contract"
   introduction:
