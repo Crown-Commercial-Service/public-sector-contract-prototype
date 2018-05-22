@@ -28,7 +28,10 @@
     {% for representative in order_form.buyer_representatives %}
     <p>{{ representative.name }}</p>
     {% endfor %}
+
+    {% if not order_form.buyer_representative %}
     <p><a href="add/buyer_representatives" class="">Add</a></p>
+    {% endif %}
   </div>
 
   {% include "v4/_save_and_continue.html" %}

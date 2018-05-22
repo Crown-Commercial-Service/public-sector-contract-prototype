@@ -15,6 +15,15 @@
       </span>
     </label>
     <input class="form-control" id="supplier_address" type="text" name="supplier_address" value="{% if order_form.supplier_address %}{{ order_form.supplier_address }}{% else %}The Principle Place, Shoreditch{% endif %}">
+
+    <h2 class="heading-medium">Authorised representative</h2>
+    {% for rep in order_form.supplier_representative %}
+    <p>{{ rep.name }}</p>
+    {% endfor %}
+
+    {% if not order_form.supplier_representative %}
+    <p><a href="add/supplier_representative">Add</a></p>
+    {% endif %}
   </div>
 
   {% include "v4/_save_and_continue.html" %}

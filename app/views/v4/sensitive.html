@@ -3,9 +3,7 @@
     <h2 class="heading-medium">{{ content.sensitive.form.information.label }}</h2>
     <label class="form-label" for="sensitive_information">
       <span class="form-hint">
-        {% for hint_text in content.sensitive.form.information.hint %}
-        {{ hint_text }}<br>
-        {% endfor %}
+        {{ content.sensitive.form.information.hint }}
       </span>
     </label>
     <textarea class="form-control form-control-3-4" name="sensitive_information" id="sensitive_information" rows="10">{{ order_form.sensitive_information }}</textarea>

@@ -74,7 +74,7 @@ router.post('/v4/:page', function (req, res) {
 router.get('/v4/add/:type', function (req, res) {
   res.render('v4/base', {
     header: req.params.type,
-    page: 'representatives',
+    page: 'representative',
     type: req.params.type,
     content: content
   })
@@ -98,12 +98,7 @@ router.post('/v4/add/:type', function (req, res) {
   console.log(req.session.data)
   console.log(`*********\n`)
 
-  if (type.includes('buyer')) {
-    path = 'buyer'
-  } else if (type.includes('supplier')) {
-    path = 'key_staff'
-  }
-
+  path = helpers.additionReturnPath(type)
   res.redirect(`/v4/${path}?added=${type}`)
 })
 

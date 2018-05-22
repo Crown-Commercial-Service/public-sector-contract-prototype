@@ -200,7 +200,15 @@ sensitive:
     information:
       label: "Commercially sensitive information"
       hint: "The contract will be publically available. Include here details of anything that can't be publically available and explain why."
-buyer_representatives:
+buyer_representative:
+  title: "Authorised representative"
+  introduction:
+    - "This person must have the authority to sign the form for the organisation."
+    - "Usually this is a senior member of the organisation."
+  hint:
+    - "This person must have the authority to sign the form for the organisation."
+    - "Usually this is a senior member of the organisation."
+supplier_representative:
   title: "Authorised representative"
   introduction:
     - "This person must have the authority to sign the form for the organisation."
@@ -219,7 +227,8 @@ supplier_subcontractors:
     - "Add the subcontractor roles or people that you can't deliver the contract without."
 added:
   hint: "Add the subcontractor roles or people that you can't deliver the contract without."
-  buyer_representatives: "Added authorised representative"
+  buyer_representative: "Added authorised representative"
+  supplier_representative: "Added authorised representative"
   supplier_staff: "Added staff member"
   supplier_subcontractors: "Added subcontractor"
 supplier_edit:

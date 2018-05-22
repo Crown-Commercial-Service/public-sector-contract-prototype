@@ -16,7 +16,6 @@ flow = {
   expenses: '/credits',
   credits: '/payment',
   buyer: '/environmental',
-  environmental: '/security',
   supplier: '/contract_manager',
   contract_manager: '/supplier_numbers',
   supplier_numbers: '/key_staff',
@@ -29,4 +28,16 @@ exports.nextPage = function(current_page) {
 
 exports.sectionComplete = function(last_page_in_section, session_data) {
   return session_data[`${last_page_in_section}_complete`] != undefined
+}
+
+exports.additionReturnPath = function(type) {
+  if (type.includes('buyer')) {
+    path = 'buyer'
+  } else if (type.includes('representative')) {
+    path = 'supplier'
+  } else if (type.includes('supplier')) {
+    path = 'key_staff'
+  }
+
+  return path
 }
