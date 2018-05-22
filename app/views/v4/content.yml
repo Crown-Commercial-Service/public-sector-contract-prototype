@@ -6,11 +6,11 @@ overview:
     - "You've already given us some of this information, so we've put it into the form for you."
     - "You can check and edit the information."
   contract:
-    text: "1 . About the contract"
+    text: "1 . Contract details"
     hint: "Fill in the form with the details of what you're buying, for example how much and how it'll be delivered."
     link: "Check and complete contract details"
   buyer:
-    text: "2. Buying organisation details"
+    text: "2. Buyer details"
     hint: "Includes information about the buyer, for example your security policy."
     link: "Check and complete buyer details"
   supplier:
@@ -20,9 +20,9 @@ overview:
     edit: "Invite the supplier to edit"
     invited: "The supplier has been invited to edit"
   sign:
-    text: "4. Signature page"
+    text: "4. Sign online"
     hint:
-      - "Sign online."
+      - ""
       - "Once you've both signed you can start working with your supplier."
     buyer: "Sign contract"
     buyer_signed: "You have signed the contract."
@@ -30,11 +30,11 @@ overview:
     supplier_invited: "The supplier has been invited to sign"
     supplier_signed: "The supplier has signed"
 contract_overview:
-  title: "Call-off order form"
+  title: "Call-off form"
   introduction:
-    - "Once the order form has been completed and signed you can start working with your supplier."
+    - "Once the form has been completed and signed you can start working with your supplier."
 contract_details:
-  title: "About the contract"
+  title: "Contract details"
   introduction:
     - "Answer questions about what you're buying and how."
   form:
@@ -103,14 +103,10 @@ terms:
       label: "Special terms"
       hint: "Add any additional terms you need to include in your call-off contract to make your contract work."
 guarantee:
-  title: ""
-  introduction:
-    - ""
-  form:
-    label: "Guarantee"
-    hint: "Answer yes if you need a third party to guarantee the supplier can meet their obligations."
+  title: "Guarantee"
+  introduction: "Answer yes if you need a third party to guarantee the supplier can meet their obligations."
 expenses:
-  title: ""
+  title: "Refundable charges"
   introdution:
     - ""
   form:
@@ -126,12 +122,9 @@ credits:
       label: "Compensation"
       hint: "The financial penalty the supplier must pay if the service fails because of a mistake they've made."
 payment:
-  title: ""
+  title: "Paying the supplier"
   introduction:
-    - ""
-  form:
-    label: "Paying the supplier"
-    hint: "Decide how you will pay the supplier."
+    - "Decide how you will pay the supplier."
   methods:
     - "Bank transfer"
     - "Cash"
@@ -184,7 +177,7 @@ supplier_details:
     - ""
   form:
     contract_manager:
-      label: "Contract manager name"
+      label: "Contract manager"
       hint: "This person will be the buyer's daily contact. Include name, role and contact details."
     registration_number:
       label: "Company registration number"
@@ -201,26 +194,24 @@ sensitive:
     information:
       label: "Commercially sensitive information"
       hint:
-        - "The contract will be publically available. Include here details of anything that can't be publically available and explain why."
+        - "The contract will be publically availble. Include here details of anything that can't be publically available and explain why."
 buyer_representatives:
   title: "Authorised representative"
   introduction:
     - "You must have the authority to sign the form for your organisation."
     - "Usually this is a senior member of the organisation."
-  hint:
+    hint:
     - "You must have the authority to sign the form for your organisation."
     - "Usually this is a senior member of the organisation."
 supplier_staff:
   title: "Key staff"
-  introduction:
-    - "Add the staff roles or people that you can't deliver the contract without."
+  introduction: "Add the staff roles or people that you can't deliver the contract without."
   hint: "Add the staff roles or people that you can't deliver the contract without."
 supplier_subcontractors:
   title: "Key subcontractors"
-  introduction:
-    - "Add the subcontractor roles or people that you can't deliver the contract without."
-  hint: "Add the subcontractor roles or people that you can't deliver the contract without."
+  introduction: "Add the subcontractor roles or people that you can't deliver the contract without."
 added:
+hint: "Add the subcontractor roles or people that you can't deliver the contract without." 
   buyer_representatives: "Added authorised representative"
   supplier_staff: "Added staff member"
   supplier_subcontractors: "Added subcontractor"
@@ -257,6 +248,10 @@ supplier_signatory:
   date:
     label: "Date"
     hint: ""
+countersign_contract:
+  title: "Countersign contract"
+  introduction:
+    - "Confirmation details"
 contract:
   title: "Contract name"
   introduction:
