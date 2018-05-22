@@ -53,7 +53,7 @@ contract_details:
       label: "Initial period"
       hint: ""
 progress:
-  title: ""
+  title: "Contract details"
   introduction:
     - ""
   form:
@@ -64,7 +64,7 @@ progress:
       label: "Progress frequency"
       hint: "Once a month at the start of the month"
 what:
-  title: ""
+  title: "Contract details"
   introduction:
     - ""
   form:
@@ -74,7 +74,7 @@ what:
         - "Say what's being bought and the delivery dates."
         - "You should be able to find this information in the requirements."
 charges:
-  title: ""
+  title: "Contract details"
   introduction:
     - ""
   form:
@@ -82,7 +82,7 @@ charges:
       label: "Cost and how to pay"
       hint: "How much it'll cost and details of any pricing structures needed."
 liability:
-  title: ""
+  title: "Contract details"
   introduction:
     - ""
   form:
@@ -92,7 +92,7 @@ liability:
         - "This is the amount the supplier must pay if something goes wrong because of their actions."
         - "This figure should be 150% of the estimated yearly charges, but no more than £5 million."
 terms:
-  title: ""
+  title: "Contract details"
   introduction:
     - ""
   form:
@@ -100,14 +100,14 @@ terms:
       label: "Special terms"
       hint: "Add any additional terms needed in the call-off contract to make the contract work."
 guarantee:
-  title: ""
+  title: "Contract details"
   introduction:
     - ""
   form:
     label: "Guarantee"
     hint: "Answer yes if a third party is needed to guarantee the supplier can meet their obligations."
 expenses:
-  title: "Refundable charges"
+  title: "Contract details"
   introdution:
     - ""
   form:
@@ -115,7 +115,7 @@ expenses:
       label: "Charges that can be refunded"
       hint: "Any supplier expenses that will be refunded, for example travel."
 credits:
-  title: ""
+  title: "Contract details"
   introduction:
     - ""
   form:
@@ -123,7 +123,7 @@ credits:
       label: "Compensation"
       hint: "The financial penalty the supplier must pay if the service fails because of their mistake."
 payment:
-  title:
+  title: "Contract details"
   introduction:
     - ""
   form:
@@ -149,7 +149,7 @@ buyer:
       label: "Invoice address"
       hint: "Add invoice address if different."
 environmental:
-  title: ""
+  title: "Buyer details"
   introduction:
     - ""
   form:
@@ -176,7 +176,7 @@ supplier:
       label: "Address"
       hint: ""
 supplier_details:
-  title: ""
+  title: "Supplier details"
   introduction:
     - ""
   form:
@@ -191,7 +191,7 @@ supplier_details:
       hint:
         - "A DUNS number will help the buyers assess the financial stability and reliability of a company. Include if available."
 sensitive:
-  title: ""
+  title: "Supplier details"
   introduction:
     - ""
   form:
