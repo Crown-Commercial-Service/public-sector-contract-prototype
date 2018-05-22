@@ -17,7 +17,7 @@ overview:
     text: "3. Supplier details"
     hint: "Includes information about the supplier, for example key staff."
     link: "Check and complete supplier details"
-    edit: "Invite supplier to edit"
+    edit: "Invite the supplier to edit"
     invited: "The supplier has been invited to edit"
   sign:
     text: "4. Signature page"
@@ -26,7 +26,7 @@ overview:
       - "Once you've both signed you can start working with your supplier."
     buyer: "Sign contract"
     buyer_signed: "You have signed the contract."
-    supplier_sign: "Invite supplier to sign"
+    supplier_sign: "Invite the supplier to sign"
     supplier_invited: "The supplier has been invited to sign"
     supplier_signed: "The supplier has signed"
 contract_overview:
