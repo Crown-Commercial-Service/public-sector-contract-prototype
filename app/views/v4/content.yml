@@ -41,7 +41,7 @@ contract_details:
     reference:
       label: "Call-off reference number"
       hint:
-        - "Every contract has a reference number that can help you identify it."
+        - "Every contract has a reference number that can help identify it."
     start_date:
       label: "Start date"
       hint: "This is the date you expect the supplier to start work."
@@ -81,7 +81,7 @@ charges:
     - ""
   form:
     call_off:
-      label: "Call-off charges"
+      label: "What and how you pay"
       hint: "How much you'll have to pay and details of any pricing structure you want to use."
 liability:
   title: ""
@@ -114,7 +114,7 @@ expenses:
     - ""
   form:
     reimbursable:
-      label: "Refundable charges"
+      label: "Charges that can be refunded"
       hint: "Any supplier expenses that you're willing to refund, for example travel."
 credits:
   title: ""
@@ -130,11 +130,11 @@ payment:
     - ""
   form:
     label: "Paying the supplier"
-    hint: "Decide how you will pay the supplier."
+    hint: "Decide how to pay the supplier."
   methods:
     - "Bank transfer"
-    - "Cash"
-    - "Government Procurement Card"
+    - "Credit card"
+    - "Government procurement card"
     - "Other"
 buyer:
   title: "Buyer details"
@@ -184,7 +184,7 @@ supplier_details:
   form:
     contract_manager:
       label: "Contract manager"
-      hint: "This person will be the buyer's daily contact. Include name, role and contact details."
+      hint: "This person will be the buyer's daily contact."
     registration_number:
       label: "Company registration number"
       hint: "If a company is registered at Companies House they'll have an 8-digit registration number."
@@ -203,10 +203,10 @@ sensitive:
 buyer_representatives:
   title: "Authorised representative"
   introduction:
-    - "You must have the authority to sign the form for your organisation."
+    - "This person must have the authority to sign the form for the organisation."
     - "Usually this is a senior member of the organisation."
   hint:
-    - "You must have the authority to sign the form for your organisation."
+    - "This person must have the authority to sign the form for the organisation."
     - "Usually this is a senior member of the organisation."
 supplier_staff:
   title: "Key staff"
