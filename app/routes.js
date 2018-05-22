@@ -21,9 +21,11 @@ router.get('/', function (req, res) {
 // v4 routes
 
 router.get('/v4', function (req, res) {
+  data = req.session.data
   res.render('v4/overview', {
-    order_form: req.session.data,
+    order_form: data,
     content: content.overview,
+    contract_details_complete: helpers.sectionComplete('payment', data),
     supplier_edit: req.query.supplier_edit,
     supplier_signatory_invited: req.query.supplier_signatory_invited
   })
@@ -64,7 +66,7 @@ router.post('/v4/:page', function (req, res) {
     query = '?supplier_signatory_invited=true'
   }
 
-  res.redirect(`/v4${query}`)
+  res.redirect(`/v4${helpers.nextPage(page)}${query}`)
 })
 
 router.get('/v4/add/:type', function (req, res) {
@@ -90,7 +92,9 @@ router.post('/v4/add/:type', function (req, res) {
     address: data.authorised_address
   })
 
+  console.log(`*********\n`)
   console.log(req.session.data)
+  console.log(`*********\n`)
 
   if (type.includes('buyer')) {
     path = 'buyer'

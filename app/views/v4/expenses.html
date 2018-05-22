@@ -1,0 +1,16 @@
+<form class="form" action="" method="post">
+  <div class="form-group">
+    <h2 class="heading-medium">{{ content.expenses.form.reimbursable.label }}</h2>
+    <label class="form-label" for="expenses">
+      <span class="form-hint">
+        {{ content.expenses.form.reimbursable.hint }}
+      </span>
+    </label>
+    <input class="form-control" id="expenses" type="text" name="expenses" value="{{ order_form.contract_details.expenses }}">
+  </div>
+
+  <div class="form-group">
+    <input class="button button-start" type="submit" value="Save and continue">
+    <a href="#" class="button button-start">Cancel</a>
+  </div>
+</form>

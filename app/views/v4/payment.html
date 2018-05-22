@@ -1,0 +1,25 @@
+<form class="form" action="" method="post">
+  <div class="form-group">
+    <h2 class="heading-medium">{{ content.payment.form.label }}</h2>
+    <span class="form-hint">
+      {{ content.payment.form.hint }}
+    </span>
+
+    {% for method in content.payment.methods %}
+    {% set id = method.replace(" ", "-").toLowerCase() %}
+    <div class="multiple-choice" data-target="mod-yes">
+      {% if order_form.payment == method %}
+      <input id={{ id }} type="radio" name="payment" value="{{ method }}" checked="checked">
+      {% else %}
+      <input id={{ id }} type="radio" name="payment" value="{{ method }}">
+      {% endif %}
+      <label for={{ id }}>{{ method }}</label>
+    </div>
+    {% endfor %}
+  </div>
+
+  <div class="form-group">
+    <input class="button button-start" type="submit" value="Save and continue">
+    <a href="#" class="button button-start">Cancel</a>
+  </div>
+</form>

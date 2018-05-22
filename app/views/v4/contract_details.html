@@ -1,19 +1,44 @@
+<p>If you would like to fill in the order form offline, <a href="#" class="link">download the call-off order form</a>.</p>
+
 <form class="form" action="" method="post">
   <div class="form-group">
-    {% include "v4/_contract_details.html" %}
-    {% include "v4/_progress.html" %}
-    {% include "v4/_what.html" %}
-    {% include "v4/_charges.html" %}
-    {% include "v4/_liability.html" %}
-    {% include "v4/_terms.html" %}
-    {% include "v4/_guarantee.html" %}
-    {% include "v4/_expenses.html" %}
-    {% include "v4/_credits.html" %}
-    {% include "v4/_payment.html" %}
+
+      <h2 class="heading-medium">{{ content.contract_details.form.reference.label }}</h2>
+      <label class="form-label" for="reference_number">
+        <span class="form-hint">
+          {% for hint_text in content.contract_details.form.reference.hint %}
+          {{ hint_text }}<br>
+          {% endfor %}
+        </span>
+      </label>
+      <input class="form-control" id="reference_number" type="text" name="reference_number"
+      value="{% if order_form.reference_number %}{{ order_form.reference_number }}{% else %}RM05625751{% endif %}">
+
+      <h2 class="heading-medium">{{ content.contract_details.form.start_date.label }}</h2>
+      <label class="form-label" for="start_date">
+        <span class="form-hint">
+          {{ content.contract_details.form.start_date.hint }}
+        </span>
+      </label>
+      <input class="form-control" id="start_date" type="text" name="start_date" value="{% if order_form.start_date %}{{ order_form.start_date}}{% else %}01/06/18{% endif %}">
+
+      <h2 class="heading-medium">{{ content.contract_details.form.end_date.label }}</h2>
+      <label class="form-label" for="end_date">
+        <span class="form-hint">
+          {{ content.contract_details.form.end_date.hint }}
+        </span>
+      </label>
+      <input class="form-control" id="end_date" type="text" name="end_date" value="{% if order_form.end_date %}{{ order_form.end_date}}{% else %}01/06/20{% endif %}">
   </div>
 
   <div class="form-group">
-    <input class="button button-start" type="submit" value="Save">
+    <input class="button button-start" type="submit" value="Save and continue">
     <a href="#" class="button button-start">Cancel</a>
   </div>
 </form>
+
+
+
+
+
+
