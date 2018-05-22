@@ -36,7 +36,7 @@ contract_overview:
 contract_details:
   title: "About the contract"
   introduction:
-    - "Answer the questions about what you're buying and how."
+    - "Answer questions about what you're buying and how."
   form:
     reference:
       label: "Call-off reference number"
