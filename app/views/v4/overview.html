@@ -121,12 +121,16 @@
 
     <div class="column-third">
       <p class="heading-medium">
-      {% if order_form.buyer_signatory_complete %}
-        {{ content.sign.buyer_signed }}
-      {% endif %}
-
-      {% if order_form.buyer_signatory_complete and order_form.supplier_signatory_complete %}
+      {% if order_form.buyer_signatory_complete and order_form.invite_supplier_signatory_complete %}
         Completed
+      {% else %}
+        {% if order_form.buyer_signatory_complete %}
+          {{ content.sign.buyer_signed }}
+        {% endif %}
+
+        {% if order_form.invite_supplier_signatory_complete %}
+          {{ content.sign.supplier_signed }}
+        {% endif %}
       {% endif %}
       </p>
     </div>
