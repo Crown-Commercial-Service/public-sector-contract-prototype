@@ -212,11 +212,13 @@ buyer_representatives:
     - "Usually this person is a senior member of the organisation."
 supplier_staff:
   title: "Key staff"
-  introduction: "Add the staff roles or people that you can't deliver the contract without."
+  introduction:
+    - "Add the staff roles or people that you can't deliver the contract without."
   hint: "Add the staff roles or people that you can't deliver the contract without."
 supplier_subcontractors:
   title: "Key subcontractors"
-  introduction: "Add the subcontractor roles or people that you can't deliver the contract without."
+  introduction:
+    - "Add the subcontractor roles or people that you can't deliver the contract without."
   hint: "Add the subcontractor roles or people that you can't deliver the contract without."
 added:
   buyer_representatives: "Added authorised representative"

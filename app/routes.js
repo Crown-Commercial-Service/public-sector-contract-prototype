@@ -101,7 +101,7 @@ router.post('/v4/add/:type', function (req, res) {
   if (type.includes('buyer')) {
     path = 'buyer'
   } else if (type.includes('supplier')) {
-    path = 'supplier'
+    path = 'key_staff'
   }
 
   res.redirect(`/v4/${path}?added=${type}`)
