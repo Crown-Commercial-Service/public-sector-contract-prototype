@@ -122,9 +122,9 @@ credits:
       label: "Compensation"
       hint: "The financial penalty the supplier must pay if the service fails because of a mistake they've made."
 payment:
-  title: "How you want to pay"
+  title: "Paying the supplier"
   introduction:
-    - "Choose how you'd like to pay the supplier."
+    - "Decide how you will pay the supplier."
   methods:
     - "Bank transfer"
     - "Cash"
@@ -208,12 +208,14 @@ buyer_representatives:
 supplier_staff:
   title: "Key staff"
   introduction: "Add the staff roles or people that you can't deliver the contract without."
+  hint: "Add the staff roles or people that you can't deliver the contract without."
 supplier_subcontractors:
   title: "Key subcontractors"
   introduction: "Add the subcontractor roles or people that you can't deliver the contract without."
 added:
-  buyer_representatives: "Added representative"
-  supplier_staff: "Added member of staff"
+hint: "Add the subcontractor roles or people that you can't deliver the contract without." 
+  buyer_representatives: "Added authorised representative"
+  supplier_staff: "Added staff member"
   supplier_subcontractors: "Added subcontractor"
 supplier_edit:
   title: "Invite the supplier to edit"
@@ -226,7 +228,7 @@ invite_supplier_signatory:
 buyer_signatory:
   title: "Sign the order form"
   introduction:
-    - "You must have the authority to sign on the buyer's behalf."
+    - "You must have the authority to sign for the buyer."
     - "Usually this will be your authorised representative."
   name:
     label: "Name"
@@ -240,7 +242,7 @@ buyer_signatory:
 supplier_signatory:
   title: "Countersign the contract"
   introduction:
-    - "You must have the authority to sign on the supplier's behalf."
+    - "You must have the authority to sign for the supplier."
     - "Usually this will be a senior person in your company."
   name:
     label: "Name"
