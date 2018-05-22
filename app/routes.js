@@ -72,11 +72,13 @@ router.post('/v4/:page', function (req, res) {
 })
 
 router.get('/v4/add/:type', function (req, res) {
+  let type = req.params.type
   res.render('v4/base', {
-    header: req.params.type,
+    header: type,
     page: 'representative',
-    type: req.params.type,
-    content: content
+    type: type,
+    content: content,
+    cancel_path: `/v4/${helpers.additionReturnPath(type)}`
   })
 })
 
