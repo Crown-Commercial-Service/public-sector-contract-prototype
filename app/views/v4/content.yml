@@ -195,16 +195,15 @@ sensitive:
     information:
       label: "Commercially sensitive information"
       hint:
-        - "The contract will be publically availble or may be subject to a Freedom of Information request."
-        - "Include details of anything that can't be made publically available and the reasons why not."
+        - "The contract will be publically availble. Include here details of anything that can't be publically available and the reasons why."
 buyer_representatives:
   title: "Authorised representative"
   introduction:
     - "This person has the authority to sign this call-off contract order form for your organisation."
-    - "Usually this person is a senior member of the organisation."
+    - "Usually this is a senior member of the organisation."
     hint:
     - "This person has the authority to sign this call-off contract order form for your organisation."
-    - "Usually this person is a senior member of the organisation."
+    - "Usually this is a senior member of the organisation."
 supplier_staff:
   title: "Key staff"
   introduction: "Add the staff roles or people that you can't deliver the contract without."
