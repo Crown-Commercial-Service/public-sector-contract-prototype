@@ -32,7 +32,7 @@ overview:
 contract_overview:
   title: "Call-off form"
   introduction:
-    - "Once the form has been completed and signed you can start working with your supplier."
+    - "Once the form has been completed and signed you can start working with the supplier."
 contract_details:
   title: "Contract details"
   introduction:
@@ -41,8 +41,7 @@ contract_details:
     reference:
       label: "Call-off reference number"
       hint:
-        - "Every contract has a reference number."
-        - "It usually starts with 'RM' and is found on the bottom right of the contract documents."
+        - "Every contract has a reference number that can help you identify it."
     start_date:
       label: "Start date"
       hint: "This is the date you expect the supplier to start work."
