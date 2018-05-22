@@ -6,7 +6,7 @@ overview:
     - "You've already given us some of this information, so we've put it into the form for you."
     - "You can check and edit the information."
   contract:
-    text: "1 . What you're buying"
+    text: "1 . About the contract"
     hint: "Fill in the form with the details of what you're buying, for how much and how it'll be delivered."
     link: "Check and complete contract details"
   buyer:
@@ -18,16 +18,16 @@ overview:
     hint: "Includes information about the supplier, for example key staff."
     link: "Check and complete supplier details"
     edit: "Invite supplier to edit"
-    invited: "Supplier has been invited to edit"
+    invited: "The supplier has been invited to edit"
   sign:
     text: "4. Signature page"
     hint:
       - "Sign online."
       - "Once you've both signed you can start working with your supplier."
     buyer: "Sign contract"
-    buyer_signed: "You have signed the contract"
+    buyer_signed: "You have signed the contract."
     supplier_sign: "Invite supplier to sign"
-    supplier_invited: "Supplier invited to sign"
+    supplier_invited: "The supplier has been invited to sign"
     supplier_signed: "The supplier has signed the contract"
 contract_overview:
   title: "Call-off order form"
@@ -49,7 +49,7 @@ contract_details:
     end_date:
       label: "End date"
       hint:
-        - "This is when your contract is due to end, assuming it isn't extended."
+        - "This is when your contract will end if there's no extension."
     initial_period:
       label: "Initial period"
       hint: ""
@@ -120,8 +120,8 @@ credits:
     - ""
   form:
     service_credits:
-      label: "Payment if the service fails"
-      hint: "The penalty the supplier has to pay if the service falls down because of a mistake they've made."
+      label: "Compensation"
+      hint: "The financial penalty the supplier must pay if the service fails because of a mistake they've made."
 payment:
   title: "How you want to pay"
   introduction:
@@ -152,7 +152,7 @@ environmental:
   form:
     policy:
       label: "Environmental policy"
-      hint: "Upload or link to your organisation's environmental policy."
+      hint: "Add a link to your environmental policy or upload it."
 security:
   title: ""
   introduction:
@@ -160,7 +160,7 @@ security:
   form:
     policy:
       label: "Security policy"
-      hint: "Upload or link to your organisation's security policy."
+      hint: "Add a link or upload your security policy."
 supplier:
   title: "Supplier details"
   introduction:
@@ -188,10 +188,6 @@ supplier_details:
       hint:
         - "A DUNS number will help the buyers assess the financial stability and reliability of a company."
         - "Include it if you have one."
-key_staff:
-  hint: ""
-key_subcontractors:
-  hint: ""
 sensitive:
   title: ""
   introduction:
@@ -214,8 +210,7 @@ supplier_subcontractors:
   title: "Key subcontractors"
   introduction: ""
 added:
-  buyer_representatives: "Added authorised representative"
-  supplier_representatives: "Added authorised representative"
+  buyer_representatives: "Added representative"
   supplier_staff: "Added member of staff"
   supplier_subcontractors: "Added subcontractor"
 supplier_edit:
@@ -255,7 +250,7 @@ countersign_contract:
   title: "Countersign contract"
   introduction:
     - "Confirmation details"
-review:
+contract:
   title: "Contract name"
   introduction:
     - "Guidance notes and links"
