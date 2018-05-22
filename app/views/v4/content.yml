@@ -1,17 +1,17 @@
 overview:
   title: "Award a contract"
   introduction:
-    - "Fill in the form to create a contract with your supplier."
+    - "Fill in the form to create a contract with the supplier."
     - "This used to be called the call-off order form."
     - "You've already given us some of this information, so we've put it into the form for you."
     - "You can check and edit the information."
   contract:
     text: "1. Contract details"
-    hint: "Fill in the form with the details of what you're buying, for example how much and how it'll be delivered."
+    hint: "Fill in the form with the details of what's being bought, for example how much and how it'll be delivered."
     link: "Check and complete contract details"
   buyer:
     text: "2. Buyer details"
-    hint: "Includes information about the buyer, for example your security policy."
+    hint: "Includes information about the buyer, for example the security policy."
     link: "Check and complete buyer details"
   supplier:
     text: "3. Supplier details"
@@ -23,7 +23,7 @@ overview:
     text: "4. Sign online"
     hint:
       - ""
-      - "Once you've both signed you can start working with your supplier."
+      - "Work can start once the buyer and supplier have both signed the contract."
     buyer: "Sign contract"
     buyer_signed: "You have signed the contract."
     supplier_sign: "Invite the supplier to sign"
@@ -32,11 +32,11 @@ overview:
 contract_overview:
   title: "Call-off form"
   introduction:
-    - "Once the form has been completed and signed you can start working with the supplier."
+    - "Work can start once the buyer and supplier have both signed the contract."
 contract_details:
   title: "Contract details"
   introduction:
-    - "Answer questions about what you're buying and how."
+    - "Answer questions about what's being bought and how."
   form:
     reference:
       label: "Call-off reference number"
@@ -44,11 +44,11 @@ contract_details:
         - "Every contract has a reference number that can help identify it."
     start_date:
       label: "Start date"
-      hint: "This is the date you expect the supplier to start work."
+      hint: "This is the date the supplier is expected to start work."
     end_date:
       label: "End date"
       hint:
-        - "This is when your contract will end if it isn't extended."
+        - "This is when the contract will end if it isn't extended."
     initial_period:
       label: "Initial period"
       hint: ""
