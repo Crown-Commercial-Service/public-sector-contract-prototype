@@ -25,7 +25,7 @@ overview:
       - "Sign online."
       - "Once you've both signed you can start working with your supplier."
     buyer: "Sign contract"
-    buyer_signed: "You have signed the contract."
+    buyer_signed: "You have signed the contract"
     supplier_sign: "Invite supplier to sign"
     supplier_invited: "Supplier invited to sign"
     supplier_signed: "The supplier has signed the contract"
@@ -188,6 +188,10 @@ supplier_details:
       hint:
         - "A DUNS number will help the buyers assess the financial stability and reliability of a company."
         - "Include it if you have one."
+key_staff:
+  hint: ""
+key_subcontractors:
+  hint: ""
 sensitive:
   title: ""
   introduction:
@@ -210,7 +214,8 @@ supplier_subcontractors:
   title: "Key subcontractors"
   introduction: ""
 added:
-  buyer_representatives: "Added representative"
+  buyer_representatives: "Added authorised representative"
+  supplier_representatives: "Added authorised representative"
   supplier_staff: "Added member of staff"
   supplier_subcontractors: "Added subcontractor"
 supplier_edit:
@@ -250,7 +255,7 @@ countersign_contract:
   title: "Countersign contract"
   introduction:
     - "Confirmation details"
-contract:
+review:
   title: "Contract name"
   introduction:
     - "Guidance notes and links"

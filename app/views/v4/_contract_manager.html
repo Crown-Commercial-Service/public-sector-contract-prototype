@@ -12,7 +12,7 @@
     {{ content.supplier_details.form.registration_number.hint }}
   </span>
 </label>
-<input class="form-control" id="registration_number" type="text" name="registration_number" value="{% if order_form.registration_number %}{{ order_form.registration_number }}{% else %}0123456789{% endif %}">
+<input class="form-control" id="registration_number" type="text" name="registration_number" value="{% if order_form.registration_number %}{{ order_form.registration_number }}{% else %}05218772{% endif %}">
 
 <h2 class="heading-medium">{{ content.supplier_details.form.duns.label }}</h2>
 <label class="form-label" for="duns">
@@ -22,4 +22,4 @@
     {% endfor %}
   </span>
 </label>
-<input class="form-control" id="duns" type="text" name="duns" value="{% if order_form.duns %}{{ order_form.duns }}{% else %}0123456789{% endif %}">
+<input class="form-control" id="duns" type="text" name="duns" value="{% if order_form.duns %}{{ order_form.duns }}{% else %}678952172{% endif %}">

@@ -30,10 +30,10 @@ router.get('/v4', function (req, res) {
 })
 
 router.get('/v4/:page', function (req, res) {
-  if (req.params.page === 'contract') {
-    view = 'contract'
-    header = 'contract'
-    page = 'contract'
+  if (req.params.page === 'review') {
+    view = 'review'
+    header = 'review'
+    page = 'review'
   } else {
     view = 'base'
     header = req.params.page
