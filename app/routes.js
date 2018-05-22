@@ -30,9 +30,19 @@ router.get('/v4', function (req, res) {
 })
 
 router.get('/v4/:page', function (req, res) {
-  res.render('v4/base', {
-    header: req.params.page,
-    page: req.params.page,
+  if (req.params.page === 'contract') {
+    view = 'contract'
+    header = 'contract'
+    page = 'contract'
+  } else {
+    view = 'base'
+    header = req.params.page
+    page = req.params.page
+  }
+
+  res.render(`v4/${view}`, {
+    header: header,
+    page: page,
     order_form: req.session.data,
     content: content,
     added: req.query.added

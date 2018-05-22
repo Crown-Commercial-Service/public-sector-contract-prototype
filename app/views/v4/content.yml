@@ -250,3 +250,7 @@ countersign_contract:
   title: "Countersign contract"
   introduction:
     - "Confirmation details"
+contract:
+  title: "Contract name"
+  introduction:
+    - "Guidance notes and links"
