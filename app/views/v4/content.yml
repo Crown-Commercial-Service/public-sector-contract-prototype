@@ -28,11 +28,11 @@ overview:
     buyer_signed: "You have signed the contract."
     supplier_sign: "Invite supplier to sign"
     supplier_invited: "The supplier has been invited to sign"
-    supplier_signed: "The supplier has signed the contract"
+    supplier_signed: "The supplier has signed"
 contract_overview:
   title: "Call-off order form"
   introduction:
-    - "Once the form has been completed and signed you can start working with your supplier."
+    - "Once the order form has been completed and signed you can start working with your supplier."
 contract_details:
   title: "About the contract"
   introduction:
@@ -152,7 +152,7 @@ environmental:
   form:
     policy:
       label: "Environmental policy"
-      hint: "Add a link to your environmental policy or upload it."
+      hint: "Link to or upload your environmental policy."
 security:
   title: ""
   introduction:
@@ -160,7 +160,7 @@ security:
   form:
     policy:
       label: "Security policy"
-      hint: "Add a link or upload your security policy."
+      hint: "Link to or upload your security policy."
 supplier:
   title: "Supplier details"
   introduction:
@@ -224,7 +224,7 @@ invite_supplier_signatory:
 buyer_signatory:
   title: "Sign the contract"
   introduction:
-    - "You must have the authority to sign this contract on the buyer's behalf."
+    - "You must have the authority to sign on the buyer's behalf."
     - "Usually this will be your authorised representative."
   name:
     label: "Name"
@@ -238,7 +238,7 @@ buyer_signatory:
 supplier_signatory:
   title: "Countersign the contract"
   introduction:
-    - "You must have the authority to sign this contract on the supplier's behalf."
+    - "You must have the authority to sign on the supplier's behalf."
     - "Usually this will be a senior person in your company."
   name:
     label: "Name"
