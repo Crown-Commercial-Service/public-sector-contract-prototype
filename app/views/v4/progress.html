@@ -3,9 +3,7 @@
     <h2 class="heading-medium">{{ content.progress.form.report.label }}</h2>
     <label class="form-label" for="progress_report">
       <span class="form-hint">
-        {% for hint_text in content.progress.form.report.hint %}
-        {{ hint_text }}<br>
-        {% endfor %}
+        {{ content.progress.form.report.hint }}
       </span>
     </label>
     <textarea class="form-control form-control-3-4" name="progress_report" id="progress_report" rows="10">{{ order_form.progress_report }}</textarea>

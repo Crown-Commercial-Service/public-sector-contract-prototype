@@ -30,7 +30,7 @@ router.get('/v4', function (req, res) {
   res.render('v4/overview', {
     order_form: data,
     content: content.overview,
-    contract_details_complete: helpers.sectionComplete('payment', data),
+    contract_details_complete: helpers.sectionComplete('terms', data),
     buyer_complete: helpers.sectionComplete('environmental', data),
     supplier_complete: helpers.sectionComplete('sensitive', data),
     supplier_edit: req.query.supplier_edit,

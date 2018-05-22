@@ -7,14 +7,14 @@ exports.findScheduleById = function(scheduleId, version) {
 
 // v4
 flow = {
-  contract_details: '/progress',
-  progress: '/what',
+  contract_details: '/what',
   what: '/charges',
-  charges: '/terms',
-  terms: '/guarantee',
-  guarantee: '/expenses',
-  expenses: '/credits',
-  credits: '/payment',
+  charges: '/expenses',
+  expenses: '/payment',
+  payment: '/credits',
+  credits: '/guarantee',
+  guarantee: '/progress',
+  progress: '/terms',
   buyer: '/environmental',
   supplier: '/contract_manager',
   contract_manager: '/supplier_numbers',
