@@ -4,21 +4,23 @@ overview:
     - "Fill in the form to create a contract with the supplier."
     - "You've already given us some of this information, so we've put it into the form for you. You can check and edit it."
     - "When the form's complete, and the buyer and supplier have both signed it, work can start on the contract."
-    
   contract:
     text: "1. Contract details"
     hint: "Fill in the form with the details of what's being bought, for example how much and how it'll be delivered."
     link: "Check and complete contract details"
+    review: "Review your answers"
   buyer:
     text: "2. Buyer details"
     hint: "Includes information about the buyer, for example the security policy."
     link: "Check and complete buyer details"
+    review: "Review your answers"
   supplier:
     text: "3. Supplier details"
     hint: "Includes information about the supplier, for example essential staff."
     link: "Check and complete supplier details"
     edit: "Invite the supplier to add their details"
     invited: "The supplier has been invited to edit"
+    review: "Review your supplier details"
   sign:
     text: "4. Check your answers"
     hint:
