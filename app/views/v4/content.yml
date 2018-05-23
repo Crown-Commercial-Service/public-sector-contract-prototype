@@ -3,7 +3,7 @@ overview:
   introduction:
     - "Fill in the form to create a contract with the supplier."
     - "You've already given us some of this information, so we've put it into the form for you. You can check and edit it."
-    - "When the form's complete, and the buyer and supplier have both signed it, work can start on the contract."
+    - "When the form's complete, and the buyer and supplier have both signed it, work can start."
   contract:
     text: "1. Contract details"
     hint: "Fill in the form with the details of what's being bought, for example how much and how it'll be delivered."
