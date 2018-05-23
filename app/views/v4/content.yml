@@ -251,7 +251,7 @@ supplier_signatory:
   date:
     label: "Date"
     hint: ""
-contract:
+review:
   title: "Contract name"
   introduction:
     - "Guidance notes and links"
