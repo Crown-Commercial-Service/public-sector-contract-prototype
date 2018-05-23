@@ -169,14 +169,15 @@ supplier:
     address:
       label: "Address"
       hint: ""
-supplier_details:
+contract_manager:
+  title: "Supplier details"
+  introduction:
+    - "This person will be the buyer's daily contact."
+supplier_numbers:
   title: "Supplier details"
   introduction:
     - ""
   form:
-    contract_manager:
-      label: "Contract manager"
-      hint: "This person will be the buyer's daily contact."
     registration_number:
       label: "Company registration number"
       hint: "If a company is registered at Companies House they'll have an 8-digit registration number."
@@ -201,10 +202,10 @@ buyer_representatives:
     - "This person must have the authority to sign the form on behalf of their organisation."
     - "Usually this is a senior member of the organisation."
 supplier_staff:
-  title: "Key staff"
+  title: "Supplier details"
   introduction:
     - "Add the staff roles or people that are essential to the delivery of the contract."
-  hint: "Add the staff roles or people that are essential to the delivery of the contract."
+  hint: ""
 supplier_subcontractors:
   title: "Key subcontractors"
   introduction:

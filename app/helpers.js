@@ -18,8 +18,8 @@ flow = {
   buyer: '/environmental',
   supplier: '/contract_manager',
   contract_manager: '/supplier_numbers',
-  supplier_numbers: '/key_staff',
-  key_staff: '/sensitive',
+  supplier_numbers: '/supplier_staff',
+  supplier_staff: '/sensitive',
 }
 
 exports.nextPage = function(current_page) {
