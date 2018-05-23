@@ -3,9 +3,7 @@
     <h2 class="heading-medium">{{ content.what.form.details.label }}</h2>
     <label class="form-label" for="what">
       <span class="form-hint">
-        {% for hint_text in content.what.form.details.hint %}
-        {{ hint_text }}<br>
-        {% endfor %}
+        {{ content.what.form.details.hint }}
       </span>
     </label>
     <textarea class="form-control form-control-3-4" name="what" id="what" rows="20">{% if order_form.what %}{{ order_form.what }}{% else %}This information should include:

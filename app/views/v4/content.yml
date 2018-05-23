@@ -23,7 +23,7 @@ overview:
     hint:
       - "Work can start once the buyer and supplier have both signed the contract."
     buyer: "Sign contract"
-    buyer_signed: "You have signed the contract."
+    buyer_signed: "You have signed the contract"
     supplier_sign: "Invite the supplier to sign"
     supplier_invited: "The supplier has been invited to sign"
     supplier_signed: "The supplier has signed"
