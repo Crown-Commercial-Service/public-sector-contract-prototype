@@ -114,8 +114,8 @@ credits:
     - ""
   form:
     service_credits:
-      label: "Compensation"
-      hint: "The financial penalty the supplier must pay if the service fails because of their error."
+      label: "Insurance"
+      hint: "Details of any additional insurance policies the buyer wants the supplier to have."
 payment:
   title: "Contract details"
   introduction:
