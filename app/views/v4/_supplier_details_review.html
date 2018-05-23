@@ -54,10 +54,10 @@
       Contract manager
     </dt>
     <dd class="cya-answer">
-        <p>{{ order_form.contract_manager.name }}</p>
-        <p>{{ order_form.contract_manager.role }}</p>
-        <p>{{ order_form.contract_maanger.email }}</p>
-        <p>{{ order_form.contract_manager.address }}</p>
+        <p>{{ order_form.contract_manager_name }}</p>
+        <p>{{ order_form.contract_manager_role }}</p>
+        <p>{{ order_form.contract_manager_email }}</p>
+        <p>{{ order_form.contract_manager_address }}</p>
     </dd>
     <dd class="cya-change">
       <a href="#">Edit</a>
@@ -88,10 +88,10 @@
   </div>
 
   <div>
-    <dt class="cya-question">
+    <dt class="cya-question" style="border-bottom:none">
       Key staff
     </dt>
-    <dd class="cya-answer">
+    <dd class="cya-answer" style="border-bottom:none">
       {% for staff in order_form.supplier_staff %}
       <p>{{ staff.name }}</p>
       <p>{{ staff.role }}</p>
@@ -100,7 +100,7 @@
       <br>
       {% endfor %}
     </dd>
-    <dd class="cya-change">
+    <dd class="cya-change" style="border-bottom:none">
       <a href="#">Edit</a>
     </dd>
   </div>
@@ -111,12 +111,11 @@
     </dt>
     <dd class="cya-answer">
       {%for contractor in order_form.supplier_subcontractors %}
-      {{ contractor.name }}
+      <p>{{ contractor.name }}</p>
       <br>
       {% endfor %}
     </dd>
     <dd class="cya-change">
-      <a href="#">Edit</a>
     </dd>
   </div>
 
