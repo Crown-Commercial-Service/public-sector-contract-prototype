@@ -2,7 +2,6 @@ overview:
   title: "Award a contract"
   introduction:
     - "Fill in the form to create a contract with the supplier."
-    - "This used to be called the call-off order form."
     - "You've already given us some of this information, so we've put it into the form for you."
     - "You can check and edit the information."
   contract:
@@ -29,7 +28,7 @@ overview:
     supplier_invited: "The supplier has been invited to sign"
     supplier_signed: "The supplier has signed"
 contract_overview:
-  title: "Call-off form"
+  title: "Order form"
   introduction:
     - "Work can start once the buyer and supplier have both signed the contract."
 contract_details:
@@ -85,7 +84,7 @@ liability:
   form:
     max_liability:
       label: "Maximum liability"
-      hint: "This is the amount the supplier must pay if something goes wrong because of their actions. This figure should be 150% of the estimated yearly charges, but no more than £5 million."
+      hint: "This is the amount the supplier must pay if something goes wrong because of their actions. This figure should be 150% of the estimated yearly charges, but not more than £5 million."
 terms:
   title: "Contract details"
   introduction:
@@ -116,7 +115,7 @@ credits:
   form:
     service_credits:
       label: "Compensation"
-      hint: "The financial penalty the supplier must pay if the service fails because of their mistake."
+      hint: "The financial penalty the supplier must pay if the service fails because of their error."
 payment:
   title: "Contract details"
   introduction:
@@ -194,12 +193,12 @@ sensitive:
       label: "Commercially sensitive information"
       hint: "The contract will be publically available. Include details of anything that can't be made publically available and explain why."
 buyer_representatives:
-  title: "Authorised representative"
+  title: "Authority to sign"
   introduction:
-    - "This person must have the authority to sign the form for the organisation."
+    - "This person must have the authority to sign the form on behalf of their organisation."
     - "Usually this is a senior member of the organisation."
   hint:
-    - "This person must have the authority to sign the form for the organisation."
+    - "This person must have the authority to sign the form on behalf of their organisation."
     - "Usually this is a senior member of the organisation."
 supplier_staff:
   title: "Key staff"
