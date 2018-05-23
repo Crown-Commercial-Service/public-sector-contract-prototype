@@ -16,13 +16,26 @@
     </label>
     <input class="form-control" id="buyer_sign_role" type="text" name="buyer_sign_role" value="{{ order_form.buyer_representative[0].role }}">
 
-    <h2 class="heading-medium">{{ content.buyer_signatory.date.label }}</h2>
-    <label class="form-label" for="buyer_sign_date">
-      <span class="form-hint">
-        {{ content.buyer_signatory.date.hint }}
-      </span>
-    </label>
-    <input class="form-control" id="buyer_sign_date" type="text" name="buyer_sign_date">
+    <fieldset>
+      <legend>
+        <h2 class="heading-medium">{{ content.buyer_signatory.date.label  }}</h2>
+        <span class="form-hint">{{ content.buyer_signatory.date.hint }}</span>
+      </legend>
+      <div class="form-date">
+        <div class="form-group form-group-day">
+          <label class="form-label" for="buyer_sign_day">Day</label>
+          <input class="form-control" id="buyer_sign_day" name="buyer_sign_day" type="number" pattern="[0-9]*" value="{{ order_form.buyer_sign_day }}">
+        </div>
+        <div class="form-group form-group-month">
+          <label class="form-label" for="buyer_sign_month">Month</label>
+          <input class="form-control" id="buyer_sign_month" name="buyer_sign_month" type="number" pattern="[0-9]*" value="{{ order_form.buyer_sign_month }}">
+        </div>
+        <div class="form-group form-group-year">
+          <label class="form-label" for="buyer_sign_year">Year</label>
+          <input class="form-control" id="buyer_sign_year" name="buyer_sign_year" type="number" pattern="[0-9]*" value="{{ order_form.buyer_sign_year }}">
+        </div>
+      </div>
+    </fieldset>
   </div>
 
   <div class="form-group">

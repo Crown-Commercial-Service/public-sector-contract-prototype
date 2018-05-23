@@ -11,21 +11,47 @@
     <input class="form-control" id="reference_number" type="text" name="reference_number"
     value="{% if order_form.reference_number %}{{ order_form.reference_number }}{% else %}RM05625751{% endif %}">
 
-    <h2 class="heading-medium">{{ content.contract_details.form.start_date.label }}</h2>
-    <label class="form-label" for="start_date">
-      <span class="form-hint">
-        {{ content.contract_details.form.start_date.hint }}
-      </span>
-    </label>
-    <input class="form-control" id="start_date" type="text" name="start_date" value="{% if order_form.start_date %}{{ order_form.start_date}}{% else %}01/06/18{% endif %}">
+    <fieldset>
+      <legend>
+        <h2 class="heading-medium">{{ content.contract_details.form.start_date.label }}</h2>
+        <span class="form-hint">{{ content.contract_details.form.start_date.hint }}</span>
+      </legend>
+      <div class="form-date">
+        <div class="form-group form-group-day">
+          <label class="form-label" for="start_date_day">Day</label>
+          <input class="form-control" id="start_date_day" name="start_date_day" type="number" pattern="[0-9]*" value="{% if order_form.start_date_day %}{{ order_form.start_date_day }}{% else %}01{% endif %}">
+        </div>
+        <div class="form-group form-group-month">
+          <label class="form-label" for="start_date_month">Month</label>
+          <input class="form-control" id="start_date_month" name="start_date_month" type="number" pattern="[0-9]*" value="{% if order_form.start_date_month %}{{ order_form.start_date_month }}{% else %}06{% endif %}">
+        </div>
+        <div class="form-group form-group-year">
+          <label class="form-label" for="start_date_year">Year</label>
+          <input class="form-control" id="start_date_year" name="start_date_year" type="number" pattern="[0-9]*" value="{% if order_form.start_date_year %}{{ order_form.start_date_year }}{% else %}18{% endif %}">
+        </div>
+      </div>
+    </fieldset>
 
-    <h2 class="heading-medium">{{ content.contract_details.form.end_date.label }}</h2>
-    <label class="form-label" for="end_date">
-      <span class="form-hint">
-        {{ content.contract_details.form.end_date.hint }}
-      </span>
-    </label>
-    <input class="form-control" id="end_date" type="text" name="end_date" value="{% if order_form.end_date %}{{ order_form.end_date}}{% else %}01/06/20{% endif %}">
+    <fieldset>
+      <legend>
+        <h2 class="heading-medium">{{ content.contract_details.form.end_date.label  }}</h2>
+        <span class="form-hint">{{ content.contract_details.form.end_date.hint }}</span>
+      </legend>
+      <div class="form-date">
+        <div class="form-group form-group-day">
+          <label class="form-label" for="end_date_day">Day</label>
+          <input class="form-control" id="end_date_day" name="end_date_day" type="number" pattern="[0-9]*" value="{% if order_form.end_date_day %}{{ order_form.end_date_day }}{% else %}01{% endif %}">
+        </div>
+        <div class="form-group form-group-month">
+          <label class="form-label" for="end_date_month">Month</label>
+          <input class="form-control" id="end_date_month" name="end_date_month" type="number" pattern="[0-9]*" value="{% if order_form.end_date_month %}{{ order_form.end_date_month }}{% else %}06{% endif %}">
+        </div>
+        <div class="form-group form-group-year">
+          <label class="form-label" for="end_date_year">Year</label>
+          <input class="form-control" id="end_date_year" name="end_date_year" type="number" pattern="[0-9]*" value="{% if order_form.end_date_year %}{{ order_form.end_date_year }}{% else %}20{% endif %}">
+        </div>
+      </div>
+    </fieldset>
   </div>
 
   {% include "v4/_save_and_continue.html" %}
