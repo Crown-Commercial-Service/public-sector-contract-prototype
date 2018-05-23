@@ -95,7 +95,7 @@ terms:
   form:
     special_terms:
       label: "Special terms"
-      hint: "Add any additional terms needed in the call-off contract to make the contract work."
+      hint: "Add or upload any additional terms needed to make the contract work."
 guarantee:
   title: "Contract details"
   introduction:
