@@ -1,9 +1,10 @@
 overview:
-  title: "Award a contract"
+  title: "Award pumping station maintenance contract"
   introduction:
     - "Fill in the form to create a contract with the supplier."
-    - "You've already given us some of this information, so we've put it into the form for you."
-    - "You can check and edit the information."
+    - "You've already given us some of this information, so we've put it into the form for you. You can check and edit it."
+    - "When the form's complete, and the buyer and supplier have both signed it, work can start on the contract."
+    
   contract:
     text: "1. Contract details"
     hint: "Fill in the form with the details of what's being bought, for example how much and how it'll be delivered."
@@ -14,7 +15,7 @@ overview:
     link: "Check and complete buyer details"
   supplier:
     text: "3. Supplier details"
-    hint: "Includes information about the supplier, for example key staff."
+    hint: "Includes information about the supplier, for example essential staff."
     link: "Check and complete supplier details"
     edit: "Invite the supplier to add their details"
     invited: "The supplier has been invited to edit"
@@ -141,7 +142,7 @@ buyer:
       hint: ""
     invoice_address:
       label: "Invoice address"
-      hint: "Add invoice address if different."
+      hint: "Add invoice address if you're using a different address."
 environmental:
   title: "Buyer details"
   introduction:
@@ -207,11 +208,11 @@ supplier_staff:
     - "Add the staff roles or people that are essential to the delivery of the contract."
   hint: ""
 supplier_subcontractors:
-  title: "Key subcontractors"
+  title: "Essential subcontractors"
   introduction:
-    - "Add the subcontractor roles or people that are essential to the delivery of the contract."
+    - "Add the subcontractor roles or people that are crucial to the delivery of the contract."
 added:
-  hint: "Add the subcontractor roles or people that are essential to the delivery of the contract."
+  hint: "Add the subcontractor roles or people that are crucial to the delivery of the contract."
   buyer_representative: "Added authorised representative"
   supplier_representative: "Added authorised representative"
   supplier_staff: "Added staff member"
