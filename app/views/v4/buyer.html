@@ -25,12 +25,12 @@
     <input class="form-control" id="invoice_address" type="text" name="invoice_address" value={{ order_form.invoice_address }}>
 
     <h2 class="heading-medium">Authorised representative</h2>
-    {% for representative in order_form.buyer_representatives %}
+    {% for representative in order_form.buyer_representative %}
     <p>{{ representative.name }}</p>
     {% endfor %}
 
     {% if not order_form.buyer_representative %}
-    <p><a href="add/buyer_representatives" class="">Add</a></p>
+    <p><a href="add/buyer_representative" class="">Add</a></p>
     {% endif %}
   </div>
 
