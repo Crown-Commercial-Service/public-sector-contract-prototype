@@ -1,9 +1,10 @@
 overview:
-  title: "Award pumping station maintenance contract"
+  title: "Award an office cleaning contract"
   introduction:
     - "Fill in the form to create a contract with the supplier."
     - "You've already given us some of this information, so we've put it into the form for you. You can check and edit it."
     - "When the form's complete, and the buyer and supplier have both signed it, work can start on the contract."
+    
   contract:
     text: "1. Contract details"
     hint: "Fill in the form with the details of what's being bought, for example how much and how it'll be delivered."
@@ -193,15 +194,7 @@ sensitive:
     information:
       label: "Commercially sensitive information"
       hint: "The contract will be publically available. Include details of anything that can't be made publically available and explain why."
-buyer_representative:
-  title: "Authority to sign"
-  introduction:
-    - "This person must have the authority to sign the form on behalf of their organisation."
-    - "Usually this is a senior member of the organisation."
-  hint:
-    - "This person must have the authority to sign the form on behalf of their organisation."
-    - "Usually this is a senior member of the organisation."
-supplier_representative:
+buyer_representatives:
   title: "Authority to sign"
   introduction:
     - "This person must have the authority to sign the form on behalf of their organisation."
@@ -256,7 +249,7 @@ supplier_signatory:
   date:
     label: "Date"
     hint: ""
-review:
+contract:
   title: "Contract name"
   introduction:
     - "Guidance notes and links"
