@@ -1,0 +1,160 @@
+<!-- use additional modifier class to change column widths for multiple groups of questions and answers: -->
+<!--   * `cya-questions-short` for short questions -->
+<!--   * `cya-questions-long` for long questions -->
+<!--   * none for single group of q&a -->
+<dl class="govuk-check-your-answers cya-questions-short">
+  <div>
+    <dt class="cya-question">
+      <h2 class="heading-medium">{{ content.contract_details.title }}</h2>
+    </dt>
+    <dd class="cya-answer">
+    </dd>
+    <dd class="cya-change">
+    </dd>
+  </div>
+
+  <div>
+    <dt class="cya-question" style="border-bottom:none">
+      {{ content.contract_details.form.reference.label }}
+    </dt>
+    <dd class="cya-answer" style="border-bottom:none">
+      <div>
+        {{ order_form.reference_number }}
+      </div>
+      </dd>
+    <dd class="cya-change" style="border-bottom:none">
+      <a href="#">Edit</a>
+    </dd>
+  </div>
+
+  <div>
+    <dt class="cya-question" style="border-bottom:none">
+      Start date
+    </dt>
+    <dd class="cya-answer" style="border-bottom:none">
+      {% if order_form.start_date_day %}
+      {{ order_form.start_date_day }}/{{ order_form.start_date_month}}/{{ order_form.start_date_year }}
+      {% endif %}
+    </dd>
+    <dd class="cya-change" style="border-bottom:none">
+    </dd>
+  </div>
+
+  <div>
+    <dt class="cya-question">
+      End date
+    </dt>
+    <dd class="cya-answer">
+      {% if order_form.end_date_day %}
+      {{ order_form.end_date_day }}/{{ order_form.end_date_month}}/{{ order_form.end_date_year }}
+      {% endif %}
+    </dd>
+    <dd class="cya-change"></dd>
+  </div>
+
+  <div>
+    <dt class="cya-question">
+      {{ content.what.form.details.label }}
+    </dt>
+    <dd class="cya-answer">
+      {{ order_form.what }}
+    </dd>
+    <dd class="cya-change">
+      <a href="#">Edit</a>
+    </dd>
+  </div>
+
+  <div>
+    <dt class="cya-question" style="border-bottom:none">
+      {{ content.charges.form.call_off.label }}
+    </dt>
+    <dd class="cya-answer" style="border-bottom:none">
+      {{ order_form.call_off_charges }}
+    </dd>
+    <dd class="cya-change" style="border-bottom:none">
+      <a href="#">Edit</a>
+    </dd>
+  </div>
+
+  <div>
+    <dt class="cya-question">
+      {{ content.liability.form.max_liability.label }}
+    </dt>
+    <dd class="cya-answer">
+      {{ order_form.liability }}
+    </dd>
+    <dd class="cya-change"></dd>
+  </div>
+
+  <div>
+    <dt class="cya-question">
+      {{ content.expenses.form.reimbursable.label }}
+    </dt>
+    <dd class="cya-answer">
+      {{ order_form.expenses }}
+    </dd>
+    <dd class="cya-change">
+        <a href="#">Edit</a>
+    </dd>
+  </div>
+
+  <div>
+    <dt class="cya-question">
+      {{ content.payment.form.label }}
+    </dt>
+    <dd class="cya-answer">
+      {{ order_form.payment }}
+    </dd>
+    <dd class="cya-change">
+        <a href="#">Edit</a>
+    </dd>
+  </div>
+
+  <div>
+    <dt class="cya-question">
+      {{ content.credits.form.service_credits.label }}
+    </dt>
+    <dd class="cya-answer">
+      {{ order_form.service_credits }}
+    </dd>
+    <dd class="cya-change">
+        <a href="#">Edit</a>
+    </dd>
+  </div>
+
+  <div>
+    <dt class="cya-question">
+      {{ content.guarantee.form.label }}
+    </dt>
+    <dd class="cya-answer">
+      {{ order_form.guarantee }}
+    </dd>
+    <dd class="cya-change">
+        <a href="#">Edit</a>
+    </dd>
+  </div>
+
+  <div>
+    <dt class="cya-question">
+      {{ content.progress.form.report.label }}
+    </dt>
+    <dd class="cya-answer">
+      {{ order_form.progress_report }}
+    </dd>
+    <dd class="cya-change">
+      <a href="#">Edit</a>
+    </dd>
+  </div>
+
+  <div>
+    <dt class="cya-question">
+      {{ content.terms.form.special_terms.label }}
+    </dt>
+    <dd class="cya-answer">
+      {{ order_form.special_terms }}
+    </dd>
+    <dd class="cya-change">
+      <a href="#">Edit</a>
+    </dd>
+  </div>
+</dl>

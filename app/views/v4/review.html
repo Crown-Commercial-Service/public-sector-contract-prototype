@@ -18,88 +18,13 @@
   </div>
 
   <div class="grid-row">
-    <div class="column-two-thirds">
-      <h2 class="heading-medium">{{ content.contract.text }}</h2>
-      <div class="list-number">
-        <p>{{ content.contract.hint }}</p>
-        <p><a href="v4/contract_details">{{ content.contract.link }}</a></p>
-      </div>
-    </div>
-
-    <div class="column-third">
-      {% if order_form.contract_details_complete %}
-      <p class="cya-change">
-        <a href="#">Edit</a>
-      </p>
-      {% endif %}
+    <div class="column-full">
+      {% include "v4/_contract_details_review.html" %}
+      {% include "v4/_buyer_details_review.html" %}
+      {% include "v4/_supplier_details_review.html" %}
     </div>
   </div>
 
-  <div class="grid-row">
-    <div class="column-two-thirds">
-
-      <!-- use additional modifier class to change column widths for multiple groups of questions and answers: -->
-      <!--   * `cya-questions-short` for short questions -->
-      <!--   * `cya-questions-long` for long questions -->
-      <!--   * none for single group of q&a -->
-      <dl class="govuk-check-your-answers cya-questions-long" style="border-bottom:none;">
-        <div>
-          <dt class="cya-question">
-            {{ content.contract_details.form.reference.label }}
-          </dt>
-          <dd class="cya-answer">
-              {{ order_form.reference_number }}
-          </dd>
-          <dd class="cya-change">
-            <a href="#">Edit</a>
-          </dd>
-        </div>
-
-        <div>
-          <dt class="cya-question">
-            Start date
-          </dt>
-          <dd class="cya-answer">
-            01/01/01
-          </dd>
-          <dd class="cya-change"><a href="#">Edit</a></dd>
-        </div>
-
-        <div>
-          <dt class="cya-question">
-            Last updated
-          </dt>
-          <dd class="cya-answer">
-            24 April 2018
-          </dd>
-          <dd class="cya-change"></dd>
-        </div>
-
-        <div>
-          <dt class="cya-question">
-            Status
-          </dt>
-          <dd class="cya-answer">
-            Draft
-          </dd>
-          <dd class="cya-change"></dd>
-        </div>
-
-        <div>
-          <dt class="cya-question">
-            Version
-          </dt>
-          <dd class="cya-answer">
-            1.0
-          </dd>
-          <dd class="cya-change"></dd>
-        </div>
-      </dl>
-    </div>
-    <div class="column-third">
-      Edit
-    </div>
-  </div>
 
   <div class="column-two-thirds">
     <h2 class="heading-medium">Sign</h2>

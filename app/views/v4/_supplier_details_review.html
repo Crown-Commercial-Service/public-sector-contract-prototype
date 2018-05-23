@@ -1,0 +1,134 @@
+<dl class="govuk-check-your-answers cya-questions-short">
+  <div>
+    <dt class="cya-question">
+      <h2 class="heading-medium">{{ content.supplier.title }}</h2>
+    </dt>
+    <dd class="cya-answer">
+    </dd>
+    <dd class="cya-change">
+    </dd>
+  </div>
+
+  <div>
+    <dt class="cya-question" style="border-bottom:none">
+      {{ content.supplier.form.name.label }}
+    </dt>
+    <dd class="cya-answer" style="border-bottom:none">
+      <div>
+        {{ order_form.supplier_name }}
+      </div>
+      </dd>
+    <dd class="cya-change" style="border-bottom:none">
+      <a href="#">Edit</a>
+    </dd>
+  </div>
+
+  <div>
+    <dt class="cya-question">
+      {{ content.supplier.form.address.label }}
+    </dt>
+    <dd class="cya-answer">
+      {{ order_form.supplier_address }}
+    </dd>
+    <dd class="cya-change">
+    </dd>
+  </div>
+
+  <div>
+    <dt class="cya-question">
+      {{ content.supplier_representative.title }}
+    </dt>
+    <dd class="cya-answer">
+      <p>{{ order_form.suplier_representative[0].name }}</p>
+      <p>{{ order_form.supplier_representative[0].role }}</p>
+      <p>{{ order_form.supplier_representative[0].email }}</p>
+      <p>{{ order_form.supplier_representative[0].address }}</p>
+    </dd>
+    <dd class="cya-change">
+      <a href="#">Edit</a>
+    </dd>
+  </div>
+
+  <div>
+    <dt class="cya-question">
+      Contract manager
+    </dt>
+    <dd class="cya-answer">
+        <p>{{ order_form.contract_manager.name }}</p>
+        <p>{{ order_form.contract_manager.role }}</p>
+        <p>{{ order_form.contract_maanger.email }}</p>
+        <p>{{ order_form.contract_manager.address }}</p>
+    </dd>
+    <dd class="cya-change">
+      <a href="#">Edit</a>
+    </dd>
+  </div>
+
+  <div>
+    <dt class="cya-question" style="border-bottom:none">
+      {{ content.supplier_numbers.form.registration_number.label }}
+    </dt>
+    <dd class="cya-answer" style="border-bottom:none">
+      {{ order_form.registration_number }}
+    </dd>
+    <dd class="cya-change" style="border-bottom:none">
+        <a href="#">Edit</a>
+    </dd>
+  </div>
+
+  <div>
+    <dt class="cya-question">
+      {{ content.supplier_numbers.form.duns.label }}
+    </dt>
+    <dd class="cya-answer">
+      {{ order_form.duns }}
+    </dd>
+    <dd class="cya-change">
+    </dd>
+  </div>
+
+  <div>
+    <dt class="cya-question">
+      Key staff
+    </dt>
+    <dd class="cya-answer">
+      {% for staff in order_form.supplier_staff %}
+      <p>{{ staff.name }}</p>
+      <p>{{ staff.role }}</p>
+      <p>{{ staff.email }}</p>
+      <p>{{ staff.address }}</p>
+      <br>
+      {% endfor %}
+    </dd>
+    <dd class="cya-change">
+      <a href="#">Edit</a>
+    </dd>
+  </div>
+
+  <div>
+    <dt class="cya-question">
+      Subcontractors
+    </dt>
+    <dd class="cya-answer">
+      {%for contractor in order_form.supplier_subcontractors %}
+      {{ contractor.name }}
+      <br>
+      {% endfor %}
+    </dd>
+    <dd class="cya-change">
+      <a href="#">Edit</a>
+    </dd>
+  </div>
+
+  <div>
+    <dt class="cya-question">
+      {{ content.sensitive.form.information.label }}
+    </dt>
+    <dd class="cya-answer">
+      {{ order_form.sensitive_information }}
+    </dd>
+    <dd class="cya-change">
+      <a href="#">Edit</a>
+    </dd>
+  </div>
+</dl>

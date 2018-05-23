@@ -1,0 +1,83 @@
+<dl class="govuk-check-your-answers cya-questions-short">
+  <div>
+    <dt class="cya-question">
+      <h2 class="heading-medium">{{ content.buyer.title }}</h2>
+    </dt>
+    <dd class="cya-answer">
+    </dd>
+    <dd class="cya-change">
+    </dd>
+  </div>
+
+  <div>
+    <dt class="cya-question" style="border-bottom:none">
+      {{ content.buyer.form.name.label }}
+    </dt>
+    <dd class="cya-answer" style="border-bottom:none">
+      <div>
+        {{ order_form.buyer_name }}
+      </div>
+      </dd>
+    <dd class="cya-change" style="border-bottom:none">
+      <a href="#">Edit</a>
+    </dd>
+  </div>
+
+  <div>
+    <dt class="cya-question" style="border-bottom:none">
+      {{ content.buyer.form.address.label }}
+    </dt>
+    <dd class="cya-answer" style="border-bottom:none">
+      {{ order_form.buyer_address }}
+    </dd>
+    <dd class="cya-change" style="border-bottom:none">
+    </dd>
+  </div>
+
+  <div>
+    <dt class="cya-question">
+      {{ content.buyer_representatives.form.invoice_address.label }}
+    </dt>
+    <dd class="cya-answer">
+      {{ order_form.buyer.invoice_address }}
+    </dd>
+    <dd class="cya-change"></dd>
+  </div>
+
+  <div>
+    <dt class="cya-question">
+      {{ content.buyer_representative.title }}
+    </dt>
+    <dd class="cya-answer">
+      <p>{{ order_form.buyer_representative[0].name }}</p>
+      <p>{{ order_form.buyer_representative[0].role }}</p>
+      <p>{{ order_form.buyer_representative[0].email }}</p>
+      <p>{{ order_form.buyer_representative[0].address }}</p>
+    </dd>
+    <dd class="cya-change">
+      <a href="#">Edit</a>
+    </dd>
+  </div>
+
+  <div>
+    <dt class="cya-question" style="border-bottom:none">
+      {{ content.environmental.form.policy.label }}
+    </dt>
+    <dd class="cya-answer" style="border-bottom:none">
+      {{ order_form.environmental_policy }}
+    </dd>
+    <dd class="cya-change" style="border-bottom:none">
+      <a href="#">Edit</a>
+    </dd>
+  </div>
+
+  <div>
+    <dt class="cya-question">
+      {{ content.security.form.policy.label }}
+    </dt>
+    <dd class="cya-answer">
+      {{ order_form.security_policy }}
+    </dd>
+    <dd class="cya-change"></dd>
+  </div>
+</dl>
