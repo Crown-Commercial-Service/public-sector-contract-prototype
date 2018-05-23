@@ -6,7 +6,7 @@
         {{ content.what.form.details.hint }}
       </span>
     </label>
-    <textarea class="form-control form-control-3-4" name="what" id="what" rows="20">{% if order_form.what %}{{ order_form.what }}{% else %}{% endif %}</textarea>
+    <textarea class="form-control form-control-3-4" name="what" id="what" rows="20">{{ order_form.what }}</textarea>
   </div>
 
   {% include "v4/_save_and_continue.html" %}

@@ -19,7 +19,11 @@
     </dt>
     <dd class="cya-answer" style="border-bottom:none">
       <div>
-        {{ order_form.reference_number }}
+        {% if order_form.reference_number %}
+          {{ order_form.reference_number }}
+        {% else %}
+          RM05625751
+        {% endif %}
       </div>
       </dd>
     <dd class="cya-change" style="border-bottom:none">
@@ -33,7 +37,10 @@
     </dt>
     <dd class="cya-answer" style="border-bottom:none">
       {% if order_form.start_date_day %}
-      {{ order_form.start_date_day }}/{{ order_form.start_date_month}}/{{ order_form.start_date_year }}
+        {{ order_form.start_date_day }}
+        {{ order_form.start_date_day }}/{{ order_form.start_date_month}}/{{ order_form.start_date_year }}
+      {% else %}
+        01/06/18
       {% endif %}
     </dd>
     <dd class="cya-change" style="border-bottom:none">
@@ -46,7 +53,9 @@
     </dt>
     <dd class="cya-answer">
       {% if order_form.end_date_day %}
-      {{ order_form.end_date_day }}/{{ order_form.end_date_month}}/{{ order_form.end_date_year }}
+        {{ order_form.end_date_day }}/{{ order_form.end_date_month}}/{{ order_form.end_date_year }}
+      {% else %}
+        01/06/20
       {% endif %}
     </dd>
     <dd class="cya-change"></dd>

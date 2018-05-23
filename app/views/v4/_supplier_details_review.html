@@ -15,7 +15,11 @@
     </dt>
     <dd class="cya-answer" style="border-bottom:none">
       <div>
-        {{ order_form.supplier_name }}
+        {% if order_form.supplier_name %}]
+          {{ order_form.supplier_name }}
+        {% else %}
+          AWS
+        {% endif %}
       </div>
       </dd>
     <dd class="cya-change" style="border-bottom:none">
@@ -28,7 +32,11 @@
       {{ content.supplier.form.address.label }}
     </dt>
     <dd class="cya-answer">
-      {{ order_form.supplier_address }}
+      {% if order_form.supplier_address %}
+        {{ order_form.supplier_address }}
+      {% else %}
+        The Principle Place, Shoreditch
+      {% endif %}
     </dd>
     <dd class="cya-change">
     </dd>
@@ -69,7 +77,11 @@
       {{ content.supplier_numbers.form.registration_number.label }}
     </dt>
     <dd class="cya-answer" style="border-bottom:none">
-      {{ order_form.registration_number }}
+      {% if order_form.registration_number %}
+        {{ order_form.registration_number }}
+      {% else %}
+        05218772
+      {% endif %}
     </dd>
     <dd class="cya-change" style="border-bottom:none">
         <a href="#">Edit</a>
@@ -81,7 +93,11 @@
       {{ content.supplier_numbers.form.duns.label }}
     </dt>
     <dd class="cya-answer">
-      {{ order_form.duns }}
+      {% if order_form.duns %}
+        {{ order_form.duns }}
+      {% else %}
+        678952172
+      {% endif %}
     </dd>
     <dd class="cya-change">
     </dd>

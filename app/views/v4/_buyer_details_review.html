@@ -15,7 +15,11 @@
     </dt>
     <dd class="cya-answer" style="border-bottom:none">
       <div>
-        {{ order_form.buyer_name }}
+        {% if order_form.buyer_name %}
+          {{ order_form.buyer_name }}
+        {% else %}
+          GDS
+        {% endif %}
       </div>
       </dd>
     <dd class="cya-change" style="border-bottom:none">
@@ -28,7 +32,11 @@
       {{ content.buyer.form.address.label }}
     </dt>
     <dd class="cya-answer" style="border-bottom:none">
-      {{ order_form.buyer_address }}
+      {% if order_form.buyer_address %}
+        {{ order_form.buyer_address }}
+      {% else %}
+        White Chapel Building, London
+      {% endif %}
     </dd>
     <dd class="cya-change" style="border-bottom:none">
     </dd>
@@ -36,7 +44,7 @@
 
   <div>
     <dt class="cya-question">
-      {{ content.buyer_representatives.form.invoice_address.label }}
+      {{ content.buyer.form.invoice_address.label }}
     </dt>
     <dd class="cya-answer">
       {{ order_form.buyer.invoice_address }}
