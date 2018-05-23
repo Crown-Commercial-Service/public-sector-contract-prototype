@@ -6,7 +6,7 @@
         {{ content.buyer_signatory.name.hint }}
       </span>
     </label>
-    <input class="form-control" id="buyer_sign_name" type="text" name="buyer_sign_name">
+    <input class="form-control" id="buyer_sign_name" type="text" name="buyer_sign_name" value="{{ order_form.buyer_representative[0].name }}">
 
     <h2 class="heading-medium">{{ content.buyer_signatory.role.label }}</h2>
     <label class="form-label" for="buyer_sign_role">
@@ -14,7 +14,7 @@
         {{ content.buyer_signatory.role.hint }}
       </span>
     </label>
-    <input class="form-control" id="buyer_sign_role" type="text" name="buyer_sign_role">
+    <input class="form-control" id="buyer_sign_role" type="text" name="buyer_sign_role" value="{{ order_form.buyer_representative[0].role }}">
 
     <h2 class="heading-medium">{{ content.buyer_signatory.date.label }}</h2>
     <label class="form-label" for="buyer_sign_date">
@@ -27,8 +27,8 @@
 
   <div class="form-group">
     <p>
-      <input id="waste-type-1" name="waste-types" type="checkbox" value="waste-animal">
-      <label for="waste-type-1">{{ content.buyer_signatory.authorised }}</label>
+      <input id="buyer_confirmation" name="buyer_confirmation" type="checkbox">
+      <label for="buyer_confirmation">{{ content.buyer_signatory.authorised }}</label>
     </p>
     <p><input class="button button-start" type="submit" value="Sign"></p>
     <p><a href="/v4">Cancel</a></p>
