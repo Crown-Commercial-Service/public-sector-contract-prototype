@@ -107,19 +107,18 @@
     <div class="column-two-thirds">
       <h2 class="heading-medium">{{ content.sign.text }}</h2>
       <div class="list-number">
-        <a href="v4/review" role="link">Check your answers</a>
-
         {% if not order_form.buyer_signatory_complete %}
-          {% for hint_text in content.sign.hint %}
-          <p>{{ hint_text }}</p>
-          {% endfor %}
+        {% for hint_text in content.sign.hint %}
+        <p>{{ hint_text }}</p>
+        {% endfor %}
         {% endif %}
 
         {% if order_form.buyer_signatory_complete %}
         <p><a href="v4/invite_supplier_signatory">{{ content.sign.supplier_sign }}</a></p>
-        {% else %}
         <p><a class="button" type="submit" disabled="disabled" aria-disabled="true" href="v4/buyer_signatory">{{ content.sign.buyer }}</a></p>
         {% endif %}
+
+        <a href="v4/review" role="link">Check your answers</a>
       </div>
     </div>
 

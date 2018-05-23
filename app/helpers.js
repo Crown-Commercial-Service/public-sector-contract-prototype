@@ -35,7 +35,7 @@ exports.additionReturnPath = function(type) {
     path = 'buyer'
   } else if (type.includes('representative')) {
     path = 'supplier'
-  } else if (type.includes('supplier')) {
+  } else if (type.includes('add')) {
     path = 'supplier_staff'
   }
 

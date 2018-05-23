@@ -1,3 +1,13 @@
+{% if type == 'add_staff' or type == ''%}
+<h2 class="heading-medium">{{ content.add_staff.sub_heading }}</h2>
+<p>{{ content.add_staff.hint }}</p>
+{% endif %}
+
+{% if type == 'add_subcontractors' %}
+<h2 class="heading-medium">{{ content.add_subcontractors.sub_heading }}</h2>
+<p>{{ content.add_subcontractors.hint }}</p>
+{% endif %}
+
 <form class="form" action="" method="post">
   <div class="form-group">
     <h2 class="heading-medium">Name</h2>

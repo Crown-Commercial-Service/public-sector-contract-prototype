@@ -175,7 +175,8 @@ supplier:
 contract_manager:
   title: "Supplier details"
   introduction:
-    - "This person will be the buyer's daily contact."
+    - ""
+  hint: "This person will be the buyer's daily contact."
 supplier_numbers:
   title: "Supplier details"
   introduction:
@@ -215,12 +216,19 @@ supplier_representative:
 supplier_staff:
   title: "Supplier details"
   introduction:
-    - "Add the staff roles or people that are essential to the delivery of the contract."
-  hint: ""
+    - "Add the staff or subcontractors that are essential to the delivery of the contract."
 supplier_subcontractors:
   title: "Essential subcontractors"
   introduction:
-    - "Add the subcontractor roles or people that are crucial to the delivery of the contract."
+    - "Add the staff or subcontractors that are essential to the delivery of the contract."
+add_staff:
+  title: "Supplier details"
+  sub_heading: "Essential staff"
+  hint: "Add the staff that are essential to the delivery of the contract"
+add_subcontractors:
+  title: "Supplier details"
+  sub_heading: "Essential subcontractors"
+  hint: "Add the subcontractors that are essential to the delivery of the contract"
 added:
   hint: "Add the subcontractor roles or people that are crucial to the delivery of the contract."
   buyer_representative: "Added authorised representative"
