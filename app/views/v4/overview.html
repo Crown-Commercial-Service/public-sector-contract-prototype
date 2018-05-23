@@ -115,7 +115,7 @@
         {% if order_form.buyer_signatory_complete %}
         <p><a href="v4/invite_supplier_signatory">{{ content.sign.supplier_sign }}</a></p>
         {% else %}
-        <p><a href="v4/buyer_signatory">{{ content.sign.buyer }}</a></p>
+        <p><a class="button" type="submit" disabled="disabled" aria-disabled="true" href="v4/buyer_signatory">{{ content.sign.buyer }}</a></p>
         {% endif %}
       </div>
     </div>
