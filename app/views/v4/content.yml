@@ -23,8 +23,8 @@ overview:
     review: "Review answers"
   sign:
     text: "4. Check your answers"
-    hint:
-      - "Check the completed form and then sign the contract. Work can start once the buyer and supplier have both signed the contract."
+    hint: "You'll be able to sign the contract once you've filled in the form."
+    button_visible: "Sign the contract. Work can start when the buyer and supplier have both signed the contract."
     buyer: "Sign contract"
     buyer_signed: "You have signed the contract"
     supplier_sign: "Invite the supplier to sign"
