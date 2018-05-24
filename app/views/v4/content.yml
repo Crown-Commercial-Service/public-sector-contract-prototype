@@ -233,8 +233,8 @@ added:
   hint: "Add the subcontractor roles or people that are crucial to the delivery of the contract."
   buyer_representative: "Added the name of the person signing the contract"
   supplier_representative: "Added the name of the person signing the contract"
-  supplier_staff: "Added staff member"
-  supplier_subcontractors: "Added subcontractor"
+  add_staff: "Added staff member"
+  add_subcontractors: "Added subcontractor"
 supplier_edit:
   title: "Invite the supplier to edit"
   hint: ""

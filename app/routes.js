@@ -55,7 +55,8 @@ router.get('/v4/:page', function (req, res) {
     back: req.headers.referer,
     order_form: req.session.data,
     content: content,
-    added: req.query.added
+    added: req.query.added,
+    review: req.query.review
   })
 })
 
@@ -70,7 +71,13 @@ router.post('/v4/:page', function (req, res) {
     query = '?supplier_signatory_invited=true'
   }
 
-  res.redirect(`/v4${helpers.nextPage(page)}${query}`)
+  if (req.query.review) {
+    path = helpers.editReturnPath(req.session.data.back)
+  } else {
+    path = helpers.nextPage(page)
+  }
+
+  res.redirect(`/v4${path}${query}`)
 })
 
 router.get('/v4/add/:type', function (req, res) {
@@ -102,8 +109,6 @@ router.post('/v4/add/:type', function (req, res) {
   path = helpers.additionReturnPath(type)
   res.redirect(`/v4/${path}?added=${type}`)
 })
-
-// v2 and v3 routes
 
 router.get('/:version(v2|v3)/what-is-the-public-sector-contract', function (req, res) {
   res.render(

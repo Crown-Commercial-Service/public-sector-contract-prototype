@@ -1,7 +1,15 @@
 <div class="form-group">
-  <p><input class="button button-start" type="submit" value="Save and continue"></p>
-  <p>
-    <a href="{{ back }}">Back</a>
-    <a href="/v4" style="padding-left:20px">Cancel</a>
-  </p>
+  {% if review %}
+  <label class="form-label" for="back"></label>
+  <input class="form-control" id="back" name="back" type="hidden" value="{{ back }}">
+  {% endif %}
+
+  {% if review or page in ['terms', 'environmental', 'sensitive'] %}
+    {% set save_text = "Save" %}
+  {% else %}
+    {% set save_text = "Save and continue" %}
+  {% endif %}
+
+  <p><input class="button button-start" type="submit" value="{{ save_text }}"></p>
+  <p><a href="/v4">Cancel</a></p>
 </div>

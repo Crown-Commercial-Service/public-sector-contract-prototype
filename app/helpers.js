@@ -41,3 +41,7 @@ exports.additionReturnPath = function(type) {
 
   return path
 }
+
+exports.editReturnPath = function(url) {
+  return url.substr(url.lastIndexOf('/'))
+}

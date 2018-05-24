@@ -26,11 +26,5 @@
     <input type="file" id="security_policy_file">
   </div>
 
-  <div class="form-group">
-    <p><input class="button button-start" type="submit" value="Save"></p>
-    <p>
-      <a href="{{ back }}">Back</a>
-      <a href="/v4" style="padding-left:20px">Cancel</a>
-    </p>
-  </div>
+  {% include "v4/_save_and_continue.html" %}
 </form>

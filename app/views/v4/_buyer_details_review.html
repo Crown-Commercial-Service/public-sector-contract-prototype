@@ -23,7 +23,7 @@
       </div>
       </dd>
     <dd class="cya-change" style="border-bottom:none">
-      <a href="#">Edit</a>
+      <a href="/v4/buyer?review=section">Edit</a>
     </dd>
   </div>
 
@@ -43,13 +43,14 @@
   </div>
 
   <div>
-    <dt class="cya-question">
+    <dt class="cya-question" style="border-bottom:none">
       {{ content.buyer.form.invoice_address.label }}
     </dt>
-    <dd class="cya-answer">
+    <dd class="cya-answer" style="border-bottom:none">
       {{ order_form.buyer.invoice_address }}
     </dd>
-    <dd class="cya-change"></dd>
+    <dd class="cya-change" style="border-bottom:none">
+    </dd>
   </div>
 
   <div>
@@ -62,9 +63,7 @@
       <p>{{ order_form.buyer_representative[0].email }}</p>
       <p>{{ order_form.buyer_representative[0].address }}</p>
     </dd>
-    <dd class="cya-change">
-      <a href="#">Edit</a>
-    </dd>
+    <dd class="cya-change"></dd>
   </div>
 
   <div>
@@ -75,7 +74,7 @@
       {{ order_form.environmental_policy }}
     </dd>
     <dd class="cya-change" style="border-bottom:none">
-      <a href="#">Edit</a>
+      <a href="/v4/environmental?review=section">Edit</a>
     </dd>
   </div>
 
