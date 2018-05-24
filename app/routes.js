@@ -21,6 +21,7 @@ router.get('/', function (req, res) {
 // v4 routes
 
 router.get('/v4', function (req, res) {
+  req.session.data.visited = []
   data = req.session.data
 
   console.log(`*********\n`)
@@ -35,7 +36,22 @@ router.get('/v4', function (req, res) {
   })
 })
 
+router.get('/v4/back', function (req, res) {
+  if (req.session.data.visited.length === 1) {
+    previous_page = "/v4"
+  } else {
+    previous_page = `/v4/${req.session.data.visited.splice(-2, 2)[0]}`
+  }
+
+  res.redirect(previous_page)
+})
+
 router.get('/v4/:page', function (req, res) {
+  if (req.session.data.visited === undefined) {
+    req.session.data.visited = []
+  }
+  req.session.data.visited.push(req.params.page)
+
   res.render('v4/base', {
     header: req.params.page,
     page: req.params.page,

@@ -15,13 +15,13 @@
   </div>
 
   <div class="grid-row">
-    {% if page == 'review' %}
+    {% if page == "review" %}
       {% set column_class = "column-full" %}
     {% else %}
       {% set column_class = "column-two-thirds" %}
     {% endif %}
     <div class="{{ column_class }}">
-      <a href="{{ back }}" class="link-back">Back</a>
+      <a href="/v4/back" class="link-back">Back</a>
 
       {% if added %}
       <div class="govuk-box-highlight">

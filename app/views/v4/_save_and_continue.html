@@ -1,9 +1,4 @@
 <div class="form-group">
-  {% if review %}
-  <label class="form-label" for="back"></label>
-  <input class="form-control" id="back" name="back" type="hidden" value="{{ back }}">
-  {% endif %}
-
   {% if review or page in ['terms', 'environmental', 'sensitive'] %}
     {% set save_text = "Save" %}
   {% else %}
