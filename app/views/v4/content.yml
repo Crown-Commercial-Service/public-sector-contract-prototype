@@ -234,11 +234,11 @@ added:
   supplier_subcontractors: "Added subcontractor"
 supplier_edit:
   title: "Invite the supplier to edit"
-  hint: ""
+  hint: "The supplier will be sent an email and invited to edit their details. You'll be able to review their answers once they've done this."
   email: "Email"
 invite_supplier_signatory:
   title: "Invite the supplier to sign"
-  hint: ""
+  hint: "The supplier will be sent an email inviting them to sign the contract."
   email: "Email"
 buyer_signatory:
   title: "Sign the contract"
