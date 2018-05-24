@@ -8,19 +8,19 @@ overview:
     text: "1. Contract details"
     hint: "Fill in the form with the details of what's being bought, for example how much and how it'll be delivered."
     link: "Check and complete contract details"
-    review: "Review your answers"
+    review: "Review answers"
   buyer:
     text: "2. Buyer details"
     hint: "Includes information about the buyer, for example the security policy."
     link: "Check and complete buyer details"
-    review: "Review your answers"
+    review: "Review answers"
   supplier:
     text: "3. Supplier details"
     hint: "Includes information about the supplier, for example essential staff."
     link: "Check and complete supplier details"
     edit: "Invite the supplier to add their details"
     invited: "The supplier has been invited to edit"
-    review: "Review your supplier details"
+    review: "Review answers"
   sign:
     text: "4. Check your answers"
     hint:
@@ -118,7 +118,7 @@ credits:
   form:
     service_credits:
       label: "Insurance"
-      hint: "Details of any additional insurance policies the buyer wants the supplier to have."
+      hint: "Details of any additional insurance policies the buyer needs the supplier to have."
 payment:
   title: "Contract details"
   introduction:
@@ -144,7 +144,7 @@ buyer:
       hint: ""
     invoice_address:
       label: "Invoice address"
-      hint: "Add invoice address if you're using a different address."
+      hint: "Add invoice address if it's a different address."
 environmental:
   title: "Buyer details"
   introduction:
@@ -176,7 +176,7 @@ contract_manager:
   title: "Supplier details"
   introduction:
     - ""
-  hint: "This person will be the buyer's daily contact."
+  hint: "This will be the buyer's daily contact."
 supplier_numbers:
   title: "Supplier details"
   introduction:
@@ -200,39 +200,39 @@ sensitive:
 buyer_representative:
   title: "Authority to sign"
   introduction:
-    - "This person must have the authority to sign the form on behalf of their organisation."
+    - "This person must have the authority to sign the form on their organisation's behalf."
     - "Usually this is a senior member of the organisation."
   hint:
-    - "This person must have the authority to sign the form on behalf of their organisation."
+    - "This person must have the authority to sign the form on their organisation's behalf."
     - "Usually this is a senior member of the organisation."
 supplier_representative:
   title: "Authority to sign"
   introduction:
-    - "This person must have the authority to sign the form on behalf of their organisation."
+    - "This person must have the authority to sign the form on their organisation's behalf."
     - "Usually this is a senior member of the organisation."
   hint:
-    - "This person must have the authority to sign the form on behalf of their organisation."
+    - "This person must have the authority to sign the form on their organisation's behalf."
     - "Usually this is a senior member of the organisation."
 supplier_staff:
   title: "Supplier details"
   introduction:
-    - "Add the staff or subcontractors that are essential to the delivery of the contract."
+    - "Add the staff or subcontractors that are crucial to the delivery of the contract."
 supplier_subcontractors:
   title: "Essential subcontractors"
   introduction:
-    - "Add the staff or subcontractors that are essential to the delivery of the contract."
+    - "Add the staff or subcontractors that are crucial to the delivery of the contract."
 add_staff:
   title: "Supplier details"
   sub_heading: "Essential staff"
-  hint: "Add the staff that are essential to the delivery of the contract"
+  hint: "Add the staff that are crucial to the delivery of the contract"
 add_subcontractors:
   title: "Supplier details"
   sub_heading: "Essential subcontractors"
-  hint: "Add the subcontractors that are essential to the delivery of the contract"
+  hint: "Add the subcontractors that are crucial to the delivery of the contract"
 added:
   hint: "Add the subcontractor roles or people that are crucial to the delivery of the contract."
-  buyer_representative: "Added authorised representative"
-  supplier_representative: "Added authorised representative"
+  buyer_representative: "Added the name of the person signing the contract"
+  supplier_representative: "Added the name of the person signing the contract"
   supplier_staff: "Added staff member"
   supplier_subcontractors: "Added subcontractor"
 supplier_edit:
