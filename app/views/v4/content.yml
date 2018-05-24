@@ -26,10 +26,10 @@ overview:
     hint: "You'll be able to sign the contract once you've filled in the form."
     button_visible: "Work can start when the buyer and supplier have both signed the contract."
     buyer: "Sign contract"
-    buyer_signed: "You have signed the contract"
-    supplier_sign: "Invite the supplier to sign"
-    supplier_invited: "The supplier has been invited to sign"
-    supplier_signed: "The supplier has signed"
+    buyer_signed: "You've signed the contract"
+    supplier_sign: "Invite the supplier to sign the contract"
+    supplier_invited: "The supplier has been invited to sign the contract"
+    supplier_signed: "The supplier has signed the contract"
 contract_overview:
   title: "Order form"
   introduction:
@@ -70,7 +70,7 @@ what:
     - ""
   form:
     details:
-      label: "What's being bought"
+      label: "About the purchase"
       hint: "Say what's being bought and the delivery dates. You should be able to find this information in the requirements document."
 charges:
   title: "Contract details"
@@ -176,7 +176,7 @@ contract_manager:
   title: "Supplier details"
   introduction:
     - ""
-  hint: "This will be the buyer's daily contact."
+  hint: "This will be the buyer's regular contact."
 supplier_numbers:
   title: "Supplier details"
   introduction:
@@ -198,21 +198,18 @@ sensitive:
       label: "Commercially sensitive information"
       hint: "The contract will be publically available. Include details of any information that can't be published and explain why."
 buyer_representative:
-  title: "Authority to sign"
+  title: "Who can sign the contract"
   introduction:
     - "This person must have the authority to sign the form on their organisation's behalf."
     - "Usually this is a senior member of the organisation."
-  hint:
-    - "This person must have the authority to sign the form on their organisation's behalf."
-    - "Usually this is a senior member of the organisation."
+  hint: "This person will sign the form on their organisation's behalf."
 supplier_representative:
-  title: "Who will sign the contract"
+  title: "Who can sign the contract"
   introduction:
     - "This person must have the authority to sign the form on their organisation's behalf."
     - "Usually this is a senior member of the organisation."
   hint:
-    - "This person must have the authority to sign the form on their organisation's behalf."
-    - "Usually this is a senior member of the organisation."
+    - "This person will sign the form on their organisation's behalf."
 supplier_staff:
   title: "Supplier details"
   introduction:
@@ -246,7 +243,7 @@ invite_supplier_signatory:
 buyer_signatory:
   title: "Sign the contract"
   introduction:
-    - "You must have the authority to sign. Usually this will be a senior person in the organisation."
+    - "This person has the authority to sign the contract for their organisation."
   name:
     label: "Name"
     hint: ""
