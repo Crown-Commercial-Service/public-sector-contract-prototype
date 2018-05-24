@@ -245,7 +245,7 @@ invite_supplier_signatory:
 buyer_signatory:
   title: "Sign the contract"
   introduction:
-    - "This person has the authority to sign the contract for their organisation."
+    - ""
   name:
     label: "Name"
     hint: ""
@@ -255,7 +255,7 @@ buyer_signatory:
   date:
     label: "Date"
     hint: ""
-  authorised: "I confirm I have the authority to sign this contract on my organisation's behalf."
+  authorised: "I confirm that I have the authority to sign this contract on my organisation's behalf."
 supplier_signatory:
   title: "Countersign the contract"
   introduction:
