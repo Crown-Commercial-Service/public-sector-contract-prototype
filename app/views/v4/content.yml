@@ -71,7 +71,7 @@ what:
   form:
     details:
       label: "About the purchase"
-      hint: "Say what's being bought and the delivery dates. You should be able to find this information in the requirements document."
+      hint: "Say what's being bought and the delivery dates. You should be able to find this information in the requirements."
 charges:
   title: "Contract details"
   introduction:
