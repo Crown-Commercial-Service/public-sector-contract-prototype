@@ -198,7 +198,7 @@ sensitive:
       label: "Commercially sensitive information"
       hint: "The contract will be publically available. Include details of anything that can't be published and explain why."
 buyer_representative:
-  title: "Authori to sign"
+  title: "Authority to sign"
   introduction:
     - "This person must have the authority to sign the form on their organisation's behalf."
     - "Usually this is a senior member of the organisation."
