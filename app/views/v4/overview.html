@@ -47,45 +47,47 @@
 
   <div class="grid-row">
     <div class="column-two-thirds">
-      <h2 class="heading-medium">{{ content.contract.text }}</h2>
+      <h2 class="heading-medium">
+        {{ content.contract.text }}
+
+        {% if order_form.contract_details_complete %}
+        <span class="task-completed">Completed</span>
+        {% endif %}
+      </h2>
       <div class="list-number">
         <p>{{ content.contract.hint }}</p>
         <p><a href="v4/contract_details">{{ content.contract.link }}</a></p>
         <p><a href="v4/review?review=contract_details">{{ content.contract.review }}</a></p>
       </div>
     </div>
-
-    <div class="column-third">
-      {% if order_form.terms_complete %}
-      <p class="heading-medium">Completed</p>
-      {% else %}
-      <p class="heading-medium">Incomplete</p>
-      {% endif %}
-    </div>
   </div>
 
   <div class="grid-row">
     <div class="column-two-thirds">
-      <h2 class="heading-medium">{{ content.buyer.text }}</h2>
+      <h2 class="heading-medium">
+        {{ content.buyer.text }}
+
+        {% if order_form.environmental_complete %}
+        <span class="task-completed">Completed</span>
+        {% endif %}
+      </h2>
       <div class="list-number">
         <p>{{ content.buyer.hint }}</p>
         <p><a href="v4/buyer">{{ content.buyer.link }}</a></p>
         <p><a href="v4/review?review=buyer_details">{{ content.buyer.review }}</a></p>
       </div>
     </div>
-
-    <div class="column-third">
-      {% if order_form.environmental_complete %}
-      <p class="heading-medium">Completed</p>
-      {% else %}
-      <p class="heading-medium">Incomplete</p>
-      {% endif %}
-    </div>
   </div>
 
   <div class="grid-row">
     <div class="column-two-thirds">
-      <h2 class="heading-medium">{{ content.supplier.text }}</h2>
+      <h2 class="heading-medium">
+        {{ content.supplier.text }}
+
+        {% if order_form.sensitive_complete %}
+        <span class="task-completed">Completed</span>
+        {% endif %}
+      </h2>
       <div class="list-number">
         <p>{{ content.supplier.hint }}</p>
         <p><a href="v4/supplier_edit">{{ content.supplier.edit }}</a></p>
@@ -93,19 +95,19 @@
         <p><a href="v4/review?review=supplier_details">{{ content.supplier.review }}</a></p>
       </div>
     </div>
-
-    <div class="column-third">
-      {% if order_form.sensitive_complete %}
-      <p class="heading-medium">Completed</p>
-      {% else %}
-      <p class="heading-medium">Incomplete</p>
-      {% endif %}
-    </div>
   </div>
 
   <div class="grid-row">
     <div class="column-two-thirds">
-      <h2 class="heading-medium">{{ content.sign.text }}</h2>
+      <h2 class="heading-medium">
+        {{ content.sign.text }}
+
+        {% if order_form.buyer_signatory_complete and order_form.invite_supplier_signatory_complete %}
+        <span class="task-completed">Completed</span>
+        {% elif order_form.buyer_signatory_complete %}
+        <span class="task-completed">{{ content.sign.buyer_signed }}</span>
+        {% endif %}
+      </h2>
       <div class="list-number">
         <p><a href="v4/review" role="link">Check your answers</a></p>
 
@@ -121,22 +123,6 @@
         <p><a class="button" type="submit" href="v4/buyer_signatory">{{ content.sign.buyer }}</a></p>
         {% endif %}
       </div>
-    </div>
-
-    <div class="column-third">
-      <p class="heading-medium">
-      {% if order_form.buyer_signatory_complete and order_form.invite_supplier_signatory_complete %}
-        Completed
-      {% else %}
-        {% if order_form.buyer_signatory_complete %}
-          {{ content.sign.buyer_signed }}
-        {% endif %}
-
-        {% if order_form.invite_supplier_signatory_complete %}
-          {{ content.sign.supplier_signed }}
-        {% endif %}
-      {% endif %}
-      </p>
     </div>
   </div>
 </main>
