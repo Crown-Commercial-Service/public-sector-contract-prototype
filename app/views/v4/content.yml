@@ -102,7 +102,7 @@ guarantee:
     - ""
   form:
     label: "Guarantee"
-    hint: "Answer yes if a third party is needed to guarantee the supplier can meet their obligations. This may be necessary because the supplier can't provide enough trading history information or are a very small company."
+    hint: "Answer yes if a third party is needed to guarantee the supplier can meet their obligations. This may be necessary, for example, because the supplier can't provide enough trading history information or are a very small company."
 expenses:
   title: "Contract details"
   introdution:
