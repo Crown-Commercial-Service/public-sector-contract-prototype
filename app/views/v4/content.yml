@@ -78,7 +78,7 @@ charges:
     - ""
   form:
     call_off:
-      label: "Price and how to pay"
+      label: "Price"
       hint: "How much it'll cost and details of any pricing structures needed."
 liability:
   title: "Contract details"
@@ -124,7 +124,7 @@ payment:
   introduction:
     - ""
   form:
-    label: "Paying the supplier"
+    label: "How to pay"
     hint: "How the supplier will be paid."
   methods:
     - "Bank transfer"
@@ -198,7 +198,7 @@ sensitive:
       label: "Commercially sensitive information"
       hint: "The contract will be publically available. Include details of anything that can't be published and explain why."
 buyer_representative:
-  title: "Authority to sign"
+  title: "Authori to sign"
   introduction:
     - "This person must have the authority to sign the form on their organisation's behalf."
     - "Usually this is a senior member of the organisation."
@@ -206,7 +206,7 @@ buyer_representative:
     - "This person must have the authority to sign the form on their organisation's behalf."
     - "Usually this is a senior member of the organisation."
 supplier_representative:
-  title: "Authority to sign"
+  title: "Who will sign the contract"
   introduction:
     - "This person must have the authority to sign the form on their organisation's behalf."
     - "Usually this is a senior member of the organisation."
