@@ -95,14 +95,14 @@ terms:
   form:
     special_terms:
       label: "Special terms"
-      hint: "Add or upload any additional terms needed to make the contract work."
+      hint: "Add or upload any additional terms needed to make the contract work. For most contracts this won't be needed."
 guarantee:
   title: "Contract details"
   introduction:
     - ""
   form:
     label: "Guarantee"
-    hint: "Answer yes if a third party is needed to guarantee the supplier can meet their obligations."
+    hint: "Answer yes if a third party is needed to guarantee the supplier can meet their obligations. This may be necessary because they're a very small firm or can't provide sufficient trading history."
 expenses:
   title: "Contract details"
   introdution:
