@@ -38,7 +38,7 @@
         <nav role="navigation" aria-labelledby="subsection-title">
           <ul class="font-xsmall">
             <li><a href="https://www.gov.uk/guidance/digital-marketplace-buyers-guide">Buyer guidance</a></li>
-            <li><a href="https://www.gov.uk/guidance/how-to-award-a-contract-when-you-buy-services">How to award a contract</a></li>   
+            <li><a href="https://www.gov.uk/guidance/how-to-award-a-contract-when-you-buy-services">How to award a contract</a></li>
           </ul>
         </nav>
       </aside>
@@ -107,15 +107,15 @@
     <div class="column-two-thirds">
       <h2 class="heading-medium">{{ content.sign.text }}</h2>
       <div class="list-number">
+        <p><a href="v4/review" role="link">Check your answers</a></p>
+
         {% if not order_form.buyer_signatory_complete %}
         <p>{{ content.sign.hint }}</p>
         {% endif %}
 
         {% if order_form.buyer_signatory_complete %}
-        <p><a href="v4/invite_supplier_signatory">{{ content.sign.supplier_sign }}</a></p>
+        <p><a class="button" href="v4/invite_supplier_signatory">{{ content.sign.supplier_sign }}</a></p>
         {% endif %}
-
-        <p><a href="v4/review" role="link">Check your answers</a></p>
 
         {% if (order_form.terms_complete and order_form.environmental_complete and order_form.sensitive_complete) and not order_form.buyer_signatory_complete %}
         <p><a class="button" type="submit" href="v4/buyer_signatory">{{ content.sign.buyer }}</a></p>
