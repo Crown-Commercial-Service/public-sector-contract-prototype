@@ -1,58 +1,38 @@
-{% extends "layout.html" %}
-
-{% block page_title %}
-  Award a contract
-{% endblock %}
-
-{% block content %}
-
-<main id="content" role="main">
-  <div class="grid-row">
-    <div class="column-full">
-      <a href="{{ back }}" class="link-back">Back</a>
-
-      <h1 class="heading-xlarge">{{ content[header].title }}</h1>
-
-      {% for paragraph_text in content[header].introduction %}
-      <p>{{ paragraph_text }}</p>
-      {% endfor %}
+<div class="grid-row">
+  <div class="column-full">
+    {% if review == "contract_details" or not review %}
+    <div>
+      {% include "v4/_contract_details_review.html" %}
     </div>
-  </div>
+    {% endif %}
 
-  <div class="grid-row">
-    <div class="column-full">
-      <div>
-        {% include "v4/_contract_details_review.html" %}
-      </div>
-
-      <div style="margin-top:60px">
-        {% include "v4/_buyer_details_review.html" %}
-      </div>
-
-      <div style="margin-top:60px">
-        {% include "v4/_supplier_details_review.html" %}
-      </div>
+    {% if review == "buyer_details" or not review %}
+    {% if not review %}
+    <div style="margin-top:60px">
+    {% else %}
+    <div>
+    {% endif %}
+      {% include "v4/_buyer_details_review.html" %}
     </div>
-  </div>
+    {% endif %}
 
-
-  <div class="column-two-thirds">
-    <h2 class="heading-medium">Sign</h2>
-    <div class="list-number">
-
-      {% if not order_form.buyer_signatory_complete %}
-        {% for hint_text in content.sign.hint %}
-        <p>{{ hint_text }}</p>
-        {% endfor %}
-      {% endif %}
-
-      {% if order_form.buyer_signatory_complete %}
-      <p><a href="v4/invite_supplier_signatory">{{ content.sign.supplier_sign }}</a></p>
-      {% else %}
-      <p><a href="v4/buyer_signatory">{{ content.sign.buyer }}</a></p>
-      {% endif %}
+    {% if review == "supplier_details" or not review %}
+    {% if not review %}
+    <div style="margin-top:60px">
+    {% else %}
+    <div>
+    {% endif %}
+      {% include "v4/_supplier_details_review.html" %}
     </div>
+    {% endif %}
   </div>
-</main>
+</div>
 
-{% endblock %}
+<div class="grid-row" style="margin-top:30px">
+  <div class="column-full">
+    {% if (order_form.terms_complete and order_form.environmental_complete and order_form.sensitive_complete) and not order_form.buyer_signatory_complete %}
+    <p><a class="button" type="submit" href="v4/buyer_signatory">Sign contract</a></p>
+    {% endif %}
+    <p><a href="/v4">Cancel</a></p>
+  </div>
+</div>

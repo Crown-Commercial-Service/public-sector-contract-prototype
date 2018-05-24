@@ -30,28 +30,15 @@ router.get('/v4', function (req, res) {
   res.render('v4/overview', {
     order_form: data,
     content: content.overview,
-    contract_details_complete: helpers.sectionComplete('terms', data),
-    buyer_complete: helpers.sectionComplete('environmental', data),
-    supplier_complete: helpers.sectionComplete('sensitive', data),
     supplier_edit: req.query.supplier_edit,
     supplier_signatory_invited: req.query.supplier_signatory_invited
   })
 })
 
 router.get('/v4/:page', function (req, res) {
-  if (req.params.page === 'review') {
-    view = 'review'
-    header = 'review'
-    page = 'review'
-  } else {
-    view = 'base'
-    header = req.params.page
-    page = req.params.page
-  }
-
-  res.render(`v4/${view}`, {
-    header: header,
-    page: page,
+  res.render('v4/base', {
+    header: req.params.page,
+    page: req.params.page,
     back: req.headers.referer.split('?')[0],
     order_form: req.session.data,
     content: content,

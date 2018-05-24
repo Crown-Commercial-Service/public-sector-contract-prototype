@@ -8,7 +8,12 @@
 
 <main id="content" role="main">
   <div class="grid-row">
-    <div class="column-two-thirds">
+    {% if page == 'review' %}
+      {% set column_class = "column-full" %}
+    {% else %}
+      {% set column_class = "column-two-thirds" %}
+    {% endif %}
+    <div class="{{ column_class }}">
       <a href="{{ back }}" class="link-back">Back</a>
 
       {% if added %}

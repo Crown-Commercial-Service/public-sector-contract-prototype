@@ -32,7 +32,7 @@
       {% endfor %}
     </span>
     {% for representative in order_form.buyer_representative %}
-    <p>{{ representative.name }}</p>
+      {% include "v4/_representative_details.html" %}
     {% endfor %}
 
     {% if not order_form.buyer_representative %}

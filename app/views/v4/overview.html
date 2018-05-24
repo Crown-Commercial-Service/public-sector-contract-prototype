@@ -51,12 +51,12 @@
       <div class="list-number">
         <p>{{ content.contract.hint }}</p>
         <p><a href="v4/contract_details">{{ content.contract.link }}</a></p>
-        <p><a href="#">{{ content.contract.review }}</a></p>
+        <p><a href="v4/review?review=contract_details">{{ content.contract.review }}</a></p>
       </div>
     </div>
 
     <div class="column-third">
-      {% if contract_details_complete %}
+      {% if order_form.terms_complete %}
       <p class="heading-medium">Completed</p>
       {% else %}
       <p class="heading-medium">Incomplete</p>
@@ -70,12 +70,12 @@
       <div class="list-number">
         <p>{{ content.buyer.hint }}</p>
         <p><a href="v4/buyer">{{ content.buyer.link }}</a></p>
-        <p><a href="#">{{ content.buyer.review }}</a></p>
+        <p><a href="v4/review?review=buyer_details">{{ content.buyer.review }}</a></p>
       </div>
     </div>
 
     <div class="column-third">
-      {% if buyer_complete %}
+      {% if order_form.environmental_complete %}
       <p class="heading-medium">Completed</p>
       {% else %}
       <p class="heading-medium">Incomplete</p>
@@ -90,12 +90,12 @@
         <p>{{ content.supplier.hint }}</p>
         <p><a href="v4/supplier_edit">{{ content.supplier.edit }}</a></p>
         <p><a href="v4/supplier">{{ content.supplier.link }}</a></p>
-        <p><a href="#">{{ content.supplier.review }}</a></p>
+        <p><a href="v4/review?review=supplier_details">{{ content.supplier.review }}</a></p>
       </div>
     </div>
 
     <div class="column-third">
-      {% if supplier_complete %}
+      {% if order_form.sensitive_complete %}
       <p class="heading-medium">Completed</p>
       {% else %}
       <p class="heading-medium">Incomplete</p>
@@ -108,17 +108,18 @@
       <h2 class="heading-medium">{{ content.sign.text }}</h2>
       <div class="list-number">
         {% if not order_form.buyer_signatory_complete %}
-        {% for hint_text in content.sign.hint %}
-        <p>{{ hint_text }}</p>
-        {% endfor %}
+        <p>{{ content.sign.hint }}</p>
         {% endif %}
 
         {% if order_form.buyer_signatory_complete %}
         <p><a href="v4/invite_supplier_signatory">{{ content.sign.supplier_sign }}</a></p>
-        <p><a class="button" type="submit" disabled="disabled" aria-disabled="true" href="v4/buyer_signatory">{{ content.sign.buyer }}</a></p>
         {% endif %}
 
-        <a href="v4/review" role="link">Check your answers</a>
+        <p><a href="v4/review" role="link">Check your answers</a></p>
+
+        {% if (order_form.terms_complete and order_form.environmental_complete and order_form.sensitive_complete) and not order_form.buyer_signatory_complete %}
+        <p><a class="button" type="submit" href="v4/buyer_signatory">{{ content.sign.buyer }}</a></p>
+        {% endif %}
       </div>
     </div>
 
@@ -138,12 +139,6 @@
       </p>
     </div>
   </div>
-
-  <!-- <div class="grid-row">
-    <div class="column-two-thirds">
-      <a class="button button-start" href="v4/review" role="link">Check your answers</a>
-    </div>
-  </div> -->
 </main>
 
 {% endblock %}

@@ -23,22 +23,22 @@
       </div>
       </dd>
     <dd class="cya-change" style="border-bottom:none">
-      <a href="#">Edit</a>
+      <a href="/v4/supplier?review=section">Edit</a>
     </dd>
   </div>
 
   <div>
-    <dt class="cya-question">
+    <dt class="cya-question" style="border-bottom:none">
       {{ content.supplier.form.address.label }}
     </dt>
-    <dd class="cya-answer">
+    <dd class="cya-answer" style="border-bottom:none">
       {% if order_form.supplier_address %}
         {{ order_form.supplier_address }}
       {% else %}
         The Principle Place, Shoreditch
       {% endif %}
     </dd>
-    <dd class="cya-change">
+    <dd class="cya-change" style="border-bottom:none">
     </dd>
   </div>
 
@@ -53,7 +53,6 @@
       <p>{{ order_form.supplier_representative[0].address }}</p>
     </dd>
     <dd class="cya-change">
-      <a href="#">Edit</a>
     </dd>
   </div>
 
@@ -68,7 +67,7 @@
         <p>{{ order_form.contract_manager_address }}</p>
     </dd>
     <dd class="cya-change">
-      <a href="#">Edit</a>
+      <a href="/v4/contract_manager?review=section">Edit</a>
     </dd>
   </div>
 
@@ -84,7 +83,7 @@
       {% endif %}
     </dd>
     <dd class="cya-change" style="border-bottom:none">
-        <a href="#">Edit</a>
+        <a href="/v4/supplier_numbers?review=section">Edit</a>
     </dd>
   </div>
 
@@ -117,7 +116,7 @@
       {% endfor %}
     </dd>
     <dd class="cya-change" style="border-bottom:none">
-      <a href="#">Edit</a>
+      <a href="/v4/supplier_staff?review=section">Edit</a>
     </dd>
   </div>
 
@@ -143,7 +142,7 @@
       {{ order_form.sensitive_information }}
     </dd>
     <dd class="cya-change">
-      <a href="#">Edit</a>
+      <a href="/v4/sensitive?review=section">Edit</a>
     </dd>
   </div>
 </dl>
