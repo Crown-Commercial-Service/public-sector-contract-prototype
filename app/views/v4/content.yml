@@ -24,7 +24,7 @@ overview:
   sign:
     text: "4. Review and sign contract"
     hint: "You'll be able to sign the contract once you've filled in the form."
-    button_visible: "The buyer and the supplier need to sign the contract. Once that's happened, work can begin."
+    button_visible: "Check your answers and then sign the contract. Once the buyer and supplier have both signed, work can start."
     buyer: "Sign contract"
     buyer_signed: "You've signed the contract"
     supplier_sign: "Invite the supplier to sign the contract"
