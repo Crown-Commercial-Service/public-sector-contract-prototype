@@ -43,5 +43,5 @@ exports.additionReturnPath = function(type) {
 }
 
 exports.editReturnPath = function(url) {
-  return url.substr(url.lastIndexOf('/'))
+  return url.substr(url.lastIndexOf('/')).split('?')[0]
 }

@@ -52,7 +52,7 @@ router.get('/v4/:page', function (req, res) {
   res.render(`v4/${view}`, {
     header: header,
     page: page,
-    back: req.headers.referer,
+    back: req.headers.referer.split('?')[0],
     order_form: req.session.data,
     content: content,
     added: req.query.added,
@@ -85,7 +85,7 @@ router.get('/v4/add/:type', function (req, res) {
   res.render('v4/base', {
     header: type,
     page: 'representative',
-    back: req.headers.referer,
+    back: req.headers.referer.split('?')[0],
     type: type,
     content: content,
     cancel_path: `/v4/${helpers.additionReturnPath(type)}`
