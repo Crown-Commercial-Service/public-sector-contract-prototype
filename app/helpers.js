@@ -41,3 +41,7 @@ exports.additionReturnPath = function(type) {
 exports.editReturnPath = function(url) {
   return url.substr(url.lastIndexOf('/')).split('?')[0]
 }
+
+exports.findRepIndex = function(data, type, id) {
+  return data[type].findIndex(rep => rep.id == id )
+}

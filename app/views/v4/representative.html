@@ -15,7 +15,7 @@
       <span class="form-hint">
       </span>
     </label>
-    <input class="form-control" id="authorised_name" type="text" name="authorised_name">
+    <input class="form-control" id="authorised_name" type="text" name="authorised_name" value="{{ rep.name }}">
 
     {% if type != 'supplier_subcontractors' %}
     <h2 class="heading-medium">Role</h2>
@@ -23,21 +23,21 @@
       <span class="form-hint">
       </span>
     </label>
-    <input class="form-control" id="authorised_role" type="text" name="authorised_role">
+    <input class="form-control" id="authorised_role" type="text" name="authorised_role" value="{{ rep.role }}">
 
     <h2 class="heading-medium">Email</h2>
     <label class="form-label" for="authorised_email">
       <span class="form-hint">
       </span>
     </label>
-    <input class="form-control" id="authorised_email" type="text" name="authorised_email">
+    <input class="form-control" id="authorised_email" type="text" name="authorised_email" value="{{ rep.email }}">
 
     <h2 class="heading-medium">Address</h2>
     <label class="form-label" for="authorised_address">
       <span class="form-hint">
       </span>
     </label>
-    <input class="form-control" id="authorised_address" type="text" name="authorised_address">
+    <input class="form-control" id="authorised_address" type="text" name="authorised_address" value="{{ rep.address }}">
     {% endif %}
   </div>
 

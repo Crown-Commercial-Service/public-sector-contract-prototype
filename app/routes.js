@@ -51,7 +51,7 @@ router.post('/v4/:page', function (req, res) {
   page = req.params.page
   req.session.data[`${page}_complete`] = true
 
-  let query = ''
+  query = ''
   if (page === 'supplier_edit') {
     query = '?supplier_edit=true'
   } else if (page === 'invite_supplier_signatory') {
@@ -68,7 +68,7 @@ router.post('/v4/:page', function (req, res) {
 })
 
 router.get('/v4/add/:type', function (req, res) {
-  let type = req.params.type
+  type = req.params.type
   res.render('v4/base', {
     header: type,
     page: 'representative',
@@ -80,13 +80,14 @@ router.get('/v4/add/:type', function (req, res) {
 })
 
 router.post('/v4/add/:type', function (req, res) {
-  let type = req.params.type
+  type = req.params.type
   if (req.session.data[type] == undefined) {
     req.session.data[type] = []
   }
 
   data = req.session.data
   req.session.data[type].push({
+    id: req.session.data[type].length + 1,
     name: data.authorised_name,
     role: data.authorised_role,
     email: data.authorised_email,
@@ -96,6 +97,43 @@ router.post('/v4/add/:type', function (req, res) {
   path = helpers.additionReturnPath(type)
   res.redirect(`/v4/${path}?added=${type}`)
 })
+
+router.get('/v4/edit/:type/:id', function (req, res) {
+  type = req.params.type
+  rep_index = helpers.findRepIndex(req.session.data, type, req.params.id)
+
+  res.render('v4/base', {
+    header: type,
+    page: 'representative',
+    back: req.headers.referer.split('?')[0],
+    type: type,
+    rep: req.session.data[type][rep_index],
+    content: content,
+    cancel_path: `/v4/${helpers.additionReturnPath(type)}`
+  })
+})
+
+router.post('/v4/edit/:type/:id', function (req, res) {
+  type = req.params.type
+
+  data = req.session.data
+  rep_index = helpers.findRepIndex(data, type, req.params.id)
+  id = req.session.data[type][rep_index].id
+  req.session.data[type].splice(rep_index, 1)
+
+  req.session.data[type].push({
+    id: id,
+    name: data.authorised_name,
+    role: data.authorised_role,
+    email: data.authorised_email,
+    address: data.authorised_address
+  })
+
+  path = helpers.additionReturnPath(type)
+  res.redirect(`/v4/${path}`)
+})
+
+// v2 and v3 routes
 
 router.get('/:version(v2|v3)/what-is-the-public-sector-contract', function (req, res) {
   res.render(
