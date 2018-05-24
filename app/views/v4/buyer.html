@@ -27,10 +27,7 @@
 
     <h2 class="heading-medium">{{ content.buyer_representative.title }}</h2>
     <span class="form-hint">
-      {% for hint_text in content.buyer_representative.hint %}
-      {{ hint_text }}
-      <br>
-      {% endfor %}
+      {{ content.buyer_representative.hint }}
     </span>
     {% for representative in order_form.buyer_representative %}
       {% include "v4/_representative_details.html" %}
