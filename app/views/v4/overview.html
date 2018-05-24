@@ -109,11 +109,12 @@
         {% endif %}
       </h2>
       <div class="list-number">
-        <p><a href="v4/review" role="link">Check the completed form</a></p>
-
-        {% if not order_form.buyer_signatory_complete %}
+        {% if not order_form.buyer_signatory_complete and not ((order_form.terms_complete and order_form.environmental_complete and order_form.sensitive_complete)) %}
         <p>{{ content.sign.hint }}</p>
+        {% else %}
+        {{ content.sign.button_visible }}
         {% endif %}
+        <p><a href="v4/review" role="link">Check the completed form</a></p>
 
         {% if order_form.buyer_signatory_complete %}
         <p><a class="button" href="v4/invite_supplier_signatory">{{ content.sign.supplier_sign }}</a></p>
