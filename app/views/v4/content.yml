@@ -78,7 +78,7 @@ charges:
     - ""
   form:
     call_off:
-      label: "Price and how to pay"
+      label: "Price"
       hint: "How much it'll cost and details of any pricing structures needed."
 liability:
   title: "Contract details"
