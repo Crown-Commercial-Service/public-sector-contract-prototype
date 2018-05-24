@@ -59,8 +59,8 @@ progress:
     - ""
   form:
     report:
-      label: "Working arrangements"
-      hint: "How the supplier needs to provide updates about their work. For example, should the supplier be onsite 3 days a week for face-to-face meetings or provide weekly written reports."
+      label: "Working together"
+      hint: "How the supplier should update the buyer about their progress on the project. For example, should the supplier be onsite 3 days a week for face-to-face meetings or provide weekly written reports."
     frequency:
       label: "Progress frequency"
       hint: "Once a month at the start of the month"
@@ -102,7 +102,7 @@ guarantee:
     - ""
   form:
     label: "Guarantee"
-    hint: "Answer yes if a third party is needed to guarantee the supplier can meet their obligations. This may be necessary, for example, because the supplier can't provide enough trading history information or are a very small company."
+    hint: "Answer yes if a third party is needed to guarantee the supplier can meet their obligations. For example, this may be necessary because the supplier can't provide enough trading history information or are a very small company."
 expenses:
   title: "Contract details"
   introdution:
