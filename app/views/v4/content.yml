@@ -198,18 +198,18 @@ sensitive:
       label: "Commercially sensitive information"
       hint: "The contract will be made publically available. Include details of any information that can't be published and explain why."
 buyer_representative:
-  title: "Who can sign the contract"
+  title: "Who will sign the contract"
   introduction:
-    - "This person must have the authority to sign the form on their organisation's behalf."
+    - "This person must have the authority to sign the contract on their organisation's behalf."
     - "Usually this is a senior member of the organisation."
-  hint: "This person will sign the form on their organisation's behalf."
+  hint: "This person will sign the contract on their organisation's behalf."
 supplier_representative:
-  title: "Who can sign the contract"
+  title: "Who will sign the contract"
   introduction:
-    - "This person must have the authority to sign the form on their organisation's behalf."
+    - "This person must have the authority to sign the contract on their organisation's behalf."
     - "Usually this is a senior member of the organisation."
   hint:
-    - "This person will sign the form on their organisation's behalf."
+    - "This person will sign the contract on their organisation's behalf."
 supplier_staff:
   title: "Supplier details"
   introduction:
