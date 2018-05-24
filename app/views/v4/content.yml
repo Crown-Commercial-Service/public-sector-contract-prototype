@@ -87,7 +87,7 @@ liability:
   form:
     max_liability:
       label: "Maximum liability"
-      hint: "This is the amount the supplier must pay if something goes wrong because of their actions. This figure should be 150% of the estimated yearly charges, but not more than £5 million."
+      hint: "This is the maximum amount the supplier should pay if something goes wrong because of their actions. This figure should be 150% of the estimated yearly charges, but not more than £5 million."
 terms:
   title: "Contract details"
   introduction:
@@ -118,7 +118,7 @@ credits:
   form:
     service_credits:
       label: "Insurance"
-      hint: "Details of any additional insurance policies the buyer needs the supplier to have."
+      hint: "Details of any insurance policies the buyer wants the supplier to have."
 payment:
   title: "Contract details"
   introduction:
