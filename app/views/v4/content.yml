@@ -1,12 +1,12 @@
 overview:
-  title: "Award the office cleaning contract"
+  title: "Award the Office cleaning contract"
   introduction:
     - "Fill in the form to create a contract with the supplier."
     - "You've already given us some of this information, so we've put it into the form for you. You can check and edit it."
     - "When the form's complete, and the buyer and supplier have both signed it, work can start."
   contract:
     text: "1. Contract details"
-    hint: "Fill in the form with the details of what's being bought, for example how much and how it'll be delivered."
+    hint: "Includes information about what's being bought, for example price and delivery."
     link: "Check and complete contract details"
     review: "Review answers"
   buyer:
@@ -24,7 +24,7 @@ overview:
   sign:
     text: "4. Check your answers"
     hint:
-      - "Work can start once the buyer and supplier have both signed the contract."
+      - "Check the completed form and then sign the contract. Work can start once the buyer and supplier have both signed the contract."
     buyer: "Sign contract"
     buyer_signed: "You have signed the contract"
     supplier_sign: "Invite the supplier to sign"
@@ -110,7 +110,7 @@ expenses:
   form:
     reimbursable:
       label: "Supplier expenses"
-      hint: "Any supplier expenses that'll be refunded, for example travel."
+      hint: "Any supplier expenses that will be refunded, for example travel."
 credits:
   title: "Contract details"
   introduction:
@@ -196,7 +196,7 @@ sensitive:
   form:
     information:
       label: "Commercially sensitive information"
-      hint: "The contract will be publically available. Include details of anything that can't be made publically available and explain why."
+      hint: "The contract will be publically available. Include details of anything that can't be published and explain why."
 buyer_representative:
   title: "Authority to sign"
   introduction:
@@ -233,8 +233,8 @@ added:
   hint: "Add the subcontractor roles or people that are crucial to the delivery of the contract."
   buyer_representative: "Added the name of the person signing the contract"
   supplier_representative: "Added the name of the person signing the contract"
-  add_staff: "Added staff member"
-  add_subcontractors: "Added subcontractor"
+  supplier_staff: "Added staff member"
+  supplier_subcontractors: "Added subcontractor"
 supplier_edit:
   title: "Invite the supplier to edit"
   hint: ""
