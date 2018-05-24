@@ -95,7 +95,7 @@ terms:
   form:
     special_terms:
       label: "Special terms"
-      hint: "Add or upload any additional terms needed to make the contract work. For most contracts this won't be needed."
+      hint: "Add or upload any additional terms needed to make the contract work. For most contracts this won't be necessary."
 guarantee:
   title: "Contract details"
   introduction:
