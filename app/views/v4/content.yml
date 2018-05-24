@@ -42,7 +42,7 @@ contract_details:
     reference:
       label: "Call-off reference number"
       hint:
-        - "Every contract has a reference number that can help identify it."
+        - "Every call-off contract has a reference number that can help identify it."
     start_date:
       label: "Start date"
       hint: "This is the date the supplier is expected to start work."
@@ -71,7 +71,7 @@ what:
   form:
     details:
       label: "What's being bought"
-      hint: "Say what's being bought and the delivery dates. You should be able to find this information in the requirements."
+      hint: "Say what's being bought and the delivery dates. You should be able to find this information in the requirements document."
 charges:
   title: "Contract details"
   introduction:
@@ -102,7 +102,7 @@ guarantee:
     - ""
   form:
     label: "Guarantee"
-    hint: "Answer yes if a third party is needed to guarantee the supplier can meet their obligations. This may be necessary because they're a very small company or can't provide sufficient trading history information."
+    hint: "Answer yes if a third party is needed to guarantee the supplier can meet their obligations. This may be necessary because the supplier can't provide enough trading history information or are a very small company."
 expenses:
   title: "Contract details"
   introdution:
@@ -196,7 +196,7 @@ sensitive:
   form:
     information:
       label: "Commercially sensitive information"
-      hint: "The contract will be publically available. Include details of anything that can't be published and explain why."
+      hint: "The contract will be publically available. Include details of any information that can't be published and explain why."
 buyer_representative:
   title: "Authority to sign"
   introduction:
