@@ -2,22 +2,81 @@
 <form class="form" action="" method="post">
   <div class="form-group">
     <h2 class="heading-medium">Essential staff</h2>
-    {% for staff in order_form.supplier_staff %}
-    <p>{{ staff.name }}</p>
-    {% endfor %}
-    <span class="form-hint">
-      {{ content.supplier_staff.hint }}
-    </span>
-    <p><a href="add/add_staff" class="">Add staff</a></p>
+    <div class="column-full" style="padding-left:0;margin-bottom:20px">
+      {% for staff in order_form.add_staff %}
+      <dl class="govuk-check-your-answers cya-questions-short">
+        <div>
+          <dt class="cya-question" style="border-bottom:none;padding-top:10px">
+            Name
+          </dt>
+          <dd class="cya-answer" style="border-bottom:none">
+            {{ staff.name }}
+          </dd>
+          <dd class="cya-change" style="border-bottom:none">
+            Edit
+          </dd>
+        </div>
+
+        <div>
+          <dt class="cya-question" style="border-bottom:none">
+            Role
+          </dt>
+          <dd class="cya-answer" style="border-bottom:none">
+            {{ staff.role }}
+          </dd>
+          <dd class="cya-change" style="border-bottom:none">
+          </dd>
+        </div>
+
+        <div>
+          <dt class="cya-question" style="border-bottom:none">
+            Email
+          </dt>
+          <dd class="cya-answer" style="border-bottom:none">
+            {{ staff.email }}
+          </dd>
+          <dd class="cya-change" style="border-bottom:none">
+          </dd>
+        </div>
+
+        <div>
+          <dt class="cya-question">
+            Address
+          </dt>
+          <dd class="cya-answer">
+            {{ staff.address }}
+          </dd>
+          <dd class="cya-change">
+          </dd>
+        </div>
+      </dl>
+      {% endfor %}
+
+      <p style="margin-top:20px">
+        <a href="add/add_staff">Add staff</a>
+      </p>
+    </div>
 
     <h2 class="heading-medium">Essential subcontractors</h2>
-    {% for subcontractor in order_form.supplier_subcontractors %}
-    <p>{{ subcontractor.name }}</p>
-    {% endfor %}
-    <span class="form-hint">
-      {{ content.supplier_subcontractors.hint }}
-    </span>
-    <p><a href="add/add_subcontractors" class="">Add subcontractors</a></p>
+    <div class="column-full" style="padding-left:0">
+      {% for subcontractor in order_form.add_subcontractors %}
+      <dl class="govuk-check-your-answers cya-questions-short">
+        <div>
+          <dt class="cya-question" style="padding-top:10px">
+            Name
+          </dt>
+          <dd class="cya-answer">
+            {{ subcontractor.name }}
+          </dd>
+          <dd class="cya-change">
+            Edit
+          </dd>
+        </div>
+      </dl>
+      {% endfor %}
+
+      <p style="margin-top:20px"><a href="add/add_subcontractors">Add subcontractors</a></p>
+    </div>
   </div>
 
   {% include "v4/_save_and_continue.html" %}
