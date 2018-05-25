@@ -1,0 +1,52 @@
+{% for staff in order_form.add_staff %}
+<dl class="govuk-check-your-answers cya-questions-short" style="padding-bottom:10px">
+  <div>
+    <dt class="cya-question" style="border-bottom:none">
+      Name
+    </dt>
+    <dd class="cya-answer" style="border-bottom:none">
+      {{ staff.name }}
+    </dd>
+    <dd class="cya-change" style="border-bottom:none">
+      {% if page != "review" %}
+      <a href="/v4/edit/add_staff/{{ staff.id }}">Change</a>
+      {% endif %}
+    </dd>
+  </div>
+
+  <div>
+    <dt class="cya-question" style="border-bottom:none">
+      Role
+    </dt>
+    <dd class="cya-answer" style="border-bottom:none">
+      <div>
+        {{ staff.role }}
+      </div>
+      </dd>
+    <dd class="cya-change" style="border-bottom:none">
+    </dd>
+  </div>
+
+  <div>
+    <dt class="cya-question" style="border-bottom:none">
+      Email
+    </dt>
+    <dd class="cya-answer" style="border-bottom:none">
+      {{ staff.email }}
+    </dd>
+    <dd class="cya-change" style="border-bottom:none">
+    </dd>
+  </div>
+
+  <div>
+    <dt class="cya-question">
+      Address
+    </dt>
+    <dd class="cya-answer">
+      {{ staff.address }}
+    </dd>
+    <dd class="cya-change">
+    </dd>
+  </div>
+</dl>
+{% endfor %}

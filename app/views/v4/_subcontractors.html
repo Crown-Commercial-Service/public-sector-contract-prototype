@@ -1,0 +1,41 @@
+{% for subcontractor in order_form.add_subcontractors %}
+<dl class="govuk-check-your-answers cya-questions-short" style="padding-bottom:10px">
+  <div>
+    <dt class="cya-question" style="border-bottom:none">
+      Name
+    </dt>
+    <dd class="cya-answer" style="border-bottom:none">
+      {{ subcontractor.name }}
+    </dd>
+    <dd class="cya-change" style="border-bottom:none">
+      {% if page != "review" %}
+      <a href="/v4/edit/add_subcontractors/{{ subcontractor.id }}">Change</a>
+      {% endif %}
+    </dd>
+  </div>
+
+  {% if page == "review" and loop.index == order_form.add_subcontractors.length %}
+  <div>
+    <dt class="cya-question" style="border-bottom:none">
+      Email
+    </dt>
+    <dd class="cya-answer" style="border-bottom:none">
+      {{ subcontractor.email }}
+    </dd>
+    <dd class="cya-change" style="border-bottom:none">
+    </dd>
+  </div>
+  {% else %}
+  <div>
+    <dt class="cya-question">
+      Email
+    </dt>
+    <dd class="cya-answer">
+      {{ subcontractor.email }}
+    </dd>
+    <dd class="cya-change">
+    </dd>
+  </div>
+  {% endif %}
+</dl>
+{% endfor %}

@@ -67,10 +67,9 @@
       Contract manager
     </dt>
     <dd class="cya-answer">
-        <p>{{ order_form.contract_manager_name }}</p>
-        <p>{{ order_form.contract_manager_role }}</p>
-        <p>{{ order_form.contract_manager_email }}</p>
-        <p>{{ order_form.contract_manager_address }}</p>
+      {% if order_form.contract_manager_name %}
+        {% include "v4/_contract_manager.html" %}
+      {% endif %}
     </dd>
     <dd class="cya-change">
       <a href="/v4/contract_manager?review={{ supplier_change }}">Change</a>
@@ -113,13 +112,9 @@
       Essential staff
     </dt>
     <dd class="cya-answer" style="border-bottom:none">
-      {% for staff in order_form.supplier_staff %}
-      <p>{{ staff.name }}</p>
-      <p>{{ staff.role }}</p>
-      <p>{{ staff.email }}</p>
-      <p>{{ staff.address }}</p>
-      <br>
-      {% endfor %}
+      {% if order_form.add_staff %}
+        {% include "v4/_staff.html" %}
+      {% endif %}
     </dd>
     <dd class="cya-change" style="border-bottom:none">
       <a href="/v4/supplier_staff?review={{ supplier_change }}">Change</a>
@@ -131,10 +126,9 @@
       Essential subcontractors
     </dt>
     <dd class="cya-answer">
-      {%for contractor in order_form.supplier_subcontractors %}
-      <p>{{ contractor.name }}</p>
-      <br>
-      {% endfor %}
+      {% if order_form.add_subcontractors %}
+        {% include "v4/_subcontractors.html" %}
+      {% endif %}
     </dd>
     <dd class="cya-change">
     </dd>
