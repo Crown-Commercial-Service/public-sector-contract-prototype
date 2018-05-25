@@ -75,7 +75,11 @@ router.post('/v4/:page', function (req, res) {
   }
 
   if (req.query.review) {
-    path = helpers.editReturnPath(req.session.data.back)
+    params = ''
+    if (req.query.review != "all") {
+      params = `?review=${req.query.review}`
+    }
+    path = `/review${params}`
   } else {
     path = helpers.nextPage(page)
   }

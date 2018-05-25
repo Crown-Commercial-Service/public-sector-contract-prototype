@@ -1,3 +1,9 @@
+{% if review == "supplier_details" %}
+  {% set supplier_change = "supplier_details" %}
+{% else %}
+  {% set supplier_change = "all" %}
+{% endif %}
+
 <dl class="govuk-check-your-answers cya-questions-short">
   <div>
     <dt class="cya-question">
@@ -23,7 +29,7 @@
       </div>
       </dd>
     <dd class="cya-change" style="border-bottom:none">
-      <a href="/v4/supplier?review=section">Change</a>
+      <a href="/v4/supplier?review={{ supplier_change }}">Change</a>
     </dd>
   </div>
 
@@ -67,7 +73,7 @@
         <p>{{ order_form.contract_manager_address }}</p>
     </dd>
     <dd class="cya-change">
-      <a href="/v4/contract_manager?review=section">Change</a>
+      <a href="/v4/contract_manager?review={{ supplier_change }}">Change</a>
     </dd>
   </div>
 
@@ -83,7 +89,7 @@
       {% endif %}
     </dd>
     <dd class="cya-change" style="border-bottom:none">
-        <a href="/v4/supplier_numbers?review=section">Change</a>
+      <a href="/v4/supplier_numbers?review={{ supplier_change }}">Change</a>
     </dd>
   </div>
 
@@ -116,7 +122,7 @@
       {% endfor %}
     </dd>
     <dd class="cya-change" style="border-bottom:none">
-      <a href="/v4/supplier_staff?review=section">Change</a>
+      <a href="/v4/supplier_staff?review={{ supplier_change }}">Change</a>
     </dd>
   </div>
 
@@ -142,7 +148,7 @@
       {{ order_form.sensitive_information }}
     </dd>
     <dd class="cya-change">
-      <a href="/v4/sensitive?review=section">Change</a>
+      <a href="/v4/sensitive?review={{ supplier_change }}">Change</a>
     </dd>
   </div>
 </dl>

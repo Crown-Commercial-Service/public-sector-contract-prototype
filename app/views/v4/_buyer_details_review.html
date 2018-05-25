@@ -1,3 +1,9 @@
+{% if review == "buyer_details" %}
+  {% set buyer_change = "buyer_details" %}
+{% else %}
+  {% set buyer_change = "all" %}
+{% endif %}
+
 <dl class="govuk-check-your-answers cya-questions-short">
   <div>
     <dt class="cya-question">
@@ -23,7 +29,7 @@
       </div>
       </dd>
     <dd class="cya-change" style="border-bottom:none">
-      <a href="/v4/buyer?review=section">Change</a>
+      <a href="/v4/buyer?review={{ buyer_change }}">Change</a>
     </dd>
   </div>
 
@@ -74,7 +80,8 @@
       {{ order_form.environmental_policy }}
     </dd>
     <dd class="cya-change" style="border-bottom:none">
-      <a href="/v4/environmental?review=section">Change</a>
+
+      <a href="/v4/environmental?review={{ buyer_change }}">Change</a>
     </dd>
   </div>
 
