@@ -62,14 +62,25 @@
       {% for subcontractor in order_form.add_subcontractors %}
       <dl class="govuk-check-your-answers cya-questions-short">
         <div>
-          <dt class="cya-question" style="padding-top:10px">
+          <dt class="cya-question" style="border-bottom:none;padding-top:10px">
             Name
           </dt>
-          <dd class="cya-answer">
+          <dd class="cya-answer" style="border-bottom:none">
             {{ subcontractor.name }}
           </dd>
-          <dd class="cya-change">
+          <dd class="cya-change" style="border-bottom:none">
             Edit
+          </dd>
+        </div>
+
+        <div>
+          <dt class="cya-question">
+            Email
+          </dt>
+          <dd class="cya-answer">
+            {{ subcontractor.email }}
+          </dd>
+          <dd class="cya-change">
           </dd>
         </div>
       </dl>
