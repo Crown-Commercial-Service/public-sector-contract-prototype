@@ -15,11 +15,14 @@ flow = {
   credits: '/guarantee',
   guarantee: '/progress',
   progress: '/terms',
+  terms: '/review?review=contract_details',
   buyer: '/environmental',
+  environmental: '/review?review=buyer_details',
   supplier: '/contract_manager',
   contract_manager: '/supplier_numbers',
   supplier_numbers: '/supplier_staff',
   supplier_staff: '/sensitive',
+  sensitive: '/review?review=supplier_details'
 }
 
 exports.nextPage = function(current_page) {
