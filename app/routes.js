@@ -32,7 +32,8 @@ router.get('/v4', function (req, res) {
     order_form: data,
     content: content.overview,
     supplier_edit: req.query.supplier_edit,
-    supplier_signatory_invited: req.query.supplier_signatory_invited
+    supplier_signatory_invited: req.query.supplier_signatory_invited,
+    buyer_signed: req.query.buyer_signed
   })
 })
 
@@ -72,6 +73,8 @@ router.post('/v4/:page', function (req, res) {
     query = '?supplier_edit=true'
   } else if (page === 'invite_supplier_signatory') {
     query = '?supplier_signatory_invited=true'
+  } else if (page === 'buyer_signatory') {
+    query = '?buyer_signed=true'
   }
 
   if (req.query.review) {

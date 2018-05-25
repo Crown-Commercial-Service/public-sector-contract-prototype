@@ -25,6 +25,14 @@
       </div>
       {% endif %}
 
+      {% if buyer_signed %}
+      <div class="govuk-box-highlight">
+        <p class="font-medium" style="margin-bottom: 0px">
+          {{ content.sign.buyer_signed }}
+        </p>
+      </div>
+      {% endif %}
+
       <h1 class="heading-xlarge">{{ content.title }}</h1>
 
       {% for paragraph_text in content.introduction %}
