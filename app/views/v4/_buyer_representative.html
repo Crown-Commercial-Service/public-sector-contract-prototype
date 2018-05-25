@@ -1,0 +1,52 @@
+<div class="column-two-thirds" style="padding-left:0;padding-top:10px">
+{% for representative in order_form.buyer_representative %}
+  <dl class="govuk-check-your-answers cya-questions-short">
+    <div>
+      <dt class="cya-question" style="border-bottom:none">
+        Name
+      </dt>
+      <dd class="cya-answer" style="border-bottom:none">
+        {{ representative.name }}
+      </dd>
+      <dd class="cya-change" style="border-bottom:none">
+        <a href="/v4/edit/buyer_representative/{{ representative.id }}">Edit</a>
+      </dd>
+    </div>
+
+    <div>
+      <dt class="cya-question" style="border-bottom:none">
+        Role
+      </dt>
+      <dd class="cya-answer" style="border-bottom:none">
+        <div>
+          {{ representative.role }}
+        </div>
+        </dd>
+      <dd class="cya-change" style="border-bottom:none">
+      </dd>
+    </div>
+
+    <div>
+      <dt class="cya-question" style="border-bottom:none">
+        Email
+      </dt>
+      <dd class="cya-answer" style="border-bottom:none">
+        {{ representative.email }}
+      </dd>
+      <dd class="cya-change" style="border-bottom:none">
+      </dd>
+    </div>
+
+    <div>
+      <dt class="cya-question" style="border-bottom:none">
+        Address
+      </dt>
+      <dd class="cya-answer" style="border-bottom:none">
+        {{ representative.address }}
+      </dd>
+      <dd class="cya-change" style="border-bottom:none">
+      </dd>
+    </div>
+  </dl>
+{% endfor %}
+</div>

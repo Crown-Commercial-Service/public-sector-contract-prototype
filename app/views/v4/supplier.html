@@ -24,12 +24,11 @@
       <br>
       {% endfor %}
     </span>
-    {% for rep in order_form.supplier_representative %}
-    <p>{{ rep.name }}</p>
-    {% endfor %}
 
     {% if not order_form.supplier_representative %}
     <p><a href="add/supplier_representative">Add</a></p>
+    {% else %}
+    {% include "v4/_supplier_representative.html" %}
     {% endif %}
   </div>
 

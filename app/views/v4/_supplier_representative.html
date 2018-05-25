@@ -1,5 +1,5 @@
-<div class="column-two-thirds">
-{% for representative in order_form.buyer_representative %}
+<div class="column-two-thirds" style="padding-left:0;padding-top:10px">
+{% for representative in order_form.supplier_representative %}
   <dl class="govuk-check-your-answers cya-questions-short">
     <div>
       <dt class="cya-question" style="border-bottom:none">
@@ -9,7 +9,7 @@
         {{ representative.name }}
       </dd>
       <dd class="cya-change" style="border-bottom:none">
-        <a href="/v4/edit/buyer_representative/{{ representative.id }}">Edit</a>
+        <a href="/v4/edit/supplier_representative/{{ representative.id }}">Edit</a>
       </dd>
     </div>
 

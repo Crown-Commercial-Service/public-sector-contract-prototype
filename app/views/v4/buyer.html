@@ -29,12 +29,11 @@
     <span class="form-hint">
       {{ content.buyer_representative.hint }}
     </span>
-    {% for representative in order_form.buyer_representative %}
-      {% include "v4/_representative_details.html" %}
-    {% endfor %}
 
     {% if not order_form.buyer_representative %}
     <p><a href="add/buyer_representative" class="">Add</a></p>
+    {% else %}
+    {% include "v4/_buyer_representative.html" %}
     {% endif %}
   </div>
 
