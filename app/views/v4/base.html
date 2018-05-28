@@ -6,6 +6,10 @@
 
 {% block content %}
 
+{% if review %}
+  {% set review_param = "?review=" + review %}
+{% endif %}
+
 <main id="content" role="main">
   <div class="breadcrumbs">
     <ol>

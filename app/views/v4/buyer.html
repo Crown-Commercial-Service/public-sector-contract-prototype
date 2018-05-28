@@ -31,7 +31,7 @@
     </span>
 
     {% if not order_form.buyer_representative %}
-    <p><a href="add/buyer_representative" class="">Add</a></p>
+    <p><a href="add/buyer_representative{{ review_param }}" class="">Add</a></p>
     {% else %}
     {% include "v4/_buyer_representative.html" %}
     {% endif %}

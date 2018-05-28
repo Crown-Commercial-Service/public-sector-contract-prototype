@@ -6,7 +6,7 @@
       {% include "v4/_staff.html" %}
 
       <p style="margin-top:20px">
-        <a href="add/add_staff">Add staff</a>
+        <a href="add/add_staff{{ review_param }}">Add staff</a>
       </p>
     </div>
 
@@ -14,7 +14,11 @@
     <div class="column-full" style="padding-left:0">
       {% include "v4/_subcontractors.html" %}
 
-      <p style="margin-top:20px"><a href="add/add_subcontractors">Add subcontractors</a></p>
+      <p style="margin-top:20px">
+        <a href="add/add_subcontractors{{ review_param }}">
+          Add subcontractors
+        </a>
+      </p>
     </div>
   </div>
 

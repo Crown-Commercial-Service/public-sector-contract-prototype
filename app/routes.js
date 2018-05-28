@@ -96,7 +96,8 @@ router.get('/v4/add/:type', function (req, res) {
     page: 'representative',
     type: type,
     content: content,
-    cancel_path: `/v4/${helpers.additionReturnPath(type)}`
+    cancel_path: `/v4/${helpers.additionReturnPath(type)}`,
+    review: req.query.review
   })
 })
 
@@ -115,8 +116,13 @@ router.post('/v4/add/:type', function (req, res) {
     address: data.authorised_address
   })
 
+  review_param = ''
+  if (req.query.review) {
+    review_param = `&review=${req.query.review}`
+  }
+
   path = helpers.additionReturnPath(type)
-  res.redirect(`/v4/${path}?added=${type}`)
+  res.redirect(`/v4/${path}?added=${type}${review_param}`)
 })
 
 router.get('/v4/edit/:type/:id', function (req, res) {
