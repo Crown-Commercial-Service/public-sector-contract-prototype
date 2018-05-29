@@ -24,7 +24,7 @@
         {% if order_form.buyer_name %}
           {{ order_form.buyer_name }}
         {% else %}
-          GDS
+          {{ content.prefill_buyer_name }}
         {% endif %}
       </div>
       </dd>
@@ -41,7 +41,7 @@
       {% if order_form.buyer_address %}
         {{ order_form.buyer_address }}
       {% else %}
-        White Chapel Building, London
+        {{ content.prefill_buyer_address }}
       {% endif %}
     </dd>
     <dd class="cya-change" style="border-bottom:none">

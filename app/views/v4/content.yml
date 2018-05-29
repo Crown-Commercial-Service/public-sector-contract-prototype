@@ -1,3 +1,9 @@
+prefill_buyer_name: "The Cabinet Office"
+prefill_buyer_address: "70 Whitehall, London"
+prefill_supplier_name: "Cleaning 4 U Ltd."
+prefill_supplier_address: "1 Spotless Street, Sponge City"
+prefill_registration_number: "05218772"
+prefill_duns_number: "678952172"
 overview:
   title: "Award the Office cleaning contract"
   introduction:

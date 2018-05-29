@@ -7,7 +7,7 @@
         {{ content.buyer.form.name.hint }}
       </span>
     </label>
-    <input class="form-control" id="buyer_name" type="text" name="buyer_name" value="{% if order_form.buyer_name %}{{ order_form.buyer_name }}{% else %}GDS{% endif %}">
+    <input class="form-control" id="buyer_name" type="text" name="buyer_name" value="{% if order_form.buyer_name %}{{ order_form.buyer_name }}{% else %}{{ content.prefill_buyer_name }}{% endif %}">
 
     <h2 class="heading-medium">{{ content.buyer.form.address.label }}</h2>
     <label class="form-label" for="buyer_address">
@@ -15,7 +15,7 @@
         {{ content.buyer.form.address.hint }}
       </span>
     </label>
-    <input class="form-control" id="buyer_address" type="text" name="buyer_address" value="{% if order_form.buyer_address %}{{ order_form.buyer_address }}{% else %}White Chapel Building, London{% endif %}">
+    <input class="form-control" id="buyer_address" type="text" name="buyer_address" value="{% if order_form.buyer_address %}{{ order_form.buyer_address }}{% else %}{{ content.prefill_buyer_address }}{% endif %}">
 
     <h2 class="heading-medium">{{ content.buyer.form.invoice_address.label }}</h2>
     <label class="form-label" for="name">
