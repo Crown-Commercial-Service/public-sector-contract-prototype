@@ -76,11 +76,17 @@
     <dt class="cya-question" style="border-bottom:none">
       {{ content.environmental.form.policy.label }}
     </dt>
+    {% if not order_form.files.environmental_policy_files | length %}
     <dd class="cya-answer" style="border-bottom:none">
-      {{ order_form.environmental_policy }}
+    {% else %}
+    <dd class="cya-answer">
+    {% endif %}
+      <p>{{ order_form.environmental_policy }}</p>
+      {% for file in order_form.files.environmental_policy_files %}
+      <p>{{ file }}</p>
+      {% endfor %}
     </dd>
     <dd class="cya-change" style="border-bottom:none">
-
       <a href="/v4/environmental?review={{ buyer_change }}">Change</a>
     </dd>
   </div>
@@ -90,7 +96,10 @@
       {{ content.security.form.policy.label }}
     </dt>
     <dd class="cya-answer">
-      {{ order_form.security_policy }}
+      <p>{{ order_form.security_policy }}</p>
+      {% for file in order_form.files.security_policy_files %}
+      <p>{{ file }}</p>
+      {% endfor %}
     </dd>
     <dd class="cya-change"></dd>
   </div>

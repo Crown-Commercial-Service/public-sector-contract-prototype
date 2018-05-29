@@ -67,3 +67,21 @@ exports.additionReturnPath = function(type) {
 exports.findRepIndex = function(data, type, id) {
   return data[type].findIndex(rep => rep.id == id )
 }
+
+exports.addFile = function(data, page) {
+  if (data.files === undefined) {
+    data.files = {}
+  }
+
+  Object.keys(data).forEach(field => {
+    if (field.includes('_files')) {
+      if (data.files[field] === undefined) {
+        data.files[field] = []
+      }
+
+      if (!data[field] == "") {
+        data.files[field].push(data[field])
+      }
+    }
+  })
+}

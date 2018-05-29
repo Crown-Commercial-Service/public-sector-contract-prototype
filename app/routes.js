@@ -67,6 +67,7 @@ router.post('/v4/:page', function (req, res) {
   page = req.params.page
   req.session.data[`${page}_complete`] = true
 
+  helpers.addFile(req.session.data, page)
   path = helpers.setPath(page, req.query.review)
   query = helpers.setQuery(page)
 

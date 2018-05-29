@@ -8,10 +8,13 @@
       </span>
     </label>
     <textarea class="form-control form-control-3-4" name="special_terms" id="special_terms" rows="10">{{ order_form.special_terms }}</textarea>
-    <label class="form-label" for="security_policy_file" style="margin-top: 20px">
+    {% for file in order_form.files.special_terms_files %}
+    <p>{{ file }}</p>
+    {% endfor %}
+    <label class="form-label" for="special_terms_files" style="margin-top: 20px">
       Upload a file
     </label>
-    <input type="file" id="security_policy_file">
+    <input type="file" name="special_terms_files" id="special_terms_files">
   </div>
 
   {% include "v4/_save_and_continue.html" %}

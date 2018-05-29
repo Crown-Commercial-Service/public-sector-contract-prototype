@@ -8,10 +8,13 @@
       </span>
     </label>
     <input class="form-control" id="environmental_policy" type="text" name="environmental_policy" value="{{ order_form.environmental_policy }}">
-    <label class="form-label" for="environmental_policy_file" style="margin-top: 20px">
+    {% for file in order_form.files.environmental_policy_files %}
+    <p>{{ file }}</p>
+    {% endfor %}
+    <label class="form-label" for="environmental_policy_files" style="margin-top: 20px">
       Upload a file
     </label>
-    <input type="file" id="environmental_policy_file">
+    <input type="file" name="environmental_policy_files" id="environmental_policy_files" class="file-upload-input">
 
     <h2 class="heading-medium">{{ content.security.form.policy.label }}</h2>
     <label class="form-label" for="security_policy">
@@ -20,11 +23,13 @@
       </span>
     </label>
     <input class="form-control" id="security_policy" type="text" name="security_policy" value="{{ order_form.security_policy }}">
-
-    <label class="form-label" for="security_policy_file" style="margin-top: 20px">
+    {% for file in order_form.files.security_policy_files %}
+    <p>{{ file }}</p>
+    {% endfor %}
+    <label class="form-label" for="security_policy_files" style="margin-top: 20px">
       Upload a file
     </label>
-    <input type="file" id="security_policy_file">
+    <input type="file" name="security_policy_files" id="security_policy_files" class="file-upload-input">
   </div>
 
   {% include "v4/_save_and_continue.html" %}

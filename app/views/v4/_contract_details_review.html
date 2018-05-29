@@ -166,7 +166,10 @@
       {{ content.terms.form.special_terms.label }}
     </dt>
     <dd class="cya-answer">
-      {{ order_form.special_terms }}
+      <p>{{ order_form.special_terms }}</p>
+      {% for file in order_form.files.special_terms_files %}
+      <p>{{ file }}</p>
+      {% endfor %}
     </dd>
     <dd class="cya-change">
       <a href="/v4/terms?review={{ contract_change }}">Change</a>
