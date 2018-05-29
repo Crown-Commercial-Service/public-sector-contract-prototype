@@ -67,24 +67,8 @@ router.post('/v4/:page', function (req, res) {
   page = req.params.page
   req.session.data[`${page}_complete`] = true
 
-  query = ''
-  if (page === 'supplier_edit') {
-    query = '?supplier_edit=true'
-  } else if (page === 'invite_supplier_signatory') {
-    query = '?supplier_signatory_invited=true'
-  } else if (page === 'buyer_signatory') {
-    query = '?buyer_signed=true'
-  }
-
-  if (req.query.review) {
-    params = ''
-    if (req.query.review != "all") {
-      params = `?review=${req.query.review}`
-    }
-    path = `/review${params}`
-  } else {
-    path = helpers.nextPage(page)
-  }
+  path = helpers.setPath(page, req.query.review)
+  query = helpers.setQuery(page)
 
   res.redirect(`/v4${path}${query}`)
 })

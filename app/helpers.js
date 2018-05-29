@@ -25,8 +25,31 @@ flow = {
   sensitive: '/review?review=supplier_details'
 }
 
-exports.nextPage = function(current_page) {
-  return flow[current_page] || ''
+exports.setPath = function(page, review) {
+  if (review) {
+    params = ''
+    if (review != "all") {
+      params = `?review=${review}`
+    }
+    path = `/review${params}`
+  } else {
+    path = flow[page] || ''
+  }
+
+  return path
+}
+
+exports.setQuery = function(page) {
+  query = ''
+  if (page === 'supplier_edit') {
+    query = '?supplier_edit=true'
+  } else if (page === 'invite_supplier_signatory') {
+    query = '?supplier_signatory_invited=true'
+  } else if (page === 'buyer_signatory') {
+    query = '?buyer_signed=true'
+  }
+
+  return query
 }
 
 exports.additionReturnPath = function(type) {
