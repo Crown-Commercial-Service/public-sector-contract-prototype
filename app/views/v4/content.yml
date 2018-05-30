@@ -202,7 +202,7 @@ sensitive:
   form:
     information:
       label: "Commercially sensitive information"
-      hint: "The contract will be made publically available. Include details of any information that can't be published and explain why."
+      hint: "The contract will be made publicly available. Include details of any information that can't be published and explain why."
 buyer_representative:
   title: "Who will sign the contract"
   introduction:
