@@ -12,24 +12,28 @@ overview:
     - "When the form's complete, and the buyer and supplier have both signed it, work can start."
   contract:
     text: "1. Contract details"
-    hint: "Information about what's being bought, for example price and delivery."
+    hint:
+      - "Information about what's being bought, for example price and delivery."
     link: "Check and complete contract details"
     review: "Review answers"
   buyer:
     text: "2. Buyer details"
-    hint: "Information about the buyer, for example the security policy."
+    hint:
+      - "Information about the buyer, for example the security policy."
     link: "Check and complete buyer details"
     review: "Review answers"
   supplier:
     text: "3. Supplier details"
-    hint: "Information about the supplier, for example essential staff."
+    hint:
+      - "Information about the supplier, for example essential staff."
     link: "Check and complete supplier details"
     edit: "Invite the supplier to add their details"
     invited: "The supplier has been invited to edit"
     review: "Review answers"
   sign:
     text: "4. Review and sign contract"
-    hint: "You'll be able to sign the contract once you've filled in the form."
+    hint:
+      - "You'll be able to sign the contract once you've filled in the form."
     button_visible: "Check your answers and then sign the contract. Once the buyer and supplier have both signed, work can start."
     buyer: "Sign contract"
     buyer_signed: "You've signed the contract"
@@ -44,94 +48,70 @@ contract_details:
   title: "Contract details"
   introduction:
     - "Answer questions about what's being bought and how."
-  form:
-    reference:
-      label: "Call-off reference number"
-      hint:
-        - "Every call-off contract has a reference number that can help identify it."
-    start_date:
-      label: "Start date"
-      hint: "This is the date the supplier is expected to start work."
-    end_date:
-      label: "End date"
-      hint:
-        - "This is when the contract will end if it isn't extended."
-    initial_period:
-      label: "Initial period"
-      hint: ""
+  reference:
+    label: "Call-off reference number"
+    hint:
+      - "Every call-off contract has a reference number that can help identify it."
+  start_date:
+    label: "Start date"
+    hint:
+      - "This is the date the supplier is expected to start work."
+  end_date:
+    label: "End date"
+    hint:
+      - "This is when the contract will end if it isn't extended."
 progress:
   title: "Contract details"
-  introduction:
-    - ""
-  form:
-    report:
-      label: "Working together"
-      hint: "How the supplier should update the buyer about their progress on the project. For example, should the supplier be onsite 3 days a week for face-to-face meetings or provide weekly written reports."
-    frequency:
-      label: "Progress frequency"
-      hint: "Once a month at the start of the month"
+  report:
+    label: "Working together"
+    hint:
+      - "How the supplier should update the buyer about their progress on the project. For example, should the supplier be onsite 3 days a week for face-to-face meetings or provide weekly written reports."
 what:
   title: "Contract details"
-  introduction:
-    - ""
-  form:
-    details:
-      label: "About the purchase"
-      hint: "Say what's being bought and the delivery dates. You should be able to find this information in the requirements."
+  details:
+    label: "About the purchase"
+    hint:
+      - "Say what's being bought and the delivery dates. You should be able to find this information in the requirements."
 charges:
   title: "Contract details"
-  introduction:
-    - ""
-  form:
-    call_off:
-      label: "Price"
-      hint: "How much it'll cost and details of any pricing structures needed."
+  call_off:
+    label: "Price"
+    hint:
+      - "How much it'll cost and details of any pricing structures needed."
 liability:
   title: "Contract details"
-  introduction:
-    - ""
-  form:
-    max_liability:
-      label: "Maximum liability"
-      hint: "This is the maximum amount the supplier should pay if something goes wrong because of their actions. This figure should be 150% of the estimated yearly charges, but not more than £5 million."
+  max_liability:
+    label: "Maximum liability"
+    hint:
+      - "This is the maximum amount the supplier should pay if something goes wrong because of their actions. This figure should be 150% of the estimated yearly charges, but not more than £5 million."
 terms:
   title: "Contract details"
-  introduction:
-    - ""
-  form:
-    special_terms:
-      label: "Special terms"
-      hint: "Add or upload any additional terms needed to make the contract work. For most contracts this won't be necessary."
+  special_terms:
+    label: "Special terms"
+    hint:
+      - "Add or upload any additional terms needed to make the contract work. For most contracts this won't be necessary."
 guarantee:
   title: "Contract details"
-  introduction:
-    - ""
-  form:
-    label: "Guarantee"
-    hint: "Answer yes if a third party is needed to guarantee the supplier can meet their obligations. For example, this may be necessary because the supplier can't provide enough trading history information or are a very small company."
+  label: "Guarantee"
+  hint:
+    - "Answer yes if a third party is needed to guarantee the supplier can meet their obligations. For example, this may be necessary because the supplier can't provide enough trading history information or are a very small company."
 expenses:
   title: "Contract details"
-  introdution:
-    - ""
-  form:
-    reimbursable:
-      label: "Supplier expenses"
-      hint: "Any supplier expenses that will be refunded, for example travel."
+  reimbursable:
+    label: "Supplier expenses"
+    hint:
+      - "Any supplier expenses that will be refunded, for example travel."
 credits:
   title: "Contract details"
-  introduction:
-    - ""
-  form:
-    service_credits:
-      label: "Insurance"
-      hint: "Details of any insurance policies the buyer wants the supplier to have."
+  service_credits:
+    label: "Insurance"
+    hint:
+      - "Details of any insurance policies the buyer wants the supplier to have."
 payment:
   title: "Contract details"
-  introduction:
-    - ""
-  form:
-    label: "How to pay"
-    hint: "How the supplier will be paid."
+  label: "How to pay"
+  hint:
+    - "How the supplier will be paid."
   methods:
     - "Bank transfer"
     - "Credit card"
@@ -139,76 +119,56 @@ payment:
     - "Other"
 buyer:
   title: "Buyer details"
-  introduction:
-    - ""
-  form:
-    name:
-      label: "Company name"
-      hint: ""
-    address:
-      label: "Address"
-      hint: ""
-    invoice_address:
-      label: "Invoice address"
-      hint: "Add invoice address if it's a different address."
+  name:
+    label: "Company name"
+  address:
+    label: "Address"
+  invoice_address:
+    label: "Invoice address"
+    hint:
+      - "Add invoice address if it's a different address."
 environmental:
   title: "Buyer details"
-  introduction:
-    - ""
-  form:
-    policy:
-      label: "Environmental policy"
-      hint: "Link to or upload the environmental policy."
+  label: "Environmental policy"
+  hint:
+    - "Link to or upload the environmental policy."
 security:
-  title: ""
-  introduction:
-    - ""
-  form:
-    policy:
-      label: "Security policy"
-      hint: "Link to or upload the security policy."
+  label: "Security policy"
+  hint:
+    - "Link to or upload the security policy."
 supplier:
   title: "Supplier details"
-  introduction:
-    - ""
-  form:
-    name:
-      label: "Company name"
-      hint: ""
-    address:
-      label: "Address"
-      hint: ""
+  name:
+    label: "Company name"
+  address:
+    label: "Address"
 contract_manager:
   title: "Supplier details"
-  introduction:
-    - ""
-  hint: "This will be the buyer's regular contact."
+  hint:
+    - "This will be the buyer's regular contact."
 supplier_numbers:
   title: "Supplier details"
-  introduction:
-    - ""
-  form:
-    registration_number:
-      label: "Company registration number"
-      hint: "If a company is registered at Companies House they'll have an 8-digit registration number."
-    duns:
-      label: "DUNS number"
-      hint:
-        - "A DUNS number will help the buyers assess the financial stability and reliability of a company. Include if available."
+  registration_number:
+    label: "Company registration number"
+    hint:
+      - "If a company is registered at Companies House they'll have an 8-digit registration number."
+  duns:
+    label: "DUNS number"
+    hint:
+      - "A DUNS number will help the buyers assess the financial stability and reliability of a company. Include if available."
 sensitive:
   title: "Supplier details"
-  introduction:
-    - ""
-  form:
-    information:
-      label: "Commercially sensitive information"
-      hint: "The contract will be made publicly available. Include details of any information that can't be published and explain why."
+  information:
+    label: "Commercially sensitive information"
+    hint:
+      - "The contract will be made publicly available. Include details of any information that can't be published and explain why."
 buyer_representative:
   title: "Who will sign the contract"
   introduction:
     - "This person must have the authority to sign the contract on their organisation's behalf."
     - "Usually this is a senior member of the organisation."
-  hint: "This person will sign the contract on their organisation's behalf."
+  hint:
+    - "This person will sign the contract on their organisation's behalf."
 supplier_representative:
   title: "Who will sign the contract"
   introduction:
@@ -227,13 +187,16 @@ supplier_subcontractors:
 add_staff:
   title: "Supplier details"
   sub_heading: "Essential staff"
-  hint: "Add the staff that are crucial to the delivery of the contract"
+  hint:
+    - "Add the staff that are crucial to the delivery of the contract"
 add_subcontractors:
   title: "Supplier details"
   sub_heading: "Essential subcontractors"
-  hint: "Add the subcontractors that are crucial to the delivery of the contract"
+  hint:
+    - "Add the subcontractors that are crucial to the delivery of the contract"
 added:
-  hint: "Add the subcontractor roles or people that are crucial to the delivery of the contract."
+  hint:
+    - "Add the subcontractor roles or people that are crucial to the delivery of the contract."
   buyer_representative: "Added the name of the person signing the contract"
   supplier_representative: "Added the name of the person signing the contract"
   add_staff: "Added staff member"
@@ -250,29 +213,9 @@ invite_supplier_signatory:
   email: "Email"
 buyer_signatory:
   title: "Sign the contract"
-  introduction:
-    - ""
-  name:
-    label: "Name"
-    hint: ""
-  role:
-    label: "Role"
-    hint: ""
-  date:
-    label: "Date"
-    hint: ""
+  name: "Name"
+  role: "Role"
+  date: "Date"
   authorised: "I confirm that I have the authority to sign this contract on my organisation's behalf."
-supplier_signatory:
-  title: "Countersign the contract"
-  introduction:
-    - "You must have the authority to sign. Usually this will be a senior person in the company."
-  name:
-    label: "Name"
-    hint: ""
-  date:
-    label: "Date"
-    hint: ""
 review:
   title: "Office cleaning contract"
-  introduction:
-    - ""

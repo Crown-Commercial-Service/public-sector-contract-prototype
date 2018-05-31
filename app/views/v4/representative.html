@@ -1,11 +1,15 @@
 {% if type == 'add_staff' or type == ''%}
 <h2 class="heading-medium">{{ content.add_staff.sub_heading }}</h2>
-<p>{{ content.add_staff.hint }}</p>
+  {% for hint_text in content.add_staff.hint %}
+  <p>{{ hint_text }}</p>
+  {% endfor %}
 {% endif %}
 
 {% if type == 'add_subcontractors' %}
 <h2 class="heading-medium">{{ content.add_subcontractors.sub_heading }}</h2>
-<p>{{ content.add_subcontractors.hint }}</p>
+  {% for hint_text in content.add_subcontractors.hint %}
+  <p>{{ hint_text }}</p>
+  {% endfor %}
 {% endif %}
 
 <form class="form" action="" method="post">

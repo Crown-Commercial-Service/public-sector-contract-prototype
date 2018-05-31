@@ -1,21 +1,29 @@
 <span class="form-hint">Step 1 of 9</span>
 <form class="form" action="" method="post">
   <div class="form-group">
-    <h2 class="heading-medium-first">{{ content.contract_details.form.reference.label }}</h2>
+    <h2 class="heading-medium-first">{{ content.contract_details.reference.label }}</h2>
     <label class="form-label" for="reference_number">
+      {% if content.contract_details.reference.hint %}
       <span class="form-hint">
-        {% for hint_text in content.contract_details.form.reference.hint %}
+        {% for hint_text in content.contract_details.reference.hint %}
         {{ hint_text }}<br>
         {% endfor %}
       </span>
+      {% endif %}
     </label>
     <input class="form-control" id="reference_number" type="text" name="reference_number"
     value="{% if order_form.reference_number %}{{ order_form.reference_number }}{% else %}RM05625751{% endif %}">
 
     <fieldset>
       <legend>
-        <h2 class="heading-medium">{{ content.contract_details.form.start_date.label }}</h2>
-        <span class="form-hint">{{ content.contract_details.form.start_date.hint }}</span>
+        <h2 class="heading-medium">{{ content.contract_details.start_date.label }}</h2>
+        {% if content.contract_details.start_date.hint %}
+        <span class="form-hint">
+          {% for hint_text in content.contract_details.start_date.hint %}
+          {{ hint_text }}<br>
+          {% endfor %}
+        </span>
+        {% endif %}
       </legend>
       <div class="form-date">
         <div class="form-group form-group-day">
@@ -35,8 +43,14 @@
 
     <fieldset>
       <legend>
-        <h2 class="heading-medium">{{ content.contract_details.form.end_date.label  }}</h2>
-        <span class="form-hint">{{ content.contract_details.form.end_date.hint }}</span>
+        <h2 class="heading-medium">{{ content.contract_details.end_date.label  }}</h2>
+        {% if content.contract_details.end_date.hint %}
+        <span class="form-hint">
+          {% for hint_text in content.contract_details.end_date.hint %}
+          {{ hint_text }}<br>
+          {% endfor %}
+        </span>
+        {% endif %}
       </legend>
       <div class="form-date">
         <div class="form-group form-group-day">

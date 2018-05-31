@@ -1,11 +1,14 @@
 <span class="form-hint">Step 7 of 9</span>
 <form class="form" action="" method="post">
   <div class="form-group">
-    <h2 class="heading-medium-first">{{ content.guarantee.form.label }}</h2>
+    <h2 class="heading-medium-first">{{ content.guarantee.label }}</h2>
+    {% if content.guarantee.hint %}
     <span class="form-hint">
-      {{ content.guarantee.form.hint }}
+      {% for hint_text in content.guarantee.hint %}
+      {{ hint_text }}<br>
+      {% endfor %}
     </span>
-
+    {% endif %}
     <div class="multiple-choice" data-target="mod-yes">
       {% if order_form.guarantee == "Yes" %}
       <input id="yes" type="radio" name="guarantee" value="Yes" checked="checked">

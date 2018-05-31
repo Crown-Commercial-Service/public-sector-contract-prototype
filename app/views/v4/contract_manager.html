@@ -1,7 +1,11 @@
 <span class="form-hint">Step 2 of 5</span>
 <form class="form" action="" method="post">
   <h2 class="heading-medium-first">Contract manager</h2>
-  <p>{{ content.contract_manager.hint }}</p>
+  {% if content.contract_manager.hint %}
+    {% for hint_text in content.contract_manager.hint %}
+    <p>{{ hint_text }}</p>
+    {% endfor %}
+  {% endif %}
 
   <div class="form-group">
     <h2 class="heading-medium">Name</h2>

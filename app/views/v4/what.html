@@ -1,11 +1,15 @@
 <span class="form-hint">Step 2 of 9</span>
 <form class="form" action="" method="post">
   <div class="form-group">
-    <h2 class="heading-medium-first">{{ content.what.form.details.label }}</h2>
+    <h2 class="heading-medium-first">{{ content.what.details.label }}</h2>
     <label class="form-label" for="what">
+      {% if content.what.details.hint %}
       <span class="form-hint">
-        {{ content.what.form.details.hint }}
+        {% for hint_text in content.what.details.hint %}
+        {{ hint_text }}<br>
+        {% endfor %}
       </span>
+      {% endif %}
     </label>
     <textarea class="form-control form-control-3-4" name="what" id="what" rows="20">{{ order_form.what }}</textarea>
   </div>

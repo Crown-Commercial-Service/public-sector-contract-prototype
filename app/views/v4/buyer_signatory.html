@@ -1,15 +1,14 @@
 <form class="form" action="" method="post">
   <div class="form-group">
-    <h2 class="heading-medium">{{ content.buyer_signatory.name.label }}</h2>
+    <h2 class="heading-medium">{{ content.buyer_signatory.name }}</h2>
     <p>{{ order_form.buyer_representative[0].name }}</p>
 
-    <h2 class="heading-medium">{{ content.buyer_signatory.role.label }}</h2>
+    <h2 class="heading-medium">{{ content.buyer_signatory.role }}</h2>
     <p>{{ order_form.buyer_representative[0].role }}</p>
 
     <fieldset>
       <legend>
-        <h2 class="heading-medium">{{ content.buyer_signatory.date.label  }}</h2>
-        <span class="form-hint">{{ content.buyer_signatory.date.hint }}</span>
+        <h2 class="heading-medium">{{ content.buyer_signatory.date  }}</h2>
       </legend>
       <div class="form-date">
         <div class="form-group form-group-day">

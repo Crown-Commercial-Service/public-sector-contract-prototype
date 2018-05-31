@@ -1,30 +1,22 @@
 <span class="form-hint">Step 1 of 5</span>
 <form class="form" action="" method="post">
   <div class="form-group">
-    <h2 class="heading-medium-first">{{ content.supplier.form.name.label }}</h2>
-    <label class="form-label" for="supplier_name">
-      <span class="form-hint">
-        {{ content.supplier.form.name.hint }}
-      </span>
-    </label>
+    <h2 class="heading-medium-first">{{ content.supplier.name.label }}</h2>
+    <label class="form-label" for="supplier_name"></label>
     <input class="form-control" id="supplier_name" type="text" name="supplier_name" value="{% if order_form.supplier_name %}{{ order_form.supplier_name }}{% else %}{{ content.prefill_supplier_name }}{% endif %}">
 
-    <h2 class="heading-medium">{{ content.supplier.form.address.label }}</h2>
-    <label class="form-label" for="supplier_address">
-      <span class="form-hint">
-        {{ content.supplier.form.address.hint }}
-      </span>
-    </label>
+    <h2 class="heading-medium">{{ content.supplier.address.label }}</h2>
+    <label class="form-label" for="supplier_address"></label>
     <input class="form-control" id="supplier_address" type="text" name="supplier_address" value="{% if order_form.supplier_address %}{{ order_form.supplier_address }}{% else %}{{ content.prefill_supplier_address }}{% endif %}">
 
     <h2 class="heading-medium">{{ content.supplier_representative.title }}</h2>
+    {% if content.supplier_representative.hint %}
     <span class="form-hint">
       {% for hint_text in content.supplier_representative.hint %}
-      {{ hint_text }}
-      <br>
+      {{ hint_text }}<br>
       {% endfor %}
     </span>
-
+    {% endif %}
     {% if not order_form.supplier_representative %}
     <p><a href="add/supplier_representative{{ review_param }}">Add</a></p>
     {% else %}

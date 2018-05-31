@@ -1,11 +1,15 @@
 <span class="form-hint">Step 5 of 5</span>
 <form class="form" action="" method="post">
   <div class="form-group">
-    <h2 class="heading-medium-first">{{ content.sensitive.form.information.label }}</h2>
+    <h2 class="heading-medium-first">{{ content.sensitive.information.label }}</h2>
     <label class="form-label" for="sensitive_information">
+      {% if content.sensitive.information.hint %}
       <span class="form-hint">
-        {{ content.sensitive.form.information.hint }}
+        {% for hint_text in content.sensitive.information.hint %}
+        {{ hint_text }}<br>
+        {% endfor %}
       </span>
+      {% endif %}
     </label>
     <textarea class="form-control form-control-3-4" name="sensitive_information" id="sensitive_information" rows="10">{{ order_form.sensitive_information }}</textarea>
   </div>

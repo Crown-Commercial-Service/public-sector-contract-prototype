@@ -1,11 +1,15 @@
 <span class="form-hint">Step 8 of 9</span>
 <form class="form" action="" method="post">
   <div class="form-group">
-    <h2 class="heading-medium-first">{{ content.progress.form.report.label }}</h2>
+    <h2 class="heading-medium-first">{{ content.progress.report.label }}</h2>
     <label class="form-label" for="progress_report">
+      {% if content.progress.report.hint %}
       <span class="form-hint">
-        {{ content.progress.form.report.hint }}
+        {% for hint_text in content.progress.report.hint %}
+        {{ hint_text }}<br>
+        {% endfor %}
       </span>
+      {% endif %}
     </label>
     <textarea class="form-control form-control-3-4" name="progress_report" id="progress_report" rows="10">{{ order_form.progress_report }}</textarea>
   </div>

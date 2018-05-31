@@ -1,11 +1,15 @@
 <span class="form-hint">Step 2 of 2</span>
 <form class="form" action="" method="post">
   <div class="form-group">
-    <h2 class="heading-medium-first">{{ content.environmental.form.policy.label }}</h2>
+    <h2 class="heading-medium-first">{{ content.environmental.label }}</h2>
     <label class="form-label" for="environmental_policy">
+      {% if content.environmental.hint %}
       <span class="form-hint">
-        {{ content.environmental.form.policy.hint }}
+        {% for hint_text in content.environmental.hint %}
+        {{ hint_text }}<br>
+        {% endfor %}
       </span>
+      {% endif %}
     </label>
     <input class="form-control" id="environmental_policy" type="text" name="environmental_policy" value="{{ order_form.environmental_policy }}">
     {% for file in order_form.files.environmental_policy_files %}
@@ -16,11 +20,15 @@
     </label>
     <input type="file" name="environmental_policy_files" id="environmental_policy_files" class="file-upload-input">
 
-    <h2 class="heading-medium">{{ content.security.form.policy.label }}</h2>
+    <h2 class="heading-medium">{{ content.security.label }}</h2>
     <label class="form-label" for="security_policy">
+      {% if content.security.hint %}
       <span class="form-hint">
-        {{ content.security.form.policy.hint }}
+        {% for hint_text in content.security.hint %}
+        {{ hint_text }}<br>
+        {% endfor %}
       </span>
+      {% endif %}
     </label>
     <input class="form-control" id="security_policy" type="text" name="security_policy" value="{{ order_form.security_policy }}">
     {% for file in order_form.files.security_policy_files %}

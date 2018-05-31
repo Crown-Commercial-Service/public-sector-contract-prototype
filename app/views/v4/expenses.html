@@ -1,11 +1,15 @@
 <span class="form-hint">Step 4 of 9</span>
 <form class="form" action="" method="post">
   <div class="form-group">
-    <h2 class="heading-medium-first">{{ content.expenses.form.reimbursable.label }}</h2>
+    <h2 class="heading-medium-first">{{ content.expenses.reimbursable.label }}</h2>
     <label class="form-label" for="expenses">
+      {% if content.expenses.reimbursable.hint %}
       <span class="form-hint">
-        {{ content.expenses.form.reimbursable.hint }}
+        {% for hint_text in content.expenses.reimbursable.hint %}
+        {{ hint_text }}<br>
+        {% endfor %}
       </span>
+      {% endif %}
     </label>
     <textarea class="form-control form-control-3-4" name="expenses" id="expenses" rows="10">{{ order_form.expenses }}</textarea>
   </div>

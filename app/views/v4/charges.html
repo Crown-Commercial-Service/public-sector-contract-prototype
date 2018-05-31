@@ -1,19 +1,27 @@
 <span class="form-hint">Step 3 of 9</span>
 <form class="form" action="" method="post">
   <div class="form-group">
-    <h2 class="heading-medium-first">{{ content.charges.form.call_off.label }}</h2>
+    <h2 class="heading-medium-first">{{ content.charges.call_off.label }}</h2>
     <label class="form-label" for="call_off_charges">
+      {% if content.charges.call_off.hint %}
       <span class="form-hint">
-        {{ content.charges.form.call_off.hint }}
+        {% for hint_text in content.charges.call_off.hint %}
+        {{ hint_text }}<br>
+        {% endfor %}
       </span>
+      {% endif %}
     </label>
     <textarea class="form-control form-control-3-4" name="call_off_charges" id="call_off_charges" rows="10">{{ order_form.call_off_charges }}</textarea>
 
-    <h2 class="heading-medium">{{ content.liability.form.max_liability.label }}</h2>
+    <h2 class="heading-medium">{{ content.liability.max_liability.label }}</h2>
     <label class="form-label" for="liability">
+      {% if content.liability.max_liability.hint %}
       <span class="form-hint">
-        {{ content.liability.form.max_liability.hint }}
+        {% for hint_text in content.liability.max_liability.hint %}
+        {{ hint_text }}<br>
+        {% endfor %}
       </span>
+      {% endif %}
     </label>
     <input class="form-control" id="liability" type="text" name="liability" value="{{ order_form.liability }}">
   </div>

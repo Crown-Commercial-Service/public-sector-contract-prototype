@@ -17,7 +17,7 @@
 
   <div>
     <dt class="cya-question" style="border-bottom:none">
-      {{ content.supplier.form.name.label }}
+      {{ content.supplier.name.label }}
     </dt>
     <dd class="cya-answer" style="border-bottom:none">
       <div>
@@ -35,7 +35,7 @@
 
   <div>
     <dt class="cya-question" style="border-bottom:none">
-      {{ content.supplier.form.address.label }}
+      {{ content.supplier.address.label }}
     </dt>
     <dd class="cya-answer" style="border-bottom:none">
       {% if order_form.supplier_address %}
@@ -78,7 +78,7 @@
 
   <div>
     <dt class="cya-question" style="border-bottom:none">
-      {{ content.supplier_numbers.form.registration_number.label }}
+      {{ content.supplier_numbers.registration_number.label }}
     </dt>
     <dd class="cya-answer" style="border-bottom:none">
       {% if order_form.registration_number %}
@@ -94,7 +94,7 @@
 
   <div>
     <dt class="cya-question">
-      {{ content.supplier_numbers.form.duns.label }}
+      {{ content.supplier_numbers.duns.label }}
     </dt>
     <dd class="cya-answer">
       {% if order_form.duns %}
@@ -136,7 +136,7 @@
 
   <div>
     <dt class="cya-question">
-      {{ content.sensitive.form.information.label }}
+      {{ content.sensitive.information.label }}
     </dt>
     <dd class="cya-answer">
       {{ order_form.sensitive_information }}

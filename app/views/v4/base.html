@@ -37,9 +37,11 @@
 
       <h1 class="heading-xlarge">{{ content[header].title }}</h1>
 
-      {% for paragraph_text in content[header].introduction %}
-      <p>{{ paragraph_text }}</p>
-      {% endfor %}
+      {% if content[header].introduction %}
+        {% for paragraph_text in content[header].introduction %}
+        <p>{{ paragraph_text }}</p>
+        {% endfor %}
+      {% endif %}
 
       {% include "v4/" + page + ".html" %}
 
