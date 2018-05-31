@@ -79,7 +79,7 @@ exports.addFile = function(data, page) {
         data.files[field] = []
       }
 
-      if (!data[field] == "") {
+      if (!data[field] == "" && !data.files[field].includes(data[field])) {
         data.files[field].push(data[field])
       }
     }
