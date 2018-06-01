@@ -2,7 +2,7 @@
   <div class="column-full">
     {% if review == "contract_details" or not review %}
     <div>
-      {% include "v4/_contract_details_review.html" %}
+      {% include "v4/includes/_contract_details_review.html" %}
     </div>
     {% endif %}
 
@@ -12,7 +12,7 @@
     {% else %}
     <div>
     {% endif %}
-      {% include "v4/_buyer_details_review.html" %}
+      {% include "v4/includes/_buyer_details_review.html" %}
     </div>
     {% endif %}
 
@@ -22,7 +22,7 @@
     {% else %}
     <div>
     {% endif %}
-      {% include "v4/_supplier_details_review.html" %}
+      {% include "v4/includes/_supplier_details_review.html" %}
     </div>
     {% endif %}
   </div>

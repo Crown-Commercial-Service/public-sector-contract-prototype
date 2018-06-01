@@ -68,7 +68,7 @@
     </dt>
     <dd class="cya-answer">
       {% if order_form.supplier_contract_manager_name %}
-        {% include "v4/_supplier_contract_manager.html" %}
+        {% include "v4/includes/_supplier_contract_manager_review.html" %}
       {% endif %}
     </dd>
     <dd class="cya-change">
@@ -113,7 +113,7 @@
     </dt>
     <dd class="cya-answer" style="border-bottom:none">
       {% if order_form.add_staff %}
-        {% include "v4/_staff.html" %}
+        {% include "v4/includes/_staff.html" %}
       {% endif %}
     </dd>
     <dd class="cya-change" style="border-bottom:none">
@@ -127,7 +127,7 @@
     </dt>
     <dd class="cya-answer">
       {% if order_form.add_subcontractors %}
-        {% include "v4/_subcontractors.html" %}
+        {% include "v4/includes/_subcontractors.html" %}
       {% endif %}
     </dd>
     <dd class="cya-change">

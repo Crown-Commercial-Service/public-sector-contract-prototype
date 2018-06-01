@@ -11,7 +11,7 @@
 {% endif %}
 
 <main id="content" role="main">
-  {% if not page == "role" %}
+  {% if page != "role" %}
   <div class="breadcrumbs">
     <ol>
       <li><a href="/v4">Home</a></li>
@@ -27,7 +27,7 @@
       {% set column_class = "column-two-thirds" %}
     {% endif %}
     <div class="{{ column_class }}">
-      {% if not page == "role" %}
+      {% if page != "role" %}
       <a href="/v4/back" class="link-back">Back</a>
       {% endif %}
 
@@ -47,7 +47,7 @@
         {% endfor %}
       {% endif %}
 
-      {% include "v4/" + page + ".html" %}
+      {% include "v4/includes/_" + page + ".html" %}
 
     </div>
   </div>

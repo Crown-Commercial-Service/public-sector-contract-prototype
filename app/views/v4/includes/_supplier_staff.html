@@ -3,7 +3,7 @@
   <div class="form-group">
     <h2 class="heading-medium-first">Essential staff</h2>
     <div class="column-full" style="padding-left:0;margin-bottom:20px">
-      {% include "v4/_staff.html" %}
+      {% include "v4/includes/_staff.html" %}
 
       <p style="margin-top:20px">
         <a href="add/add_staff{{ review_param }}">Add staff</a>
@@ -12,7 +12,7 @@
 
     <h2 class="heading-medium">Essential subcontractors</h2>
     <div class="column-full" style="padding-left:0">
-      {% include "v4/_subcontractors.html" %}
+      {% include "v4/includes/_subcontractors.html" %}
 
       <p style="margin-top:20px">
         <a href="add/add_subcontractors{{ review_param }}">
@@ -22,5 +22,5 @@
     </div>
   </div>
 
-  {% include "v4/_save_and_continue.html" %}
+  {% include "v4/includes/_save_and_continue.html" %}
 </form>
