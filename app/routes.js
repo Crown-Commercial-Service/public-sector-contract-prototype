@@ -21,20 +21,24 @@ router.get('/', function (req, res) {
 // v4 routes
 
 router.get('/v4', function (req, res) {
-  req.session.data.visited = []
-  data = req.session.data
+  if (req.session.data.role === undefined) {
+    res.redirect('/v4/role')
+  } else {
+    req.session.data.visited = []
+    data = req.session.data
 
-  console.log(`*********\n`)
-  console.log(data)
-  console.log(`*********\n`)
+    console.log(`*********\n`)
+    console.log(data)
+    console.log(`*********\n`)
 
-  res.render('v4/overview', {
-    order_form: data,
-    content: content.overview,
-    supplier_edit: req.query.supplier_edit,
-    supplier_signatory_invited: req.query.supplier_signatory_invited,
-    buyer_signed: req.query.buyer_signed
-  })
+    res.render('v4/overview', {
+      order_form: data,
+      content: content.overview,
+      supplier_edit: req.query.supplier_edit,
+      supplier_signatory_invited: req.query.supplier_signatory_invited,
+      buyer_signed: req.query.buyer_signed
+    })
+  }
 })
 
 router.get('/v4/back', function (req, res) {

@@ -1,10 +1,16 @@
-<div class="form-group">
-  {% if review %}
-    {% set save_text = "Save" %}
-  {% else %}
-    {% set save_text = "Save and continue" %}
-  {% endif %}
+{% if review %}
+  {% set save_text = "Save" %}
+{% else %}
+  {% set save_text = "Save and continue" %}
+{% endif %}
 
+{% if page == "role" %}
+  {% set cancel_link = "/" %}
+{% else %}
+  {% set cancel_link = "/v4" %}
+{% endif %}
+
+<div class="form-group">
   <p><input class="button button-start" type="submit" value="{{ save_text }}"></p>
-  <p><a href="/v4">Cancel</a></p>
+  <p><a href="{{ cancel_link }}">Cancel</a></p>
 </div>

@@ -11,12 +11,14 @@
 {% endif %}
 
 <main id="content" role="main">
+  {% if not page == "role" %}
   <div class="breadcrumbs">
     <ol>
       <li><a href="/v4">Home</a></li>
       <li>{{ content[header].title }}</li>
     </ol>
   </div>
+  {% endif %}
 
   <div class="grid-row">
     {% if page == "review" %}
@@ -25,7 +27,9 @@
       {% set column_class = "column-two-thirds" %}
     {% endif %}
     <div class="{{ column_class }}">
+      {% if not page == "role" %}
       <a href="/v4/back" class="link-back">Back</a>
+      {% endif %}
 
       {% if added %}
       <div class="govuk-box-highlight">
