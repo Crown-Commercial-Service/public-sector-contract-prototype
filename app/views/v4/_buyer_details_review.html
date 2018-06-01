@@ -73,6 +73,20 @@
   </div>
 
   <div>
+    <dt class="cya-question">
+      Contract manager
+    </dt>
+    <dd class="cya-answer">
+      {% if order_form.buyer_contract_manager_name %}
+        {% include "v4/_buyer_contract_manager.html" %}
+      {% endif %}
+    </dd>
+    <dd class="cya-change">
+      <a href="/v4/buyer_contract_manager?review={{ buyer_change }}">Change</a>
+    </dd>
+  </div>
+
+  <div>
     <dt class="cya-question" style="border-bottom:none">
       {{ content.environmental.label }}
     </dt>
