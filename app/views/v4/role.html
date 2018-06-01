@@ -17,12 +17,12 @@
     </div>
 
     <div class="multiple-choice" data-target="mod-yes">
-      {% if order_form.guarantee == "supplier" %}
+      {% if order_form.role == "supplier" %}
       <input id="supplier" type="radio" name="role" value="supplier" checked="checked">
       {% else %}
-      <input id="supplier" type="radio" name="role" value="supplier" disabled>
+      <input id="supplier" type="radio" name="role" value="supplier">
       {% endif %}
-      <label for="supplier" disabled>Supplier</label>
+      <label for="supplier">Supplier</label>
     </div>
   </div>
 
