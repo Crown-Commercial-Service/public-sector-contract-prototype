@@ -160,7 +160,7 @@
         {% endif %}
 
         {% if (order_form.terms_complete and order_form.environmental_complete and order_form.sensitive_complete) and not order_form.buyer_signatory_complete %}
-        <p><a class="button" type="submit" href="v4/buyer_signatory">{{ content.sign.buyer }}</a></p>
+        <p><a class="button" type="submit" href="v4/signatory">{{ content.sign.buyer }}</a></p>
         {% endif %}
       </div>
       {% else %}
