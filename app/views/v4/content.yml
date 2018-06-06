@@ -21,7 +21,7 @@ overview:
     - "fill in your details"
     - "review the contract"
     -  "sign the contract"
-    - "Some of the information was in the framework agreement, so we've put it into the form for you."
+    - "Some information was in the framework agreement, so we've put it into the form for you."
     - "When the form's complete, and the buyer and supplier have both signed it, work can start."
   contract:
     text: "1. Contract details"
