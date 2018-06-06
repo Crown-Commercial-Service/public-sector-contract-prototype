@@ -1,7 +1,7 @@
 role:
   title: "Pick role"
   hint:
-    - "This is the role you will be filling out the contract as"
+    - "What's your role?"
 prefill_buyer_name: "The Cabinet Office"
 prefill_buyer_address: "70 Whitehall, London"
 prefill_supplier_name: "Cleaning 4 U Ltd."
