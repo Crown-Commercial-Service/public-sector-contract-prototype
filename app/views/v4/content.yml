@@ -46,6 +46,14 @@ overview:
     edit: "Invite the supplier to add their details"
     invited: "The supplier has been invited to edit"
     review: "Review answers"
+    
+  supplier_supplier:
+    supplier_text: "3. Supplier details"
+    supplier_hint:
+      - "The buyer has invited you to add your details to the contract before you sign it."
+    supplier_link: "Check and complete supplier details"
+    review: "Review the whole contract"
+    
   sign:
     text: "4. Review and sign contract"
     hint:
