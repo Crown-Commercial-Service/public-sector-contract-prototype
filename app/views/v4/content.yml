@@ -64,7 +64,7 @@ overview:
     buyer_invited: "The supplier has been invited to edit"
     supplier_invited: ""
     buyer_review: "Review answers"
-    supplier_review: "Review the whole contract and sign"
+    supplier_review: "Review the whole contract"
   sign:
     text: "Review and sign contract"
     hint:
