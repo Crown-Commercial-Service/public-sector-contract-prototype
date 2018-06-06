@@ -3,7 +3,7 @@ role:
   hint:
     - "What's your role?"
 prefill:
-  buyer_name: "The Cabinet Office"
+  buyer_name: "Cabinet Office"
   buyer_address: "70 Whitehall, London"
   supplier_name: "Cleaning 4 U Ltd."
   supplier_address: "1 Spotless Street, Sponge City"
