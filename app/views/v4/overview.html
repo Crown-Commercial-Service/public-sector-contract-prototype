@@ -116,7 +116,12 @@
         <span class="task-completed">Completed</span>
         {% endif %}
       </h2>
+
+      {% if order_form.role == 'buyer' %}
       <div class="list-number">
+      {% else %}
+      <div>
+      {% endif %}
         {% for hint_text in content.supplier[role + "_hint"] %}
         <p>{{ hint_text }}</p>
         {% endfor %}
@@ -168,7 +173,7 @@
         {% endif %}
       </div>
       {% elif order_form.sensitive_complete %}
-      <p><a class="button button-start" type="submit" href="v4/signatory">Sign</a></p>
+      <p><a class="button button-start" type="submit" href="v4/signatory" disabled>Sign</a></p>
       {% endif %}
     </div>
   </div>
