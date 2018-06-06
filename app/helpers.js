@@ -40,14 +40,14 @@ exports.setPath = function(page, review) {
   return path
 }
 
-exports.setQuery = function(page) {
+exports.setQuery = function(page, role) {
   query = ''
   if (page === 'supplier_edit') {
     query = '?supplier_edit=true'
   } else if (page === 'invite_supplier_signatory') {
     query = '?supplier_signatory_invited=true'
-  } else if (page === 'buyer_signatory') {
-    query = '?buyer_signed=true'
+  } else if (page === 'signatory') {
+    query = `?signed=${role}`
   }
 
   return query

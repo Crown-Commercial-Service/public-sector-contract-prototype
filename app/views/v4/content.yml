@@ -70,7 +70,7 @@ overview:
       - "You'll be able to sign the contract once you've filled in the form."
     button_visible: "Check your answers and then sign the contract. Once the buyer and supplier have both signed, work can start."
     buyer: "Sign contract"
-    buyer_signed: "You've signed the contract"
+    signed: "You've signed the contract"
     supplier_sign: "Invite the supplier to sign the contract"
     supplier_invited: "The supplier has been invited to sign the contract"
     supplier_signed: "The supplier has signed the contract"

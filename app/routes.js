@@ -36,7 +36,7 @@ router.get('/v4', function (req, res) {
       content: content.overview,
       supplier_edit: req.query.supplier_edit,
       supplier_signatory_invited: req.query.supplier_signatory_invited,
-      buyer_signed: req.query.buyer_signed
+      signed: req.query.signed
     })
   }
 })
@@ -73,7 +73,7 @@ router.post('/v4/:page', function (req, res) {
 
   helpers.addFile(req.session.data, page)
   path = helpers.setPath(page, req.query.review)
-  query = helpers.setQuery(page)
+  query = helpers.setQuery(page, req.session.data.role)
 
   res.redirect(`/v4${path}${query}`)
 })

@@ -27,10 +27,10 @@
       </div>
       {% endif %}
 
-      {% if buyer_signed %}
+      {% if signed %}
       <div class="govuk-box-highlight">
         <p class="font-medium" style="margin-bottom: 0px">
-          {{ content.sign.buyer_signed }}
+          {{ content.sign.signed }}
         </p>
       </div>
       {% endif %}
@@ -142,7 +142,7 @@
         {% if order_form.buyer_signatory_complete and order_form.invite_supplier_signatory_complete %}
         <span class="task-completed">Completed</span>
         {% elif order_form.buyer_signatory_complete %}
-        <span class="task-completed">{{ content.sign.buyer_signed }}</span>
+        <span class="task-completed">{{ content.sign.signed }}</span>
         {% endif %}
       </h2>
       <div class="list-number">
