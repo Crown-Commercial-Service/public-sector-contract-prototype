@@ -35,6 +35,18 @@
       </div>
       {% endif %}
 
+      {% if order_form.supplier_submitted %}
+      <div class="govuk-box-highlight">
+        <p class="font-medium" style="margin-bottom: 0px">
+          {{ content.supplier_submit.title }}<br>
+          <br>
+          {% for intro_text in content.supplier_submit.introduction %}
+            {{ intro_text }}<br>
+          {% endfor %}
+        </p>
+      </div>
+      {% endif %}
+
       <h1 class="heading-xlarge">{{ content[role + "_title"] }}</h1>
 
       {% for paragraph_text in content[role + "_introduction"] %}
@@ -172,7 +184,7 @@
         <p><a class="button" type="submit" href="v4/signatory">{{ content.sign.buyer }}</a></p>
         {% endif %}
       </div>
-      {% elif order_form.sensitive_complete %}
+      {% elif order_form.supplier_submitted %}
       <p><a class="button button-start" type="submit" href="v4/signatory" disabled>Sign</a></p>
       {% endif %}
     </div>

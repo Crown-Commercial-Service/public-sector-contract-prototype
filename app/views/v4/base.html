@@ -41,8 +41,9 @@
 
       <h1 class="heading-xlarge">{{ content[header].title }}</h1>
 
-      {% if content[header].introduction %}
-        {% for paragraph_text in content[header].introduction %}
+      {% set introduction = content[header].introduction or content[header][order_form.role + "_introduction"] %}
+      {% if introduction %}
+        {% for paragraph_text in introduction %}
         <p>{{ paragraph_text }}</p>
         {% endfor %}
       {% endif %}

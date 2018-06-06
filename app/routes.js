@@ -25,6 +25,11 @@ router.get('/v4', function (req, res) {
     res.redirect('/v4/role')
   } else {
     req.session.data.visited = []
+
+    if (req.query.supplier_submitted) {
+      req.session.data.supplier_submitted = true
+    }
+
     data = req.session.data
 
     console.log(`*********\n`)

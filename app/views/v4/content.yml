@@ -75,6 +75,10 @@ overview:
     supplier_sign: "Invite the supplier to sign the contract"
     supplier_invited: "The supplier has been invited to sign the contract"
     supplier_signed: "The supplier has signed the contract"
+  supplier_submit:
+    title: "Contract submitted"
+    introduction:
+      - "The buyer will check your details and then invite you to sign the contract. Once it's signed, work can start."
 contract_overview:
   title: "Order form"
   introduction:
@@ -244,11 +248,6 @@ supplier_edit:
   title: "Invite the supplier to edit"
   introduction:
     - "The supplier will be sent an email and invited to edit their details. You'll be able to review their answers once they've done this."
-supplier_submit:
-  title: "Contract submitted"
-  introduction:
-    - "The buyer will check your details and then invite you to sign the contract. Once it's signed, work can start."
-  email: "Email"
 invite_supplier_signatory:
   title: "Invite the supplier to sign"
   supplier_title: "Invite the buyer to sign"
@@ -265,6 +264,6 @@ supplier_signatory:
   authorised: "I confirm that I have the authority to sign this contract on my organisation's behalf."
 review:
   title: "Office cleaning contract"
-  supplier_introduction: 
-    - "Review and then submit the contract." 
+  supplier_introduction:
+    - "Review and then submit the contract."
     - "The buyer will check your details and then invite you to sign the contract."
