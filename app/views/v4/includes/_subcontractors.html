@@ -14,7 +14,6 @@
     </dd>
   </div>
 
-  {% if page == "review" and loop.index == order_form.add_subcontractors.length %}
   <div>
     <dt class="cya-question" style="border-bottom:none">
       Email
@@ -25,13 +24,25 @@
     <dd class="cya-change" style="border-bottom:none">
     </dd>
   </div>
+
+  {% if page == "review" and loop.index == order_form.add_subcontractors.length %}
+  <div>
+    <dt class="cya-question" style="border-bottom:none">
+      Phone
+    </dt>
+    <dd class="cya-answer" style="border-bottom:none">
+      {{ subcontractor.phone }}
+    </dd>
+    <dd class="cya-change" style="border-bottom:none">
+    </dd>
+  </div>
   {% else %}
   <div>
     <dt class="cya-question">
-      Email
+      Phone
     </dt>
     <dd class="cya-answer">
-      {{ subcontractor.email }}
+      {{ subcontractor.phone }}
     </dd>
     <dd class="cya-change">
     </dd>

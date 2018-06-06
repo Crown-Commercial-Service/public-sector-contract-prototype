@@ -102,6 +102,7 @@ router.post('/v4/add/:type', function (req, res) {
     name: data.authorised_name,
     role: data.authorised_role,
     email: data.authorised_email,
+    phone: data.authorised_phone,
     address: data.authorised_address
   })
 
@@ -141,6 +142,7 @@ router.post('/v4/edit/:type/:id', function (req, res) {
     name: data.authorised_name,
     role: data.authorised_role,
     email: data.authorised_email,
+    phone: data.authorised_phone,
     address: data.authorised_address
   })
 
