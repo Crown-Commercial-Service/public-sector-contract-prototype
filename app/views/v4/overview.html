@@ -6,6 +6,8 @@
 
 {% block content %}
 
+{% set role = order_form.role %}
+
 <main id="content" role="main">
   <div class="grid-row">
     <div class="column-two-thirds">
@@ -33,9 +35,9 @@
       </div>
       {% endif %}
 
-      <h1 class="heading-xlarge">{{ content.title }}</h1>
+      <h1 class="heading-xlarge">{{ content[role + "_title"] }}</h1>
 
-      {% for paragraph_text in content.introduction %}
+      {% for paragraph_text in content[role + "_introduction"] %}
       <p>{{ paragraph_text }}</p>
       {% endfor %}
     </div>
@@ -103,22 +105,22 @@
         {% endif %}
       </h2>
       <div class="list-number">
-        {% for hint_text in content.supplier.hint %}
+        {% for hint_text in content.supplier[role + "_hint"] %}
         <p>{{ hint_text }}</p>
         {% endfor %}
 
         {% if order_form.role == 'buyer' %}
-        <p><a href="v4/supplier_edit">{{ content.supplier.edit }}</a></p>
+        <p><a href="v4/supplier_edit">{{ content.supplier[role + "_edit"] }}</a></p>
         {% endif %}
 
-        <p><a href="v4/supplier">{{ content.supplier.link }}</a></p>
+        <p><a href="v4/supplier">{{ content.supplier[role + "_link"] }}</a></p>
 
         {% if order_form.role == 'buyer' %}
           {% set review_path = 'review?review=supplier_details' %}
         {% else %}
           {% set review_path = 'review' %}
         {% endif %}
-        <p><a href="v4/{{ review_path }}">{{ content.supplier.review }}</a></p>
+        <p><a href="v4/{{ review_path }}">{{ content.supplier[role + "_review"] }}</a></p>
       </div>
     </div>
   </div>

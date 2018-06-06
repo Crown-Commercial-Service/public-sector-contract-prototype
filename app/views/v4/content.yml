@@ -9,14 +9,14 @@ prefill_supplier_address: "1 Spotless Street, Sponge City"
 prefill_registration_number: "05218772"
 prefill_duns_number: "678952172"
 overview:
-  title: "Award the Office cleaning contract"
+  buyer_title: "Award the Office cleaning contract"
   supplier_title: "Complete and sign the Office cleaning contract"
-  introduction:
+  buyer_introduction:
     - "Fill in the order form to create a contract with the supplier."
     - "You've already given us some of this information, so we've put it into the form for you. You can check and edit it."
     - "When the form's complete, and the buyer and supplier have both signed it, work can start."
   supplier_introduction:
-    - "You've been awarded the 'Office cleaning' contract." 
+    - "You've been awarded the 'Office cleaning' contract."
     - "The buyer has invited you to:"
     - "fill in your details"
     - "review the contract"
@@ -37,18 +37,18 @@ overview:
     review: "Review answers"
   supplier:
     text: "3. Supplier details"
-    hint:
+    buyer_hint:
       - "Information about the supplier, for example essential staff."
     supplier_hint:
       - "The buyer has invited you to add your details to the contract before you sign it."
-    link: "Check and complete supplier details"
+    buyer_link: "Check and complete supplier details"
     supplier_link: "Check and complete supplier details"
-    edit: "Invite the supplier to add their details"
+    buyer_edit: "Invite the supplier to add their details"
     supplier_edit: ""
-    invited: "The supplier has been invited to edit"
+    buyer_invited: "The supplier has been invited to edit"
     supplier_invited: ""
-    review: "Review answers"
-    supplier_review: "Review the whole contract and sign"    
+    buyer_review: "Review answers"
+    supplier_review: "Review the whole contract and sign"
   sign:
     text: "4. Review and sign contract"
     hint:
@@ -58,7 +58,7 @@ overview:
     buyer_signed: "You've signed the contract"
     supplier_sign: "Invite the supplier to sign the contract"
     supplier_invited: "The supplier has been invited to sign the contract"
-    supplier_signed: "The supplier has signed the contract"   
+    supplier_signed: "The supplier has signed the contract"
 contract_overview:
   title: "Order form"
   introduction:
