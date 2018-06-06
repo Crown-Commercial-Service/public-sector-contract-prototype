@@ -73,7 +73,11 @@
       {{ content.what.details.label }}
     </dt>
     <dd class="cya-answer">
-      {{ order_form.what }}
+      {% if order_form.role == 'supplier' %}
+        {{ content.prefill.about_the_purchase }}
+      {% else %}
+        {{ order_form.what }}
+      {% endif %}
     </dd>
     <dd class="cya-change">
       {% if order_form.role == 'buyer' %}
@@ -87,7 +91,11 @@
       {{ content.charges.call_off.label }}
     </dt>
     <dd class="cya-answer" style="border-bottom:none">
-      {{ order_form.call_off_charges }}
+      {% if order_form.role == 'supplier' %}
+        {{ content.prefill.price }}
+      {% else %}
+        {{ order_form.call_off_charges }}
+      {% endif %}
     </dd>
     <dd class="cya-change" style="border-bottom:none">
       {% if order_form.role == 'buyer' %}
@@ -101,7 +109,11 @@
       {{ content.liability.max_liability.label }}
     </dt>
     <dd class="cya-answer">
-      {{ order_form.liability }}
+      {% if order_form.role == 'supplier' %}
+        {{ content.prefill.maximum_liability }}
+      {% else %}
+        {{ order_form.liability }}
+      {% endif %}
     </dd>
     <dd class="cya-change"></dd>
   </div>
@@ -111,7 +123,11 @@
       {{ content.expenses.reimbursable.label }}
     </dt>
     <dd class="cya-answer">
-      {{ order_form.expenses }}
+      {% if order_form.role == 'supplier' %}
+        {{ content.prefill.supplier_expenses }}
+      {% else %}
+        {{ order_form.expenses }}
+      {% endif %}
     </dd>
     <dd class="cya-change">
       {% if order_form.role == 'buyer' %}
@@ -125,7 +141,11 @@
       {{ content.payment.label }}
     </dt>
     <dd class="cya-answer">
-      {{ order_form.payment }}
+      {% if order_form.role == 'supplier' %}
+        {{ content.prefill.how_to_pay }}
+      {% else %}
+        {{ order_form.payment }}
+      {% endif %}
     </dd>
     <dd class="cya-change">
       {% if order_form.role == 'buyer' %}
@@ -139,7 +159,11 @@
       {{ content.credits.service_credits.label }}
     </dt>
     <dd class="cya-answer">
-      {{ order_form.service_credits }}
+      {% if order_form.role == 'supplier' %}
+        {{ content.prefill.insurance }}
+      {% else %}
+        {{ order_form.service_credits }}
+      {% endif %}
     </dd>
     <dd class="cya-change">
       {% if order_form.role == 'buyer' %}
@@ -153,7 +177,11 @@
       {{ content.guarantee.label }}
     </dt>
     <dd class="cya-answer">
-      {{ order_form.guarantee }}
+      {% if order_form.role == 'supplier' %}
+        {{ content.prefill.guarantee }}
+      {% else %}
+        {{ order_form.guarantee }}
+      {% endif %}
     </dd>
     <dd class="cya-change">
       {% if order_form.role == 'buyer' %}
@@ -167,7 +195,11 @@
       {{ content.progress.report.label }}
     </dt>
     <dd class="cya-answer">
-      {{ order_form.progress_report }}
+      {% if order_form.role == 'supplier' %}
+        {{ content.prefill.working_together }}
+      {% else %}
+        {{ order_form.progress_report }}
+      {% endif %}
     </dd>
     <dd class="cya-change">
       {% if order_form.role == 'buyer' %}
@@ -181,10 +213,14 @@
       {{ content.terms.special_terms.label }}
     </dt>
     <dd class="cya-answer">
-      <p>{{ order_form.special_terms }}</p>
-      {% for file in order_form.files.special_terms_files %}
-      <p>{{ file }}</p>
-      {% endfor %}
+      {% if order_form.role == 'supplier' %}
+        {{ content.prefill.special_terms }}
+      {% else %}
+        <p>{{ order_form.special_terms }}</p>
+        {% for file in order_form.files.special_terms_files %}
+        <p>{{ file }}</p>
+        {% endfor %}
+      {% endif %}
     </dd>
     <dd class="cya-change">
       {% if order_form.role == 'buyer' %}

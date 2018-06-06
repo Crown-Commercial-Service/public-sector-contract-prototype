@@ -27,9 +27,9 @@
     <div>
     {% endif %}
       {% if order_form.role == 'supplier' %}
-        {% include "v4/includes/_supplier_details_review.html" %}
-      {% else %}
         {% include "v4/includes/_buyer_details_review.html" %}
+      {% else %}
+        {% include "v4/includes/_supplier_details_review.html" %}
       {% endif %}
     </div>
     {% endif %}
