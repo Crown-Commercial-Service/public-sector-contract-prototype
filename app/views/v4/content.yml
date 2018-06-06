@@ -244,19 +244,17 @@ supplier_edit:
   title: "Invite the supplier to edit"
   introduction:
     - "The supplier will be sent an email and invited to edit their details. You'll be able to review their answers once they've done this."
-  
-  supplier_submit:
+supplier_submit:
   title: "Contract submitted"
   introduction:
     - "The contract is complete and ready to use. The buyer will email you and ask you to sign the contract. Once it's signed, work can start on the contract."
-    
   email: "Email"
 invite_supplier_signatory:
   title: "Invite the supplier to sign"
   supplier_title: "Invite the buyer to sign"
   introduction:
     - "The supplier will be sent an email inviting them to sign the contract."
-    supplier_introduction:
+  supplier_introduction:
     - "The buyer will be sent an email inviting them to sign the contract."
   email: "Email"
 buyer_signatory:

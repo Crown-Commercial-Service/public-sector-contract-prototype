@@ -167,7 +167,7 @@
         <p><a class="button" type="submit" href="v4/signatory">{{ content.sign.buyer }}</a></p>
         {% endif %}
       </div>
-      {% else %}
+      {% elif order_form.sensitive_complete %}
       <p><a class="button button-start" type="submit" href="v4/signatory">Sign</a></p>
       {% endif %}
     </div>
