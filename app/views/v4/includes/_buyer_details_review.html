@@ -24,7 +24,7 @@
         {% if order_form.buyer_name %}
           {{ order_form.buyer_name }}
         {% else %}
-          {{ content.prefill_buyer_name }}
+          {{ content.prefill.buyer_name }}
         {% endif %}
       </div>
       </dd>
@@ -43,7 +43,7 @@
       {% if order_form.buyer_address %}
         {{ order_form.buyer_address }}
       {% else %}
-        {{ content.prefill_buyer_address }}
+        {{ content.prefill.buyer_address }}
       {% endif %}
     </dd>
     <dd class="cya-change" style="border-bottom:none">

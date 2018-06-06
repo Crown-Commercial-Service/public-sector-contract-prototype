@@ -3,11 +3,11 @@
   <div class="form-group">
     <h2 class="heading-medium-first">{{ content.supplier.name.label }}</h2>
     <label class="form-label" for="supplier_name"></label>
-    <input class="form-control" id="supplier_name" type="text" name="supplier_name" value="{% if order_form.supplier_name %}{{ order_form.supplier_name }}{% else %}{{ content.prefill_supplier_name }}{% endif %}">
+    <input class="form-control" id="supplier_name" type="text" name="supplier_name" value="{% if order_form.supplier_name %}{{ order_form.supplier_name }}{% else %}{{ content.prefill.supplier_name }}{% endif %}">
 
     <h2 class="heading-medium">{{ content.supplier.address.label }}</h2>
     <label class="form-label" for="supplier_address"></label>
-    <input class="form-control" id="supplier_address" type="text" name="supplier_address" value="{% if order_form.supplier_address %}{{ order_form.supplier_address }}{% else %}{{ content.prefill_supplier_address }}{% endif %}">
+    <input class="form-control" id="supplier_address" type="text" name="supplier_address" value="{% if order_form.supplier_address %}{{ order_form.supplier_address }}{% else %}{{ content.prefill.supplier_address }}{% endif %}">
 
     <h2 class="heading-medium">{{ content.supplier_representative.title }}</h2>
     {% if content.supplier_representative.hint %}

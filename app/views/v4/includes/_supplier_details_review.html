@@ -24,7 +24,7 @@
         {% if order_form.supplier_name %}
           {{ order_form.supplier_name }}
         {% else %}
-          {{ content.prefill_supplier_name }}
+          {{ content.prefill.supplier_name }}
         {% endif %}
       </div>
       </dd>
@@ -41,7 +41,7 @@
       {% if order_form.supplier_address %}
         {{ order_form.supplier_address }}
       {% else %}
-        {{ content.prefill_supplier_address }}
+        {{ content.prefill.supplier_address }}
       {% endif %}
     </dd>
     <dd class="cya-change" style="border-bottom:none">
@@ -84,7 +84,7 @@
       {% if order_form.registration_number %}
         {{ order_form.registration_number }}
       {% else %}
-        {{ content.prefill_registration_number }}
+        {{ content.prefill.registration_number }}
       {% endif %}
     </dd>
     <dd class="cya-change" style="border-bottom:none">
@@ -100,7 +100,7 @@
       {% if order_form.duns %}
         {{ order_form.duns }}
       {% else %}
-        {{ content.prefill_duns_number }}
+        {{ content.prefill.duns_number }}
       {% endif %}
     </dd>
     <dd class="cya-change">
