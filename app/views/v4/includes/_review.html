@@ -12,7 +12,11 @@
     {% else %}
     <div>
     {% endif %}
-      {% include "v4/includes/_buyer_details_review.html" %}
+      {% if order_form.role == 'buyer' %}
+        {% include "v4/includes/_buyer_details_review.html" %}
+      {% else %}
+        {% include "v4/includes/_supplier_details_review.html" %}
+      {% endif %}
     </div>
     {% endif %}
 
@@ -22,7 +26,11 @@
     {% else %}
     <div>
     {% endif %}
-      {% include "v4/includes/_supplier_details_review.html" %}
+      {% if order_form.role == 'buyer' %}
+        {% include "v4/includes/_supplier_details_review.html" %}
+      {% else %}
+        {% include "v4/includes/_buyer_details_review.html" %}
+      {% endif %}
     </div>
     {% endif %}
   </div>

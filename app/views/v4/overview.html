@@ -53,6 +53,7 @@
     </div>
   </div>
 
+  {% if order_form.role == 'buyer' %}
   <div class="grid-row">
     <div class="column-two-thirds">
       <h2 class="heading-medium">
@@ -90,6 +91,7 @@
       </div>
     </div>
   </div>
+  {% endif %}
 
   <div class="grid-row">
     <div class="column-two-thirds">
@@ -104,15 +106,26 @@
         {% for hint_text in content.supplier.hint %}
         <p>{{ hint_text }}</p>
         {% endfor %}
+
+        {% if order_form.role == 'buyer' %}
         <p><a href="v4/supplier_edit">{{ content.supplier.edit }}</a></p>
+        {% endif %}
+
         <p><a href="v4/supplier">{{ content.supplier.link }}</a></p>
-        <p><a href="v4/review?review=supplier_details">{{ content.supplier.review }}</a></p>
+
+        {% if order_form.role == 'buyer' %}
+          {% set review_path = 'review?review=supplier_details' %}
+        {% else %}
+          {% set review_path = 'review' %}
+        {% endif %}
+        <p><a href="v4/{{ review_path }}">{{ content.supplier.review }}</a></p>
       </div>
     </div>
   </div>
 
   <div class="grid-row">
     <div class="column-two-thirds">
+      {% if order_form.role == 'buyer' %}
       <h2 class="heading-medium">
         {{ content.sign.text }}
 
@@ -140,6 +153,9 @@
         <p><a class="button" type="submit" href="v4/buyer_signatory">{{ content.sign.buyer }}</a></p>
         {% endif %}
       </div>
+      {% else %}
+      <p><a class="button button-start" type="submit" href="v4/signatory">Sign</a></p>
+      {% endif %}
     </div>
   </div>
 </main>
