@@ -265,3 +265,6 @@ supplier_signatory:
   authorised: "I confirm that I have the authority to sign this contract on my organisation's behalf."
 review:
   title: "Office cleaning contract"
+  supplier_introduction: 
+    - "Review and then submit the contract." 
+    - "The buyer will then check your details and ask you to sign the contract."
