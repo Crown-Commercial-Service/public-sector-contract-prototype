@@ -4,7 +4,7 @@ role:
     - "What's your role?"
 prefill:
   buyer_name: "Cabinet Office"
-  buyer_address: "70 Whitehall, London"
+  buyer_address: "70 Whitehall, London, SW1A 2AS"
   supplier_name: "Cleaning 4 U Ltd."
   supplier_address: "1 Spotless Street, Sponge City"
   registration_number: "05218772"
