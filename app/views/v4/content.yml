@@ -10,13 +10,11 @@ prefill_registration_number: "05218772"
 prefill_duns_number: "678952172"
 overview:
   title: "Award the Office cleaning contract"
+  supplier_title: "Create the Office cleaning contract"
   introduction:
     - "Fill in the order form to create a contract with the supplier."
     - "You've already given us some of this information, so we've put it into the form for you. You can check and edit it."
     - "When the form's complete, and the buyer and supplier have both signed it, work can start."
- 
- supplier_overview:
-  supplier_title: "Create the Office cleaning contract"
   supplier_introduction:
     - "You've been awarded the 'Office cleaning' contract." 
     - "The buyer has invited you to:"
@@ -25,7 +23,6 @@ overview:
     -  "sign the contract"
     - "Some of the information was in the framework agreement, so we've put it into the form for you."
     - "When the form's complete, and the buyer and supplier have both signed it, work can start."
-  
   contract:
     text: "1. Contract details"
     hint:
@@ -42,18 +39,16 @@ overview:
     text: "3. Supplier details"
     hint:
       - "Information about the supplier, for example essential staff."
-    link: "Check and complete supplier details"
-    edit: "Invite the supplier to add their details"
-    invited: "The supplier has been invited to edit"
-    review: "Review answers"
-    
-  supplier_supplier:
-    supplier_text: "3. Supplier details"
     supplier_hint:
       - "The buyer has invited you to add your details to the contract before you sign it."
+    link: "Check and complete supplier details"
     supplier_link: "Check and complete supplier details"
-    review: "Review the whole contract"
-    
+    edit: "Invite the supplier to add their details"
+    supplier_edit: ""
+    invited: "The supplier has been invited to edit"
+    supplier_invited: ""
+    review: "Review answers"
+    supplier_review: "Review the whole contract and sign"    
   sign:
     text: "4. Review and sign contract"
     hint:
@@ -233,9 +228,12 @@ supplier_edit:
   title: "Invite the supplier to edit"
   introduction:
     - "The supplier will be sent an email and invited to edit their details. You'll be able to review their answers once they've done this."
+  supplier_introduction:
+    - "The buyer will be sent an email inviting them to sign the contract. Once they've signed, you'll be ready to start work."
   email: "Email"
 invite_supplier_signatory:
   title: "Invite the supplier to sign"
+  supplier_title: "Invite the buyer to sign"
   introduction:
     - "The supplier will be sent an email inviting them to sign the contract."
   email: "Email"
@@ -247,18 +245,3 @@ buyer_signatory:
   authorised: "I confirm that I have the authority to sign this contract on my organisation's behalf."
 review:
   title: "Office cleaning contract"
-
-  supplier_email: "Email"
-supplier_invite_supplier_signatory:
-  supplier_title: "Invite the buyer to sign"
-  supplier_introduction:
-    - "The buyer will be sent an email inviting them to sign the contract. Once they've signed, you'll be ready to start work."
-  supplier_email: "Email"
-supplier_buyer_signatory:
-  supplier_title: "Sign the contract"
-  supplier_name: "Name"
-  supplier_role: "Role"
-  supplier_date: "Date"
-  supplier_authorised: "I confirm that I have the authority to sign this contract on my organisation's behalf."
-review:
-  supplier_title: "Office cleaning contract"
