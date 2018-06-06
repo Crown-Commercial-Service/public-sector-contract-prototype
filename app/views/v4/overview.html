@@ -112,7 +112,7 @@
       <h2 class="heading-medium">
         {% if role == 'buyer' %}3. {% endif %}{{ content.supplier.text }}
 
-        {% if order_form.sensitive_complete %}
+        {% if order_form.sensitive_complete and order_form.role != 'supplier' %}
         <span class="task-completed">Completed</span>
         {% endif %}
       </h2>
