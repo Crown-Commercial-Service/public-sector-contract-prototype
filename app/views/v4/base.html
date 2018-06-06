@@ -50,7 +50,7 @@
 
       {% include "v4/includes/_" + page + ".html" %}
 
-      {% if page == 'review' %}
+      {% if page == 'review' and not review %}
       <a href="/v4/back" class="link-back">Back</a>
       {% endif %}
     </div>
