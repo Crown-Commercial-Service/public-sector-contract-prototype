@@ -36,22 +36,23 @@ overview:
     - "fill in your details"
     - "review the contract"
     -  "sign the contract"
+  supplier_introduction_two:
     - "Some information was in the framework agreement, so we've put it into the form for you."
     - "When the form's complete, and the buyer and supplier have both signed it, work can start."
   contract:
-    text: "1. Contract details"
+    text: "Contract details"
     hint:
       - "Information about what's being bought, for example price and delivery."
     link: "Check and complete contract details"
     review: "Review answers"
   buyer:
-    text: "2. Buyer details"
+    text: "Buyer details"
     hint:
       - "Information about the buyer, for example the security policy."
     link: "Check and complete buyer details"
     review: "Review answers"
   supplier:
-    text: "3. Supplier details"
+    text: "Supplier details"
     buyer_hint:
       - "Information about the supplier, for example essential staff."
     supplier_hint:
@@ -65,7 +66,7 @@ overview:
     buyer_review: "Review answers"
     supplier_review: "Review the whole contract and sign"
   sign:
-    text: "4. Review and sign contract"
+    text: "Review and sign contract"
     hint:
       - "You'll be able to sign the contract once you've filled in the form."
     button_visible: "Check your answers and then sign the contract. Once the buyer and supplier have both signed, work can start."

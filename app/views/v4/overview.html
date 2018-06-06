@@ -47,6 +47,10 @@
         <li>{{ list_text }}</li>
         {% endfor %}
       </ul>
+
+        {% for intro_text in content.supplier_introduction_two %}
+        <p>{{ intro_text }}</p>
+        {% endfor %}
       {% endif %}
     </div>
 
@@ -67,7 +71,7 @@
   <div class="grid-row">
     <div class="column-two-thirds">
       <h2 class="heading-medium">
-        {{ content.contract.text }}
+        1. {{ content.contract.text }}
 
         {% if order_form.terms_complete %}
         <span class="task-completed">Completed</span>
@@ -86,7 +90,7 @@
   <div class="grid-row">
     <div class="column-two-thirds">
       <h2 class="heading-medium">
-        {{ content.buyer.text }}
+        2. {{ content.buyer.text }}
 
         {% if order_form.environmental_complete %}
         <span class="task-completed">Completed</span>
@@ -106,7 +110,7 @@
   <div class="grid-row">
     <div class="column-two-thirds">
       <h2 class="heading-medium">
-        {{ content.supplier.text }}
+        {% if role == 'buyer' %}3. {% endif %}{{ content.supplier.text }}
 
         {% if order_form.sensitive_complete %}
         <span class="task-completed">Completed</span>
@@ -137,7 +141,7 @@
     <div class="column-two-thirds">
       {% if order_form.role == 'buyer' %}
       <h2 class="heading-medium">
-        {{ content.sign.text }}
+        4. {{ content.sign.text }}
 
         {% if order_form.buyer_signatory_complete and order_form.invite_supplier_signatory_complete %}
         <span class="task-completed">Completed</span>
