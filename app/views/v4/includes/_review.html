@@ -41,7 +41,12 @@
     {% if not review and (order_form.terms_complete and order_form.environmental_complete and order_form.sensitive_complete) and not order_form.buyer_signatory_complete %}
     <p><a class="button" type="submit" href="/v4/buyer_signatory">Sign contract</a></p>
     {% else %}
-    <p><a href="/v4" class="button button-start">Submit</a></p>
+      {% if order_form.role == "supplier" and order_form.sensitive_complete and not review %}
+        {% set button_text = "Submit" %}
+      {% else %}
+        {% set button_text = "Save" %}
+      {% endif %}
+      <p><a href="/v4" class="button button-start">{{ button_text }}</a></p>
     {% endif %}
   </div>
 </div>
