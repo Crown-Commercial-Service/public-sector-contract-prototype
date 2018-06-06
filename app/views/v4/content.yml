@@ -18,6 +18,7 @@ overview:
   supplier_introduction:
     - "You've been awarded the 'Office cleaning' contract."
     - "The buyer has invited you to:"
+  supplier_introduction_list:
     - "fill in your details"
     - "review the contract"
     -  "sign the contract"

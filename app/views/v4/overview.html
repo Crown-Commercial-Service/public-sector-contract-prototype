@@ -40,6 +40,14 @@
       {% for paragraph_text in content[role + "_introduction"] %}
       <p>{{ paragraph_text }}</p>
       {% endfor %}
+
+      {% if role == 'supplier' %}
+      <ul class="list list-bullet">
+        {% for list_text in content.supplier_introduction_list %}
+        <li>{{ list_text }}</li>
+        {% endfor %}
+      </ul>
+      {% endif %}
     </div>
 
     <div class="column-third">
