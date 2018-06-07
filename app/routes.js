@@ -41,6 +41,7 @@ router.get('/v4', function (req, res) {
       content: content.overview,
       supplier_edit: req.query.supplier_edit,
       supplier_signatory_invited: req.query.supplier_signatory_invited,
+      supplier_submitted: req.query.supplier_submitted,
       signed: req.query.signed
     })
   }
