@@ -1,0 +1,35 @@
+{% if supplier_edit %}
+<div class="govuk-box-highlight">
+  <p class="font-medium" style="margin-bottom: 0px">
+    {{ content.supplier.supplier_invited }}
+  </p>
+</div>
+{% endif %}
+
+{% if supplier_signatory_invited %}
+<div class="govuk-box-highlight">
+  <p class="font-medium" style="margin-bottom: 0px">
+    {{ content.sign.supplier_invited }}
+  </p>
+</div>
+{% endif %}
+
+{% if signed %}
+<div class="govuk-box-highlight">
+  <p class="font-medium" style="margin-bottom: 0px">
+    {{ content.sign.signed }}
+  </p>
+</div>
+{% endif %}
+
+{% if supplier_submitted %}
+<div class="govuk-box-highlight">
+  <p class="font-medium" style="margin-bottom: 0px">
+    {{ content.supplier_submit.title }}<br>
+    <br>
+    {% for intro_text in content.supplier_submit.introduction %}
+      {{ intro_text }}<br>
+    {% endfor %}
+  </p>
+</div>
+{% endif %}
