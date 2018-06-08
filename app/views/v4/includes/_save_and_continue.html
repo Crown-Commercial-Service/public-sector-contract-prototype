@@ -10,6 +10,14 @@
   {% set cancel_link = "/v4" %}
 {% endif %}
 
+{% if 'representative' in page %}
+  {% if rep.id %}
+    {% set save_text = "Save" %}
+  {% else %}
+    {% set save_text = "Add" %}
+  {% endif %}
+{% endif %}
+
 <div class="form-group">
   <p><input class="button button-start" type="submit" value="{{ save_text }}"></p>
   <p><a href="{{ cancel_link }}">Cancel</a></p>

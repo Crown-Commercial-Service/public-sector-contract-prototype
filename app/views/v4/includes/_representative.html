@@ -55,7 +55,12 @@
   </div>
 
   <div class="form-group">
-    <p><input class="button button-start" type="submit" value="Add"></p>
+    {% if rep.id %}
+      {% set button_text = "Save" %}
+    {% else %}
+      {% set button_text = "Add" %}
+    {% endif %}
+    <p><input class="button button-start" type="submit" value="{{ button_text }}"></p>
     <p><a href="{{ cancel_path }}">Cancel</a></p>
   </div>
 </form>
