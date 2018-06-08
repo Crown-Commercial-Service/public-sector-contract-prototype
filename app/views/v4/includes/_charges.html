@@ -13,6 +13,15 @@
     </label>
     <textarea class="form-control form-control-3-4" name="call_off_charges" id="call_off_charges" rows="10">{{ order_form.call_off_charges }}</textarea>
 
+    {% for file in order_form.files.call_off_charges_files %}
+    <p>{{ file }}</p>
+    {% endfor %}
+
+    <label class="form-label" for="call_off_charges_files" style="margin-top: 20px">
+      Upload a file
+    </label>
+    <input type="file" name="call_off_charges_files" id="call_off_charges_files" class="file-upload-input">
+
     <h2 class="heading-medium">{{ content.liability.max_liability.label }}</h2>
     <label class="form-label" for="liability">
       {% if content.liability.max_liability.hint %}

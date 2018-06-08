@@ -92,9 +92,12 @@
     </dt>
     <dd class="cya-answer" style="border-bottom:none">
       {% if order_form.role == 'supplier' %}
-        {{ content.prefill.price }}
+        <p>{{ content.prefill.price }}</p>
       {% else %}
-        {{ order_form.call_off_charges }}
+        <p>{{ order_form.call_off_charges }}</p>
+        {% for file in order_form.files.call_off_charges_files %}
+        <p>{{ file }}</p>
+        {% endfor %}
       {% endif %}
     </dd>
     <dd class="cya-change" style="border-bottom:none">
