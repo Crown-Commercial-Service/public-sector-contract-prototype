@@ -17,7 +17,7 @@
       {% endfor %}
     </span>
     {% endif %}
-    {% if not order_form.supplier_representative %}
+    {% if not order_form.supplier_representative|length %}
     <p><a href="add/supplier_representative{{ review_param }}">Add</a></p>
     {% else %}
     {% include "v4/includes/_supplier_representative.html" %}

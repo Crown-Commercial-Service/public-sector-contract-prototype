@@ -53,6 +53,16 @@ exports.setQuery = function(page, role) {
   return query
 }
 
+exports.added = function(data) {
+  return [
+    data.authorised_name,
+    data.authorised_role,
+    data.authorised_email,
+    data.authorised_phone,
+    data.authorised_address
+  ].filter(Boolean).length > 0
+}
+
 exports.additionReturnPath = function(type) {
   if (type.includes('buyer')) {
     path = 'buyer'

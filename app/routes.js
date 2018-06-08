@@ -103,22 +103,32 @@ router.post('/v4/add/:type', function (req, res) {
   }
 
   data = req.session.data
-  req.session.data[type].push({
-    id: req.session.data[type].length + 1,
-    name: data.authorised_name,
-    role: data.authorised_role,
-    email: data.authorised_email,
-    phone: data.authorised_phone,
-    address: data.authorised_address
-  })
+
+  added_param = ''
+  if (helpers.added(data)) {
+    req.session.data[type].push({
+      id: req.session.data[type].length + 1,
+      name: data.authorised_name,
+      role: data.authorised_role,
+      email: data.authorised_email,
+      phone: data.authorised_phone,
+      address: data.authorised_address
+    })
+    added_param = `?added=${type}`
+  }
 
   review_param = ''
   if (req.query.review) {
-    review_param = `&review=${req.query.review}`
+    if (added_param) {
+      review_param << '&'
+    } else {
+      review_param << '?'
+    }
+    review_param << `review=${req.query.review}`
   }
 
   path = helpers.additionReturnPath(type)
-  res.redirect(`/v4/${path}?added=${type}${review_param}`)
+  res.redirect(`/v4/${path}${added_param}${review_param}`)
 })
 
 router.get('/v4/edit/:type/:id', function (req, res) {
