@@ -75,7 +75,12 @@ router.get('/v4/:page', function (req, res) {
 
 router.post('/v4/:page', function (req, res) {
   page = req.params.page
-  req.session.data[`${page}_complete`] = true
+
+  if (page === 'signatory') {
+    req.session.data[`${req.session.data.role}_${page}_complete`] = true
+  } else {
+    req.session.data[`${page}_complete`] = true
+  }
 
   helpers.addFile(req.session.data, page)
   path = helpers.setPath(page, req.query.review)
