@@ -66,7 +66,7 @@ overview:
     buyer_review: "Review answers"
     supplier_review: "Review the whole contract"
   sign:
-    text: "Review and sign contract"
+    text: "Review the contract"
     hint:
       - "You'll be able to sign the contract once you've filled in the form."
     button_visible: "Check your answers and then sign the contract. Once the buyer and supplier have both signed, work can start."
