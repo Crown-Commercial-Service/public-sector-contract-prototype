@@ -143,6 +143,8 @@
     <dd class="cya-answer">
       {% if order_form.role == 'supplier' %}
         {{ content.prefill.how_to_pay }}
+      {% elif order_form.payment == 'Other' %}
+        {{ order_form.payment_other }}
       {% else %}
         {{ order_form.payment }}
       {% endif %}

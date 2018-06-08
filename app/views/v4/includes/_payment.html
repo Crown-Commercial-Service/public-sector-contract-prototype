@@ -5,21 +5,39 @@
     {% if content.payment.hint %}
     <span class="form-hint">
       {% for hint_text in content.payment.hint %}
-      {{ hint_text }}<br>
+        {{ hint_text }}<br>
       {% endfor %}
     </span>
     {% endif %}
+
     {% for method in content.payment.methods %}
-    {% set id = method.replace(" ", "-").toLowerCase() %}
-    <div class="multiple-choice" data-target="mod-yes">
-      {% if order_form.payment == method %}
-      <input id={{ id }} type="radio" name="payment" value="{{ method }}" checked="checked">
-      {% else %}
-      <input id={{ id }} type="radio" name="payment" value="{{ method }}">
-      {% endif %}
-      <label for={{ id }}>{{ method }}</label>
-    </div>
+      {% set id = method.replace(" ", "-").toLowerCase() %}
+      <div class="multiple-choice" data-target="mod-yes">
+        {% if order_form.payment == method %}
+          {% if method == 'Other' %}
+          <input id={{ id }} type="radio" name="payment" value="{{ method }}" checked="checked" onclick="toggle('show')">
+          {% else %}
+          <input id={{ id }} type="radio" name="payment" value="{{ method }}" checked="checked">
+          {% endif %}
+        {% else %}
+          {% if method == 'Other' %}
+          <input id={{ id }} type="radio" name="payment" value="{{ method }}" onclick="toggle('show')">
+          {% else %}
+          <input id={{ id }} type="radio" name="payment" value="{{ method }}" onclick="toggle('hide')">
+          {% endif %}
+        {% endif %}
+
+        <label for={{ id }}>{{ method }}</label>
+      </div>
     {% endfor %}
+  </div>
+
+  {% if order_form.payment == 'Other' %}
+  <div class="form-group" id="payment_other">
+  {% else %}
+  <div class="form-group" style="display:none" id="payment_other">
+  {% endif %}
+  <textarea class="form-control form-control-3-4" name="payment_other" id="payment_other" rows="10">{{ order_form.payment_other }}</textarea>
   </div>
 
   {% include "v4/includes/_save_and_continue.html" %}
