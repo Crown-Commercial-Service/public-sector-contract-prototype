@@ -65,9 +65,12 @@
         {% endif %}
       </h2>
       <div class="list-number">
+        <p>You can view the terms and conditions of this contract <a href="v4/terms_and_conditions">here</a>.</p>
+
         {% for hint_text in content.contract.hint %}
         <p>{{ hint_text }}</p>
         {% endfor %}
+
         <p><a href="v4/contract_details">{{ content.contract.link }}</a></p>
         <p><a href="v4/review?review=contract_details">{{ content.contract.review }}</a></p>
       </div>
