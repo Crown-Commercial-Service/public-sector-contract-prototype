@@ -33,3 +33,11 @@
   </p>
 </div>
 {% endif %}
+
+{% if (order_form.terms_complete and order_form.environmental_complete and order_form.sensitive_complete) and not order_form.buyer_signatory_complete %}
+<div class="govuk-box-highlight">
+  <p class="font-medium" style="margin-bottom: 0px">
+    {{ content.sign.supplier_sign }}
+  </p>
+</div>
+{% endif %}
