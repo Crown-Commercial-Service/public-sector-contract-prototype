@@ -1,4 +1,4 @@
-<span class="form-hint">Step 6 of 9</span>
+<span class="form-hint">Step 6 of 8</span>
 <form class="form" action="" method="post">
   <div class="form-group">
     <h2 class="heading-medium-first">{{ content.credits.service_credits.label }}</h2>
@@ -12,6 +12,34 @@
       {% endif %}
     </label>
     <input class="form-control" id="service_credits" type="text" name="service_credits" value="{{ order_form.service_credits }}">
+  </div>
+
+  <div class="form-group">
+    <h2 class="heading-medium-first">{{ content.guarantee.label }}</h2>
+    {% if content.guarantee.hint %}
+    <span class="form-hint">
+      {% for hint_text in content.guarantee.hint %}
+      {{ hint_text }}<br>
+      {% endfor %}
+    </span>
+    {% endif %}
+    <div class="multiple-choice" data-target="mod-yes">
+      {% if order_form.guarantee == "Yes" %}
+      <input id="yes" type="radio" name="guarantee" value="Yes" checked="checked">
+      {% else %}
+      <input id="yes" type="radio" name="guarantee" value="Yes">
+      {% endif %}
+      <label for="yes">Yes</label>
+    </div>
+
+    <div class="multiple-choice" data-target="mod-yes">
+      {% if order_form.guarantee == "No" %}
+      <input id="no" type="radio" name="guarantee" value="No" checked="checked">
+      {% else %}
+      <input id="no" type="radio" name="guarantee" value="No">
+      {% endif %}
+      <label for="no">No</label>
+    </div>
   </div>
 
   {% include "v4/includes/_save_and_continue.html" %}

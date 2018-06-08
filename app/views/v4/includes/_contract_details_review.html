@@ -160,17 +160,17 @@
   </div>
 
   <div>
-    <dt class="cya-question">
+    <dt class="cya-question" style="border-bottom:none">
       {{ content.credits.service_credits.label }}
     </dt>
-    <dd class="cya-answer">
+    <dd class="cya-answer" style="border-bottom:none">
       {% if order_form.role == 'supplier' %}
         {{ content.prefill.insurance }}
       {% else %}
         {{ order_form.service_credits }}
       {% endif %}
     </dd>
-    <dd class="cya-change">
+    <dd class="cya-change" style="border-bottom:none">
       {% if order_form.role == 'buyer' %}
       <a href="/v4/credits?review={{ contract_change }}">Change</a>
       {% endif %}
@@ -189,9 +189,6 @@
       {% endif %}
     </dd>
     <dd class="cya-change">
-      {% if order_form.role == 'buyer' %}
-      <a href="/v4/guarantee?review={{ contract_change }}">Change</a>
-      {% endif %}
     </dd>
   </div>
 
