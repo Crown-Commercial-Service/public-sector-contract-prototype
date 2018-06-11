@@ -129,10 +129,10 @@
   </div>
 
   <div>
-    <dt class="cya-question">
+    <dt class="cya-question" style="border-bottom:none">
       {{ content.security.label }}
     </dt>
-    <dd class="cya-answer">
+    <dd class="cya-answer" style="border-bottom:none">
       {% if order_form.role == 'supplier' %}
         {{ content.prefill.security_policy }}
       {% else %}
@@ -141,6 +141,22 @@
         <p>{{ file }}</p>
         {% endfor %}
       {% endif %}
+    </dd>
+    <dd class="cya-change" style="border-bottom:none"></dd>
+  </div>
+
+  <div>
+    <dt class="cya-question">
+      {{ content.additional_policy.label }}
+    </dt>
+    <dd class="cya-answer">
+      {% for link in order_form.links.additional_policy_links %}
+        <p>{{ link }}</p>
+      {% endfor %}
+
+      {% for file in order_form.files.additional_policy_files %}
+        <p>{{ file }}</p>
+      {% endfor %}
     </dd>
     <dd class="cya-change"></dd>
   </div>

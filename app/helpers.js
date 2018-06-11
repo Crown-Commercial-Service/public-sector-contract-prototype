@@ -27,10 +27,7 @@ flow = {
 
 exports.setPath = function(page, review) {
   if (review) {
-    params = ''
-    if (review != "all") {
-      params = `?review=${review}`
-    }
+    params = review != 'all' ? `?review=${review}` : ''
     path = `/review${params}`
   } else {
     path = flow[page] || ''
@@ -69,6 +66,8 @@ exports.additionReturnPath = function(type) {
     path = 'supplier'
   } else if (type.includes('add')) {
     path = 'supplier_staff'
+  } else if (type == 'policy') {
+    path = 'environmental'
   }
 
   return path
@@ -78,20 +77,22 @@ exports.findRepIndex = function(data, type, id) {
   return data[type].findIndex(rep => rep.id == id )
 }
 
-exports.addFile = function(data, page) {
-  if (data.files === undefined) {
-    data.files = {}
-  }
-
-  Object.keys(data).forEach(field => {
-    if (field.includes('_files')) {
-      if (data.files[field] === undefined) {
-        data.files[field] = []
-      }
-
-      if (!data[field] == "" && !data.files[field].includes(data[field])) {
-        data.files[field].push(data[field])
-      }
+exports.addItem = function(data) {
+  ['files', 'links'].forEach(item_type => {
+    if (data[item_type] === undefined) {
+      data[item_type] = {}
     }
+
+    Object.keys(data).forEach(field => {
+      if (field.includes(`_${item_type}`)) {
+        if (data[item_type][field] === undefined) {
+          data[item_type][field] = []
+        }
+
+        if (!data[item_type][field].includes(data[field])) {
+          data[item_type][field].push(data[field])
+        }
+      }
+    })
   })
 }

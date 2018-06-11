@@ -1,0 +1,18 @@
+<form class="form" action="" method="post">
+  <div class="form-group">
+    <h2 class="heading-medium-first">Additional policy</h2>
+    <label class="form-label" for="additional_policy_links">
+      <span class="form-hint">
+        Link to or upload additional policy
+      </span>
+    </label>
+    <input class="form-control" id="additional_policy_links" type="text" name="additional_policy_links">
+
+    <label class="form-label" for="environmental_policy_files" style="margin-top: 20px">
+      Upload a file
+    </label>
+    <input type="file" name="additional_policy_files" id="additional_policy_files" class="file-upload-input">
+  </div>
+
+  {% include "v4/includes/_save_and_continue.html" %}
+</form>

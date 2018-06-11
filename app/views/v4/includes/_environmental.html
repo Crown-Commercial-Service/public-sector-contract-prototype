@@ -40,5 +40,17 @@
     <input type="file" name="security_policy_files" id="security_policy_files" class="file-upload-input">
   </div>
 
+  {% for link in order_form.links.additional_policy_links %}
+    <p>{{ link }}</p>
+  {% endfor %}
+
+  {% for file in order_form.files.additional_policy_files %}
+    <p>{{ file }}</p>
+  {% endfor %}
+
+  <p style="margin-top:20px">
+    <a href="add/policy{{ review_param }}">Add additional policy</a>
+  </p
+
   {% include "v4/includes/_save_and_continue.html" %}
 </form>

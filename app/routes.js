@@ -82,18 +82,20 @@ router.post('/v4/:page', function (req, res) {
     req.session.data[`${page}_complete`] = true
   }
 
-  helpers.addFile(req.session.data, page)
+  helpers.addItem(req.session.data)
   path = helpers.setPath(page, req.query.review)
   query = helpers.setQuery(page, req.session.data.role)
-
   res.redirect(`/v4${path}${query}`)
 })
 
 router.get('/v4/add/:type', function (req, res) {
   type = req.params.type
+
+  page = type == 'policy' ? 'policy' : 'representative'
+
   res.render('v4/base', {
     header: type,
-    page: 'representative',
+    page: page,
     type: type,
     content: content,
     cancel_path: `/v4/${helpers.additionReturnPath(type)}`,
@@ -106,8 +108,8 @@ router.post('/v4/add/:type', function (req, res) {
   if (req.session.data[type] == undefined) {
     req.session.data[type] = []
   }
-
   data = req.session.data
+  helpers.addItem(data)
 
   added_param = ''
   if (helpers.added(data)) {
@@ -124,11 +126,7 @@ router.post('/v4/add/:type', function (req, res) {
 
   review_param = ''
   if (req.query.review) {
-    if (added_param) {
-      review_param << '&'
-    } else {
-      review_param << '?'
-    }
+    review_param << added_param ? '&' : '?'
     review_param << `review=${req.query.review}`
   }
 

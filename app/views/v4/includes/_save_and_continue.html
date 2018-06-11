@@ -10,7 +10,7 @@
   {% set cancel_link = "/v4" %}
 {% endif %}
 
-{% if 'representative' in page %}
+{% if 'representative' in page or page == 'policy' %}
   {% if rep.id %}
     {% set save_text = "Save" %}
   {% else %}

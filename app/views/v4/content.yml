@@ -179,6 +179,8 @@ security:
   label: "Security policy"
   hint:
     - "Link to or upload the security policy."
+additional_policy:
+  label: "Additional policies"
 supplier:
   title: "Supplier details"
   name:
