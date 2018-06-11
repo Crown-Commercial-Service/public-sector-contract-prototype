@@ -25,10 +25,16 @@ flow = {
   sensitive: '/review?review=supplier_details'
 }
 
-exports.setPath = function(page, review) {
-  if (review) {
+exports.setPath = function(page, review, additional_policy) {
+  if (review || additional_policy) {
+    if (page === 'environmental' && additional_policy) {
+      sub_path = '/add/policy'
+    } else {
+      sub_path = '/review'
+    }
+
     params = review != 'all' ? `?review=${review}` : ''
-    path = `/review${params}`
+    path = `${sub_path}${params}`
   } else {
     path = flow[page] || ''
   }
@@ -89,7 +95,7 @@ exports.addItem = function(data) {
           data[item_type][field] = []
         }
 
-        if (!data[item_type][field].includes(data[field])) {
+        if (data[field] !== '' && !data[item_type][field].includes(data[field])) {
           data[item_type][field].push(data[field])
         }
       }

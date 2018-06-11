@@ -107,7 +107,7 @@
     <dt class="cya-question" style="border-bottom:none">
       {{ content.environmental.label }}
     </dt>
-    {% if not order_form.files.environmental_policy_files | length %}
+    {% if (not order_form.files.environmental_policy_files | length) or (not order_form.environmental_policy) %}
     <dd class="cya-answer" style="border-bottom:none">
     {% else %}
     <dd class="cya-answer">

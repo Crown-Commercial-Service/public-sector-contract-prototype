@@ -83,7 +83,7 @@ router.post('/v4/:page', function (req, res) {
   }
 
   helpers.addItem(req.session.data)
-  path = helpers.setPath(page, req.query.review)
+  path = helpers.setPath(page, req.query.review, req.body.additional_policy)
   query = helpers.setQuery(page, req.session.data.role)
   res.redirect(`/v4${path}${query}`)
 })
@@ -126,8 +126,8 @@ router.post('/v4/add/:type', function (req, res) {
 
   review_param = ''
   if (req.query.review) {
-    review_param << added_param ? '&' : '?'
-    review_param << `review=${req.query.review}`
+    review_param += added_param ? '&' : '?'
+    review_param += `review=${req.query.review}`
   }
 
   path = helpers.additionReturnPath(type)

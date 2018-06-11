@@ -34,3 +34,12 @@ $path: "/public/images/";
   @extend .heading-medium;
   margin-top: 0;
 }
+
+button.link {
+  background:none!important;
+  color:#005ea5;
+  border:none;
+  padding:0!important;
+  font: inherit;
+  cursor: pointer;
+}
