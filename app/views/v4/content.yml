@@ -116,7 +116,7 @@ charges:
   call_off:
     label: "Price"
     hint:
-      - "How much it'll cost and details of any pricing structures."
+      - "How much it'll cost and details of any pricing structures. You can add or upload the details."
 liability:
   title: "Contract details"
   max_liability:
