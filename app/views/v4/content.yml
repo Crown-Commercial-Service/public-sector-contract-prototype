@@ -109,7 +109,7 @@ what:
   details:
     label: "About the purchase"
     hint:
-      - "Say what's being bought and the delivery dates. You should be able to find this information in the requirements. You can add or upload this information."
+      - "Say what's being bought and the delivery dates. You should be able to find this information in the requirements."
 charges:
   title: "Contract details"
   call_off:
