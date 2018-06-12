@@ -93,7 +93,7 @@ contract_details:
   start_date:
     label: "Start date"
     hint:
-      - "This is the date the supplier is expected to actually start working on the contract."
+      - "This is the date the supplier is expected to start working on the contract."
   end_date:
     label: "End date"
     hint:
@@ -103,7 +103,7 @@ progress:
   report:
     label: "Working together"
     hint:
-      - "How the supplier should update the buyer about their progress on the project for example, by providing weekly written reports. Say how you want to be updated and how regularly."
+      - "How the supplier should update the buyer about their progress on the project for example, by providing weekly written reports. Include how you want to be updated and how regularly."
 what:
   title: "Contract details"
   details:
@@ -259,10 +259,10 @@ invite_supplier_signatory:
   email: "Email"
 buyer_signatory:
   title: "Sign the contract"
-  authorised: "I confirm that I have the authority to sign this contract on my organisation's behalf."
+  authorised: "I confirm that I have the authority to sign this contract for my organisation."
 supplier_signatory:
   title: "Sign the contract"
-  authorised: "I confirm that I have the authority to sign this contract on my organisation's behalf."
+  authorised: "I confirm that I have the authority to sign this contract for my organisation."
 review:
   title: "Office cleaning contract"
   supplier_introduction:
