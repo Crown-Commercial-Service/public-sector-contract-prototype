@@ -1,12 +1,12 @@
 <div class="grid-row">
   <div class="column-full">
-    {% if review == "contract_details" or not review %}
+    {% if review == "contract_details" or not review or review == "all" %}
     <div>
       {% include "v4/includes/_contract_details_review.html" %}
     </div>
     {% endif %}
 
-    {% if review == "buyer_details" or not review %}
+    {% if review == "buyer_details" or not review or review == "all" %}
     {% if not review %}
     <div style="margin-top:60px">
     {% else %}
@@ -20,7 +20,7 @@
     </div>
     {% endif %}
 
-    {% if review == "supplier_details" or not review %}
+    {% if review == "supplier_details" or not review or review == "all" %}
     {% if not review %}
     <div style="margin-top:60px">
     {% else %}
