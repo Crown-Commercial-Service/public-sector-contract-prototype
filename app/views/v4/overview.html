@@ -10,6 +10,30 @@
 
 <main id="content" role="main">
   <div class="grid-row">
+    <div class="column-third" style="float:right">
+      <aside class="govuk-related-items" role="complementary">
+        <h2 class="heading-medium" id="subsection-title">Related content</h2>
+        <nav role="navigation" aria-labelledby="subsection-title">
+          <ul class="font-xsmall">
+            <li>
+              <a href="https://www.gov.uk/guidance/digital-marketplace-buyers-guide">
+                Buyer guidance
+              </a>
+            </li>
+            <li>
+              <a href="https://www.gov.uk/guidance/how-to-award-a-contract-when-you-buy-services">
+                How to award a contract
+              </a>
+            </li>
+          </ul>
+        </nav>
+      </aside>
+
+      {% if role == 'buyer' %}
+        {% include "v4/includes/_buyer_progress.html" %}
+      {% endif %}
+    </div>
+
     <div class="column-two-thirds">
       {% include "v4/includes/_overview_flash_messages.html" %}
 
@@ -42,25 +66,7 @@
       {% endif %}
     </div>
 
-    <div class="column-third">
-      <aside class="govuk-related-items" role="complementary">
-        <h2 class="heading-medium" id="subsection-title">Related content</h2>
-        <nav role="navigation" aria-labelledby="subsection-title">
-          <ul class="font-xsmall">
-            <li><a href="https://www.gov.uk/guidance/digital-marketplace-buyers-guide">Buyer guidance</a></li>
-            <li><a href="https://www.gov.uk/guidance/how-to-award-a-contract-when-you-buy-services">How to award a contract</a></li>
-          </ul>
-        </nav>
-      </aside>
-
-      {% if order_form.role == 'buyer' %}
-        {% include "v4/includes/_buyer_progress.html" %}
-      {% endif %}
-    </div>
-  </div>
-
-  {% if order_form.role == 'buyer' %}
-  <div class="grid-row">
+  {% if role == 'buyer' %}
     <div class="column-two-thirds">
       <h2 class="heading-medium">
         1. {{ content.contract.text }}
@@ -85,9 +91,7 @@
         </p>
       </div>
     </div>
-  </div>
 
-  <div class="grid-row">
     <div class="column-two-thirds">
       <h2 class="heading-medium">
         2. {{ content.buyer.text }}
@@ -112,20 +116,18 @@
         </p>
       </div>
     </div>
-  </div>
   {% endif %}
 
-  <div class="grid-row">
     <div class="column-two-thirds">
       <h2 class="heading-medium">
         {% if role == 'buyer' %}3. {% endif %}{{ content.supplier.text }}
 
-        {% if order_form.sensitive_complete and order_form.role != 'supplier' %}
+        {% if order_form.sensitive_complete and role != 'supplier' %}
         <span class="task-completed">Completed</span>
         {% endif %}
       </h2>
 
-      {% if order_form.role == 'buyer' %}
+      {% if role == 'buyer' %}
       <div class="list-number">
       {% else %}
       <div>
@@ -134,7 +136,7 @@
         <p>{{ hint_text }}</p>
         {% endfor %}
 
-        {% if order_form.role == 'buyer' %}
+        {% if role == 'buyer' %}
         <p><a href="v4/supplier_edit">{{ content.supplier[role + "_edit"] }}</a></p>
         {% endif %}
 
@@ -148,7 +150,7 @@
           </a>
         </p>
 
-        {% if order_form.role == 'buyer' %}
+        {% if role == 'buyer' %}
           {% set review_path = 'review?review=supplier_details' %}
         {% else %}
           {% set review_path = 'review' %}
