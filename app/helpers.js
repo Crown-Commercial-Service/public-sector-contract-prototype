@@ -33,7 +33,7 @@ exports.setPath = function(page, review, additional_policy) {
       sub_path = '/review'
     }
 
-    params = `?review=${review}`
+    params = review ? `?review=${review}` : ''
     path = `${sub_path}${params}`
   } else {
     path = flow[page] || ''
