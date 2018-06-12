@@ -28,7 +28,6 @@ overview:
   buyer_introduction:
     - "Enter your details to create an order form. This will become your contract with the supplier."
     - "You've already given us some of this information, so we've put it into the form for you. You can check and edit it."
-    - "When the form's complete, and the buyer and supplier have both signed it, work can start."
   supplier_introduction:
     - "You've been awarded the 'Office cleaning' contract."
     - "The buyer has invited you to:"
@@ -54,7 +53,7 @@ overview:
   supplier:
     text: "Supplier details"
     buyer_hint:
-      - "Information about the supplier, for example essential staff."
+      - "Information about the supplier, for example key staff."
     supplier_hint:
       - "The buyer has invited you to add your details to the contract before you sign it."
     buyer_link: "Check and complete supplier details"
@@ -90,27 +89,27 @@ contract_details:
   reference:
     label: "Call-off reference number"
     hint:
-      - "Every call-off contract has a reference number that can help identify it."
+      - "Every call-off contract has a reference number that can help identify it. We've included the RM number, you may want to use your own reference number instead."
   start_date:
     label: "Start date"
     hint:
-      - "This is the date the supplier is expected to start work."
+      - "This is the date the supplier is expected to actually start working on the contract."
   end_date:
     label: "End date"
     hint:
-      - "This is when the contract will end if it isn't extended."
+      - "This is when the contract will end if it isn't extended. This contract can be extended by one year."
 progress:
   title: "Contract details"
   report:
     label: "Working together"
     hint:
-      - "How the supplier should update the buyer about their progress on the project for example, provide weekly written reports."
+      - "How the supplier should update the buyer about their progress on the project for example, by providing weekly written reports. Say how you want to be updated and how regularly."
 what:
   title: "Contract details"
   details:
     label: "About the purchase"
     hint:
-      - "Say what's being bought and the delivery dates. You should be able to find this information in the requirements."
+      - "Say what's being bought and the delivery dates. You should be able to find this information in the requirements. You can add or upload this information."
 charges:
   title: "Contract details"
   call_off:
@@ -122,7 +121,7 @@ liability:
   max_liability:
     label: "Maximum liability"
     hint:
-      - "This is the maximum amount the supplier should pay if something goes wrong because of their actions. This figure should be 150% of the estimated yearly charges, but not more than £5 million."
+      - "This is the maximum amount the supplier should pay if something goes wrong because of their actions. This figure will usually be 150% of the estimated yearly charges, but not more than £5 million."
 terms:
   title: "Contract details"
   special_terms:
@@ -133,7 +132,7 @@ guarantee:
   title: "Contract details"
   label: "Guarantee"
   hint:
-    - "Is a third party needed to guarantee the supplier can meet their obligations? For example, this may be necessary because the supplier can't provide enough trading history information or are a very small company."
+    - "Is a third party needed to guarantee the supplier can meet their obligations? This may be necessary because the supplier can't provide enough trading history information or is a very small company."
 expenses:
   title: "Contract details"
   reimbursable:
@@ -145,7 +144,7 @@ credits:
   service_credits:
     label: "Insurance"
     hint:
-      - "Details of any insurance policies the buyer wants the supplier to have."
+      - "Details of any additional insurance policies the buyer wants the supplier to have."
 payment:
   title: "Contract details"
   label: "How to pay"
@@ -226,17 +225,17 @@ supplier_staff:
   introduction:
     - "Add the staff or subcontractors that are crucial to the delivery of the contract."
 supplier_subcontractors:
-  title: "Essential subcontractors"
+  title: "Key subcontractors"
   introduction:
     - "Add the staff or subcontractors that are crucial to the delivery of the contract."
 add_staff:
   title: "Supplier details"
-  sub_heading: "Essential staff"
+  sub_heading: "Key staff"
   hint:
     - "Add the staff that are crucial to the delivery of the contract"
 add_subcontractors:
   title: "Supplier details"
-  sub_heading: "Essential subcontractors"
+  sub_heading: "Key subcontractors"
   hint:
     - "Add the subcontractors that are crucial to the delivery of the contract"
 added:
