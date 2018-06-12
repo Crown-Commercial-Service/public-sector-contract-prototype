@@ -47,7 +47,7 @@ overview:
   buyer:
     text: "Buyer details"
     hint:
-      - "Information about the buyer, for example company name and address."
+      - "Information about the buyer, for example company name."
     link: "Check and complete buyer details"
     review: "Review answers"
   supplier:
