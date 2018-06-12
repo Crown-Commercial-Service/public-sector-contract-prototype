@@ -41,7 +41,7 @@ overview:
   contract:
     text: "Contract details"
     hint:
-      - "Information about what's being bought, for example price and delivery."
+      - "Information about what's being bought, for example price."
     link: "Check and complete contract details"
     review: "Review answers"
   buyer:
