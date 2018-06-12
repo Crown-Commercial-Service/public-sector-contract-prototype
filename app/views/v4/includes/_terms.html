@@ -3,9 +3,9 @@
   <div class="form-group">
     <h2 class="heading-medium-first">{{ content.terms.special_terms.label }}</h2>
     <label class="form-label" for="special_terms">
-      {% if content.special_terms.hint %}
+      {% if content.terms.special_terms.hint %}
       <span class="form-hint">
-        {% for hint_text in content.special_terms.hint %}
+        {% for hint_text in content.terms.special_terms.hint %}
         {{ hint_text }}<br>
         {% endfor %}
       </span>
