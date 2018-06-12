@@ -6,7 +6,7 @@
     </a>
   </p>
 
-  {% if (order_form.terms_complete and order_form.environmental_complete and order_form.sensitive_complete) and not order_form.buyer_signatory_complete %}
+  {% if order_form.complete and not order_form.buyer_signatory_complete %}
    <h2 class="heading-medium" style="padding-top:20px">Next steps</h2>
 
     {% if not order_form.invite_supplier_signatory_complete %}
@@ -34,8 +34,8 @@
 
     {% if order_form.invite_supplier_signatory_complete %}
       <div style="float:left;padding-left:2px;">
-        <p style="padding-bottom:20px">
-          <span class="task-completed">Th supplier has been invited to sign</span>
+        <p style="padding-bottom:40px">
+          <span class="task-completed">The supplier has been invited to sign</span>
         </p>
       </div>
     {% endif %}

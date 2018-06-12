@@ -15,7 +15,13 @@
 
       <h1 class="heading-xlarge">{{ content[role + "_title"] }}</h1>
 
-      {% for paragraph_text in content[role + "_introduction"] %}
+      {% if order_form.complete %}
+        {% set introduction = content[role + "_introduction_sign"] %}
+      {% else %}
+        {% set introduction = content[role + "_introduction"] %}
+      {% endif %}
+
+      {% for paragraph_text in introduction %}
       <p>{{ paragraph_text }}</p>
       {% endfor %}
 

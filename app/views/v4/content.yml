@@ -30,7 +30,9 @@ overview:
     - "Enter your details to create an order form. This will become your contract with the supplier."
     - "You've already given us some of this information, so we've put it into the form for you. You can check and edit it."
     - "Review and change the whole contract, or edit it by section."
-  buyer_introduction_sign: 
+  buyer_introduction_sign:
+    - "You've completed the contract. Once the buyer and supplier have both signed it, work can start."
+  supplier_introduction_sign:
     - "You've completed the contract. Once the buyer and supplier have both signed it, work can start."
   supplier_introduction:
     - "You've been awarded the 'Office cleaning' contract."
@@ -254,6 +256,7 @@ added:
   supplier_representative: "Added the name of the person signing the contract"
   add_staff: "Added staff member"
   add_subcontractors: "Added subcontractor"
+  policy: "Added policy"
 supplier_edit:
   title: "Invite the supplier to edit"
   introduction:

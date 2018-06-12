@@ -75,16 +75,21 @@ router.get('/v4/:page', function (req, res) {
 
 router.post('/v4/:page', function (req, res) {
   page = req.params.page
+  data = req.session.data
 
   if (page === 'signatory') {
-    req.session.data[`${req.session.data.role}_${page}_complete`] = true
+    data[`${data.role}_${page}_complete`] = true
   } else {
-    req.session.data[`${page}_complete`] = true
+    data[`${page}_complete`] = true
   }
 
-  helpers.addItem(req.session.data)
+  if (data.environmental_complete && data.terms_complete && data.sensitive_complete) {
+    data.complete = true
+  }
+
+  helpers.addItem(data)
   path = helpers.setPath(page, req.query.review, req.body.additional_policy)
-  query = helpers.setQuery(page, req.session.data.role)
+  query = helpers.setQuery(page, data.role)
   res.redirect(`/v4${path}${query}`)
 })
 
