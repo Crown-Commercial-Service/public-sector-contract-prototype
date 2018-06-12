@@ -68,7 +68,15 @@
         <p>{{ hint_text }}</p>
         {% endfor %}
 
-        <p><a href="v4/contract_details">{{ content.contract.link }}</a></p>
+        <p>
+          <a href="v4/contract_details">
+            {% if order_form.terms_complete %}
+              {{ content.contract.link_after }}
+            {% else %}
+              {{ content.contract.link }}
+            {% endif %}
+          </a>
+        </p>
       </div>
     </div>
   </div>
@@ -86,7 +94,16 @@
         {% for hint_text in content.buyer.hint %}
         <p>{{ hint_text }}</p>
         {% endfor %}
-        <p><a href="v4/buyer">{{ content.buyer.link }}</a></p>
+
+        <p>
+          <a href="v4/buyer">
+            {% if order_form.environmental_complete %}
+              {{ content.buyer.link_after }}
+            {% else %}
+              {{ content.buyer.link }}
+            {% endif %}
+          </a>
+        </p>
       </div>
     </div>
   </div>
@@ -115,12 +132,28 @@
         <p><a href="v4/supplier_edit">{{ content.supplier[role + "_edit"] }}</a></p>
         {% endif %}
 
-        <p><a href="v4/supplier">{{ content.supplier[role + "_link"] }}</a></p>
+        <p>
+          <a href="v4/supplier">
+            {% if order_form.sensitive_complete %}
+              {{ content.supplier[role + "_link_after"] }}
+            {% else %}
+              {{ content.supplier[role + "_link"] }}
+            {% endif %}
+          </a>
+        </p>
 
         {% if order_form.role == 'buyer' %}
           {% set review_path = 'review?review=supplier_details' %}
         {% else %}
           {% set review_path = 'review' %}
+        {% endif %}
+
+        {% if role == 'supplier' %}
+          <p>
+            <a href="v4/{{ review_path }}">
+              {{ content.supplier[role + "_review"] }}
+            </a>
+          </p>
         {% endif %}
 
         {% if role == 'supplier' and order_form.supplier_submitted %}
