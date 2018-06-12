@@ -1,4 +1,5 @@
 <aside class="govuk-related-items" role="complementary">
+  <p>{{ content.buyer_terms_conditions }}</p>
   <p>
     <a class="button" href="v4/terms_and_conditions">
       Terms and conditions
@@ -6,15 +7,14 @@
   </p>
 
   {% if (order_form.terms_complete and order_form.environmental_complete and order_form.sensitive_complete) and not order_form.buyer_signatory_complete %}
-   <h2 class="heading-medium">Next steps</h2>
-    <p>
-      <a class="button" href="v4/invite_supplier_signatory">
-        Invite supplier to sign
-      </a>
-    </p>
+   <h2 class="heading-medium" style="padding-top:20px">Next steps</h2>
 
-    {% if order_form.invite_supplier_signatory_complete %}
-      <span class="task-completed">Supplier invited to sign</span>
+    {% if not order_form.invite_supplier_signatory_complete %}
+      <p>
+        <a class="button" href="v4/invite_supplier_signatory">
+          Invite supplier to sign
+        </a>
+      </p>
     {% endif %}
 
     {% if order_form.buyer_signatory_complete %}
@@ -26,6 +26,24 @@
           {{ content.sign.buyer }}
         </a>
       </p>
+    {% endif %}
+  {% endif %}
+
+  {% if order_form.invite_supplier_signatory_complete or order_form.buyer_signatory_complete %}
+    <h2 class="heading-medium" style="padding-top:20px">Progress</h2>
+
+    {% if order_form.invite_supplier_signatory_complete %}
+      <div style="float:left;padding-left:2px;">
+        <p style="padding-bottom:20px">
+          <span class="task-completed">Supplier invited to sign</span>
+        </p>
+      </div>
+    {% endif %}
+
+    {% if order_form.buyer_signatory_complete %}
+      <div>
+        <span class="task-completed">You have signed the contract</span>
+      </div>
     {% endif %}
   {% endif %}
 </aside>
