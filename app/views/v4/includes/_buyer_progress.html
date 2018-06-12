@@ -1,0 +1,31 @@
+<aside class="govuk-related-items" role="complementary">
+  <p>
+    <a class="button" href="v4/terms_and_conditions">
+      Terms and conditions
+    </a>
+  </p>
+
+  {% if (order_form.terms_complete and order_form.environmental_complete and order_form.sensitive_complete) and not order_form.buyer_signatory_complete %}
+   <h2 class="heading-medium">Next steps</h2>
+    <p>
+      <a class="button" href="v4/invite_supplier_signatory">
+        Invite supplier to sign
+      </a>
+    </p>
+
+    {% if order_form.invite_supplier_signatory_complete %}
+      <span class="task-completed">Supplier invited to sign</span>
+    {% endif %}
+
+    {% if order_form.buyer_signatory_complete %}
+      <span class="task-completed">
+      You have signed the contract</span>
+    {% else %}
+      <p>
+        <a class="button" type="submit" href="v4/signatory">
+          {{ content.sign.buyer }}
+        </a>
+      </p>
+    {% endif %}
+  {% endif %}
+</aside>

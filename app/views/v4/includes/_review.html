@@ -7,7 +7,7 @@
     {% endif %}
 
     {% if review == "buyer_details" or not review or review == "all" %}
-    {% if not review %}
+    {% if not review or review == "all" %}
     <div style="margin-top:60px">
     {% else %}
     <div>
@@ -21,7 +21,7 @@
     {% endif %}
 
     {% if review == "supplier_details" or not review or review == "all" %}
-    {% if not review %}
+    {% if not review or review == "all" %}
     <div style="margin-top:60px">
     {% else %}
     <div>
