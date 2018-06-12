@@ -26,7 +26,7 @@ overview:
   buyer_title: "Award the Office cleaning contract"
   supplier_title: "Complete the Office cleaning contract"
   buyer_introduction:
-    - "Fill in the order form to create a contract with the supplier."
+    - "Enter your details to create an order form. This will become your contract with the supplier."
     - "You've already given us some of this information, so we've put it into the form for you. You can check and edit it."
     - "When the form's complete, and the buyer and supplier have both signed it, work can start."
   supplier_introduction:
@@ -48,7 +48,7 @@ overview:
   buyer:
     text: "Buyer details"
     hint:
-      - "Information about the buyer, for example the security policy."
+      - "Information about the buyer, for example company name and address."
     link: "Check and complete buyer details"
     review: "Review answers"
   supplier:
@@ -104,7 +104,7 @@ progress:
   report:
     label: "Working together"
     hint:
-      - "How the supplier should update the buyer about their progress on the project. For example, should the supplier be onsite 3 days a week for face-to-face meetings or provide weekly written reports."
+      - "How the supplier should update the buyer about their progress on the project for example, provide weekly written reports."
 what:
   title: "Contract details"
   details:
@@ -116,7 +116,7 @@ charges:
   call_off:
     label: "Price"
     hint:
-      - "How much it'll cost and details of any pricing structures needed."
+      - "How much it'll cost and details of any pricing structures."
 liability:
   title: "Contract details"
   max_liability:
@@ -133,7 +133,7 @@ guarantee:
   title: "Contract details"
   label: "Guarantee"
   hint:
-    - "Answer yes if a third party is needed to guarantee the supplier can meet their obligations. For example, this may be necessary because the supplier can't provide enough trading history information or are a very small company."
+    - "Is a third party needed to guarantee the supplier can meet their obligations? For example, this may be necessary because the supplier can't provide enough trading history information or are a very small company."
 expenses:
   title: "Contract details"
   reimbursable:
