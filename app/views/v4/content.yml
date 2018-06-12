@@ -29,6 +29,7 @@ overview:
   buyer_introduction:
     - "Enter your details to create an order form. This will become your contract with the supplier."
     - "You've already given us some of this information, so we've put it into the form for you. You can check and edit it."
+    - "Review and change the whole contract, or edit it by section."
   supplier_introduction:
     - "You've been awarded the 'Office cleaning' contract."
     - "The buyer has invited you to:"
