@@ -180,8 +180,9 @@ buyer_contract_manager:
   title: "Buyer details"
   hint:
     - "This will be the supplier's regular contact."
-environmental:
+policies:
   title: "Buyer details"
+environmental:
   label: "Environmental policy"
   hint:
     - "Link to or upload the environmental policy."

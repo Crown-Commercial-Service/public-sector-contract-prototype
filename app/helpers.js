@@ -16,8 +16,8 @@ flow = {
   progress: '/terms',
   terms: '/review?review=contract_details',
   buyer: '/buyer_contract_manager',
-  buyer_contract_manager: '/environmental',
-  environmental: '/review?review=buyer_details',
+  buyer_contract_manager: '/policies',
+  policies: '/review?review=buyer_details',
   supplier: '/supplier_contract_manager',
   supplier_contract_manager: '/supplier_numbers',
   supplier_numbers: '/supplier_staff',
@@ -27,7 +27,7 @@ flow = {
 
 exports.setPath = function(page, review, additional_policy) {
   if (review || additional_policy) {
-    if (page === 'environmental' && additional_policy) {
+    if (page === 'policies' && additional_policy) {
       sub_path = '/add/policy'
     } else {
       sub_path = '/review'
@@ -73,7 +73,7 @@ exports.additionReturnPath = function(type) {
   } else if (type.includes('add')) {
     path = 'supplier_staff'
   } else if (type == 'policy') {
-    path = 'environmental'
+    path = 'policies'
   }
 
   return path
