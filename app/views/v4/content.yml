@@ -107,7 +107,11 @@ contract_details:
   end_date:
     label: "End date"
     hint:
-      - "This is when the contract will end if it isn't extended. This contract can be extended by one year."
+      - "This is when the contract will end if it isn't extended."
+  extension_period:
+    label: "Extension period"
+    hint:
+      - "This contract can be extended by a maximum of two years."
 progress:
   title: "Contract details"
   report:
@@ -155,7 +159,7 @@ credits:
   service_credits:
     label: "Insurance"
     hint:
-      - "Details of any additional insurance policies the buyer wants the supplier to have."
+      - "Details of insurance policies the supplier must have are in the framework agreement. Include any additional insurance policies the buyer wants the supplier to have."
 payment:
   title: "Contract details"
   label: "How to pay"
