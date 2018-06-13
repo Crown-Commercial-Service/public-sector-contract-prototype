@@ -113,7 +113,7 @@ progress:
   report:
     label: "Working together"
     hint:
-      - "How the supplier should update the buyer about their progress on the project for example, by providing weekly written reports. Include how you want to be updated and how regularly."
+      - "How the supplier should update the buyer about their progress on the project, for example by providing weekly written reports. Include how you want to be updated and how regularly."
 what:
   title: "Contract details"
   details:
