@@ -111,7 +111,7 @@ contract_details:
   extension_period:
     label: "Extension period"
     hint:
-      - "This contract can be extended by a maximum of two years. Say how long you'd want to extend it for."
+      - "This contract can be extended by a maximum of two years. Say how long you might want to extend it for."
 progress:
   title: "Contract details"
   report:
