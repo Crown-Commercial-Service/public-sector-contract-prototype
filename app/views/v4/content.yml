@@ -29,7 +29,7 @@ overview:
   buyer_introduction:
     - "Enter your details to create an order form. This will become your contract with the supplier."
     - "You've already given us some of this information, so we've put it into the form for you. You can check and edit it."
-    - "Review and edit the entire contract, or edit by section."
+    - "Review and edit the entire contract, or by section."
   buyer_introduction_sign:
     - "You've completed the contract. Once the buyer and supplier have both signed it, work can start."
   supplier_introduction_sign:
