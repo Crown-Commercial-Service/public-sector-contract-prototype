@@ -96,7 +96,7 @@
       <h2 class="heading-medium">
         2. {{ content.buyer.text }}
 
-        {% if order_form.environmental_complete %}
+        {% if order_form.policies_complete %}
         <span class="task-completed">Completed</span>
         {% endif %}
       </h2>
@@ -107,7 +107,7 @@
 
         <p>
           <a href="v4/buyer">
-            {% if order_form.environmental_complete %}
+            {% if order_form.policies_complete %}
               {{ content.buyer.link_after }}
             {% else %}
               {{ content.buyer.link }}
@@ -122,7 +122,7 @@
       <h2 class="heading-medium">
         {% if role == 'buyer' %}3. {% endif %}{{ content.supplier.text }}
 
-        {% if order_form.sensitive_complete and role != 'supplier' %}
+        {% if order_form.sensitive_complete and role == 'buyer' %}
         <span class="task-completed">Completed</span>
         {% endif %}
       </h2>

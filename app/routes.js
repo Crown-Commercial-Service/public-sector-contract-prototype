@@ -83,7 +83,7 @@ router.post('/v4/:page', function (req, res) {
     data[`${page}_complete`] = true
   }
 
-  if (data.environmental_complete && data.terms_complete && data.sensitive_complete) {
+  if (data.policies_complete && data.terms_complete && data.sensitive_complete) {
     data.complete = true
   }
 

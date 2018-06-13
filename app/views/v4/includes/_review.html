@@ -38,7 +38,7 @@
 
 <div class="grid-row" style="margin-top:30px">
   <div class="column-full">
-    {% if not review and (order_form.terms_complete and order_form.environmental_complete and order_form.sensitive_complete) and not order_form.buyer_signatory_complete %}
+    {% if not review and order_form.complete and not order_form.buyer_signatory_complete %}
     <p><a class="button" type="submit" href="/v4/signatory">Sign contract</a></p>
     <p><a class="button" href="/v4/invite_supplier_signatory">Invite supplier to sign</a></p>
     {% else %}
