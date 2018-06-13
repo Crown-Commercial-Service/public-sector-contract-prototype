@@ -6,7 +6,7 @@
       {% if content.contract_details.reference.hint %}
       <span class="form-hint">
         {% for hint_text in content.contract_details.reference.hint %}
-        {{ hint_text }}<br>
+          {{ hint_text }}<br>
         {% endfor %}
       </span>
       {% endif %}
@@ -20,7 +20,7 @@
         {% if content.contract_details.start_date.hint %}
         <span class="form-hint">
           {% for hint_text in content.contract_details.start_date.hint %}
-          {{ hint_text }}<br>
+            {{ hint_text }}<br>
           {% endfor %}
         </span>
         {% endif %}
@@ -47,7 +47,7 @@
         {% if content.contract_details.end_date.hint %}
         <span class="form-hint">
           {% for hint_text in content.contract_details.end_date.hint %}
-          {{ hint_text }}<br>
+            {{ hint_text }}<br>
           {% endfor %}
         </span>
         {% endif %}
@@ -67,6 +67,18 @@
         </div>
       </div>
     </fieldset>
+
+    <div class="form-group">
+      <h2 class="heading-medium">{{ content.contract_details.extension_period.label }}</h2>
+      <label class="form-label" for="extension">
+        <span class="form-hint">
+          {% for hint_text in content.contract_details.extension_period.hint %}
+            {{ hint_text }}<br>
+          {% endfor %}
+        </span>
+      </label>
+      <input class="form-control" id="extension" type="text" name="extension" value="{{ order_form.extension }}">
+    </div>
   </div>
 
   {% include "v4/includes/_save_and_continue.html" %}

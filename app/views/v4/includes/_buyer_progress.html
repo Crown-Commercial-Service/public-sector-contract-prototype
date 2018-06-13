@@ -4,9 +4,11 @@
       <div style="padding-bottom:10px">
         <h2 class="heading-medium">Next steps</h2>
 
+        <p>{{ content.sign.supplier_sign }}</p>
+
         {% if not order_form.invite_supplier_signatory_complete %}
           <p>
-            <a class="button" href="v4/invite_supplier_signatory">
+            <a class="button" href="#">
               Invite supplier to sign
             </a>
           </p>
@@ -17,7 +19,7 @@
           You have signed the contract</span>
         {% else %}
           <p>
-            <a class="button" type="submit" href="v4/signatory">
+            <a class="button" type="submit" href="#">
               {{ content.sign.buyer }}
             </a>
           </p>
@@ -32,22 +34,4 @@
       </a>
     </p>
   </div>
-
-  {% if order_form.invite_supplier_signatory_complete or order_form.buyer_signatory_complete %}
-    <h2 class="heading-medium" style="padding-top:20px">Progress</h2>
-
-    {% if order_form.invite_supplier_signatory_complete %}
-      <div style="float:left;padding-left:2px;">
-        <p style="padding-bottom:40px">
-          <span class="task-completed">The supplier has been invited to sign</span>
-        </p>
-      </div>
-    {% endif %}
-
-    {% if order_form.buyer_signatory_complete %}
-      <div>
-        <span class="task-completed">You have signed the contract</span>
-      </div>
-    {% endif %}
-  {% endif %}
 </aside>

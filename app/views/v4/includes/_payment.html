@@ -37,7 +37,7 @@
   {% else %}
   <div class="form-group" style="display:none" id="payment_other">
   {% endif %}
-  <textarea class="form-control form-control-3-4" name="payment_other" id="payment_other" rows="10">{{ order_form.payment_other }}</textarea>
+  <input class="form-control" name="payment_other" id="payment_other">{{ order_form.payment_other }}</input>
   </div>
 
   {% include "v4/includes/_save_and_continue.html" %}
