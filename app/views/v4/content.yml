@@ -99,7 +99,7 @@ contract_details:
   reference:
     label: "Call-off reference number"
     hint:
-      - "Every call-off contract has a reference number that can help identify it. We've included the RM number, you may want to use your own reference number instead."
+      - "Every call-off contract has a reference number that can help identify it. We've included the RM number, you may want to use your own reference number."
   start_date:
     label: "Start date"
     hint:
@@ -111,7 +111,7 @@ contract_details:
   extension_period:
     label: "Extension period"
     hint:
-      - "This contract can be extended by a maximum of two years."
+      - "This contract can be extended by a maximum of two years. Say how long you'd want to extend it for."
 progress:
   title: "Contract details"
   report:
@@ -159,7 +159,7 @@ credits:
   service_credits:
     label: "Insurance"
     hint:
-      - "Details of insurance policies the supplier must have are in the framework agreement. Include any additional insurance policies the buyer wants the supplier to have."
+      - "Details of insurance policies the supplier needs are in the framework agreement. Include any additional insurance policies the buyer wants the supplier to have."
 payment:
   title: "Contract details"
   label: "How to pay"
