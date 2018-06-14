@@ -1,63 +1,68 @@
-<div class="column-two-thirds" style="padding-left:0;padding-top:10px">
-{% for representative in order_form.supplier_representative %}
   <dl class="govuk-check-your-answers cya-questions-short">
+  {% if order_form.supplier_representative_name %}
     <div>
       <dt class="cya-question" style="border-bottom:none">
         Name
       </dt>
       <dd class="cya-answer" style="border-bottom:none">
-        {{ representative.name }}
+        {{ order_form.supplier_representative_name }}
       </dd>
       <dd class="cya-change" style="border-bottom:none">
-        <a href="/v4/edit/supplier_representative/{{ representative.id }}">Edit</a>
       </dd>
     </div>
+  {% endif %}
 
+  {% if order_form.supplier_representative_role %}
     <div>
       <dt class="cya-question" style="border-bottom:none">
         Role
       </dt>
       <dd class="cya-answer" style="border-bottom:none">
         <div>
-          {{ representative.role }}
+          {{ order_form.supplier_representative_role }}
         </div>
         </dd>
       <dd class="cya-change" style="border-bottom:none">
       </dd>
     </div>
+  {% endif %}
 
+  {% if order_form.supplier_representative_email%}
     <div>
       <dt class="cya-question" style="border-bottom:none">
         Email
       </dt>
       <dd class="cya-answer" style="border-bottom:none">
-        {{ representative.email }}
+        {{ order_form.supplier_representative_email }}
       </dd>
       <dd class="cya-change" style="border-bottom:none">
       </dd>
     </div>
+  {% endif %}
 
+  {% if order_form.supplier_representative_phone %}
     <div>
       <dt class="cya-question" style="border-bottom:none">
         Telephone
       </dt>
       <dd class="cya-answer" style="border-bottom:none">
-        {{ representative.phone }}
+        {{ order_form.supplier_representative_phone }}
       </dd>
       <dd class="cya-change" style="border-bottom:none">
       </dd>
     </div>
+  {% endif %}
 
+  {% if order_form.supplier_representative_address %}
     <div>
       <dt class="cya-question" style="border-bottom:none">
         Address
       </dt>
       <dd class="cya-answer" style="border-bottom:none">
-        {{ representative.address }}
+        {{ order_form.supplier_representative_address }}
       </dd>
       <dd class="cya-change" style="border-bottom:none">
       </dd>
     </div>
+  {% endif %}
   </dl>
-{% endfor %}
-</div>

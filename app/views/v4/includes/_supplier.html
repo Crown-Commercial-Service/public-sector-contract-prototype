@@ -9,18 +9,19 @@
     <label class="form-label" for="supplier_address"></label>
     <input class="form-control" id="supplier_address" type="text" name="supplier_address" value="{% if order_form.supplier_address %}{{ order_form.supplier_address }}{% else %}{{ content.prefill.supplier_address }}{% endif %}">
 
-    <h2 class="heading-medium">{{ content.supplier_representative.title }}</h2>
-    {% if content.supplier_representative.hint %}
+    <h2 class="heading-medium">{{ content.supplier_contract_manager.title }}</h2>
+    {% if content.supplier_contract_manager.hint %}
     <span class="form-hint">
-      {% for hint_text in content.supplier_representative.hint %}
-      {{ hint_text }}<br>
+      {% for hint_text in content.supplier_contract_manager.hint %}
+        {{ hint_text }}<br>
       {% endfor %}
     </span>
     {% endif %}
-    {% if not order_form.supplier_representative|length %}
-    <p><a href="add/supplier_representative{{ review_param }}">Add</a></p>
+
+    {% if not order_form.supplier_contract_manager_name %}
+      <p><a href="add/supplier_contract_manager{{ review_param }}">Add</a></p>
     {% else %}
-    {% include "v4/includes/_supplier_representative.html" %}
+      {% include "v4/includes/_supplier_contract_manager_review.html" %}
     {% endif %}
   </div>
 

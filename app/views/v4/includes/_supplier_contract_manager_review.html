@@ -1,4 +1,5 @@
 <dl class="govuk-check-your-answers cya-questions-short">
+{% if order_form.supplier_contract_manager_name %}
   <div>
     <dt class="cya-question" style="border-bottom:none;padding-top:10px">
       Name
@@ -9,7 +10,9 @@
     <dd class="cya-change" style="border-bottom:none">
     </dd>
   </div>
+{% endif %}
 
+{% if order_form.supplier_contract_manager_role %}
   <div>
     <dt class="cya-question" style="border-bottom:none">
       Role
@@ -20,7 +23,9 @@
     <dd class="cya-change" style="border-bottom:none">
     </dd>
   </div>
+{% endif %}
 
+{% if order_form.supplier_contract_manager_email %}
   <div>
     <dt class="cya-question" style="border-bottom:none">
       Email
@@ -31,7 +36,9 @@
     <dd class="cya-change" style="border-bottom:none">
     </dd>
   </div>
+{% endif %}
 
+{% if order_form.supplier_contract_manager_phone %}
   <div>
     <dt class="cya-question" style="border-bottom:none">
       Telephone
@@ -42,7 +49,9 @@
     <dd class="cya-change" style="border-bottom:none">
     </dd>
   </div>
+{% endif %}
 
+{% if order_form.supplier_contract_manager_address %}
   <div>
     <dt class="cya-question" style="border-bottom:none">
       Address
@@ -53,4 +62,5 @@
     <dd class="cya-change" style="border-bottom:none">
     </dd>
   </div>
+{% endif %}
 </dl>

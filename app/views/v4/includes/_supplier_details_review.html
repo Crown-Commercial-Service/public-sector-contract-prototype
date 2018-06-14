@@ -50,14 +50,10 @@
 
   <div>
     <dt class="cya-question">
-      {{ content.supplier_representative.title }}
+      Contract manager
     </dt>
     <dd class="cya-answer">
-      <p>{{ order_form.supplier_representative[0].name }}</p>
-      <p>{{ order_form.supplier_representative[0].role }}</p>
-      <p>{{ order_form.supplier_representative[0].email }}</p>
-      <p>{{ order_form.supplier_representative[0].phone }}</p>
-      <p>{{ order_form.supplier_representative[0].address }}</p>
+      {% include "v4/includes/_supplier_contract_manager_review.html" %}
     </dd>
     <dd class="cya-change">
     </dd>
@@ -65,15 +61,13 @@
 
   <div>
     <dt class="cya-question">
-      Contract manager
+      Who will sign
     </dt>
     <dd class="cya-answer">
-      {% if order_form.supplier_contract_manager_name %}
-        {% include "v4/includes/_supplier_contract_manager_review.html" %}
-      {% endif %}
+      {% include "v4/includes/_supplier_representative.html" %}
     </dd>
     <dd class="cya-change">
-      <a href="/v4/supplier_contract_manager?review={{ supplier_change }}">Change</a>
+      <a href="/v4/supplier_authorised_representative?review={{ supplier_change }}">Change</a>
     </dd>
   </div>
 

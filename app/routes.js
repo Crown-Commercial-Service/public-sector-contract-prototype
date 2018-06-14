@@ -114,23 +114,26 @@ router.get('/v4/add/:type', function (req, res) {
 
 router.post('/v4/add/:type', function (req, res) {
   type = req.params.type
-  if (req.session.data[type] == undefined) {
-    req.session.data[type] = []
-  }
-  data = req.session.data
-  helpers.addItem(data)
-
   added_param = ''
-  if (helpers.added(data)) {
-    req.session.data[type].push({
-      id: req.session.data[type].length + 1,
-      name: data.authorised_name,
-      role: data.authorised_role,
-      email: data.authorised_email,
-      phone: data.authorised_phone,
-      address: data.authorised_address
-    })
-    added_param = `?added=${type}`
+
+  if (!type.includes('contract_manager')) {
+    if (req.session.data[type] == undefined) {
+      req.session.data[type] = []
+    }
+    data = req.session.data
+    helpers.addItem(data)
+
+    if (helpers.added(data)) {
+      req.session.data[type].push({
+        id: req.session.data[type].length + 1,
+        name: data.authorised_name,
+        role: data.authorised_role,
+        email: data.authorised_email,
+        phone: data.authorised_phone,
+        address: data.authorised_address
+      })
+      added_param = `?added=${type}`
+    }
   }
 
   review_param = ''

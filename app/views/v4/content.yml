@@ -203,7 +203,7 @@ supplier:
   address:
     label: "Address"
 supplier_contract_manager:
-  title: "Supplier details"
+  title: "Contract manager"
   hint:
     - "This will be the buyer's regular contact."
 supplier_numbers:
@@ -227,13 +227,11 @@ buyer_authorised_representative:
   hint:
     - "This person must have the authority to sign the contract on their organisation's behalf."
     - "Usually this is a senior member of the organisation."
-supplier_representative:
-  title: "Who will sign the contract"
-  introduction:
+supplier_authorised_representative:
+  title: "Supplier details"
+  hint:
     - "This person must have the authority to sign the contract on their organisation's behalf."
     - "Usually this is a senior member of the organisation."
-  hint:
-    - "This person will sign the contract on their organisation's behalf."
 supplier_staff:
   title: "Supplier details"
   introduction:
@@ -255,8 +253,8 @@ add_subcontractors:
 added:
   hint:
     - "Add the subcontractor roles or people that are crucial to the delivery of the contract."
-  buyer_representative: "Added the name of the person signing the contract"
-  supplier_representative: "Added the name of the person signing the contract"
+  buyer_contract_manager: "Added the contract manager"
+  supplier_contract_manager: "Added the contract manager"
   add_staff: "Added staff member"
   add_subcontractors: "Added subcontractor"
   policy: "Added policy"

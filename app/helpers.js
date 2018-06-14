@@ -18,8 +18,8 @@ flow = {
   buyer: '/buyer_authorised_representative',
   buyer_authorised_representative: '/policies',
   policies: '/review?review=buyer_details',
-  supplier: '/supplier_contract_manager',
-  supplier_contract_manager: '/supplier_numbers',
+  supplier: '/supplier_authorised_representative',
+  supplier_authorised_representative: '/supplier_numbers',
   supplier_numbers: '/supplier_staff',
   supplier_staff: '/sensitive',
   sensitive: '/review?review=supplier_details'
@@ -68,7 +68,7 @@ exports.added = function(data) {
 exports.additionReturnPath = function(type) {
   if (type.includes('buyer')) {
     path = 'buyer'
-  } else if (type.includes('representative')) {
+  } else if (type.includes('supplier')) {
     path = 'supplier'
   } else if (type.includes('add')) {
     path = 'supplier_staff'

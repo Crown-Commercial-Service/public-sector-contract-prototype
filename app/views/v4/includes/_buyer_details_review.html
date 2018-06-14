@@ -73,9 +73,7 @@
       {% if order_form.role == 'supplier' %}
         {{ content.prefill.buyer_contract_manager }}
       {% else %}
-        {% if order_form.buyer_contract_manager_name %}
-          {% include "v4/includes/_buyer_contract_manager_review.html" %}
-        {% endif %}
+        {% include "v4/includes/_buyer_contract_manager_review.html" %}
       {% endif %}
     </dd>
     <dd class="cya-change"></dd>
