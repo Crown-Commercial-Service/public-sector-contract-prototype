@@ -27,7 +27,12 @@
       </div>
     {% endif %}
 
+   {% if order_form.complete%}
+    <p>{{ content.buyer_terms_conditions_after }}</p>
+   {% else %}
     <p>{{ content.buyer_terms_conditions }}</p>
+   {% endif %}
+
     <p>
       <a class="button" href="v4/terms_and_conditions">
         Terms and conditions

@@ -25,6 +25,7 @@ prefill:
 overview:
   buyer_title: "Award the Office cleaning contract"
   buyer_terms_conditions: "Read the contract's terms and conditions"
+  buyer_terms_conditions_after: "Download the contract's terms and conditions"
   supplier_title: "Complete the Office cleaning contract"
   buyer_introduction:
     - "Enter your details to create an order form. This will become your contract with the supplier."
