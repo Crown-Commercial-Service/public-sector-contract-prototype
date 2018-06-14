@@ -159,7 +159,7 @@ credits:
   service_credits:
     label: "Insurance"
     hint:
-      - "Details of insurance policies the supplier needs are in the framework agreement. Include any additional insurance policies the buyer wants the supplier to have."
+      - "Include any additional insurance policies the supplier needs. Details of insurance policies the supplier must have are in the framework agreement."
 payment:
   title: "Contract details"
   label: "How to pay"
