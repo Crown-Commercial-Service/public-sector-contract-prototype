@@ -1,0 +1,48 @@
+<span class="form-hint">Step 2 of 3</span>
+<form class="form" action="" method="post">
+  <h2 class="heading-medium-first">Who will sign the contract</h2>
+  {% if content.buyer_authorised_representative.hint %}
+    {% for hint_text in content.buyer_authorised_representative.hint %}
+    <p>{{ hint_text }}</p>
+    {% endfor %}
+  {% endif %}
+
+  <div class="form-group">
+    <h2 class="heading-medium">Name</h2>
+    <label class="form-label" for="buyer_representative_name">
+      <span class="form-hint">
+      </span>
+    </label>
+    <input class="form-control" id="buyer_representative_name" type="text" name="buyer_representative_name" value="{{ order_form.buyer_representative_name }}">
+
+    <h2 class="heading-medium">Role</h2>
+    <label class="form-label" for="buyer_representative_role">
+      <span class="form-hint">
+      </span>
+    </label>
+    <input class="form-control" id="buyer_representative_role" type="text" name="buyer_representative_role" value="{{ order_form.buyer_representative_role }}">
+
+    <h2 class="heading-medium">Email</h2>
+    <label class="form-label" for="buyer_representative_email">
+      <span class="form-hint">
+      </span>
+    </label>
+    <input class="form-control" id="buyer_representative_email" type="text" name="buyer_representative_email" value="{{ order_form.buyer_representative_email }}">
+
+    <h2 class="heading-medium">Telephone</h2>
+    <label class="form-label" for="buyer_representative_phone">
+      <span class="form-hint">
+      </span>
+    </label>
+    <input class="form-control" id="buyer_representative_phone" type="text" name="buyer_representative_phone" value="{{ order_form.buyer_representative_phone }}">
+
+    <h2 class="heading-medium">Address</h2>
+    <label class="form-label" for="buyer_representative_address">
+      <span class="form-hint">
+      </span>
+    </label>
+    <input class="form-control" id="buyer_representative_address" type="text" name="buyer_representative_address" value="{{ order_form.buyer_representative_address }}">
+  </div>
+
+  {% include "v4/includes/_save_and_continue.html" %}
+</form>

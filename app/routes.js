@@ -96,7 +96,11 @@ router.post('/v4/:page', function (req, res) {
 router.get('/v4/add/:type', function (req, res) {
   type = req.params.type
 
-  page = type == 'policy' ? 'policy' : 'representative'
+  if (['add_staff', 'add_subcontractors'].includes(type)) {
+    page = 'representative'
+  } else {
+    page = type
+  }
 
   res.render('v4/base', {
     header: type,

@@ -6,7 +6,7 @@
       {% if content.buyer.name.hint %}
       <span class="form-hint">
         {% for hint_text in content.buyer.name.hint %}
-        {{ hint_text }}<br>
+          {{ hint_text }}<br>
         {% endfor %}
       </span>
       {% endif %}
@@ -18,7 +18,7 @@
       {% if content.buyer.address.hint %}
       <span class="form-hint">
         {% for hint_text in content.buyer.address.hint %}
-        {{ hint_text }}<br>
+          {{ hint_text }}<br>
         {% endfor %}
       </span>
       {% endif %}
@@ -30,25 +30,26 @@
       {% if content.buyer.invoice_address.hint %}
       <span class="form-hint">
         {% for hint_text in content.buyer.invoice_address.hint %}
-        {{ hint_text }}<br>
+          {{ hint_text }}<br>
         {% endfor %}
       </span>
       {% endif %}
     </label>
     <input class="form-control" id="invoice_address" type="text" name="invoice_address" value={{ order_form.invoice_address }}>
 
-    <h2 class="heading-medium">{{ content.buyer_representative.title }}</h2>
-    {% if content.buyer_representative.hint %}
+    <h2 class="heading-medium">{{ content.buyer_contract_manager.title }}</h2>
+    {% if content.buyer_contract_manager.hint %}
     <span class="form-hint">
-      {% for hint_text in content.buyer_representative.hint %}
-      {{ hint_text }}<br>
+      {% for hint_text in content.buyer_contract_manager.hint %}
+        {{ hint_text }}<br>
       {% endfor %}
     </span>
     {% endif %}
-    {% if not order_form.buyer_representative %}
-    <p><a href="add/buyer_representative{{ review_param }}" class="">Add</a></p>
+
+    {% if not order_form.buyer_contract_manager_name %}
+      <p><a href="add/buyer_contract_manager{{ review_param }}" class="">Add</a></p>
     {% else %}
-    {% include "v4/includes/_buyer_representative.html" %}
+      {% include "v4/includes/_buyer_contract_manager_review.html" %}
     {% endif %}
   </div>
 

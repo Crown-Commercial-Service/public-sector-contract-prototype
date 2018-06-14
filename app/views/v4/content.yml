@@ -222,13 +222,11 @@ sensitive:
     label: "Commercially sensitive information"
     hint:
       - "The contract will be made publicly available. Include details of any information that can't be published and explain why."
-buyer_representative:
-  title: "Who will sign the contract"
-  introduction:
+buyer_authorised_representative:
+  title: "Buyer details"
+  hint:
     - "This person must have the authority to sign the contract on their organisation's behalf."
     - "Usually this is a senior member of the organisation."
-  hint:
-    - "This person will sign the contract on their organisation's behalf."
 supplier_representative:
   title: "Who will sign the contract"
   introduction:

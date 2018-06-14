@@ -67,24 +67,6 @@
 
   <div>
     <dt class="cya-question">
-      {{ content.buyer_representative.title }}
-    </dt>
-    <dd class="cya-answer">
-      {% if order_form.role == 'supplier' %}
-        {{ content.prefill.buyer_who_will_sign }}
-      {% else %}
-        <p>{{ order_form.buyer_representative[0].name }}</p>
-        <p>{{ order_form.buyer_representative[0].role }}</p>
-        <p>{{ order_form.buyer_representative[0].email }}</p>
-        <p>{{ order_form.buyer_representative[0].phone }}</p>
-        <p>{{ order_form.buyer_representative[0].address }}</p>
-      {% endif %}
-    </dd>
-    <dd class="cya-change"></dd>
-  </div>
-
-  <div>
-    <dt class="cya-question">
       Contract manager
     </dt>
     <dd class="cya-answer">
@@ -96,9 +78,23 @@
         {% endif %}
       {% endif %}
     </dd>
+    <dd class="cya-change"></dd>
+  </div>
+
+  <div>
+    <dt class="cya-question">
+      Who will sign
+    </dt>
+    <dd class="cya-answer">
+      {% if order_form.role == 'supplier' %}
+        {{ content.prefill.buyer_who_will_sign }}
+      {% else %}
+        {% include "v4/includes/_buyer_representative.html" %}
+      {% endif %}
+    </dd>
     <dd class="cya-change">
       {% if order_form.role == 'buyer' %}
-      <a href="/v4/buyer_contract_manager?review={{ buyer_change }}">Change</a>
+      <a href="/v4/buyer_authorised_representative?review={{ buyer_change }}">Change</a>
       {% endif %}
     </dd>
   </div>
