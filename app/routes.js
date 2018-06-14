@@ -69,7 +69,8 @@ router.get('/v4/:page', function (req, res) {
     order_form: req.session.data,
     content: content,
     added: req.query.added,
-    review: req.query.review
+    review: req.query.review,
+    edit: req.query.edit
   })
 })
 
@@ -88,7 +89,7 @@ router.post('/v4/:page', function (req, res) {
   }
 
   helpers.addItem(data)
-  path = helpers.setPath(page, req.query.review, req.body.additional_policy)
+  path = helpers.setPath(page, req.query.review, req.body.additional_policy, req.query.edit)
   query = helpers.setQuery(page, data.role)
   res.redirect(`/v4${path}${query}`)
 })
@@ -96,11 +97,7 @@ router.post('/v4/:page', function (req, res) {
 router.get('/v4/add/:type', function (req, res) {
   type = req.params.type
 
-  if (['add_staff', 'add_subcontractors'].includes(type)) {
-    page = 'representative'
-  } else {
-    page = type
-  }
+  page = type == 'policy' ? 'policy' : 'representative'
 
   res.render('v4/base', {
     header: type,
@@ -114,16 +111,16 @@ router.get('/v4/add/:type', function (req, res) {
 
 router.post('/v4/add/:type', function (req, res) {
   type = req.params.type
+  data = req.session.data
+  helpers.addItem(data)
+
   added_param = ''
+  if (helpers.added(data, type)) {
+    if (!type.includes('contract_manager')) {
+      if (data[type] == undefined) {
+        data[type] = []
+      }
 
-  if (!type.includes('contract_manager')) {
-    if (req.session.data[type] == undefined) {
-      req.session.data[type] = []
-    }
-    data = req.session.data
-    helpers.addItem(data)
-
-    if (helpers.added(data)) {
       req.session.data[type].push({
         id: req.session.data[type].length + 1,
         name: data.authorised_name,
@@ -132,8 +129,8 @@ router.post('/v4/add/:type', function (req, res) {
         phone: data.authorised_phone,
         address: data.authorised_address
       })
-      added_param = `?added=${type}`
     }
+    added_param = `?added=${type}`
   }
 
   review_param = ''

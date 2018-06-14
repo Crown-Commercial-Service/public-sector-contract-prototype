@@ -39,6 +39,14 @@
       </div>
       {% endif %}
 
+      {% if edit and page in ['buyer', 'supplier'] %}
+      <div class="govuk-box-highlight">
+        <p class="font-medium" style="margin-bottom: 0px">
+          Updated contract manager
+        </p>
+      </div>
+      {% endif %}
+
       <h1 class="heading-xlarge">{{ content[header].title }}</h1>
 
       {% set introduction = content[header].introduction or content[header][order_form.role + "_introduction"] %}

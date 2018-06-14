@@ -25,7 +25,7 @@ flow = {
   sensitive: '/review?review=supplier_details'
 }
 
-exports.setPath = function(page, review, additional_policy) {
+exports.setPath = function(page, review, additional_policy, edit) {
   if (review || additional_policy) {
     if (page === 'policies' && additional_policy) {
       sub_path = '/add/policy'
@@ -35,6 +35,17 @@ exports.setPath = function(page, review, additional_policy) {
 
     params = review ? `?review=${review}` : ''
     path = `${sub_path}${params}`
+  } else if (page.includes('contract_manager')) {
+    sub_path = page.replace('_contract_manager', '')
+
+    if (edit) {
+      param = '?edit=yes'
+    } else {
+      param = `?added=${page}`
+    }
+    review_param = review ? `&review=${review}` : ''
+
+    path = `/${sub_path}${param}${review_param}`
   } else {
     path = flow[page] || ''
   }
@@ -55,13 +66,13 @@ exports.setQuery = function(page, role) {
   return query
 }
 
-exports.added = function(data) {
+exports.added = function(data, type) {
   return [
-    data.authorised_name,
-    data.authorised_role,
-    data.authorised_email,
-    data.authorised_phone,
-    data.authorised_address
+    data.authorised_name || data[`${type}_name`],
+    data.authorised_role || data[`${type}_role`],
+    data.authorised_email || data[`${type}_email`],
+    data.authorised_phone || data[`${type}_phone`],
+    data.authorised_address || data[`${type}_address`]
   ].filter(Boolean).length > 0
 }
 

@@ -1,5 +1,5 @@
   <dl class="govuk-check-your-answers cya-questions-short">
-  {% if order_form.supplier_representative_name %}
+  {% if order_form.supplier_representative_name|length %}
     <div>
       <dt class="cya-question" style="border-bottom:none">
         Name
@@ -12,7 +12,7 @@
     </div>
   {% endif %}
 
-  {% if order_form.supplier_representative_role %}
+  {% if order_form.supplier_representative_role|length %}
     <div>
       <dt class="cya-question" style="border-bottom:none">
         Role
@@ -27,7 +27,7 @@
     </div>
   {% endif %}
 
-  {% if order_form.supplier_representative_email%}
+  {% if order_form.supplier_representative_email|length %}
     <div>
       <dt class="cya-question" style="border-bottom:none">
         Email
@@ -40,7 +40,7 @@
     </div>
   {% endif %}
 
-  {% if order_form.supplier_representative_phone %}
+  {% if order_form.supplier_representative_phone|length %}
     <div>
       <dt class="cya-question" style="border-bottom:none">
         Telephone
@@ -53,7 +53,7 @@
     </div>
   {% endif %}
 
-  {% if order_form.supplier_representative_address %}
+  {% if order_form.supplier_representative_address|length %}
     <div>
       <dt class="cya-question" style="border-bottom:none">
         Address

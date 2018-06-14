@@ -26,27 +26,27 @@
   </div>
 
   {% if page == "review" and loop.index == order_form.add_subcontractors.length %}
-  <div>
-    <dt class="cya-question" style="border-bottom:none">
-      Telephone
-    </dt>
-    <dd class="cya-answer" style="border-bottom:none">
-      {{ subcontractor.phone }}
-    </dd>
-    <dd class="cya-change" style="border-bottom:none">
-    </dd>
-  </div>
-  {% else %}
-  <div>
-    <dt class="cya-question">
-      Telephone
-    </dt>
-    <dd class="cya-answer">
-      {{ subcontractor.phone }}
-    </dd>
-    <dd class="cya-change">
-    </dd>
-  </div>
+    <div>
+      <dt class="cya-question" style="border-bottom:none">
+        Telephone
+      </dt>
+      <dd class="cya-answer" style="border-bottom:none">
+        {{ subcontractor.phone }}
+      </dd>
+      <dd class="cya-change" style="border-bottom:none">
+      </dd>
+    </div>
+    {% else %}
+    <div>
+      <dt class="cya-question">
+        Telephone
+      </dt>
+      <dd class="cya-answer">
+        {{ subcontractor.phone }}
+      </dd>
+      <dd class="cya-change">
+      </dd>
+    </div>
   {% endif %}
 </dl>
 {% endfor %}

@@ -46,10 +46,23 @@
     </span>
     {% endif %}
 
-    {% if not order_form.buyer_contract_manager_name %}
-      <p><a href="add/buyer_contract_manager{{ review_param }}" class="">Add</a></p>
-    {% else %}
+    {%
+      if order_form.buyer_contract_manager_name|length or
+      order_form.buyer_contract_manager_role|length or
+      order_form.buyer_contract_manager_email|length or
+      order_form.buyer_contract_manager_phone|length or
+      order_form.buyer_contract_manager_address|length
+    %}
       {% include "v4/includes/_buyer_contract_manager_review.html" %}
+
+      {% if review_param %}
+        {% set edit_param = "&edit=yes" %}
+      {% else %}
+        {% set edit_param = "?edit=yes" %}
+      {% endif %}
+      <p><a href="/v4/buyer_contract_manager{{ review_param }}{{ edit_param }}">Change</a></p>
+    {% else %}
+      <p><a href="/v4/buyer_contract_manager{{ review_param }}">Add</a></p>
     {% endif %}
   </div>
 
