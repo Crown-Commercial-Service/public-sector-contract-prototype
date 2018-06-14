@@ -50,14 +50,14 @@ overview:
     hint:
       - "Information about what's being bought, for example price."
     link: "Check and complete contract details"
-    link_after: "Review contract details"
+    link_after: "Review details"
     review: "Review answers"
   buyer:
     text: "Buyer details"
     hint:
       - "Information about the buyer, for example company name."
     link: "Check and complete buyer details"
-    link_after: "Review contract details"
+    link_after: "Review details"
     review: "Review answers"
   supplier:
     text: "Supplier details"
@@ -66,9 +66,9 @@ overview:
     supplier_hint:
       - "The buyer has invited you to add your details to the contract before you sign it."
     buyer_link: "Check and complete supplier details"
-    buyer_link_after: "Review contract details"
+    buyer_link_after: "Review details"
     supplier_link: "Check and complete supplier details"
-    supplier_link_after: "Review contract details"
+    supplier_link_after: "Review details"
     buyer_edit: "Invite the supplier to add their details"
     supplier_edit: ""
     buyer_invited: ""
