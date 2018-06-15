@@ -4,10 +4,6 @@
   {% set contract_change = "all" %}
 {% endif %}
 
-<!-- use additional modifier class to change column widths for multiple groups of questions and answers: -->
-<!--   * `cya-questions-short` for short questions -->
-<!--   * `cya-questions-long` for long questions -->
-<!--   * none for single group of q&a -->
 <dl class="govuk-check-your-answers cya-questions-short">
   <div>
     <dt class="cya-question">
@@ -33,8 +29,8 @@
       </div>
       </dd>
     <dd class="cya-change" style="border-bottom:none">
-      {% if order_form.role == 'buyer' %}
-      <a href="/v4/contract_details?review={{ contract_change }}">Change</a>
+      {% if order_form.role == 'buyer' and order_form.terms_complete %}
+        <a href="/v4/contract_details?review={{ contract_change }}">Change</a>
       {% endif %}
     </dd>
   </div>
@@ -80,8 +76,8 @@
       {% endif %}
     </dd>
     <dd class="cya-change">
-      {% if order_form.role == 'buyer' %}
-      <a href="/v4/what?review={{ contract_change }}">Change</a>
+      {% if order_form.role == 'buyer' and order_form.terms_complete %}
+        <a href="/v4/what?review={{ contract_change }}">Change</a>
       {% endif %}
     </dd>
   </div>
@@ -101,8 +97,8 @@
       {% endif %}
     </dd>
     <dd class="cya-change" style="border-bottom:none">
-      {% if order_form.role == 'buyer' %}
-      <a href="/v4/charges?review={{ contract_change }}">Change</a>
+      {% if order_form.role == 'buyer' and order_form.terms_complete %}
+        <a href="/v4/charges?review={{ contract_change }}">Change</a>
       {% endif %}
     </dd>
   </div>
@@ -133,8 +129,8 @@
       {% endif %}
     </dd>
     <dd class="cya-change">
-      {% if order_form.role == 'buyer' %}
-      <a href="/v4/expenses?review={{ contract_change }}">Change</a>
+      {% if order_form.role == 'buyer' and order_form.terms_complete %}
+        <a href="/v4/expenses?review={{ contract_change }}">Change</a>
       {% endif %}
     </dd>
   </div>
@@ -153,8 +149,8 @@
       {% endif %}
     </dd>
     <dd class="cya-change">
-      {% if order_form.role == 'buyer' %}
-      <a href="/v4/payment?review={{ contract_change }}">Change</a>
+      {% if order_form.role == 'buyer' and order_form.terms_complete %}
+        <a href="/v4/payment?review={{ contract_change }}">Change</a>
       {% endif %}
     </dd>
   </div>
@@ -171,8 +167,8 @@
       {% endif %}
     </dd>
     <dd class="cya-change" style="border-bottom:none">
-      {% if order_form.role == 'buyer' %}
-      <a href="/v4/credits?review={{ contract_change }}">Change</a>
+      {% if order_form.role == 'buyer' and order_form.terms_complete %}
+        <a href="/v4/credits?review={{ contract_change }}">Change</a>
       {% endif %}
     </dd>
   </div>
@@ -204,8 +200,8 @@
       {% endif %}
     </dd>
     <dd class="cya-change">
-      {% if order_form.role == 'buyer' %}
-      <a href="/v4/progress?review={{ contract_change }}">Change</a>
+      {% if order_form.role == 'buyer' and order_form.terms_complete %}
+        <a href="/v4/progress?review={{ contract_change }}">Change</a>
       {% endif %}
     </dd>
   </div>
@@ -225,7 +221,7 @@
       {% endif %}
     </dd>
     <dd class="cya-change">
-      {% if order_form.role == 'buyer' %}
+      {% if order_form.role == 'buyer' and order_form.terms_complete %}
       <a href="/v4/terms?review={{ contract_change }}">Change</a>
       {% endif %}
     </dd>

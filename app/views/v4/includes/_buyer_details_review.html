@@ -29,8 +29,8 @@
       </div>
       </dd>
     <dd class="cya-change" style="border-bottom:none">
-      {% if order_form.role == 'buyer' %}
-      <a href="/v4/buyer?review={{ buyer_change }}">Change</a>
+      {% if order_form.role == 'buyer' and order_form.policies_complete %}
+        <a href="/v4/buyer?review={{ buyer_change }}">Change</a>
       {% endif %}
     </dd>
   </div>
@@ -91,8 +91,8 @@
       {% endif %}
     </dd>
     <dd class="cya-change">
-      {% if order_form.role == 'buyer' %}
-      <a href="/v4/buyer_authorised_representative?review={{ buyer_change }}">Change</a>
+      {% if order_form.role == 'buyer' and order_form.policies_complete %}
+        <a href="/v4/buyer_authorised_representative?review={{ buyer_change }}">Change</a>
       {% endif %}
     </dd>
   </div>
@@ -116,8 +116,8 @@
       {% endif %}
     </dd>
     <dd class="cya-change" style="border-bottom:none">
-      {% if order_form.role == 'buyer' %}
-      <a href="/v4/policies?review={{ buyer_change }}">Change</a>
+      {% if order_form.role == 'buyer' and order_form.policies_complete %}
+        <a href="/v4/policies?review={{ buyer_change }}">Change</a>
       {% endif %}
     </dd>
   </div>
