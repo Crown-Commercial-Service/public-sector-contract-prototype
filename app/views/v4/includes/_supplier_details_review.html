@@ -29,7 +29,7 @@
       </div>
       </dd>
     <dd class="cya-change" style="border-bottom:none">
-      {% if order_form.sensitive_complete %}
+      {% if order_form.sensitive_complete or order_form.role == 'supplier' %}
         <a href="/v4/supplier?review={{ supplier_change }}">Change</a>
       {% endif %}
     </dd>
@@ -69,7 +69,7 @@
       {% include "v4/includes/_supplier_representative.html" %}
     </dd>
     <dd class="cya-change">
-      {% if order_form.sensitive_complete %}
+      {% if order_form.sensitive_complete or order_form.role == 'supplier' %}
         <a href="/v4/supplier_authorised_representative?review={{ supplier_change }}">Change</a>
       {% endif %}
     </dd>
@@ -87,7 +87,7 @@
       {% endif %}
     </dd>
     <dd class="cya-change" style="border-bottom:none">
-      {% if order_form.sensitive_complete %}
+      {% if order_form.sensitive_complete or order_form.role == 'supplier' %}
         <a href="/v4/supplier_numbers?review={{ supplier_change }}">Change</a>
       {% endif %}
     </dd>
@@ -118,7 +118,7 @@
       {% endif %}
     </dd>
     <dd class="cya-change" style="border-bottom:none">
-      {% if order_form.sensitive_complete %}
+      {% if order_form.sensitive_complete or order_form.role == 'supplier' %}
         <a href="/v4/supplier_staff?review={{ supplier_change }}">Change</a>
       {% endif %}
     </dd>
@@ -145,7 +145,7 @@
       {{ order_form.sensitive_information }}
     </dd>
     <dd class="cya-change">
-      {% if order_form.sensitive_complete %}
+      {% if order_form.sensitive_complete or order_form.role == 'supplier' %}
         <a href="/v4/sensitive?review={{ supplier_change }}">Change</a>
       {% endif %}
     </dd>
