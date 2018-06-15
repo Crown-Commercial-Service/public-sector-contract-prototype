@@ -37,7 +37,7 @@
   {% else %}
   <div class="form-group" style="display:none" id="payment_other">
   {% endif %}
-  <input class="form-control" name="payment_other" id="payment_other">{{ order_form.payment_other }}</input>
+  <input class="form-control" name="payment_other" id="payment_other" value="{{ order_form.payment_other }}">
   </div>
 
   {% include "v4/includes/_save_and_continue.html" %}

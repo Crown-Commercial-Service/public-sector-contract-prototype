@@ -22,45 +22,52 @@ flow = {
   supplier_authorised_representative: '/supplier_numbers',
   supplier_numbers: '/supplier_staff',
   supplier_staff: '/sensitive',
-  sensitive: '/review?review=supplier_details'
+  sensitive: '/review?review=supplier_details',
+  buyer_contract_manager: '/buyer',
+  supplier_contract_manager: '/supplier'
 }
 
-exports.setPath = function(page, review, additional_policy, edit) {
-  if (review || additional_policy) {
-    if (page === 'policies' && additional_policy) {
-      sub_path = '/add/policy'
-    } else {
-      sub_path = '/review'
+exports.setPath = function(args) {
+  if (args.type) {
+    if (args.type.includes('buyer')) {
+      path = '/buyer'
+    } else if (args.type.includes('supplier')) {
+      path = '/supplier'
+    } else if (args.type.includes('add')) {
+      path = '/supplier_staff'
+    } else if (args.type === 'policy') {
+      path = '/policies'
     }
-
-    params = review ? `?review=${review}` : ''
-    path = `${sub_path}${params}`
-  } else if (page.includes('contract_manager')) {
-    sub_path = page.replace('_contract_manager', '')
-
-    if (edit) {
-      param = '?edit=yes'
-    } else {
-      param = `?added=${page}`
-    }
-    review_param = review ? `&review=${review}` : ''
-
-    path = `/${sub_path}${param}${review_param}`
+  } else if (args.review) {
+    path = '/review'
+  } else if (args.additional_policy) {
+    path = '/add/policy'
   } else {
-    path = flow[page] || ''
+    path = flow[args.page] || ''
   }
 
   return path
 }
 
-exports.setQuery = function(page, role) {
+exports.setQuery = function(args) {
   query = ''
-  if (page === 'supplier_edit') {
-    query = '?supplier_edit=true'
-  } else if (page === 'invite_supplier_signatory') {
-    query = '?supplier_signatory_invited=true'
-  } else if (page === 'signatory') {
-    query = `?signed=${role}`
+  if (args.page) {
+    if (args.page.includes('contract_manager')) {
+      query = args.edit ? '?edit=yes' : `?added=${args.page}`
+    } else if (args.page === 'supplier_edit') {
+      query = '?supplier_edit=true'
+    } else if (args.page === 'invite_supplier_signatory') {
+      query = '?supplier_signatory_invited=true'
+    } else if (args.page === 'signatory') {
+      query = `?signed=${args.role}`
+    }
+  } else if (args.added) {
+    query = `?added=${args.added}`
+  }
+
+  if (args.review) {
+    query += query ? '&' : '?'
+    query += `review=${args.review}`
   }
 
   return query
@@ -68,26 +75,35 @@ exports.setQuery = function(page, role) {
 
 exports.added = function(data, type) {
   return [
-    data.authorised_name || data[`${type}_name`],
-    data.authorised_role || data[`${type}_role`],
-    data.authorised_email || data[`${type}_email`],
-    data.authorised_phone || data[`${type}_phone`],
-    data.authorised_address || data[`${type}_address`]
+    (data.authorised_name || data[`${type}_name`]),
+    (data.authorised_role || data[`${type}_role`]),
+    (data.authorised_email || data[`${type}_email`]),
+    (data.authorised_phone || data[`${type}_phone`]),
+    (data.authorised_address || data[`${type}_address`])
   ].filter(Boolean).length > 0
 }
 
-exports.additionReturnPath = function(type) {
-  if (type.includes('buyer')) {
-    path = 'buyer'
-  } else if (type.includes('supplier')) {
-    path = 'supplier'
-  } else if (type.includes('add')) {
-    path = 'supplier_staff'
-  } else if (type == 'policy') {
-    path = 'policies'
+exports.addStaffOrSubcontractors = function(data, type, id) {
+  if (data[type] == undefined) {
+    data[type] = []
   }
 
-  return path
+  data[type].push({
+    id: id || data[type].length + 1,
+    name: data.authorised_name,
+    role: data.authorised_role,
+    email: data.authorised_email,
+    phone: data.authorised_phone,
+    address: data.authorised_address
+  })
+}
+
+exports.cleanKeys = function(data) {
+  Object.keys(data).forEach(field => {
+    if (field.includes('authorised')) {
+      delete data[field]
+    }
+  })
 }
 
 exports.findRepIndex = function(data, type, id) {

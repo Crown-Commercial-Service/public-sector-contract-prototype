@@ -89,22 +89,31 @@ router.post('/v4/:page', function (req, res) {
   }
 
   helpers.addItem(data)
-  path = helpers.setPath(page, req.query.review, req.body.additional_policy, req.query.edit)
-  query = helpers.setQuery(page, data.role)
+  path = helpers.setPath({
+    page: page,
+    review: req.query.review,
+    additional_policy: req.body.additional_policy
+  })
+
+  query = helpers.setQuery({
+    page: page,
+    role: data.role,
+    review: req.query.review,
+    edit: req.query.edit
+  })
+
   res.redirect(`/v4${path}${query}`)
 })
 
 router.get('/v4/add/:type', function (req, res) {
   type = req.params.type
 
-  page = type == 'policy' ? 'policy' : 'representative'
-
   res.render('v4/base', {
     header: type,
-    page: page,
+    page: type === 'policy' ? 'policy' : 'representative',
     type: type,
     content: content,
-    cancel_path: `/v4/${helpers.additionReturnPath(type)}`,
+    cancel_path: `/v4${helpers.setPath({ type: type })}`,
     review: req.query.review
   })
 })
@@ -114,33 +123,15 @@ router.post('/v4/add/:type', function (req, res) {
   data = req.session.data
   helpers.addItem(data)
 
-  added_param = ''
-  if (helpers.added(data, type)) {
-    if (!type.includes('contract_manager')) {
-      if (data[type] == undefined) {
-        data[type] = []
-      }
-
-      req.session.data[type].push({
-        id: req.session.data[type].length + 1,
-        name: data.authorised_name,
-        role: data.authorised_role,
-        email: data.authorised_email,
-        phone: data.authorised_phone,
-        address: data.authorised_address
-      })
-    }
-    added_param = `?added=${type}`
+  added_item = helpers.added(data, type) ? type : ''
+  if (added_item) {
+    helpers.addStaffOrSubcontractors(data, type)
+    helpers.cleanKeys(data)
   }
 
-  review_param = ''
-  if (req.query.review) {
-    review_param += added_param ? '&' : '?'
-    review_param += `review=${req.query.review}`
-  }
-
-  path = helpers.additionReturnPath(type)
-  res.redirect(`/v4/${path}${added_param}${review_param}`)
+  path = helpers.setPath({ type: type })
+  query = helpers.setQuery({ review: req.query.review, added: added_item })
+  res.redirect(`/v4${path}${query}`)
 })
 
 router.get('/v4/edit/:type/:id', function (req, res) {
@@ -153,29 +144,21 @@ router.get('/v4/edit/:type/:id', function (req, res) {
     type: type,
     rep: req.session.data[type][rep_index],
     content: content,
-    cancel_path: `/v4/${helpers.additionReturnPath(type)}`
+    cancel_path: `/v4${helpers.setPath({ type: type })}`
   })
 })
 
 router.post('/v4/edit/:type/:id', function (req, res) {
   type = req.params.type
-
   data = req.session.data
+
   rep_index = helpers.findRepIndex(data, type, req.params.id)
   id = req.session.data[type][rep_index].id
   req.session.data[type].splice(rep_index, 1)
+  helpers.addStaffOrSubcontractors(data, type, id)
 
-  req.session.data[type].push({
-    id: id,
-    name: data.authorised_name,
-    role: data.authorised_role,
-    email: data.authorised_email,
-    phone: data.authorised_phone,
-    address: data.authorised_address
-  })
-
-  path = helpers.additionReturnPath(type)
-  res.redirect(`/v4/${path}`)
+  path = helpers.setPath({ type: type })
+  res.redirect(`/v4${path}`)
 })
 
 // v2 and v3 routes
