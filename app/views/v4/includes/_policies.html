@@ -40,13 +40,17 @@
     <input type="file" name="security_policy_files" id="security_policy_files" class="file-upload-input">
   </div>
 
-  {% for link in order_form.links.additional_policy_links %}
-    <p>{{ link }}</p>
-  {% endfor %}
+  {% if order_form.links.additional_policy_links|length or order_form.files.additional_policy_files %}
+    <h2 class="heading-medium">Additional Policies</h2>
 
-  {% for file in order_form.files.additional_policy_files %}
-    <p>{{ file }}</p>
-  {% endfor %}
+    {% for link in order_form.links.additional_policy_links %}
+      <p>{{ link }}</p>
+    {% endfor %}
+
+    {% for file in order_form.files.additional_policy_files %}
+      <p>{{ file }}</p>
+    {% endfor %}
+  {% endif %}
 
   <p style="margin-top:20px">
     <button class="link" name="additional_policy" value="1" type="submit">Add additional policy</button>
