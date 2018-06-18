@@ -40,7 +40,7 @@
     <input type="file" name="security_policy_files" id="security_policy_files" class="file-upload-input">
   </div>
 
-  {% if order_form.links.additional_policy_links|length or order_form.files.additional_policy_files %}
+  {% if order_form.links.additional_policy_links|length or order_form.files.additional_policy_files|length %}
     <h2 class="heading-medium">Additional Policies</h2>
 
     {% for link in order_form.links.additional_policy_links %}
