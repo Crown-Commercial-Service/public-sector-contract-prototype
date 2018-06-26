@@ -48,7 +48,9 @@ router.get('/v4', function (req, res) {
 })
 
 router.get('/v4/back', function (req, res) {
-  if (req.session.data.visited.length === 1) {
+  if (req.session.data.visited.pop() === "4-0")
+    previous_page = "/"
+  else if (req.session.data.visited.length === 1) {
     previous_page = "/v4"
   } else {
     previous_page = `/v4/${req.session.data.visited.splice(-2, 2)[0]}`
